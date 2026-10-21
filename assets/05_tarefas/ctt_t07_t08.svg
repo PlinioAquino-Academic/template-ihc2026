@@ -1,0 +1,332 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+
+  <rect width="1500" height="980" fill="#ffffff"/>
+
+  <text x="750" y="42"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="28"
+        font-weight="bold"
+        fill="#24292f">
+    CTT — T07/T08 Comparar e sintetizar resultados
+  </text>
+
+  <text x="750" y="72"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        fill="#57606a">
+    P02 — Carlos Mendes · C02 — Interpretação e comparação de resultados
+  </text>
+
+  <!-- A0 -->
+
+  <rect x="535" y="105" width="430" height="75" rx="24"
+        fill="#f6f8fa"
+        stroke="#24292f"
+        stroke-width="2"/>
+
+  <text x="750" y="136"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="18"
+        font-weight="bold"
+        fill="#24292f">
+    [A] A0 — Comparar e sintetizar resultados
+  </text>
+
+  <text x="750" y="162"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#57606a">
+    A1 []&gt;&gt; A2 []&gt;&gt; A3
+  </text>
+
+  <!-- Nível principal -->
+
+  <line x1="750" y1="180" x2="750" y2="220"
+        stroke="#57606a" stroke-width="2"/>
+  <line x1="260" y1="220" x2="1240" y2="220"
+        stroke="#57606a" stroke-width="2"/>
+
+  <line x1="260" y1="220" x2="260" y2="255"
+        stroke="#57606a" stroke-width="2"/>
+  <line x1="750" y1="220" x2="750" y2="255"
+        stroke="#57606a" stroke-width="2"/>
+  <line x1="1240" y1="220" x2="1240" y2="255"
+        stroke="#57606a" stroke-width="2"/>
+
+  <rect x="95" y="255" width="330" height="68" rx="22"
+        fill="#f6f8fa" stroke="#24292f" stroke-width="2"/>
+  <text x="260" y="296"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        font-weight="bold"
+        fill="#24292f">
+    [A] A1 — Preparar comparação
+  </text>
+
+  <rect x="585" y="255" width="330" height="68" rx="22"
+        fill="#f6f8fa" stroke="#24292f" stroke-width="2"/>
+  <text x="750" y="296"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        font-weight="bold"
+        fill="#24292f">
+    [A] A2 — Analisar resultados
+  </text>
+
+  <rect x="1075" y="255" width="330" height="68" rx="22"
+        fill="#f6f8fa" stroke="#24292f" stroke-width="2"/>
+  <text x="1240" y="296"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        font-weight="bold"
+        fill="#24292f">
+    [A] A3 — Sintetizar análise
+  </text>
+
+  <!-- A1 -->
+
+  <line x1="260" y1="323" x2="260" y2="365"
+        stroke="#57606a" stroke-width="2"/>
+
+  <rect x="95" y="365" width="330" height="62" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="260" y="403"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#24292f">
+    [I] I1 — Identificar / selecionar execuções
+  </text>
+
+  <text x="260" y="458"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        font-weight="bold"
+        fill="#57606a">
+    []&gt;&gt;
+  </text>
+
+  <rect x="95" y="478" width="330" height="62" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="260" y="516"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#24292f">
+    [S] S1 — Recuperar dados das execuções
+  </text>
+
+  <text x="260" y="571"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        font-weight="bold"
+        fill="#57606a">
+    &gt;&gt;
+  </text>
+
+  <rect x="95" y="591" width="330" height="62" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="260" y="629"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#24292f">
+    [U] U1 — Verificar comparabilidade
+  </text>
+
+  <!-- A2 -->
+
+  <line x1="750" y1="323" x2="750" y2="360"
+        stroke="#57606a" stroke-width="2"/>
+
+  <rect x="585" y="360" width="330" height="62" rx="22"
+        fill="#f6f8fa" stroke="#24292f" stroke-width="2"/>
+  <text x="750" y="398"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        font-weight="bold"
+        fill="#24292f">
+    [A] A2.1 — Consultar indicadores
+  </text>
+
+  <line x1="750" y1="422" x2="750" y2="460"
+        stroke="#57606a" stroke-width="2"/>
+  <line x1="525" y1="460" x2="975" y2="460"
+        stroke="#57606a" stroke-width="2"/>
+
+  <line x1="525" y1="460" x2="525" y2="495"
+        stroke="#57606a" stroke-width="2"/>
+  <line x1="675" y1="460" x2="675" y2="495"
+        stroke="#57606a" stroke-width="2"/>
+  <line x1="825" y1="460" x2="825" y2="495"
+        stroke="#57606a" stroke-width="2"/>
+  <line x1="975" y1="460" x2="975" y2="495"
+        stroke="#57606a" stroke-width="2"/>
+
+  <rect x="460" y="495" width="130" height="76" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="525" y="523"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="13"
+        fill="#24292f">[I] I2</text>
+  <text x="525" y="547"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        fill="#24292f">Tempo médio</text>
+  <text x="525" y="564"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        fill="#24292f">de espera</text>
+
+  <rect x="610" y="495" width="130" height="76" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="675" y="523"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="13"
+        fill="#24292f">[I] I3</text>
+  <text x="675" y="547"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        fill="#24292f">Tamanho médio</text>
+  <text x="675" y="564"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        fill="#24292f">das filas</text>
+
+  <rect x="760" y="495" width="130" height="76" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="825" y="523"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="13"
+        fill="#24292f">[I] I4</text>
+  <text x="825" y="554"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        fill="#24292f">Throughput</text>
+
+  <rect x="910" y="495" width="130" height="76" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="975" y="523"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="13"
+        fill="#24292f">[I] I5</text>
+  <text x="975" y="547"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        fill="#24292f">Trocas</text>
+  <text x="975" y="564"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="11"
+        fill="#24292f">de fase</text>
+
+  <text x="750" y="608"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        font-weight="bold"
+        fill="#57606a">
+    I2 ||| I3 ||| I4 ||| I5
+  </text>
+
+  <text x="750" y="647"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        font-weight="bold"
+        fill="#57606a">
+    &gt;&gt;
+  </text>
+
+  <rect x="585" y="667" width="330" height="62" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="750" y="705"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#24292f">
+    [U] U2 — Interpretar diferenças
+  </text>
+
+  <!-- A3 -->
+
+  <line x1="1240" y1="323" x2="1240" y2="395"
+        stroke="#57606a" stroke-width="2"/>
+
+  <rect x="1075" y="395" width="330" height="62" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="1240" y="433"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#24292f">
+    [U] U3 — Formular conclusão
+  </text>
+
+  <text x="1240" y="493"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        font-weight="bold"
+        fill="#57606a">
+    &gt;&gt;
+  </text>
+
+  <rect x="1075" y="513" width="330" height="62" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="1240" y="551"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#24292f">
+    [I] I6 — Consultar ou registrar síntese
+  </text>
+
+  <!-- Legenda -->
+
+  <rect x="100" y="795" width="1300" height="130" rx="12"
+        fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+
+  <text x="130" y="830"
+        font-family="Arial, sans-serif"
+        font-size="19"
+        font-weight="bold"
+        fill="#24292f">
+    Legenda
+  </text>
+
+  <text x="130" y="863"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#57606a">
+    [A] abstrata · [U] usuário · [S] sistema · [I] interação usuário–sistema
+  </text>
+
+  <text x="130" y="896"
+        font-family="Arial, sans-serif"
+        font-size="15"
+        fill="#57606a">
+    &gt;&gt; ativação · []&gt;&gt; ativação com passagem de informação · ||| concorrência
+  </text>
+
+</svg>
