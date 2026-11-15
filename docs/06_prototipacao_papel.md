@@ -11,7 +11,9 @@ Explorar em baixa fidelidade a estrutura da **Mesa de inspeção de raio-X de co
 
 ## 1. Escopo do protótipo
 
-- **Personas:** P01, Gustavo, examina a imagem; P02, Eduardo, recebe o parecer para apoiar a decisão no despacho. P03 permanece stakeholder, sem tela própria.
+- **Usuário da interface:** P01, Gustavo, examina a imagem e emite o parecer técnico.
+- **Destinatário da saída:** P02, Eduardo, recebe um PDF estático para apoiar seu trabalho no despacho. Não utiliza a Mesa nesta versão. O encaminhamento é externo, por procedimento institucional ainda a investigar (H28, H39, ?08); não há transmissão automática ao Siscomex.
+- **Stakeholder:** P03 permanece fora da interface, sem tela própria (H42).
 - **Cenários/tarefas:** CP01 e T01–T03 da [Entrega 5](05_analise_tarefas.md).
 - **Objetivos principais:** comparar radiografia e destaque do modelo (AC02/R01) e registrar o achado com justificativa (AC03/R03).
 
