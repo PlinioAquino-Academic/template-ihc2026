@@ -1,8 +1,8 @@
 # Entrega 4 — Cenários de análise/problema
 
-**Data:** 08/10/2026 (versão original)  
-**Revisão:** 25/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe09.md)  
-**Status:** 🟩 concluída 
+**Data:** 08/10/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe09.md)
+**Status:** 🟦 revisada após feedback
 **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
@@ -300,4 +300,4 @@ Fontes do cenário CP03:
 | 08/10/2026 | 1.0 | Entrega original dos cenários de análise/problema (CP01, CP02 e CP03). | Entrega 4 da disciplina. |
 | 25/10/2026 | 1.1 | Alinhamento das questões de refinamento e dos elementos extraídos aos sete elementos característicos do cenário (ambiente/contexto, atores, objetivos, planejamento, ações, eventos e avaliação) em CP01, CP02 e CP03; padronização dos marcadores `[Q1]`–`[Q10]` nos cenários refinados; ajuste de perguntas repetidas do cenário inicial; renomeação de C03 para CP03 e reescrita sem antecipação de solução nem fatos sem fonte, alinhada a H42 em `RASTREABILIDADE.md`. | [Feedback do professor da Entrega 4](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe09.md), correções 1 a 13. |
 
-
+| 15/11/2026 | 1.2 | Conferência das correções registradas em 25/10/2026 e alinhamento do status para revisada após feedback; conteúdo dos cenários preservado. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega04_Equipe09.md), conferência das correções já registradas. |

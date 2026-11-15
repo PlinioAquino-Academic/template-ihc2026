@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
 **Data:** 26/08/2026 (versão original)
-**Revisão:** 06/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe09.md)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe09.md)
 **Status:** 🟦 revisada após feedback
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
@@ -414,3 +414,4 @@ Fontes da análise C02 (Portal Único Siscomex):
 |---|---|---|
 | 06/10/2026 | Natureza e marcações dos prints de C02, origem e classificação das recomendações RC03 a RC11, separação entre canal aduaneiro e resultado da IA. | [Parecer do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe09.md), com o tratamento de cada item anotado no próprio parecer. |
 | 12/10/2026 | Público-alvo da seção 1 alinhado a H01 e H39. Em C01, C02 e C03, células que prescreviam solução ou afirmavam sustentação maior que a da matriz passaram a hipótese ou alternativa a testar. Duas células da seção 4 e o título de C03 ajustados. As mudanças em C01 e C03 foram feitas por Gabriel e ficam sujeitas à conferência de Kawan e Alexandre. | Auditoria de coerência de 12/10/2026 (AC-004, AC-005, AC-016). |
+| 15/11/2026 | Marcações dos prints de C01/C03, limites das inferências e capturas operacionais de DaiSy/viZual extraídas da brochura oficial (p. 9). C02 mantém limitação de acesso. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe09.md), complementos desta rodada. |

@@ -1,7 +1,8 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
-**Data:** 04/11/2026<br>
-**Status:** 🟩 concluída<br>
+**Data:** 04/11/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega07_Equipe09.md)
+**Status:** 🟦 revisada após feedback (pendências online na Entrega 7)
 **Responsabilidade:** contribuições individuais e síntese da equipe
 
 ## Objetivo e método
@@ -250,3 +251,9 @@ Acesso às fontes em 04/11/2026.
 - **D03 — Receita Federal.** *Verificação Física da Mercadoria — Introdução*. Atualizado em 2020. [Manual de Importação](https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior/manuais/despacho-de-importacao/topicos-1/despacho-de-importacao/etapas-do-despacho-aduaneiro-de-importacao/conferencia-aduaneira/verificacao-da-mercadoria-1/introducao).
 - **D04 — Rapiscan AS&E.** *InSight Intelligent Image Analytics*. Sem data. [Página do produto](https://www.rapiscan-ase.com/products/software/insight-operator-assist-tools).
 - **D05 — Selvaraju et al.** *Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization*. ICCV, 2017; versão ampliada, 2019. [Artigo, versão 4](https://arxiv.org/abs/1610.02391v4).
+
+## Histórico de revisões
+
+| Data | Alteração | Origem |
+|---|---|---|
+| 15/11/2026 | I01 em investigação contextual; ED01–ED05 complementares; perguntas de I02 somente online; protocolos e análise por perfil; contato/códigos e prazo de exclusão. Configuração e verificação dos formulários continuam pendentes, sem coleta com pessoas. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega07_Equipe09.md). |

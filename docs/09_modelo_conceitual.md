@@ -1,7 +1,8 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
-**Data:** 04/11/2026<br>
-**Status:** 🟩 concluída<br>
+**Data:** 04/11/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe09.md)
+**Status:** 🟦 revisada após feedback
 **Responsabilidade:** soluções individuais e consolidação da equipe
 
 ## Objetivo e base do projeto
@@ -212,3 +213,9 @@ Cada integrante terá um foco: CI01, exame e registro; CI02, conferência do fun
 - Entregas [4](04_cenarios_problema.md), [5](05_analise_tarefas.md), [6](06_prototipacao_papel.md), [7](07_coleta_dados.md) e [8](08_engenharia_usabilidade.md); [rastreabilidade](../RASTREABILIDADE.md).
 - BARBOSA, S. D. J.; SILVA, B. S. *Interação Humano-Computador*. Elsevier/Campus.
 - DE SOUZA, C. S. *The Semiotic Engineering of Human-Computer Interaction*. MIT Press, 2005. Referências conceituais indicadas na [bibliografia da disciplina](../BIBLIOGRAFIA.md).
+
+## Histórico de revisões
+
+| Data | Alteração | Origem |
+|---|---|---|
+| 15/11/2026 | Cenários como transformação dos CPs completos; DCCs identificados com conversa efetiva versus documento estático; objetivos finais/instrumentais por papel; signos desagregados e origem padronizada; R01/R03 e terminologia técnica atualizados. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega09_Equipe09.md). |

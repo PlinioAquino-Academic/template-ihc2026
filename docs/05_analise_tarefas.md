@@ -1,8 +1,8 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** 22/10/2026 (versão original)  
-**Revisão:** 25/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe09.md)  
-**Status:** 🟩 concluída  
+**Data:** 22/10/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe09.md)
+**Status:** 🟦 revisada após feedback
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -694,4 +694,4 @@ Métodos:
 |---|---|---|---|
 | 22/10/2026 | 1.0 | Entrega original da análise de tarefas (T01 a T09 em HTA, GOMS e CTT). | Entrega 5 da disciplina. |
 | 25/10/2026 | 1.1 | Sublinhado das operações finais nos diagramas HTA (`hta_t01.svg`, `hta_t04.svg`, `HTA_ALE.svg`); inclusão explícita de Input, Feedback e Plano na linha da tarefa 0 das tabelas auxiliares de T01, T04 e T07; ajuste do Plano 3 de T07 para sequência complementar (`3.1 > 3.2`); remoção do diagrama em GOMS T02, incorporação dos critérios de SR2 em M4 e adição de operador explícito de verificação no fim dos métodos de T02, T05 e T08; explicitação do gatilho humano inicial nos CTTs T03, T06 e T09; modelagem de T07 a T09 na situação atual sem antecipar aplicativo móvel, alinhada a H42 em `RASTREABILIDADE.md` e na síntese da equipe. | [Feedback do professor da Entrega 5](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe09.md), correções 1 a 18. |
-
+| 15/11/2026 | 1.2 | Conferência das correções registradas em 25/10/2026 e alinhamento do status para revisada após feedback; nove modelagens preservadas. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega05_Equipe09.md), conferência das correções já registradas. |

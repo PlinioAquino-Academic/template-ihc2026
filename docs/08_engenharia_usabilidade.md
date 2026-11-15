@@ -1,7 +1,8 @@
 # Entrega 8 — Ciclo de vida e engenharia de usabilidade
 
-**Data:** 04/11/2026<br>
-**Status:** 🟩 concluída<br>
+**Data:** 04/11/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega08_Equipe09.md)
+**Status:** 🟦 revisada após feedback
 **Autores:** Kawan Mark Geronimo Da Silva (22.222.010-5), Gabriel Albertini Pinheiro (22.122.094-8) e Alexandre Domiciano Pierri (22.125.061-6)
 
 ## Objetivo e recorte
@@ -130,3 +131,9 @@ A Entrega 9 transforma PF01/PF02 em objetivos e signos; as Entregas 10/11 modela
 - W3C. *Web Content Accessibility Guidelines (WCAG) 2.2*. Recomendação de 2024. [Critérios de acessibilidade](https://www.w3.org/TR/WCAG22/). Acesso em 04/11/2026.
 - BARBOSA, S. D. J.; SILVA, B. S. *Interação Humano-Computador*. Elsevier/Campus. Referência conceitual da [bibliografia da disciplina](../BIBLIOGRAFIA.md).
 - TCC da equipe: `IHC/TCC/TCC-VisaoRaioxContainer/codigo/main.py`, consultado para caracterizar a contribuição técnica. A avaliação de IHC não depende da execução desse código.
+
+## Histórico de revisões
+
+| Data | Alteração | Origem |
+|---|---|---|
+| 15/11/2026 | Princípios separados entre domínio/interface; tarefa de P01 distinta do uso externo por P02; baseline de tempo; satisfação; prioridades nas cinco dimensões de Nielsen e níveis de Mayhew. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega08_Equipe09.md). |

@@ -1,7 +1,8 @@
 # Entrega 6 — Prototipação em papel
 
-**Data:** 25/10/2026 · **Revisão:** 05/11/2026<br>
-**Status:** 🟩 concluída<br>
+**Data:** 25/10/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega06_Equipe09.md)
+**Status:** 🟦 revisada após feedback
 **Responsabilidade:** 1 solução integrada por equipe<br>
 **Autores:** Kawan Mark Geronimo Da Silva (22.222.010-5), Gabriel Albertini Pinheiro (22.122.094-8) e Alexandre Domiciano Pierri (22.125.061-6)
 
@@ -113,3 +114,9 @@ Os diagramas e estados completos continuam guardados como [referência para as e
 - [x] Observações geraram decisões de revisão justificadas.
 - [x] O protótipo permanece em baixa fidelidade, com a prancha testada, a revisada e os estados essenciais.
 - [x] Material detalhado preservado e rastreabilidade atualizada.
+
+## Histórico de revisões
+
+| Data | Alteração | Origem |
+|---|---|---|
+| 15/11/2026 | Cobertura limitada a T01–T03/P01; P02 como destinatário externo; prancha revisada, estados visuais, terminologia de parecer, score/limiar e filtros como hipóteses e proveniência disponível do walkthrough. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega06_Equipe09.md). |
