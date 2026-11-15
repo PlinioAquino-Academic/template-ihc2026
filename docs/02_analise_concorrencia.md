@@ -261,7 +261,7 @@ Limitação da análise: os softwares de inspeção da Smiths Detection são pro
 | [`c03_smiths_daisy_plataforma.png`](../assets/02_concorrencia/c03_smiths_daisy_plataforma.png) | Página oficial da plataforma **DaiSy**, descrita como o software instalado por padrão em todos os sistemas HCV, com "customizable image treatments, options and comparison tools". | Confirma que o tratamento de imagem e as ferramentas de comparação são o núcleo do software do operador, e não um acessório. |
 | [`c03_smiths_vizual_discriminacao.png`](../assets/02_concorrencia/c03_smiths_vizual_discriminacao.png) | Página oficial do **viZual**, que adiciona cor ligada ao número atômico à imagem radioscópica para discriminar orgânico/inorgânico e destacar objetos estranhos. | Evidência de que a cor já carrega significado de material na tela do operador — o mapa residual da nossa IA não pode competir com essa codificação. |
 
-> **Ressalva:** as duas capturas são páginas de produto do fabricante, não telas da estação de trabalho em operação. As telas do RIW não são publicamente acessíveis, e as evidências de funcionalidade vêm dos datasheets listados nas Referências. O link oficial anterior desta análise estava quebrado (retornava 404 e apontava para um site de terceiros); foi substituído pelas páginas de produto verificadas.
+> **Ressalva:** as duas capturas são páginas de produto do fabricante, não telas da estação de trabalho em operação. Não houve acesso interativo à estação RIW. As capturas operacionais complementares da brochura oficial, descritas abaixo, permitem observar elementos estáticos, sem demonstrar rotina, sequência completa ou versão atualmente instalada. O link oficial anterior desta análise estava quebrado (retornava 404 e apontava para um site de terceiros); foi substituído pelas páginas de produto verificadas.
 
 #### Preço/modelo de negócio
 
@@ -283,6 +283,20 @@ Modelo **B2B / Governamental**, integrado à venda ou modernização dos complex
 | Limitação: acúmulo de filtros na tela | O uso simultâneo de equalização de histograma, bordas e marcações pode poluir a imagem. | A camada de IA não deve somar mais poluição à imagem. Opacidade ajustável e alternância são alternativas a testar (RC09), não controles observados nesta captura. |
 | Lição de IHC: centralidade na imagem radiográfica | A estação de trabalho (RIW com tela de 22"/24") prioriza a área de exibição do scanner. | [H] Priorizar a radiografia é orientação do projeto (RC10); posição dos metadados e ações deve ser experimentada, sem inferir layout da RIW a partir da página de produto. |
 
+
+#### Complemento de evidência operacional pública de C03
+
+[F] A busca no material público do fabricante localizou a brochura **Securing Vulnerable Borders**, seção *Image Analysis Solutions*, página 9, ligada à página oficial de DaiSy. As duas imagens abaixo foram extraídas integralmente do PDF, sem reconstruir a tela. O documento não informa data de publicação verificada; as capturas ilustram uma versão divulgada, sem confirmar a estação instalada hoje. Fonte: [brochura oficial, p. 9](https://www.smithsdetection.com/media/g1ypoand/securing-vulnerable-borders-brochure.pdf#page=9), acesso em 15/11/2026.
+
+![Reprodução pública da interface DaiSy](../assets/02_concorrencia/c03_brochura_daisy.jpeg)
+
+*C03-D1. A radiografia ocupa a área principal; vê-se a região marcada, ferramentas acima e painel de informação à direita. A parte inferior reúne outra vista. São elementos visíveis na captura, sem medir eficiência, carga cognitiva ou número de passos.*
+
+![Reprodução pública da interface viZual](../assets/02_concorrencia/c03_brochura_vizual.jpeg)
+
+*C03-D2. Duas vistas da mesma unidade e região selecionada; a vista inferior mostra discriminação cromática, enquanto a superior preserva tons de cinza. Isso documenta uma composição visual possível da versão ilustrada; não comprova preferência do operador nem a adequação de um mapa de atenção do TCC.*
+
+[H] O aprendizado para o projeto é testar comparação e distinção das camadas (H30/RC09), mantendo a leitura da radiografia. [?] Fluxos de erro, permissões, registro completo e uso real da RIW continuam sem observação. A fonte de mercado não valida comportamentos, benefícios ou necessidades humanas.
 
 #### Marcações das capturas de C03
 
@@ -392,7 +406,7 @@ Fontes da análise C02 (Portal Único Siscomex):
 - [x] A síntese compara critérios comuns e produz recomendações.
 - [x] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
 
-> **Sobre o item não marcado (prints de telas/estados):** o requisito está parcialmente atendido. As capturas de C01 mostram recursos da própria interface analisada (High Density, Similar Cargo, Vehicle Compare). As de C02 combinam uma tela pública de entrada do Portal Único com uma página de documentação normativa, e não incluem a tela de trabalho do Auditor-Fiscal, que exige certificado digital. As de C03 são páginas de produto do fabricante: as telas da estação RIW da Smiths Detection não são publicamente acessíveis e a evidência de funcionalidade vem dos datasheets oficiais. Enquanto a equipe não obtiver material público que exiba as estações reais ou acesso supervisionado a uma delas, o item permanece parcialmente atendido, e as análises de C02 e C03 não concluem sobre layout.
+> **Sobre o item não marcado (prints de telas/estados):** o requisito está parcialmente atendido. As capturas de C01 mostram recursos da própria interface analisada (High Density, Similar Cargo, Vehicle Compare). As de C02 combinam uma tela pública de entrada do Portal Único com uma página de documentação normativa, e não incluem a tela de trabalho do Auditor-Fiscal, que exige certificado digital. As de C03 combinam páginas de produto e reproduções da interface na brochura oficial consultada em 15/11/2026; permitem observar elementos estáticos da versão ilustrada, sem avaliação de uso ou confirmação de versão corrente. O item permanece parcialmente atendido por C02, sem acesso à tela de trabalho do Auditor-Fiscal. Não se generaliza sobre usabilidade a partir das capturas de divulgação.
 
 ## Histórico de revisões
 
