@@ -101,7 +101,7 @@ As descrições iniciais de autoencoder/mapa residual e a evolução para classi
 
 ## 2.2 Metas da Entrega 8
 
-A [Entrega 8](docs/08_engenharia_usabilidade.md) define a plataforma demonstrativa, os limites do modelo e as metas MU01–MU06. A revisão pela aula 8 explicita Mayhew e relaciona cada princípio ao contexto, à referência, à justificativa e ao link. São critérios de projeto, sem avaliações executadas: comparação (MU01), compreensão da IA (MU02), parecer completo (MU03), tempo de registro (MU04), prevenção/recuperação (MU05) e facilidade percebida (MU06). A população prevista tem três participantes externos; eventual uso de proxies limita as conclusões à interação.
+A [Entrega 8](docs/08_engenharia_usabilidade.md) define a plataforma demonstrativa, os limites do modelo e as metas MU01–MU06. A revisão pela aula 8 explicita Mayhew e relaciona cada princípio ao contexto, à referência, à justificativa e ao link. São critérios de projeto, sem avaliações executadas: comparação (MU01), compreensão da IA (MU02), parecer completo (MU03), tempo de registro (MU04), prevenção/recuperação (MU05) e satisfação declarada (MU06). A população prevista tem três participantes externos; eventual uso de proxies limita as conclusões à interação.
 
 R01/AC02/PF01 serão avaliados por MU01/MU02; R03/AC03/PF02 por MU03–MU05; MU06 cobre ambos. Não há nova evidência sobre rotina profissional, metas portuárias ou calibração do modelo. Simulação de resultados e latência é declarada; P03 permanece stakeholder.
 
