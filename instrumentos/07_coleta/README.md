@@ -23,7 +23,7 @@ Uma eventual recusa não conta como resposta válida. As respostas brutas não d
 
 - I02: inserir a prancha real `assets/06_prototipos/mesa_inspecao.png`, com ampliação e acesso durante as respostas, atualizar a abertura e operacionalizar o campo de código. Conteúdo de perguntas permanece exclusivamente online; a análise admite retirar/substituir score.
 - I03: sincronizar abertura autossuficiente e orientações de aprofundamento com o protocolo da Entrega 7; continua ferramenta de notas do entrevistador.
-- Confirmar contato privado da equipe para exclusão e informar data exata em cada convite, sem consolidar antes dela.
+- Canal confirmado: unifkasilva@fei.edu.br. Configurar o código e o contato no Forms; informar em cada convite a data exata de sete dias após a sessão, sem consolidar antes dela.
 - Verificar os dois fluxos publicados sem login, sem enviar respostas de pesquisa, e preservar captura vazia da versão efetivamente revisada.
 
 [F] O controle de navegador estava indisponível durante esta revisão. Nenhuma dessas alterações online foi declarada como executada. Capturas atuais são da versão original; não iniciar aplicação antes de concluir a verificação. O planejamento e o fluxo de exclusão estão na Entrega 7.
