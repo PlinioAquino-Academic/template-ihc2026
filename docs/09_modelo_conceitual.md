@@ -136,7 +136,7 @@ O título do diagrama é apenas um agrupamento conceitual, sem objetivo raiz adi
 
 ![Mapa consolidado de objetivos finais e instrumentais](../assets/09_modelo_conceitual/mapa_objetivos.svg)
 
-[Fonte Mermaid editável](../assets/09_modelo_conceitual/mapa_objetivos.mmd). Elipses são finais, retângulos são instrumentais diretos e retângulos tracejados são indiretos. O papel aparece em cada objetivo; moldura tracejada de finais identifica sua realização fora da Mesa. Cores são dispensáveis para a leitura.
+[Fonte Mermaid editável](../assets/09_modelo_conceitual/mapa_objetivos.mmd). Elipses são finais, retângulos são instrumentais diretos e retângulos tracejados são indiretos. O papel aparece em cada objetivo; moldura tracejada de finais identifica sua realização fora da Mesa. Cores são dispensáveis para a leitura. No SVG, cada coluna mostra as relações com um final; IDs repetidos representam objetivos compartilhados, não novos objetivos.
 
 ### Dicionário de objetivos
 
