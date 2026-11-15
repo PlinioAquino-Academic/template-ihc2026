@@ -55,6 +55,10 @@ Dashboard, fila priorizada, login, CRUD e administração não entram no esboço
 
 **Caminho principal:** PP01 → PP02 → PP03 → PP04 → PP05. Uma análise sem região a registrar pode seguir de PP02/PP03 para PP05. Os caminhos de erro permitem corrigir a entrada ou voltar ao parecer. São comportamentos propostos no protótipo, não uma implementação concluída.
 
+![Estados essenciais PP01 a PP06](../assets/06_prototipos/estados_prototipo_pp01_pp06.svg)
+
+*Figura 2. Estados da interação de P01, incluindo entrada inválida, registro incompleto e retornos.*
+
 ## 4. Simulação / walkthrough
 
 Esta seção resume a simulação já registrada na versão anterior da entrega. Participou um **colega de curso que não elaborou as telas**, em uma iteração formativa; isso não substitui os participantes finais da Entrega 14.

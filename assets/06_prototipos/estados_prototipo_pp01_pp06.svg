@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920">
+  <defs>
+    <style>
+      .bg { fill: #fbfaf8; }
+      .header-title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #1e1e1e; }
+      .header-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; fill: #555555; }
+      .card { fill: #ffffff; stroke: #2c3e50; stroke-width: 2; rx: 8; }
+      .card-err { fill: #fdfaff; stroke: #7e22ce; stroke-width: 2; rx: 8; }
+      .card-rev { fill: #f7fee7; stroke: #15803d; stroke-width: 2.2; rx: 8; }
+      .card-head { fill: #2c3e50; rx: 6; }
+      .card-head-err { fill: #6b21a8; rx: 6; }
+      .card-head-rev { fill: #166534; rx: 6; }
+      .card-title { font-family: 'Consolas', monospace; font-size: 13px; font-weight: 700; fill: #ffffff; }
+      .lbl { font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; font-weight: 700; fill: #1e293b; }
+      .txt { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11.5px; fill: #334155; }
+      .txt-sm { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10.5px; fill: #475569; }
+      .wire-box { fill: #f8fafc; stroke: #94a3b8; stroke-width: 1.4; rx: 4; }
+      .wire-dash { fill: #fffaf0; stroke: #dd6b20; stroke-width: 1.6; stroke-dasharray: 5,3; rx: 4; }
+      .wire-roi-ai { fill: rgba(239,68,68,0.18); stroke: #dc2626; stroke-width: 1.8; stroke-dasharray: 4,2; }
+      .wire-roi-user { fill: rgba(37,99,235,0.12); stroke: #2563eb; stroke-width: 1.8; }
+      .btn-orange { fill: #ea580c; rx: 4; }
+      .btn-green { fill: #16a34a; rx: 4; }
+      .btn-red { fill: #dc2626; rx: 4; }
+      .btn-txt { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10.5px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="920" class="bg"/>
+  <rect x="12" y="12" width="1376" height="896" fill="none" stroke="#d0d7de" stroke-width="1.5" rx="10"/>
+
+  <text x="34" y="44" class="header-title">Estados numerados do protótipo de baixa fidelidade (PP01 a PP06) derivados do tldraw</text>
+  <text x="34" y="66" class="header-sub">Recortes de estado da "Mesa de inspeção" mostrando controles que disparam transições, comparação com/sem mapa, marcação, prevenção de erro e revisão pós-simulação</text>
+
+  <!-- ================= PP01: Estado Inicial (Sem imagem aberta) ================= -->
+  <g transform="translate(34, 88)">
+    <rect width="424" height="380" class="card"/>
+    <rect x="0" y="0" width="424" height="32" class="card-head"/>
+    <text x="14" y="21" class="card-title">PP01 - Sem imagem aberta (Aguardando entrada)</text>
+
+    <!-- Mini Topbar -->
+    <rect x="14" y="44" width="396" height="28" class="wire-box"/>
+    <text x="24" y="62" class="lbl">▦ Mesa de inspeção · nenhum arquivo aberto</text>
+    <rect x="322" y="48" width="82" height="20" class="btn-orange"/>
+    <text x="363" y="62" class="btn-txt">Abrir imagem</text>
+
+    <!-- Left/Center/Right layout -->
+    <rect x="14" y="80" width="88" height="200" class="wire-box"/>
+    <text x="20" y="98" class="txt-sm" font-weight="700">AJUSTES</text>
+    <text x="20" y="116" class="txt-sm" fill="#94a3b8">(Desabilitado</text>
+    <text x="20" y="130" class="txt-sm" fill="#94a3b8">sem imagem)</text>
+
+    <rect x="108" y="80" width="208" height="200" class="wire-box"/>
+    <rect x="120" y="125" width="184" height="95" class="wire-dash"/>
+    <text x="212" y="162" class="lbl" text-anchor="middle" fill="#c05621">Arraste uma imagem de raio-X</text>
+    <text x="212" y="179" class="txt-sm" text-anchor="middle" fill="#c05621">para cá (só sem imagem aberta)</text>
+    <text x="212" y="198" class="txt-sm" text-anchor="middle">PNG, JPG, BMP ou TIFF</text>
+
+    <rect x="322" y="80" width="88" height="200" class="wire-box"/>
+    <text x="328" y="98" class="txt-sm" font-weight="700">PARECER</text>
+    <text x="328" y="116" class="txt-sm" fill="#94a3b8">Aguardando</text>
+    <text x="328" y="130" class="txt-sm" fill="#94a3b8">triagem...</text>
+
+    <text x="14" y="302" class="lbl">Gatilhos de saída (Controles):</text>
+    <text x="14" y="320" class="txt">• Clicar em "Abrir imagem" ou soltar arquivo na área tracejada</text>
+    <text x="14" y="337" class="txt">• Se válido: envia POST /api/analisar e avança para PP02</text>
+    <text x="14" y="354" class="txt">• Se formato inválido ou falha local: exibe aviso em PP06a</text>
+  </g>
+
+  <!-- ================= PP02: Triagem com Mapa de Atenção Sobreposto ================= -->
+  <g transform="translate(488, 88)">
+    <rect width="424" height="380" class="card"/>
+    <rect x="0" y="0" width="424" height="32" class="card-head"/>
+    <text x="14" y="21" class="card-title">PP02 - Triagem do modelo e Mapa Sobreposto</text>
+
+    <!-- Mini Topbar -->
+    <rect x="14" y="44" width="396" height="28" class="wire-box"/>
+    <text x="22" y="62" class="lbl">▦ conteiner_BR4491.png</text>
+    <rect x="295" y="48" width="110" height="20" class="btn-orange"/>
+    <text x="350" y="62" class="btn-txt">Segure comparar (C)</text>
+
+    <!-- Center Canvas + Right Parecer -->
+    <rect x="14" y="80" width="240" height="200" class="wire-box"/>
+    <text x="22" y="96" class="txt-sm" font-weight="700">✥ Mover | Lupa | Marcar | 100%</text>
+    <rect x="26" y="106" width="216" height="162" fill="#e2e8f0" stroke="#64748b"/>
+    <!-- Simulated container bars + Grad-CAM ROI -->
+    <ellipse cx="155" cy="175" rx="42" ry="32" fill="rgba(249,115,22,0.45)" stroke="#ea580c"/>
+    <rect x="110" y="140" width="90" height="70" class="wire-roi-ai"/>
+    <text x="155" y="134" class="txt-sm" text-anchor="middle" fill="#c2410c" font-weight="700">região de maior atenção</text>
+
+    <rect x="262" y="80" width="148" height="200" class="wire-box"/>
+    <text x="270" y="98" class="lbl" fill="#dc2626">Indício de anomalia</text>
+    <rect x="270" y="106" width="130" height="10" fill="#fee2e2" stroke="#dc2626"/>
+    <rect x="270" y="106" width="118" height="10" fill="#dc2626"/>
+    <line x1="361" y1="102" x2="361" y2="120" stroke="#1e293b" stroke-width="2"/>
+    <text x="270" y="130" class="txt-sm">94% · limiar 70% (calibrado)</text>
+    <text x="270" y="150" class="txt-sm">[x] Mostrar onde olhou</text>
+    <text x="270" y="168" class="txt-sm">Intensidade: [====o==]</text>
+    <text x="270" y="186" class="txt-sm">[x] Destacar região</text>
+
+    <text x="14" y="302" class="lbl">Gatilhos de saída (Controles):</text>
+    <text x="14" y="320" class="txt">• Ajustar "Intensidade do mapa" ou chaves de exibição (H30, H31)</text>
+    <text x="14" y="337" class="txt">• Pressionar "Segure para comparar (C)" ou ajustes → PP03</text>
+    <text x="14" y="354" class="txt">• Selecionar ferramenta "Marcar" na barra do canvas → PP04</text>
+  </g>
+
+  <!-- ================= PP03: Comparação Rápida (Segure C) e Ajustes ================= -->
+  <g transform="translate(942, 88)">
+    <rect width="424" height="380" class="card"/>
+    <rect x="0" y="0" width="424" height="32" class="card-head"/>
+    <text x="14" y="21" class="card-title">PP03 - Comparação sem mapa (C) e Tratamentos</text>
+
+    <rect x="14" y="44" width="142" height="236" class="wire-box"/>
+    <text x="22" y="62" class="lbl" fill="#ea580c">Funções rápidas</text>
+    <text x="22" y="80" class="txt-sm">[Original] [Penetração alta]</text>
+    <text x="22" y="96" class="txt-sm">[Negativo] [Super realce]</text>
+    <text x="22" y="118" class="lbl" fill="#ea580c">Exposição e Realce</text>
+    <text x="22" y="134" class="txt-sm">Brilho / Contraste / Bordas</text>
+    <text x="22" y="156" class="lbl" fill="#ea580c">Densidade e cor</text>
+    <text x="22" y="172" class="txt-sm">Faixa (denso ↔ leve)</text>
+    <text x="22" y="188" class="txt-sm">[Esmaecer] [Isolar faixa]</text>
+    <text x="22" y="206" class="txt-sm">Paleta: cinza ▾ (térmica)</text>
+    <text x="22" y="226" class="txt-sm" fill="#64748b">"A cor indica só densidade"</text>
+
+    <rect x="164" y="44" width="246" height="236" class="wire-box"/>
+    <rect x="174" y="50" width="226" height="22" class="btn-orange"/>
+    <text x="287" y="65" class="btn-txt">Segure para comparar (C) [ATIVO]</text>
+    <rect x="174" y="80" width="226" height="190" fill="#cbd5e1" stroke="#475569"/>
+    <text x="287" y="140" class="lbl" text-anchor="middle" fill="#1e293b">Radiografia com filtro ativo</text>
+    <text x="287" y="158" class="txt-sm" text-anchor="middle" fill="#334155">(Mapa de calor oculto enquanto C</text>
+    <text x="287" y="174" class="txt-sm" text-anchor="middle" fill="#334155">está pressionado — preserva filtro)</text>
+    <circle cx="352" cy="228" r="28" fill="#ffffff" stroke="#ea580c" stroke-width="2.2"/>
+    <text x="352" y="232" class="lbl" text-anchor="middle" fill="#ea580c">lupa</text>
+
+    <text x="14" y="302" class="lbl">Gatilhos de saída (Controles):</text>
+    <text x="14" y="320" class="txt">• Soltar tecla (C) restaura imediatamente o mapa sobreposto (PP02)</text>
+    <text x="14" y="337" class="txt">• Ajustes rodam em Canvas 2D local sem nova chamada ao modelo</text>
+    <text x="14" y="354" class="txt">• Ativar "Marcar" para delimitar achado radiográfico → PP04</text>
+  </g>
+
+  <!-- ================= PP04: Marcação de Região e Comentário ================= -->
+  <g transform="translate(34, 498)">
+    <rect width="424" height="390" class="card"/>
+    <rect x="0" y="0" width="424" height="32" class="card-head"/>
+    <text x="14" y="21" class="card-title">PP04 - Marcação de Região (ROI) e Comentário</text>
+
+    <rect x="14" y="44" width="210" height="230" class="wire-box"/>
+    <text x="22" y="62" class="lbl" fill="#2563eb">Ferramenta ativa: [Marcar]</text>
+    <rect x="24" y="72" width="190" height="190" fill="#e2e8f0" stroke="#64748b"/>
+    <rect x="52" y="118" width="96" height="68" class="wire-roi-user"/>
+    <rect x="52" y="118" width="20" height="18" fill="#2563eb"/>
+    <text x="62" y="131" class="btn-txt">1</text>
+    <text x="100" y="204" class="txt-sm" fill="#1d4ed8" font-weight="700">Região 1 (64 × 48 px)</text>
+
+    <rect x="232" y="44" width="178" height="230" class="wire-box"/>
+    <text x="240" y="64" class="lbl" fill="#ea580c">Regiões marcadas</text>
+    <rect x="240" y="74" width="162" height="110" fill="#eff6ff" stroke="#2563eb" rx="4"/>
+    <text x="248" y="92" class="lbl" fill="#1d4ed8">[1] Região 1 · 64 × 48 px</text>
+    <rect x="248" y="102" width="146" height="52" fill="#ffffff" stroke="#93c5fd"/>
+    <text x="254" y="118" class="txt-sm">"Objeto denso retangular</text>
+    <text x="254" y="133" class="txt-sm">incompatível com carga</text>
+    <text x="254" y="148" class="txt-sm">declarada no fundo."</text>
+    <text x="248" y="174" class="txt-sm" fill="#dc2626">[Remover marcação]</text>
+
+    <text x="14" y="298" class="lbl">Gatilhos de saída (Controles):</text>
+    <text x="14" y="316" class="txt">• Arrastar no canvas cria retângulo numerado [1] e abre comentário</text>
+    <text x="14" y="333" class="txt">• Comentário individual vincula-se ao recorte da região no laudo (R03)</text>
+    <text x="14" y="350" class="txt">• Prosseguir ao bloco "Veredito final" no painel direito → PP05</text>
+    <text x="14" y="367" class="txt">• Atende diretamente T01 (sub-tarefa 3.2) e problema de CP02</text>
+  </g>
+
+  <!-- ================= PP05: Veredito Final e Emissão de Laudo PDF ================= -->
+  <g transform="translate(488, 498)">
+    <rect width="424" height="390" class="card"/>
+    <rect x="0" y="0" width="424" height="32" class="card-head"/>
+    <text x="14" y="21" class="card-title">PP05 - Veredito Final e Emissão de Laudo PDF</text>
+
+    <rect x="14" y="44" width="396" height="230" class="wire-box"/>
+    <text x="26" y="64" class="lbl" fill="#ea580c">Veredito final (Painel direito - PARECER)</text>
+
+    <rect x="26" y="76" width="176" height="32" class="btn-green"/>
+    <text x="114" y="96" class="btn-txt">Liberar carga</text>
+
+    <rect x="218" y="76" width="176" height="32" class="btn-red"/>
+    <text x="306" y="96" class="btn-txt">Inspeção física</text>
+
+    <rect x="26" y="120" width="368" height="28" fill="#ffffff" stroke="#94a3b8" rx="4"/>
+    <text x="34" y="138" class="txt">Inspetor: Gustavo Onofre (Operador - Matrícula 4092)</text>
+
+    <rect x="26" y="156" width="368" height="54" fill="#ffffff" stroke="#94a3b8" rx="4"/>
+    <text x="34" y="174" class="txt">Observações: Suspeita de ocultação no terço médio inferior</text>
+    <text x="34" y="191" class="txt">(Região 1, anomalia 94% &gt; limiar 70%). Encaminhar à RFB.</text>
+
+    <rect x="26" y="222" width="368" height="36" class="btn-orange"/>
+    <text x="210" y="244" class="btn-txt">Baixar laudo em PDF (POST /api/laudo)</text>
+
+    <text x="14" y="298" class="lbl">Gatilhos de saída (Controles):</text>
+    <text x="14" y="316" class="txt">• Selecionar veredito + preencher Inspetor e Observações (H17, RC04)</text>
+    <text x="14" y="333" class="txt">• Clicar em "Baixar laudo em PDF": gera documento com imagem,</text>
+    <text x="14" y="350" class="txt">  probabilidade, limiar 0,70, recortes das regiões e comentários (H28)</text>
+    <text x="14" y="367" class="txt">• Se faltar justificativa/região em decisão crítica → bloqueia em PP06b</text>
+  </g>
+
+  <!-- ================= PP06: Prevenção de Erros e Evolução Pós-Simulação ================= -->
+  <g transform="translate(942, 498)">
+    <rect width="424" height="390" class="card-rev"/>
+    <rect x="0" y="0" width="424" height="32" class="card-head-rev"/>
+    <text x="14" y="21" class="card-title">PP06 - Prevenção de Erro e Ajustes Pós-Simulação</text>
+
+    <!-- Error Prevention Box -->
+    <rect x="14" y="44" width="396" height="92" class="card-err"/>
+    <text x="24" y="63" class="lbl" fill="#6b21a8">PP06a / PP06b - Avisos de erro e bloqueio preventivo (H08, H12)</text>
+    <text x="24" y="81" class="txt-sm">• PP06a (Entrada): Arquivo corrompido ou servidor local offline → exibe</text>
+    <text x="24" y="95" class="txt-sm">  banner de diagnóstico com botão "Tentar novamente / Selecionar outro".</text>
+    <text x="24" y="111" class="txt-sm">• PP06b (Veredito): Bloqueia "Inspeção física" sem região/observação</text>
+    <text x="24" y="125" class="txt-sm">  e pede confirmação ao "Liberar carga" quando anomalia ≥ 70%.</text>
+
+    <!-- Post-simulation improvements Box -->
+    <rect x="14" y="146" width="396" height="132" fill="#ffffff" stroke="#15803d" stroke-width="1.6" rx="6"/>
+    <text x="24" y="165" class="lbl" fill="#166534">PP06c - Melhorias incorporadas após o Walkthrough (Seção 5):</text>
+    <text x="24" y="183" class="txt-sm">1. Resumo da Carga Declarada no topo (H11, C03, T02-M2): exibe</text>
+    <text x="24" y="197" class="txt-sm">   DI/DUIMP, NCM, mercadoria declarada e peso junto da radiografia.</text>
+    <text x="24" y="214" class="txt-sm">2. Terminologia institucional do veredito (H39, Portaria ALF/FNS 9/2024):</text>
+    <text x="24" y="228" class="txt-sm">   permite operar como "Sem ressalvas / Comunicar suspeita à RFB".</text>
+    <text x="24" y="245" class="txt-sm">3. Modo "Lado a lado" fixo além de "Segure para comparar (C)" (H30):</text>
+    <text x="24" y="259" class="txt-sm">   permite manter original e mapa visíveis ao desenhar marcações.</text>
+
+    <text x="14" y="298" class="lbl">Rastreabilidade direta:</text>
+    <text x="14" y="316" class="txt">• Conecta achados da simulação (Seção 4) às mudanças da Seção 5</text>
+    <text x="14" y="333" class="txt">• Preserva coerência com P01, P02, CP01, CP02 e T01 a T06</text>
+    <text x="14" y="350" class="txt">• Prepara as alternativas para avaliação nas Entregas 11 a 14</text>
+  </g>
+</svg>
