@@ -80,6 +80,8 @@ O participante indicou onde clicaria, explicou o que entendia e o que esperava a
 
 As evidências dizem respeito à compreensão do esboço por um colega, sem validar a rotina ou as preferências do profissional de inspeção.
 
+**Proveniência da sessão:** [F] perfil e forma de realização estão descritos acima. [?] A data exata, duração e notas primárias anonimizadas não constam dos registros disponíveis. As linhas OBS-01–OBS-06 são paráfrases preservadas do relato da equipe, sem transcrição verificável. A data da entrega não é tomada como data da sessão. Complementar esses campos somente se os autores recuperarem o registro; não é necessário repetir a sessão.
+
 ## 5. Alterações após a simulação
 
 [H] A prancha abaixo representa a revisão projetada a partir de OBS-01–OBS-06. A Figura 1 preserva o esboço testado. A revisão ainda não foi submetida a novo walkthrough nem validada com profissionais.
