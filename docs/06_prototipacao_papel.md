@@ -50,7 +50,7 @@ Dashboard, fila priorizada, login, CRUD e administração não entram no esboço
 | PP02 — resultado disponível | Radiografia e indicação do modelo para exame (T01/T02). | Ajustes ou comparação levam a PP03; “Marcar” leva a PP04. |
 | PP03 — comparação | Exame do original com e sem a camada do modelo (T02). | “Segure para comparar (C)” alterna a camada; soltar retorna a PP02. “Marcar” leva a PP04. |
 | PP04 — região marcada | Registro de área de interesse e comentário (T03). | Criar, editar ou excluir marcação; preencher o parecer leva a PP05. |
-| PP05 — parecer | Conclusão, responsável e observações (T03). | “Baixar laudo em PDF” conclui a exportação; campos incompletos levam a PP06b. |
+| PP05 — parecer técnico | Conclusão da análise da imagem, responsável e observações (T03). | “Baixar laudo em PDF” conclui a exportação; campos incompletos levam a PP06b. |
 | PP06a/PP06b — erro e retorno | Entrada inválida ou registro incompleto. | Selecionar outro arquivo retorna a PP01; revisar região ou campos retorna a PP04/PP05, preservando os dados. |
 
 **Caminho principal:** PP01 → PP02 → PP03 → PP04 → PP05. Uma análise sem região a registrar pode seguir de PP02/PP03 para PP05. Os caminhos de erro permitem corrigir a entrada ou voltar ao parecer. São comportamentos propostos no protótipo, não uma implementação concluída.
@@ -91,7 +91,7 @@ As evidências dizem respeito à compreensão do esboço por um colega, sem vali
 | Apenas nome do arquivo no cabeçalho. | Faltava referência sobre a mercadoria. | Apresentar identificação do caso e descrição da carga. | OBS-01; H11, T01/T02. |
 | Comparação dependia de manter C pressionado. | Marcar a região interrompia a comparação. | Manter o atalho e oferecer alternância persistente ou vista lado a lado. | OBS-02; H30, RC09. |
 | Porcentagem sem explicação de seu alcance. | Parecia indicar certeza de um tipo de ilícito. | Explicar que se trata de resultado do modelo, sujeito a revisão humana. | OBS-03; H31/H37, RC03. |
-| Ações chamadas “Liberar carga” e “Inspeção física”. | Confundiam parecer e autoridade de decisão. | Usar “Sem ressalvas na imagem” e “Suspeita apontada” para a conclusão da análise. | OBS-04; H39, RC07. |
+| Ações chamadas “Liberar carga” e “Inspeção física”. | Confundiam parecer e autoridade de decisão. | Usar “Conclusão da análise da imagem”, com “Sem ressalvas na imagem” e “Suspeita apontada”. O parecer não libera nem retém a carga. | OBS-04; H39, RC07. |
 | Comentário da região apenas implícito. | Não estava claro onde escrever. | Exibir comentário junto de cada região e permitir edição. | OBS-05; R03, T03. |
 | Exportação sem validação visível. | Podia gerar parecer incompleto. | Informar omissões, manter os dados e solicitar correção antes da emissão. | OBS-06; H08, RC04. |
 
