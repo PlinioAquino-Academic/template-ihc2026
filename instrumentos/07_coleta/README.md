@@ -12,12 +12,21 @@ Os links de edição exigem permissão da conta proprietária; conhecer o endere
 ## Verificação
 
 - Acesso às duas seções de cada formulário em sessão sem login.
-- Conteúdo conferido com os roteiros do repositório; campos de explicação/correção são opcionais.
+- Conferência original em 05/11/2026; não comprova atualização dos formulários após o feedback de 15/11/2026.
 - Coleta de e-mail e limitação de uma resposta por conta desativadas.
 - Consentimento inicial; o código configura a recusa para encerrar antes das perguntas.
 - Nenhuma resposta enviada durante a conferência. Capturas vazias em [assets/07_coleta](../../assets/07_coleta/).
 
-Uma eventual recusa enviada não deve contar como resposta válida. Antes de aplicação, a equipe deve definir o canal para pedidos de exclusão por código e restringir o acesso às respostas brutas. As respostas não devem ser publicadas no repositório.
+Uma eventual recusa não conta como resposta válida. As respostas brutas não devem ser publicadas no repositório.
+
+## Pendências online após o feedback de 15/11/2026
+
+- I02: inserir a prancha real `assets/06_prototipos/mesa_inspecao.png`, com ampliação e acesso durante as respostas, atualizar a abertura e operacionalizar o campo de código. Conteúdo de perguntas permanece exclusivamente online; a análise admite retirar/substituir score.
+- I03: sincronizar abertura autossuficiente e orientações de aprofundamento com o protocolo da Entrega 7; continua ferramenta de notas do entrevistador.
+- Confirmar contato privado da equipe para exclusão e informar data exata em cada convite, sem consolidar antes dela.
+- Verificar os dois fluxos publicados sem login, sem enviar respostas de pesquisa, e preservar captura vazia da versão efetivamente revisada.
+
+[F] O controle de navegador estava indisponível durante esta revisão. Nenhuma dessas alterações online foi declarada como executada. Capturas atuais são da versão original; não iniciar aplicação antes de concluir a verificação. O planejamento e o fluxo de exclusão estão na Entrega 7.
 
 ## Manutenção
 

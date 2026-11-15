@@ -223,7 +223,10 @@ A Parte A segue os cinco grupos da aula 7 (Parte A, páginas 2–8 e exercício 
 - [x] Hipóteses e lacunas da Entrega 1 retomadas.
 - [x] Dados, fontes e decisões de design relacionados ao projeto.
 - [x] Uma Parte A por integrante, com autoria e aspectos éticos.
-- [x] Três instrumentos completos, com técnicas distintas e questionário incluído.
+- [x] Três métodos permitidos e distintos planejados: investigação contextual, questionário e entrevista.
+- [ ] I02 com estímulo visual, abertura e código atualizados e verificados online.
+- [ ] Canal privado de exclusão confirmado antes da aplicação.
+- [ ] I03 online sincronizado com a abertura e os aprofundamentos do protocolo.
 - [x] Procedimentos de aplicação e análise definidos.
 - [x] Perguntas sem pressupor necessidade de funcionalidades.
 - [x] Pesquisa documental realizada, com fontes e localização dos achados.
