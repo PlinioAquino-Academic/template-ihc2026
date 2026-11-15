@@ -88,17 +88,20 @@ São **critérios propostos**, ainda sem resultados. Nas Entregas 12–14, preve
 
 “Sem ajuda” significa sem orientação do facilitador após a instrução; consultar a ajuda da própria interface é permitido e será registrado. Em amostra de três pessoas, apresentar contagens individuais, mediana e falhas, sem generalização estatística. Tempos acima do limite ou tarefas não concluídas permanecem no relatório, sem descarte para melhorar a meta.
 
-### 3.3 Prioridades
+### 3.3 Prioridades das cinco dimensões de Nielsen
 
-| Meta | Peso | Motivo |
-|---|---:|---|
-| MU01 | 20% | Comparação da imagem. |
-| MU02 | 25% | Compreensão do limite da IA. |
-| MU03 | 20% | Integridade do parecer. |
-| MU04 | 10% | Agilidade no registro. |
-| MU05 | 15% | Prevenção e recuperação. |
-| MU06 | 10% | Facilidade percebida. |
-| **Total** | **100%** | Pesos de prioridade, não resultados de avaliação. |
+[H] Pesos de projeto propostos pela equipe para o contexto atual, não resultados de avaliação ou percentuais de desempenho.
+
+| Dimensão de Nielsen | Peso | Justificativa no contexto | Metas específicas relacionadas |
+|---|---:|---|---|
+| Facilidade de aprendizado | 25% | Compreender resultado automático, marcações e parecer na primeira utilização, sem treinamento da tarefa avaliada. | MU01/MU02/MU03 |
+| Facilidade de memorização | 10% | Retomar comparação e registro após intervalo; a frequência profissional permanece hipótese. | MU01/MU03 como tarefas de referência; medir retenção exige sessão de retorno. |
+| Eficiência | 15% | Concluir o registro sem retrabalho, preservando a qualidade da análise. | MU04; recuperação em MU05 |
+| Baixa taxa de erros | 35% | Evitar confusão entre indício, parecer e ato formal; impedir documentos incompletos e perda de dados. | MU02/MU03/MU05 |
+| Satisfação positiva do usuário | 15% | Avaliar a experiência declarada na comparação e no registro. | MU06 |
+| **Total** | **100%** | Prioridade relativa das dimensões. | MU01–MU06 continuam critérios específicos. |
+
+As MU dizem o que será observado no protótipo; os pesos expressam a importância das cinco dimensões. MU01/MU03 na primeira utilização podem informar aprendizado; não demonstram memorização. Para esta última, planejar nas Entregas 12–14 retorno após sete dias, repetindo comparação e registro sem reapresentar os controles, registrando sucesso, ajuda e tempo por participante. [H] Sete dias é uma condição inicial de teste, não uma frequência de trabalho observada. Se não houver retorno, relatar memorização como não avaliada.
 
 ## 4. Ciclo de revisão
 

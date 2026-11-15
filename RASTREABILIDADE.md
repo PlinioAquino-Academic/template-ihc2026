@@ -103,6 +103,8 @@ As descrições iniciais de autoencoder/mapa residual e a evolução para classi
 
 A [Entrega 8](docs/08_engenharia_usabilidade.md) define a plataforma demonstrativa, os limites do modelo e as metas MU01–MU06. A revisão pela aula 8 explicita Mayhew e relaciona cada princípio ao contexto, à referência, à justificativa e ao link. São critérios de projeto, sem avaliações executadas: comparação (MU01), compreensão da IA (MU02), parecer completo (MU03), tempo de registro (MU04), prevenção/recuperação (MU05) e satisfação declarada (MU06). A população prevista tem três participantes externos; eventual uso de proxies limita as conclusões à interação.
 
+[H] Prioridades de Nielsen: aprendizado 25%, memorização 10%, eficiência 15%, baixa taxa de erros 35%, satisfação positiva 15% (total 100%). MU01–MU03 informam aprendizado na primeira utilização; MU02/MU03/MU05 tratam erros; MU04 trata eficiência; MU06 trata satisfação. Memorização exige sessão de retorno, não é comprovada pelas MU na primeira sessão.
+
 R01/AC02/PF01 serão avaliados por MU01/MU02; R03/AC03/PF02 por MU03–MU05; MU06 cobre ambos. Não há nova evidência sobre rotina profissional, metas portuárias ou calibração do modelo. Simulação de resultados e latência é declarada; P03 permanece stakeholder.
 
 ## 2.3 Modelo conceitual da Entrega 9
