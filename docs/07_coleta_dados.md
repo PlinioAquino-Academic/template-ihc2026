@@ -85,22 +85,44 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 
 ## Parte B — instrumentos de coleta
 
-### I01 — pesquisa documental
+### I01 — investigação contextual
 
-**Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5<br>
-**Objetivo:** investigar as hipóteses prioritárias em documentos sobre inspeção de cargas.<br>
-**Público representado:** P01 e P02; P03 como stakeholder.
+**Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5.<br>
+**Técnica:** investigação contextual, distinta do questionário I02 e da entrevista I03.<br>
+**Situação:** [H] instrumento planejado, não aplicado. A pesquisa documental ED01–ED05 é complementar, não cumpre esta responsabilidade individual.
 
-**Procedimento:**
+**Objetivo:** compreender a atividade situada de exame e registro: sequência real, informações consultadas, alternância entre ferramentas, interrupções, dúvidas e comunicação com quem decide (H01/H05/H11/H16/H28/H30/H31/H39/H41/?08). Observar o trabalho e esclarecer brevemente a ação no seu contexto, sem conduzir uma entrevista isolada da atividade.
 
-1. Buscar fontes oficiais sobre inspeção não invasiva, transmissão de imagens e conferência aduaneira; consultar também as referências da Entrega 2 e os autores do método de visualização.
-2. Selecionar documentos públicos com autoria, contexto e relação com as perguntas da pesquisa. Excluir materiais restritos ou sem origem verificável.
-3. Ler o conteúdo em contexto e preencher a ficha abaixo para cada achado.
-4. Comparar o resultado com as hipóteses e registrar o que foi sustentado, refinado ou ficou sem resposta.
+**Público/recrutamento:** planejar três sessões individuais: duas com adultos que interpretam radiografias de carga (P01) e uma com quem recebe a análise para decidir (P02). Incluir experiência direta na respectiva atividade e autorização institucional para observação; excluir menores, quem não consentir e situações em que não seja possível evitar dados sigilosos. Convidar por contato institucional autorizado, informando finalidade acadêmica, duração de 45–60 minutos, ausência de avaliação individual e proibição de fornecer dados de operações. Não abordar profissionais durante fiscalização nem coletar contato no instrumento.
 
-**Ficha de extração:** código do documento; título e autor; endereço e data de acesso; seção/página; hipótese relacionada; informação encontrada; interpretação para o projeto; limite da evidência.
+**Alternativa de acesso:** [?] recrutamento profissional ainda não disponível. Se for utilizado adulto de logística/área próxima, realizar somente simulação com caso fictício e registrar `proxy/simulação`. A simulação permite verificar entendimento e coordenação proposta; não demonstra rotina, frequência, pressão ou prática de P01/P02. Não misturar seus registros com os profissionais. Não realizar observação real sem as autorizações necessárias.
 
-**Análise:** agrupar as informações em papéis, dados da carga, registro e visualização. Distinguir procedimento institucional de recurso anunciado pelo fabricante. Não interpretar ausência de informação como prova de que uma função não existe. O resultado da aplicação está na seção seguinte.
+**Abertura/consentimento a ler:** “Sou integrante da equipe 09 de IHC da FEI. Queremos entender como informações e ferramentas apoiam o exame de imagens de cargas e o registro da conclusão. A sessão dura de 45 a 60 minutos e não avalia seu desempenho pessoal. Participar é voluntário; pode pular explicações, pedir pausa ou encerrar sem prejuízo. Usaremos somente notas anonimizadas, sem gravação, fotografias, nomes, placas, empresas, números de processo ou cópias de telas operacionais. Não mostre informações sigilosas; interromperemos o registro se elas surgirem. As notas ficarão restritas à equipe e serão descartadas até 90 dias após o encerramento da disciplina. Antes de começar, você receberá código, prazo e canal privado para pedir exclusão, conforme o procedimento ético desta entrega. Você autoriza a observação e as notas escritas?” Registrar sim/não; se não, encerrar sem notas de trabalho.
+
+**Procedimento padronizado:**
+
+1. Confirmar critério de inclusão e permissão; preparar ficha sem identificação pessoal. Distinguir profissional em contexto real de proxy em simulação. Entregar código e informar prazo/canal de exclusão antes do consentimento. Não aplicar enquanto a pendência de contato não estiver resolvida.
+2. Apresentar objetivo e ler a abertura; registrar consentimento e autorização para notas. O participante controla o que pode ser observado. Preferir exemplo sanitizado pela instituição; em proxy, usar caso fictício e os estados da Entrega 6.
+3. Pedir que mostre uma atividade de análise/recebimento do resultado que conhece diretamente. Observar primeiro, sem demonstrar a solução da equipe nem direcionar a sequência.
+4. Registrar eventos e esclarecer no momento adequado com o roteiro abaixo; evitar interromper decisões críticas. Não cronometar produtividade profissional nem transcrever dados da carga.
+5. Recapitular a sequência anotada e pedir correção da interpretação, distinguindo observação, explicação do participante e inferência da equipe. Não apresentar preferências como regra geral.
+6. Encerrar, agradecer, reafirmar o código/prazo/canal e guardar as notas em área restrita. Publicar somente síntese anonimizada, com limites do contexto e da amostra.
+
+**Instrumento integral de observação e esclarecimento:**
+
+| Bloco | O que observar | Pedido neutro de esclarecimento | Hipóteses |
+|---|---|---|---|
+| Início e papel | Evento que leva à análise e quem assume cada etapa. | “O que iniciou esta atividade e qual parte cabe a você?” | H01/H39 |
+| Contexto do caso | Tipos de informação consultados e onde são encontrados, sem registrar valores reais. | “Que informação você procura neste momento e para quê?” | H11/H26 |
+| Sequência e ferramentas | Mudanças de ferramenta, comparação, realce e exame da imagem. | “O que você procura esclarecer com esta ação? Como sabe quando seguir?” | H05/H09/H30/H43 |
+| Dúvida e resultado automático | Estratégia perante indicação insuficiente ou discordância, se existir no trabalho observado. | “O que faz quando a informação não é suficiente? Usa alguma indicação automática? Como a interpreta?” | H12/H31/H37 |
+| Interrupção e prioridade | Interrupções efetivamente ocorridas e retomada, sem supor fila. | “Como retoma o que estava fazendo? Quem define o próximo caso, quando isso se aplica?” | H16/H41 |
+| Registro e passagem entre papéis | Tipo de registro, destinatário e confirmação de recebimento. | “O que precisa acompanhar essa conclusão e quem recebe depois?” | H28/H32/H39/?08 |
+| Retorno e avaliação | Como verifica se terminou e se recebe algum desfecho. | “Como percebe que sua parte terminou? Que retorno recebe sobre o resultado?” | H38/?08 |
+
+**Ficha por evento:** código da sessão; perfil amplo; real/proxy; contexto sanitizado; minuto relativo; ação observada; tipo de ferramenta/informação; dificuldade ou interrupção; esclarecimento parafraseado; interpretação da equipe; hipótese associada; correção solicitada pelo participante. Não registrar imagem, identificadores ou descrições de ameaças específicas. Assinalar `não observado` em vez de inferir ausência.
+
+**Análise:** reconstruir sequências de trabalho por perfil; agrupar alternância, comunicação, dúvidas e retomada. Comparar observação e explicação com ED01–ED05, marcando sustentação parcial, divergência ou lacuna em cada hipótese. Separar proxies e contextos; contagem de eventos em três sessões não representa frequência profissional. Só propor mudança em comparação, filtros, contexto da carga ou parecer quando houver evidência compatível, registrada na matriz.
 
 ### I02 — questionário
 
