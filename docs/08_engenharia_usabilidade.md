@@ -70,7 +70,8 @@ O link do material de aula exige acesso ao Moodle da FEI; a referência foi conf
 |---|---|---|---|
 | Entender o papel da IA | P01/P02, leitura da triagem | Explicar que mapa e indicador apoiam a análise, sem provar ilícito. | Evitar confiança excessiva no resultado (H31/H37). |
 | Comparar sem perder o contexto | P01, T01/T02 | Alternar a camada e localizar a mesma região na imagem original. | Preservar a leitura da radiografia (H30, RC09). |
-| Produzir um parecer compreensível | P01/P02, T03/T05/T06 | Relacionar identificação do caso, região, comentário e conclusão. | Apoiar o encaminhamento da análise (R03). |
+| Produzir um parecer compreensível | P01, T03/PF02 | Parecer com caso, região comentada e conclusão técnica, produzido sem ajuda. | Preservar o achado na emissão (R03). |
+| Compreender o parecer recebido | P02, consulta externa associada a T05 | Localizar caso, região, comentário e conclusão no PDF, identificar informação insuficiente e explicar seus limites. | Avaliar a comunicação do artefato recebido; não avaliar T06 nem uso de uma interface de P02 na Mesa. |
 
 ### 3.2 Metas quantitativas
 
