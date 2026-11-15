@@ -49,9 +49,9 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 | Significado do mapa e do indicador do modelo | Explicar o resultado sem sugerir certeza de ilícito. | H31, H37 |
 | Equipamento e contexto de uso documentados | Definir premissas de tela e identificar o que ainda depende de pesquisa com usuários. | H14, H15, H16 |
 
-**De quem/fontes:** documentos sobre o trabalho de P01, publicados por fabricantes de scanners de carga e pesquisadores dos métodos utilizados. Incluir fontes com autoria e descrição do recurso; excluir radiologia médica e materiais sem origem identificável.
+**De quem/fontes:** [H] I01 observa intérpretes de radiografias de carga em contexto autorizado, para conhecer estratégias, dificuldades e ferramentas efetivamente utilizadas (H05/H09/H30/H43). Documentos de fabricantes e pesquisadores continuam fonte complementar, sem substituir a experiência observada. Excluir radiologia médica e materiais sem autoria.
 
-**Ética:** citar as fontes e respeitar a licença das imagens. Não publicar nomes de operadores, placas ou cargas identificáveis. O destaque do modelo deve ser apresentado como apoio à análise, sem atribuir a ele uma capacidade de identificar ilícitos que o TCC não demonstrou.
+**Ética:** observação em I01 depende de consentimento e autorização institucional, sem fotos ou gravação de telas; interromper notas diante de dado sigiloso. Em simulação com proxy, usar somente dados fictícios. Citar as fontes e respeitar a licença das imagens. Não publicar nomes de operadores, placas ou cargas identificáveis. O destaque do modelo deve ser apresentado como apoio à análise, sem atribuir a ele uma capacidade de identificar ilícitos que o TCC não demonstrou.
 
 ### A02 — registro e responsabilidades
 
@@ -63,9 +63,9 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 | Dados vinculados à imagem e forma de transmissão | Identificar o caso corretamente e evitar entrada manual desnecessária. | H11, H26 |
 | Registro e encaminhamento da suspeita | Definir o conteúdo do parecer e sua relação com o processo. | H06, H28, H32, ?08 |
 
-**De quem/fontes:** manuais públicos da Receita Federal e do Siscomex que descrevam os papéis de P01/P02, dados e procedimentos. Registrar a data e o alcance da fonte; uma orientação local não será tratada como regra de todos os portos.
+**De quem/fontes:** [H] investigar com participantes de análise/decisão em I02/I03 o entendimento do resultado e a comunicação/registro efetivos; I01 complementa com observação da passagem entre ferramentas e papéis. Manuais públicos continuam evidência secundária, respeitando alcance/data; uma orientação local não vale para todos os portos.
 
-**Ética:** não acessar declarações fiscais, processos identificáveis ou telas restritas. Usar apenas campos e procedimentos públicos. O PDF do protótipo é um registro de apoio, sem valor de autorização para desembaraço.
+**Ética:** I02 exige consentimento e análise por perfil, sem avaliar competência pessoal; I03 registra apenas notas autorizadas. Não acessar declarações fiscais, processos identificáveis ou telas restritas. Usar apenas campos e procedimentos públicos. O PDF do protótipo é um registro de apoio, sem valor de autorização para desembaraço.
 
 ### A03 — conferência física
 
@@ -77,9 +77,9 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 | Informações usadas para localizar e verificar a suspeita | Investigar o que precisa acompanhar o parecer. | H28, ?08 |
 | Registro do achado e retorno a quem analisou a imagem | Investigar a comunicação entre análise e conferência. | H17, H38, ?08 |
 
-**De quem/fontes:** documentação institucional sobre fiscalização, depositário e representante do importador. Incluir textos que diferenciem suas responsabilidades. A existência de conferência física, sozinha, não demonstra que P03 usa nossa interface.
+**De quem/fontes:** [H] I03 investiga com quem tem experiência direta na conferência que informações recebe, dificuldades e coordenação entre papéis. Documentação institucional complementa a definição de responsabilidades. A existência de conferência física não demonstra uso da Mesa por P03 (H42).
 
-**Ética:** não usar fotos de apreensões ou operações identificáveis. Os episódios dos cenários anteriores continuam ficcionais. A pesquisa não envolve gravações nem contato com equipes de fiscalização.
+**Ética:** não usar fotos de apreensões ou operações identificáveis. Os episódios dos cenários anteriores continuam ficcionais. [F] Ainda não houve contato com participantes; [H] I03 prevê contato autorizado, sem gravação, respeitando o direito de não responder e a exclusão por código.
 
 ### Procedimento de exclusão por código, antes de aplicar
 
