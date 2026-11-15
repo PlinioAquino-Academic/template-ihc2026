@@ -1,7 +1,7 @@
 # Entrega 8 — Ciclo de vida e engenharia de usabilidade
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 14/11/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 solução por equipe
 
 ## Objetivo da atividade
@@ -14,8 +14,8 @@ Antes das características da plataforma, separe:
 
 | Camada | O que pertence ao projeto | O que será avaliado em IHC |
 |---|---|---|
-| contribuição técnica do TCC | {{algoritmo/modelo/API/análise...}} | desempenho técnico não é substituído pelo teste de IHC |
-| camada de interação da disciplina | {{interface/fluxos}} | compreensão, eficácia, eficiência, satisfação, erros, acessibilidade etc. |
+| contribuição técnica do TCC | modelo | desempenho técnico não é substituído pelo teste de IHC |
+| camada de interação da disciplina | interface | compreensão, eficácia, eficiência, satisfação, erros, acessibilidade etc. |
 | integrações/dados simulados | {{...}} | {{limites do protótipo}} |
 
 Em um protótipo de disciplina, é aceitável simular processamento ou resultados quando a implementação técnica não estiver integrada, desde que isso seja declarado e a simulação seja suficiente para avaliar a interação.
