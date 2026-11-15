@@ -166,6 +166,8 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 
 **Procedimento:** confirmar inclusão e entregar código/prazo/canal; ler abertura e registrar consentimento; conduzir o roteiro com aprofundamentos; registrar paráfrases por tópico e marcar experiência direta ou suposição; recapitular, aceitar correções, agradecer e reafirmar exclusão/descarte. Não iniciar aplicação enquanto o canal privado não estiver definido. O roteiro textual abaixo é a referência para o entrevistador; o formulário online I03 é apenas apoio para notas e ainda precisa ser sincronizado e verificado com esta abertura.
 
+**Orientação de condução:** [H] usar o roteiro como guia flexível, seguindo a sequência relatada pelo participante. Para resposta geral, pedir “Pode descrever a última ocorrência sem identificar a operação?”, “O que acontece depois?”, “Que informação consulta?”, “Quem recebe?” e “Isso acontece no seu trabalho ou é uma possibilidade que imagina?”. Pedir exemplos sanitizados e separar prática observada pelo participante de opinião. Não oferecer termos da solução para completar a resposta nem insistir se houver sigilo. Registrar duração aproximada e notas com código, papel amplo, tópico, paráfrase, experiência direta/suposição e correções da recapitulação.
+
 **Roteiro:**
 
 1. Com quais atividades de inspeção ou despacho você tem experiência direta?
