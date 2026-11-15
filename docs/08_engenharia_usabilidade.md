@@ -59,9 +59,11 @@ Usabilidade deve ser discutida **no contexto de uso**. Metas quantitativas devem
 
 | ID | Dimensão | Métrica | Tarefa/escopo | Meta | Como medir | Justificativa |
 |---|---|---|---|---|---|---|
-| MU01 | eficácia | taxa de conclusão sem ajuda | T01 | ≥ {{x}}% | teste observado | {{...}} |
-| MU02 | eficiência | tempo mediano | T02 | ≤ {{tempo}} | cronômetro/log | {{...}} |
-| MU03 | satisfação | escala pós-tarefa | T01–T03 | ≥ {{valor}} | questionário | {{...}} |
+| MU01 | facilidade de Aprendizado | taxa de conclusão de execução sem ajuda | T01 | ≥ 90% | teste observado | {{...}} |
+| MU02 | facilidade de Memorização | taxa de conclusão em reexecução sem ajuda após intervalo de tempo | T01 | ≤ 95% | teste observado | {{...}} |
+| MU03 | eficiência | tempo médio de execução da tarefa | T01 | ≤ 5min | cronometragem no teste de usabilidade | {{...}} |
+| MU04 | taxa e gravidade de erros | número médio de erros cometidos por usuário | T01 | ≥ 1 | registrar cada ação errada (clicks em botão errado, campo não preenchido, campo preenchido incorretamente, timeout) | {{...}} |
+| MU05 | satisfação positiva do usuário | escala pós-tarefa | T01 | ≥ 85% | questionário após teste de usabilidade | {{...}} |
 
 ### 3.3 Priorização das metas (se exigida na disciplina)
 
@@ -69,7 +71,11 @@ Se o professor solicitar porcentagens que somem 100%, trate-as como **peso de pr
 
 | Meta | Peso de prioridade | Justificativa |
 |---|---:|---|
-| MU01 | {{...}}% | {{...}} |
+| MU01 | 20% | {{...}} |
+| MU02 | 20% | {{...}} |
+| MU03 | 20% | {{...}} |
+| MU04 | 20% | {{...}} |
+| MU05 | 20% | {{...}} |
 | **Total** | **100%** | |
 
 ## 4. Como o ciclo será iterado
