@@ -143,13 +143,13 @@ Use esta tabela quando o projeto incorporar padrões como dashboard, relatório,
 | ID da tela/fluxo | Padrão de interface | Objetivo/tarefa que justifica | Informação/ação principal | Evidência de necessidade | Artefatos relacionados |
 |---|---|---|---|---|---|
 | PF01 (esboço da Entrega 6; estados de referência em assets/11_figma) | comparação de resultados e tratamentos radiográficos | A02, AC02 (T01, T02) | Confrontar a radiografia tratada (penetração, contraste, bordas, densidade) com o mapa de atenção e a região destacada | [F] ADE Coana nº 19/2014, C01 e C03 (tratamentos e comparação). [H30, RC01, RC09, RC10] sobreposição com intensidade ajustável, "Segure para comparar (C)" e modo lado a lado | R01, CP01, T01, T02 |
-| PF02 (esboço da Entrega 6; estados de referência em assets/11_figma) | anotação sobre a imagem e relatório/laudo de inspeção | A03, AC03 (T01, T03, T04, T06) | Delimitar regiões suspeitas com comentário próprio, registrar parecer/veredito com responsável e exportar laudo em PDF | [F] C02 (ato motivado e distribuído a responsável) e C03 (anotações e comparação com manifesto). [H06, H17, H28, H38, H39, RC04, RC07] | R03, CP01, CP02, T01, T03, T04, T06 |
+| PF02 (esboço da Entrega 6; estados de referência em assets/11_figma) | anotação sobre a imagem e relatório/laudo de inspeção | A03, AC03 (T01, T03) | Delimitar regiões suspeitas com comentário próprio, registrar parecer/veredito com responsável e exportar laudo em PDF | [F] C02 (ato motivado e distribuído a responsável) e C03 (anotações e comparação com manifesto). [H06, H17, H28, H38, H39, RC04, RC07] | R03, CP01, T01, T03; saída destinada a P02/CP02, sem executar T04–T06 |
 | PENDENTE | fila de triagem (lista de trabalho) | A01 | Ordem em que os contêineres são examinados | [H04, H25, H33, H35] Hipótese de design. C02 não evidencia fila priorizada para o fiscal, o que não prova a necessidade | R02 |
 | PENDENTE | consulta de um caso pelo identificador | AC04, para P01 e P02 | O que já aconteceu com um contêiner ou declaração | [H18] sustentada documentalmente pela linha do tempo do despacho (C02). [H29] parcial: busca por identificador documentada. A necessidade de P01 e P02 não está demonstrada | PENDENTE |
 | fora do recorte | histórico agregado com filtros | A04, do Analista de Inteligência (H02) | Investigar padrões em análises anteriores | [H02] aberta. [?02] frequência desconhecida. Busca por risco sem evidência (H29) | Não se aplica |
 | não adotado | administração/CRUD | Nenhuma tarefa identificada | Não se aplica | Padrão não observado em C01, C02 nem C03 (Entrega 2, seção 3.1). ?01 e ?03 seguem abertas | Não se aplica |
 
-Os padrões adotados na Entrega 6 (`PF01` e `PF02`, estados `PP01` a `PP06`) estão vinculados às tarefas `T01` a `T06`; os demais seguem pendentes ou fora do recorte conforme a evidência disponível.
+Os padrões adotados na Entrega 6 (`PF01` e `PF02`, estados `PP01` a `PP06`) cobrem a interação de P01 em `T01` a `T03`. `T04` a `T06` descrevem o trabalho posterior de P02, sem fluxo próprio na Mesa;; os demais seguem pendentes ou fora do recorte conforme a evidência disponível.
 
 ## 5. Registro de mudanças de escopo
 

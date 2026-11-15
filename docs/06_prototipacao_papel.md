@@ -12,7 +12,7 @@ Explorar em baixa fidelidade a estrutura da **Mesa de inspeção de raio-X de co
 ## 1. Escopo do protótipo
 
 - **Personas:** P01, Gustavo, examina a imagem; P02, Eduardo, recebe o parecer para apoiar a decisão no despacho. P03 permanece stakeholder, sem tela própria.
-- **Cenários/tarefas:** CP01/CP02 e T01–T06 da [Entrega 5](05_analise_tarefas.md).
+- **Cenários/tarefas:** CP01 e T01–T03 da [Entrega 5](05_analise_tarefas.md).
 - **Objetivos principais:** comparar radiografia e destaque do modelo (AC02/R01) e registrar o achado com justificativa (AC03/R03).
 
 A interface é um protótipo demonstrativo ligado ao TCC. Os valores e rótulos do desenho são exemplos: o resultado do modelo não comprova ilícito nem autoriza desembaraço.
@@ -32,7 +32,7 @@ Dashboard, fila priorizada, login, CRUD e administração não entram no esboço
 | Fluxo | Tarefa/objetivo | Por que foi priorizado |
 |---|---|---|
 | PF01 — examinar | Abrir a imagem, consultar a indicação do modelo e comparar com a radiografia (T01/T02, AC02). | É a interação central com a contribuição do TCC. |
-| PF02 — registrar | Marcar região, descrever o achado, revisar a conclusão e exportar o parecer (T03–T06, AC03). | Permite comunicar o que foi observado e sua justificativa. |
+| PF02 — registrar | Marcar região, descrever o achado, revisar a conclusão e exportar o parecer (T03, AC03). | Permite comunicar o que foi observado e sua justificativa. |
 
 ## 3. Telas e estados
 
@@ -48,7 +48,7 @@ Dashboard, fila priorizada, login, CRUD e administração não entram no esboço
 | PP02 — resultado disponível | Radiografia e indicação do modelo para exame (T01/T02). | Ajustes ou comparação levam a PP03; “Marcar” leva a PP04. |
 | PP03 — comparação | Exame do original com e sem a camada do modelo (T02). | “Segure para comparar (C)” alterna a camada; soltar retorna a PP02. “Marcar” leva a PP04. |
 | PP04 — região marcada | Registro de área de interesse e comentário (T03). | Criar, editar ou excluir marcação; preencher o parecer leva a PP05. |
-| PP05 — parecer | Conclusão, responsável e observações (T03/T06). | “Baixar laudo em PDF” conclui a exportação; campos incompletos levam a PP06b. |
+| PP05 — parecer | Conclusão, responsável e observações (T03). | “Baixar laudo em PDF” conclui a exportação; campos incompletos levam a PP06b. |
 | PP06a/PP06b — erro e retorno | Entrada inválida ou registro incompleto. | Selecionar outro arquivo retorna a PP01; revisar região ou campos retorna a PP04/PP05, preservando os dados. |
 
 **Caminho principal:** PP01 → PP02 → PP03 → PP04 → PP05. Uma análise sem região a registrar pode seguir de PP02/PP03 para PP05. Os caminhos de erro permitem corrigir a entrada ou voltar ao parecer. São comportamentos propostos no protótipo, não uma implementação concluída.
