@@ -29,6 +29,8 @@ A interface é um protótipo demonstrativo ligado ao TCC. Os valores e rótulos 
 | Comparação e explicação de resultados | Examinar a imagem original e o destaque do modelo, com ajustes visuais. |
 | Registro e relatório | Marcar regiões, comentar o achado e preparar o parecer para exportação. |
 
+[H43] Exposição, penetração, negativo, super realce, brilho/contraste, nitidez, bordas, densidade/cor e isolamento de faixa são controles candidatos inspirados em C01/C03. Sua necessidade, agrupamento ou remoção devem ser investigados com P01, vinculados a T01/T02; existência no concorrente não valida todos na Mesa. A baixa fidelidade prioriza comparar, registrar e comunicar.
+
 Dashboard, fila priorizada, login, CRUD e administração não entram no esboço: não são necessários para experimentar as tarefas escolhidas.
 
 ## 2. Fluxos escolhidos
