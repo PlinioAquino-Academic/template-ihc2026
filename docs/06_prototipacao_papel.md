@@ -17,6 +17,8 @@ Explorar em baixa fidelidade a estrutura da **Mesa de inspeção de raio-X de co
 - **Cenários/tarefas:** CP01 e T01–T03 da [Entrega 5](05_analise_tarefas.md).
 - **Objetivos principais:** comparar radiografia e destaque do modelo (AC02/R01) e registrar o achado com justificativa (AC03/R03).
 
+[H31/H37] O score “94%” e o limiar “70%” do esboço testado são valores ilustrativos, sem calibração operacional demonstrada. Investigar o que o valor representa na versão técnica, sua compreensão, utilidade e alternativas qualitativas, inclusive retirar o número. OBS-03 é evidência de ambiguidade com um colega, não validação profissional.
+
 A interface é um protótipo demonstrativo ligado ao TCC. Os valores e rótulos do desenho são exemplos: o resultado do modelo não comprova ilícito nem autoriza desembaraço.
 
 ### 1.1 Famílias de interface escolhidas
@@ -90,7 +92,7 @@ As evidências dizem respeito à compreensão do esboço por um colega, sem vali
 |---|---|---|---|
 | Apenas nome do arquivo no cabeçalho. | Faltava referência sobre a mercadoria. | Apresentar identificação do caso e descrição da carga. | OBS-01; H11, T01/T02. |
 | Comparação dependia de manter C pressionado. | Marcar a região interrompia a comparação. | Manter o atalho e oferecer alternância persistente ou vista lado a lado. | OBS-02; H30, RC09. |
-| Porcentagem sem explicação de seu alcance. | Parecia indicar certeza de um tipo de ilícito. | Explicar que se trata de resultado do modelo, sujeito a revisão humana. | OBS-03; H31/H37, RC03. |
+| Porcentagem sem explicação de seu alcance. | Parecia indicar certeza de um tipo de ilícito. | Investigar H31/H37, incluindo apresentação qualitativa e remoção do score; explicar os limites do resultado quando exibido. | OBS-03; H31/H37, RC03. |
 | Ações chamadas “Liberar carga” e “Inspeção física”. | Confundiam parecer e autoridade de decisão. | Usar “Conclusão da análise da imagem”, com “Sem ressalvas na imagem” e “Suspeita apontada”. O parecer não libera nem retém a carga. | OBS-04; H39, RC07. |
 | Comentário da região apenas implícito. | Não estava claro onde escrever. | Exibir comentário junto de cada região e permitir edição. | OBS-05; R03, T03. |
 | Exportação sem validação visível. | Podia gerar parecer incompleto. | Informar omissões, manter os dados e solicitar correção antes da emissão. | OBS-06; H08, RC04. |
