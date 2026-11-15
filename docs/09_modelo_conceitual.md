@@ -8,78 +8,76 @@
 
 Definir como a Mesa de inspeção comunica o resultado do modelo e permite registrar um parecer. Os cenários abaixo partem de [CP01–CP03](04_cenarios_problema.md), das tarefas T01–T09, dos fluxos PF01/PF02 e das [metas MU01–MU06](08_engenharia_usabilidade.md).
 
-São situações propostas para o protótipo, não sessões realizadas com profissionais. As respostas de refinamento são decisões de projeto baseadas nas entregas anteriores, não depoimentos de usuários. Cada cenário apresenta versão inicial, perguntas e versão refinada, seguindo o ciclo da aula. **Os trechos em negrito apresentam a interação acrescentada ou alterada em relação ao cenário de problema.** As condições de turno, fadiga e comunicação dos cenários originais continuam hipóteses. O sistema apoia a análise e produz um parecer; não autoriza desembaraço.
+[H] O sistema apoia a análise e produz um parecer técnico; não autoriza desembaraço. A construção textual e os limites de cada cenário estão explicitados na seção 1.
 
 ## 1. Soluções individuais
+
+[H] Os cenários são propostas, sem sessões profissionais realizadas. A base textual integral é a seção **3. Cenário refinado** de cada CP da Entrega 4. As marcações `NOVO [Qn]` pertencem ao refinamento documental do cenário de problema; foram mantidas sem negrito. Somente **[Intervenção: ...]** destaca a solução e **[Limite/Fronteira...]** delimita seu alcance. As hipóteses de turno, fadiga, comunicação e sequência profissional continuam abertas. As questões de refinamento da Entrega 4 servem de apoio e não substituem esta transformação.
 
 ### CI01 — examinar a imagem e registrar uma suspeita
 
 **Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5<br>
-**Origem:** CP01; P01 Gustavo Onofre; T01–T03; PF01/PF02.
+**Origem textual:** [CP01, cenário refinado](04_cenarios_problema.md#cenário-cp01—-dúvida-diante-de-uma-imagem-de-contêiner-no-meio-do-plantão).
 
-**Versão inicial:** Gustavo recebe a radiografia de um contêiner declarado como paletes de madeira. **Confere o caso, consulta a indicação do modelo, compara com a imagem original e registra uma região em dúvida com seu parecer.**
+Gustavo Onofre opera a estação de imagem de raio-X de um terminal portuário. [NOVO [Q1]: [F] Na unidade usada como referência (Portaria ALF/FNS nº 9/2024, Imbituba), o escâner é operado por operadores designados pelo recinto alfandegado, em sala com acesso restrito às pessoas autorizadas, e não por servidores da Receita Federal. [H] Este cenário adota esse modelo como referência exploratória, sem afirmar que vale para outros terminais. Em Santos há indício de outro modelo, com a imagem analisada por servidores da vigilância da RFB em uma central (CP02). [?] Ainda não sabemos em qual modelo Gustavo estaria nem que cargo da RFB examina as imagens (H01, H39).] Está no meio de um plantão noturno e, por volta das três da manhã, já examinou centenas de imagens de contêineres e caminhões que passaram pelo escâner. [NOVO [Q4]: [?] Não sabemos qual é a duração formal da escala, a meta de atendimento por hora nem as condições reais de iluminação e ruído da sala (H13, H14, H16, ?07); a hora e o volume exato permanecem suposições do cenário exploratório.] A cada imagem, ele tem poucos segundos para decidir se há alguma coisa ali que justifique desconfiar da carga. Faz isso olhando a imagem no software do fabricante do escâner, [NOVO [Q3, Q4]: [F] em um monitor dedicado de 22" a 24" (C03). [F] Para planejar e conduzir o exame, o software oferece zoom, inversão, realce de contornos, colorização por densidades, brilho, contraste e equalização (ADE Coana nº 19/2014, item 1.2.8) e, nos produtos analisados, visualização de dados do manifesto e anotações sobre a imagem (C03).] que oferece cores por tipo de material, realce de bordas e ajuste de contraste, **[Intervenção: [H] Na Mesa demonstrativa, Gustavo vê o estado da análise e, quando concluída, o destaque aproximado do modelo. Ele o usa como ponto de atenção, sem deixar de examinar a radiografia inteira nem tomar o resultado como prova de ilícito (H31/H37).]** [NOVO [Q5]: [H] Os eventos de chegada das imagens acompanham a passagem dos veículos pelo escâner na ordem de chegada. [F] As imagens são transmitidas em tempo real à unidade da RFB (Portaria RFB nº 143/2022, art. 14), de modo que Gustavo não é o único que pode vê-las. [?] Não sabemos se existe fila configurável nem quem controla a ordem de atendimento (H04, H41).]
 
-**Questões de refinamento:**
+Chega a imagem de um contêiner declarado como carregado de paletes de madeira. A imagem é densa, com muitos objetos sobrepostos. Em uma região, o material parece um pouco mais denso que no restante, mas a diferença é pequena e Gustavo já viu variações assim em cargas de madeira que eram regulares. **[Intervenção: [H] Ele ajusta a visualização sem alterar o original, consulta a identificação e a descrição da carga fornecidas no caso demonstrativo e compara a região com o mapa oculto ou visível, mantendo a comparação ao marcar (H11/H30). A origem institucional desses dados continua em investigação.]** [NOVO [Q3, Q6]: [H] Ele procura conferir a imagem com a descrição da carga na declaração. [?] Não sabemos que informações da declaração ele tem diante dos olhos nesse momento, nem se precisa buscá-las em outro sistema ou janela (H11).] Os caminhões seguintes já esperam e a próxima imagem está pronta. Cansado, ele não consegue afirmar se aquela região faz parte da carga ou se há algo escondido ali. [NOVO [Q2, Q5, Q6]: O objetivo de Gustavo é chegar a uma conclusão defensável dentro do limite de sua função, mas ele tem duas saídas e nenhuma é sem custo. [F] Se desconfiar, sua ação é comunicar a suspeita à RFB, evento que interrompe imediatamente o fluxo daquele veículo e mantém a carga retida e segregada até a manifestação da fiscalização; sem manifestação nem bloqueio no Siscomex Carga em 3 dias úteis, a carga segue (Portaria ALF/FNS nº 9/2024, art. 8º). [H] Se comunicar sem base suficiente, ele retém uma carga regular e gera atrito com quem espera pela liberação (H12). [H] Se deixar seguir e houver algo escondido, a carga entra no país sem que ninguém tenha visto (H12). [H] Pedir a opinião de um colega antes de apontar é uma ação plausível, mas não há fonte sobre essa prática na unidade.]
 
-| Questão | Resposta de projeto | Efeito no cenário |
+**[Intervenção: [H] Gustavo registra a região em dúvida, comenta a diferença de densidade e informa sua conclusão técnica e justificativa, separadas do resultado automático. A Mesa indica campos ausentes e preserva os dados para correção. Ele revisa caso, região, comentário e responsável e emite um parecer local destinado a P02. A emissão não libera nem retém a carga.]** Ele não sabe se acertou. No resto do plantão, não terá como descobrir o que havia naquela região. [NOVO [Q7]: [F] As imagens ficam disponíveis por 180 dias e podem ser buscadas por unidade de carga, data, hora ou placa (Portaria ALF/FNS nº 9/2024, art. 5º). Isso permite rever a imagem armazenada, mas não mostra o que a verificação física da carga encontrou para avaliar o acerto da decisão. [?] Não sabemos se quem examina a imagem recebe algum retorno sobre os casos que apontou ou deixou de apontar (H38, ?08). [H] Sem avaliação de desfecho, ele não aprende com o resultado e o próximo caso parecido recomeça do mesmo ponto.]
+
+**[Limite da intervenção: o registro torna o achado comunicável; a Mesa não resolve o retorno do desfecho. Gustavo continua sem saber se sua suspeita se confirma até receber informação externa, conforme H38/?08.]**
+
+| Momento do problema | Intervenção ou limite | Base |
 |---|---|---|
-| Q1 — Como distingue interpretação humana e resultado automático? | A indicação do modelo tem seu alcance explicado; a conclusão é informada pelo analista. | A dúvida pode permanecer sem ser tratada como ilícito confirmado. |
-| Q2 — Como examina a região sem perder o contexto? | Pode comparar a indicação com o original e consultar a carga declarada. | Confronta as evidências antes de registrar. |
-| Q3 — O que acontece se o registro estiver incompleto? | O sistema informa a omissão e mantém os dados já informados. | Gustavo corrige e revisa antes de concluir. |
-
-**Cenário refinado:** Durante o plantão, Gustavo recebe a radiografia de um contêiner declarado como paletes de madeira e observa uma região mais densa. **[Q1] Ao consultar o caso, é informado de que a análise está em andamento e, depois, recebe a indicação do modelo com seus limites. [Q2] Compara a região com a imagem original e a descrição da carga, usando os recursos de exame sem alterar o arquivo original.** Como a dúvida permanece, **registra a região e descreve o que observou, deixando sua conclusão e justificativa separadas do resultado automático. [Q3] Se omitir uma informação necessária, o sistema explica o que falta e permite completar o registro sem perder o trabalho. Gustavo revisa o caso e o parecer e solicita a emissão do documento de apoio.** A suspeita fica registrada para encaminhamento, sem afirmar que foi confirmada.
-
-| Alteração em relação a CP01 | Motivo | Base |
-|---|---|---|
-| Contexto da carga junto da radiografia | Apoiar a comparação com o que está declarado. | H11; ED02; OBS-01 da Entrega 6. |
-| Comparação e explicação do mapa | Ajudar a examinar o destaque sem perder a imagem original. | R01; H30/H31; MU01/MU02. |
-| Marcação comentada e parecer revisável | Preservar o achado e a justificativa. | R03; T03; MU03/MU05. |
+| Onde começar e o que a carga declara | Estado da análise, destaque aproximado e contexto do caso. | R01; H11/H30/H31; OBS-01–OBS-03 |
+| Conclusão não comunicada com contexto | Região comentada, conclusão técnica, validação e PDF. | R03; T03; MU03/MU05 |
+| Ausência de retorno | Permanece fora da Mesa; não se presume conhecer o desfecho. | H38; ?08 |
 
 ### CI02 — compreender o parecer antes de decidir
 
 **Autor(a):** Gabriel Albertini Pinheiro — 22.122.094-8<br>
-**Origem:** CP02; P02 Eduardo Resende; T04–T06; PF02.
+**Origem textual:** [CP02, cenário refinado](04_cenarios_problema.md#cenário-cp02—-decidir-sobre-uma-carga-bloqueada-por-suspeita-na-imagem-do-escâner).
 
-**Versão inicial:** Eduardo recebe um caso cuja carga levantou suspeita no escâner. **Consulta o parecer emitido na análise, relaciona o achado à carga declarada e usa essa informação para fundamentar sua decisão no despacho.**
+Atores: Dr. Eduardo Resende (Auditor-Fiscal), servidor da vigilância que analisou a imagem, importador.
 
-**Questões de refinamento:**
+Dr. Eduardo Resende, Auditor-Fiscal na Alfândega do Porto de Santos, [NOVO [Q3]: [F] responde formalmente pela decisão do despacho aduaneiro (C02) e [H] atua na equipe de despacho de importação (Edaim), que fica em uma divisão diferente da equipe de vigilância (Eqvig) [F] (Portaria ALF/STS nº 197/2025)]. Ele recebe uma declaração de importação cuja carga está bloqueada porque a imagem do escâner levantou suspeita. [NOVO [Q1, Q2, Q9]: [F] Segundo registros históricos de Santos (A Tribuna, 2013 e 2015), a imagem era analisada por servidores da Receita na Central de Operações e Vigilância (COV), em plantão de 24 horas, com atribuição para bloquear a carga, competindo hoje à Eqvig a vigilância remota (Portaria ALF/STS nº 197/2025, art. 34). [?] Não sabemos se a COV segue operando do mesmo modo nem com que frequência esses bloqueios chegam hoje ao despacho.]
 
-| Questão | Resposta de projeto | Efeito no cenário |
+Ele precisa decidir o que fazer com essa carga e formalizar a decisão. Abre a declaração no Siscomex e lê o que a mercadoria declara ser, [NOVO [Q6]: [F] planejando a conferência a partir dos documentos do dossiê, da natureza da mercadoria, da origem e do histórico do importador (C02), [?] embora ainda não saibamos quais desses itens ele prioriza diante de uma suspeita radiográfica]. **[Intervenção: [H] Além da declaração, Eduardo recebe externamente o PDF estático produzido por P01 na Mesa. Confere identificação do caso, responsável e data e localiza a região numerada, o comentário e a conclusão humana para compreender o fundamento da suspeita.]** [NOVO [Q4]: **[Intervenção: [H] Nesta proposta, o PDF acompanha a comunicação do achado, sem envio automático ao Siscomex e sem substituir o procedimento institucional;]** [?] como a suspeita passa da vigilância para o despacho em Santos é uma lacuna que a equipe ainda precisa apurar na Entrega 7 (?08).]
+
+A imagem não está junto da declaração. [NOVO [Q5]: [F] Embora haja registro histórico de que o servidor do despacho pode se apoiar na imagem do escâner para formar convicção (A Tribuna, 2013) e previsão normativa de software de análise em estações da RFB (ADE Coana nº 19/2014), [H] a equipe supõe que, para isso, ele precisa buscá-la fora do Siscomex, em outro sistema; [?] onde e como o auditor acessa a imagem atualmente segue sem resposta.] **[Intervenção: [H] Relaciona a descrição do achado no parecer com a mercadoria declarada. Se o caso divergir ou a informação for insuficiente, procura quem fez o apontamento por canal institucional externo. O documento não responde dinamicamente nem efetua atos no despacho.]** Sem prática de leitura de radiografia, não consegue avaliar sozinho se a suspeita se sustenta.
+
+[NOVO [Q7, Q8]: [F] As ações formais de que ele dispõe no Siscomex são registrar uma exigência fiscal com motivo e prazo, determinar a verificação física ou desembaraçar a declaração (C02). [?] Enquanto não decide, a carga permanece retida no terminal por prazo que ainda não foi apurado para Santos (H08).] Na dúvida, determina a verificação física. [NOVO [Q10]: **[Intervenção: [H] Ao justificar o ato no Siscomex, escreve o motivo com as próprias palavras, usando o parecer como apoio, sem presumir vínculo automático entre análise e declaração;]** [?] se esse vínculo existe hoje é pergunta em aberto.]
+
+A verificação não encontra irregularidade, a carga é liberada com atraso, e quem analisou a imagem não fica sabendo do resultado. [NOVO [Q10]: [F] A decisão fica registrada no Siscomex (C02) e há referência histórica de guarda das imagens por 90 dias na COV (A Tribuna, 2013), mas [H] nada vincula a imagem ao resultado da verificação física para permitir a avaliação do acerto por quem originou o alerta [?] (?08).]
+
+A base de cada trecho novo está na tabela da seção 2, na questão indicada entre colchetes ([Q1] a [Q10]), com [F], [H] ou [?].
+
+**[Fronteira da interação proposta: P02 lê o PDF em um leitor externo; não abre a Mesa. A interação de P01 com a Mesa termina na exportação. Conferência física, decisão e registro no Siscomex permanecem externos; o cenário não afirma que o parecer elimina a dúvida ou evita a verificação.]**
+
+| Momento do problema | Intervenção ou limite | Base |
 |---|---|---|
-| Q1 — Como verifica que recebeu o documento correto? | O parecer informa caso, responsável e data. | Confere a correspondência antes de utilizar o achado. |
-| Q2 — Como entende a origem da suspeita? | A região registrada tem comentário e conclusão humana distinguida do modelo. | Relaciona a indicação visual ao fundamento do parecer. |
-| Q3 — E se faltar informação ou o caso estiver errado? | O documento não substitui esclarecimento nem decisão formal; o contato segue por canal externo. | Eduardo interrompe o uso da evidência e solicita correção. |
+| Motivo do bloqueio sem detalhe | PDF com caso, região e comentário. | R03; H28; MU02/MU03 |
+| Buscar explicação externa | Parecer reduz a falta de contexto proposta; esclarecimento ainda externo. | T05; ?08 |
+| Decidir e formalizar | Permanece no Siscomex, sem interface de P02 na Mesa. | H39; T04/T06 |
 
-**Cenário refinado:** Eduardo precisa decidir sobre uma carga que levantou suspeita no escâner. **[Q1] Recebe o parecer de apoio e confere identificação do caso, autoria e data. [Q2] Relaciona a região registrada ao comentário do analista e à carga declarada. O documento distingue o resultado do modelo da conclusão humana, permitindo compreender o fundamento da suspeita. [Q3] Se encontrar divergência ou informação insuficiente, solicita esclarecimento pelo canal institucional antes de se apoiar no parecer.** A decisão formal permanece no sistema do despacho. **A emissão do parecer pela Mesa não significa transmissão automática ao Siscomex.**
-
-| Alteração em relação a CP02 | Motivo | Base |
-|---|---|---|
-| Parecer com caso, autor, região e comentário | Propor uma forma de tornar a suspeita compreensível ao destinatário. | R03; T05/T06; H28/?08 ainda abertas. |
-| Separação entre resultado e conclusão humana | Evitar atribuir à IA a decisão formal. | H39; MU02; ED01/ED03. |
-| Conferência do documento e pedido de esclarecimento | Permitir reconhecer informação insuficiente ou caso incorreto. | MU03/MU05; RC04/RC07. |
-
-### CI03 — preparar a informação para a conferência física
+### CI03 — usar o resultado da intervenção na conferência física
 
 **Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6<br>
-**Origem:** CP03; P03 Marcos Oliveira como stakeholder; T07–T09 exploratórias; contribuição para PF02.
+**Origem textual:** [CP03, cenário refinado](04_cenarios_problema.md#cenário-cp03—-verificação-física-no-pátio-sem-localização-da-suspeita-apontada-na-imagem).
 
-**Versão inicial:** Marcos participa da conferência de um contêiner refrigerado retido após suspeita. **O responsável pelo encaminhamento prepara um parecer que identifica a carga e descreve a região observada, para que a equipe compreenda a origem da solicitação.**
+Durante o turno da noite em um terminal portuário, Marcos Oliveira (P03) recebe uma solicitação de verificação física para um contêiner refrigerado (*reefer*) mantido em retenção após passar pelo escâner. [NOVO [Q1, Q3]: [F] Na referência normativa de Imbituba, quando há suspeita na inspeção não invasiva, o fluxo do veículo é interrompido e a carga fica retida e segregada aguardando manifestação da RFB (Portaria ALF/FNS nº 9/2024, art. 8º), e no fluxo do despacho a verificação física passa por agendamento e exige a presença do importador ou de seu representante ao lado da fiscalização e da equipe do depositário que movimenta a carga (Decreto nº 6.759/2009; C02). [?] Ainda não sabemos qual é o cargo exato de quem conduz a vistoria em campo nem como o agendamento ocorre nos casos vindos do escâner (H42).] **[Intervenção: [H] Antes do encaminhamento externo, P01 revê na Mesa a identificação do caso, a região numerada e seu comentário, completa omissões e emite o parecer técnico. Marcos recebe esse PDF pelo procedimento institucional; o documento descreve o que foi observado na radiografia, sem converter a posição na imagem em coordenada física exata.]** [NOVO [Q4]: [F] Os dados da mercadoria declarada e do dossiê existem no processo de despacho (C02), mas **[Intervenção: [H] a intervenção propõe acompanhar a observação com a região da radiografia e seu comentário no parecer;]** [?] que informações exatas chegam a quem executa a vistoria é uma lacuna a investigar na Entrega 7 (H28, H31, ?08).]
 
-**Questões de refinamento:**
+Marcos desloca-se até o pátio sob iluminação artificial precária e ruído intenso de maquinário pesado. [NOVO [Q5]: [F] Há registro histórico em Santos de que a conferência física em terminais pode ocorrer de forma presencial ou com acompanhamento remoto por câmeras a partir da central de vigilância (A Tribuna, 2013). [?] Não sabemos em que condições físicas de área coberta, temperatura e comunicação ocorrem hoje as verificações presenciais de contêineres refrigerados na unidade estudada.] Acompanhado pela equipe de apoio, [NOVO [Q2, Q6]: [F] cujo objetivo formal é verificar a identidade e a conformidade da mercadoria declarada para subsidiar a decisão do despacho (C02), **[Intervenção: [H] Marcos consulta a indicação visual e o comentário recebidos, confirma com a fiscalização o alcance dessa referência e esclarece dúvidas pelo canal externo. A sequência de abertura é definida pelo procedimento profissional, não pelo mapa do modelo.]** [?] Não sabemos se há procedimento operacional padrão que defina desova parcial ou total nesses casos.] Ele precisa romper os lacres e acompanhar o descarregamento manual de dezenas de caixas de carne congelada na tentativa de localizar o ponto que motivou a suspeita. **[Intervenção: [H] Com a referência do parecer, a equipe pode confrontar a dúvida radiográfica com a estrutura de refrigeração e constatar o acúmulo de gelo, sem irregularidade na mercadoria. Essa é uma possibilidade de apoio comunicativo: não há evidência para afirmar redução das três horas ou da quantidade de caixas movimentadas no episódio de CP03.]** [NOVO [Q4, Q6]: [H] Se a comunicação da suspeita informasse que a diferença de densidade estava concentrada junto à parede do fundo, na altura do equipamento de refrigeração, a conferência poderia ter direcionado a atenção para essa estrutura antes de retirar a maior parte da carga.]
 
-| Questão | Resposta de projeto | Efeito no cenário |
+O processo prolonga a permanência da carga no pátio, gera atrito com o operador logístico pelo risco à conservação do produto refrigerado e exige esforço físico elevado na movimentação de uma carga regular. Ao concluir a conferência e registrar o resultado [NOVO [Q6, Q7]: [F] para que o despacho siga no Siscomex rumo ao desembaraço (C02), [?] ainda não sabemos se Marcos faz anotações em papel ou formulário próprio no pátio antes do registro no sistema na mesa de trabalho (H37, H42), nem se quem apontou a suspeita na estação de imagem recebe retorno de que o caso era apenas gelo acumulado no equipamento (H17, H38, ?08)], **[Intervenção: [H] Marcos dispõe de uma explicação do achado para a conferência, mas a equipe ainda precisa investigar se ela ajuda no trabalho real e como o resultado retorna a quem analisou a imagem. Não se afirma desova evitada ou ganho de tempo medido.]**
+
+**[Fronteira da interação proposta: CI03 descreve o uso do resultado da intervenção por P03. Somente P01 prepara/revisa o parecer na Mesa; P02 decide e encaminha externamente. Marcos não mantém conversa com a Mesa nem recebe tela móvel (H42).]**
+
+| Momento do problema | Intervenção ou limite | Base |
 |---|---|---|
-| Q1 — Quem usa a Mesa nessa preparação? | P01/P02 revisam o documento; P03 é destinatário externo. | Não pressupõe interação direta de Marcos com o sistema. |
-| Q2 — A região da radiografia identifica uma posição física exata? | É referência visual aproximada, dependente de interpretação e contexto. | Não determina sozinha o procedimento de abertura da carga. |
-| Q3 — Como corrige uma referência ausente ou divergente? | Na origem, o responsável revê o caso e corrige região/comentário antes de emitir o documento. | O encaminhamento ocorre com informações consistentes. |
-
-**Cenário refinado:** Marcos participa da conferência de um contêiner refrigerado retido após suspeita. **[Q1] Na origem, o responsável consulta o parecer preparado na Mesa. [Q3] Confere a identificação da carga e a correspondência entre região, comentário e conclusão; se houver omissão ou divergência, corrige o registro e solicita uma nova emissão. Marcos recebe o documento pelo procedimento institucional. [Q2] A região apresentada ajuda a compreender onde a diferença foi observada na radiografia, mas não é tratada como coordenada física exata.** A equipe conduz a verificação conforme seu procedimento. **O resultado é registrado no fluxo do despacho; seu retorno automático à Mesa não é presumido.** A proposta não afirma redução medida do tempo de conferência.
-
-| Alteração em relação a CP03 | Motivo | Base |
-|---|---|---|
-| Identificação, marcação e descrição no parecer | Propor informação que ajude a esclarecer a origem da suspeita. | H28/?08; R03; MU03. |
-| Conferência do conteúdo antes do encaminhamento | Reduzir a chance de trocar caso ou região. | MU05; RC04. |
-| Entrega externa do documento, sem tela para P03 | Respeitar o recorte e a ausência de evidência de uso direto. | H42; ED03. |
+| Solicitação sem referência | P01 prepara região comentada e identificação no PDF. | R03; H28/?08 |
+| Desova extensa no exemplo | Referência radiográfica apoia a compreensão; não garante localização física nem economia de tempo. | CP03; H31/H37 |
+| Registro e retorno | Procedimentos externos, sem tela de P03 ou integração automática. | H42; T07–T09 exploratórias |
 
 ## 2. Design centrado na comunicação
 
@@ -157,7 +155,7 @@ Cada integrante terá um foco: CI01, exame e registro; CI02, conferência do fun
 
 ## Checklist
 
-- [x] Três cenários com versões inicial/refinada, perguntas e alterações destacadas.
+- [x] Três cenários derivados do texto integral dos cenários refinados CP01–CP03, com intervenções destacadas.
 - [x] Cenários descrevem ações e respostas sem antecipar rótulos ou widgets.
 - [x] Autor e cenário de origem identificados em cada contribuição.
 - [x] Tópicos, falas e signos ligados aos objetivos do usuário.
