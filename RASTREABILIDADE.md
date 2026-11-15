@@ -85,7 +85,7 @@ Quando o estado é "aberta" ou "parcialmente sustentada", a coluna "Impacto no p
 
 ## 2.1a Atualização documental da Entrega 7
 
-**Data:** 04/11/2026. A [Entrega 7](docs/07_coleta_dados.md) foi concluída com pesquisa documental como coleta principal, devido à falta de acesso ao profissional especializado. Cinco fontes públicas foram analisadas; questionário e entrevista foram preparados, sem aplicação. Na revisão pelas aulas, a Parte A passou a explicitar os cinco grupos de dados: usuário, tecnologia, domínio, tarefas e motivações/valores. Características pessoais e preferências não documentadas permanecem desconhecidas. Em 05/11/2026, I02/I03 foram criados e publicados no Google Forms; os links foram verificados em sessão sem login e estão na Entrega 7. A navegação de conferência não enviou respostas: os instrumentos continuam não aplicados.
+**Data:** 04/11/2026. A [Entrega 7](docs/07_coleta_dados.md) registra pesquisa documental complementar. O planejamento obrigatório utiliza investigação contextual (I01), questionário (I02) e entrevista (I03), sem aplicação com pessoas; falta de acesso não substitui o método autorizado. Cinco fontes públicas foram analisadas; questionário e entrevista foram preparados, sem aplicação. Na revisão pelas aulas, a Parte A passou a explicitar os cinco grupos de dados: usuário, tecnologia, domínio, tarefas e motivações/valores. Características pessoais e preferências não documentadas permanecem desconhecidas. Em 05/11/2026, I02/I03 foram criados e publicados no Google Forms; os links foram verificados em sessão sem login e estão na Entrega 7. A navegação de conferência não enviou respostas: os instrumentos continuam não aplicados.
 
 | IDs | Evidência e resultado | Consequência de IHC |
 |---|---|---|

@@ -8,7 +8,7 @@
 
 Levantar informações para a Mesa de inspeção de raio-X de contêineres: quem analisa a imagem, quais dados consulta e como registra e encaminha uma suspeita.
 
-Como não temos acesso ao profissional que interpreta essas imagens, adotamos **pesquisa documental**, com manuais da Receita Federal, documentação do Siscomex, informações de fabricantes e literatura técnica. Consultamos cinco fontes públicas. Questionário e entrevista também foram preparados, conforme o enunciado, mas não foram aplicados.
+[F] Não houve acesso ao profissional nem aplicação dos instrumentos com pessoas. [H] O plano obrigatório utiliza investigação contextual (I01), questionário (I02) e entrevista semiestruturada (I03), métodos permitidos e distintos. A falta de acesso é limitação de recrutamento, não autorização para substituir o método. [F] Cinco fontes públicas foram consultadas como **pesquisa documental complementar** (ED01–ED05).
 
 O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md), a análise de concorrentes, as personas, os cenários, as tarefas e o [protótipo da Entrega 6](06_prototipacao_papel.md). Os documentos ajudam a fundamentar o projeto, mas não revelam todas as práticas de uma unidade portuária.
 
@@ -203,7 +203,7 @@ Esses resultados estão registrados na [rastreabilidade](../RASTREABILIDADE.md#2
 
 ## Relação com a aula
 
-A Parte A segue os cinco grupos da aula 7 (Parte A, páginas 2–8 e exercício da página 13). A Parte B apresenta instrumentos e protocolos, como solicitado na Parte B, páginas 20–21. Pesquisa documental é a adaptação adotada pela equipe para a falta de acesso ao perfil; não é apresentada como entrevista ou observação.
+A Parte A segue os cinco grupos da aula 7 (Parte A, páginas 2–8 e exercício da página 13). A Parte B apresenta instrumentos e protocolos, como solicitado na Parte B, páginas 20–21. Investigação contextual, questionário e entrevista compõem o planejamento. A pesquisa documental permanece evidência secundária complementar, sem ser contabilizada como método individual obrigatório.
 
 ## Checklist
 
