@@ -109,15 +109,16 @@ R01/AC02/PF01 serão avaliados por MU01/MU02; R03/AC03/PF02 por MU03–MU05; MU0
 
 ## 2.3 Modelo conceitual da Entrega 9
 
-A [Entrega 9](docs/09_modelo_conceitual.md) apresenta CI01 (Kawan, de CP01), CI02 (Gabriel, de CP02) e CI03 (Alexandre, de CP03), com mapas individuais e consolidado. A revisão pela aula 9 acrescenta versões inicial/refinada e perguntas, mantém os cenários sem rótulos/widgets e classifica as rupturas dos signos em PP/PA/AL/RA/CE. São propostas de interação, sem nova coleta com pessoas. CI03 prepara a informação no parecer e mantém P03 como destinatário externo.
+[H] CI01–CI03 transformam integralmente os cenários refinados de CP01–CP03; DCC01–DCC03 identificam autoria e distinguem conversa efetiva da leitura de PDF estático. O01–O09 possuem classificação final/instrumental e papéis; S01–S18 distinguem domínio, usuário e aplicação. Não houve coleta profissional nova.
 
-| Cadeia | Objetivos | Signos | Metas da Entrega 8 |
+| Cadeia | Objetivos | Signos | Metas |
 |---|---|---|---|
-| R01 / AC02 / T01–T02 / PF01 / CI01 | O01, O02, O03, O08 | S01–S06 | MU01/MU02/MU06 |
-| R03 / AC03 / T03–T06 / PF02 / CI01–CI02 | O04–O08, com O02 | S01, S07–S12 e S04 | MU02–MU06 |
-| R03 / CP03 / T07–T09 exploratórias / CI03 | O09, com O02/O07/O08 | S01/S07/S08/S12 | MU03/MU05 |
+| R01 / AC02 / T01–T02 / PF01 / CI01 | O01/O02/O03/O07/O08 | S01–S06/S13; S14/S15 candidatos; S16/S17 | MU01/MU02/MU06 |
+| R03 / AC03 / T03 / PF02 / CI01 | O04/O05, com O02/O07/O08 | S01/S04/S07–S13/S18 | MU02–MU06 |
+| R03 / CP02 / T04–T06 externas / CI02 | O06, com O02/O07/O08; O05 instrumenta indiretamente | S12 como PDF estático com identificação, achado, conclusão, responsável e data | Compreensão qualitativa por P02; não confundir com MU03 de produção por P01 |
+| R03 / CP03 / T07–T09 exploratórias / CI03 | O09 externo; preparação O04/O05 de P01 | S01/S07/S08/S12/S13/S18 | MU03/MU05 avaliam a preparação por P01, não a vistoria |
 
-O parecer não é ato de desembaraço. Encaminhamento institucional, vistoria e retorno do desfecho ficam fora da Mesa; H28/H39/H42/?08 não foram integralmente confirmadas. MoLIC e telas continuam por produzir nas Entregas 10/11.
+O parecer não é ato de desembaraço. Decisão, encaminhamento institucional, vistoria e retorno do desfecho ficam fora da Mesa; H28/H39/H42/?08 permanecem abertas ou parciais. MoLIC e telas Figma continuam por produzir.
 
 ## 2.1 Personas da Entrega 3 e hipóteses de que dependem
 
@@ -133,11 +134,11 @@ As três fichas são proto-personas: nenhuma foi construída com pesquisa com us
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | Mapa residual, que localiza onde a imagem se afasta da reconstrução de uma carga normal | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | CP01 | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | HTA T01, GOMS T02 (Entrega 5, `docs/05_analise_tarefas.md`) | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Esboço principal PF01 e síntese OBS-01–OBS-03 na Entrega 6: contexto da carga, comparação e explicação do indicador. Estados detalhados PP01–PP03/PP06c preservados como referência em `assets/11_figma/`, sem declarar a Entrega 11 concluída. |
+| R01 | Mapa residual, que localiza onde a imagem se afasta da reconstrução de uma carga normal | [H10, H34] Saber onde olhar em uma imagem densa e sobreposta | P01 | CP01 | A02: inspecionar a região apontada e concluir se é compatível com a carga declarada | HTA T01, GOMS T02 (Entrega 5, `docs/05_analise_tarefas.md`) | CI01/DCC01; O01/O02/O03/O07/O08; S01–S06/S13/S16/S17; S14/S15 candidatos | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Esboço principal PF01 e síntese OBS-01–OBS-03 na Entrega 6: contexto da carga, comparação e explicação do indicador. Estados detalhados PP01–PP03/PP06c preservados como referência em `assets/11_figma/`, sem declarar a Entrega 11 concluída. |
 | R02 | Medida de anomalia calculada para cada imagem | [H04, H25, H35] Saber quais contêineres examinar primeiro. A existência dessa tarefa é hipótese | P01 | PENDENTE | A01: triar os contêineres escaneados | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE |
-| R03 | Mapa residual como evidência associada ao contêiner | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 (e P03 como stakeholder em H42) | CP01, CP02 (e CP03 exploratório) | A03: registrar o resultado da análise | T01, T03 (P01); T04, T05, T06 (P02, situação atual); T07 a T09 (P03, exploratórias fora do recorte enquanto H42 estiver aberta) | PENDENTE | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Esboço principal PF02 e síntese OBS-04–OBS-06 na Entrega 6: parecer, comentário por região e revisão antes da exportação. Estados detalhados PP04–PP06c preservados em `assets/11_figma/` para evolução posterior. |
+| R03 | Mapa residual como evidência associada ao contêiner | [H06, H39] Registrar o resultado da análise de forma que quem decide possa usá-lo | P01, P02 (e P03 como stakeholder em H42) | CP01, CP02 (e CP03 exploratório) | A03: registrar o resultado da análise | T01, T03 (P01); T04, T05, T06 (P02, situação atual); T07 a T09 (P03, exploratórias fora do recorte enquanto H42 estiver aberta) | CI01–CI03/DCC01–DCC03; O02/O04–O09; S01/S04/S07–S13/S18; leitura externa em CI02/CI03 | PENDENTE | PENDENTE | PENDENTE | PENDENTE | Esboço principal PF02 e síntese OBS-04–OBS-06 na Entrega 6: parecer, comentário por região e revisão antes da exportação. Estados detalhados PP04–PP06c preservados em `assets/11_figma/` para evolução posterior. |
 
-As colunas marcadas `PENDENTE` pertencem a entregas ainda não realizadas (cenários de interação e signos na Entrega 9, MoLIC na Entrega 10, telas no Figma na Entrega 11, avaliação nas Entregas 13 e 14).
+R01/R03 já possuem cenários de interação e signos da Entrega 9. MoLIC, Figma e avaliações permanecem pendentes nas Entregas 10–14. R02 continua hipótese de fila/priorização sem tarefa demonstrada; seus campos pendentes não significam ausência da Entrega 9 inteira.
 
 ## 4. Rastreabilidade de padrões de interface
 
