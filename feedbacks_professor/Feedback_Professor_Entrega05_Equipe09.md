@@ -459,3 +459,7 @@ Entretanto, a entrega precisa de revisão formal. **Os HTAs ainda não seguem co
 O problema mais estrutural permanece em T07–T09. A equipe está modelando em detalhes uma pessoa que a própria rastreabilidade afirma ainda não estar confirmada no recorte e, ao mesmo tempo, introduz uma aplicação móvel futura dentro das tarefas atuais. Isso precisa ser resolvido antes de avançar.
 
 A boa notícia é que grande parte do conteúdo de T01–T06 pode ser preservada. A revisão necessária é principalmente de **formalismo, coerência metodológica e separação entre trabalho atual e solução futura**. Em análise de tarefas, uma árvore bonita não salva um plano errado - e um aplicativo que ainda não existe não pode aparecer como se já fosse um método de trabalho disponível.
+
+> **Conferência de situação (15/11/2026)** ([`907ef6d`](https://github.com/KawanMark/template-ihc2026/commit/907ef6d)): as correções de conteúdo registradas em 25/10/2026 permanecem no documento. O status foi alinhado para 🟦 revisada após feedback, sem refazer os artefatos já corrigidos.
+>
+> \- Kawan

@@ -470,3 +470,7 @@ A equipe produziu uma entrega visualmente rica, detalhada e aparentemente comple
 As personas possuem boa estrutura e são memoráveis, mas várias características capazes de alterar diretamente o design foram inventadas ou extrapoladas a partir de documentação de mercado. O mapa de empatia atende ao formato, porém incorpora soluções prontas. O contexto de uso é abrangente, mas precisa de melhor tratamento de evidência. A jornada apresenta sequência e emoções, mas ainda funciona mais como um cenário futuro da interface do que como uma narrativa completa da experiência antes, durante e depois do uso.
 
 Antes de avançar, a equipe precisa fazer uma revisão conceitual: **menos certeza sobre a interface e mais rigor sobre as pessoas**. Se isso for corrigido, os artefatos desta entrega poderão cumprir muito bem sua função nas próximas etapas de cenários e análise de tarefas.
+
+> **Complemento de situação (15/11/2026)** ([`4e72cec`](https://github.com/KawanMark/template-ihc2026/commit/4e72cec17237dedd43b27fb9d388133ac71c21a7)): A imagem de P01 é um retrato ilustrativo neutro. As fichas de P01/P03 já contêm [F]/[H]/[?] e distinção de papéis na versão de 12/10/2026 preservada na main; não foram reescritas nesta rodada. P03 continua stakeholder; nenhum dado profissional novo foi inventado.
+>
+> \- Kawan

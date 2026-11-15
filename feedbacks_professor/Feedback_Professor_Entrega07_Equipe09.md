@@ -1,5 +1,27 @@
 # Feedback do Professor > Entrega 07 > Equipe 09
 
+> **Status da aplicação (15/11/2026):** revisão solicitada para as entregas da equipe, na branch `feedbacks`. Autoria acadêmica preservada; aplicação registrada por Kawan. O texto do professor está intacto, com anotações em blocos de citação. 🟦 indica revisão; pendências de configuração/verificação online e lacunas de evidência permanecem explícitas.
+>
+> | Item do parecer | Situação nesta rodada | Commit(s) / referência |
+> |---|---|---|
+> | Correção 1: I01 - “pesquisa documental” não é um método permitido para cumprir a responsabilidade individual | ✅ Aplicado | [`065e8f5`](https://github.com/KawanMark/template-ihc2026/commit/065e8f523d381ea0110ecf72fe8b24891c0f2074) |
+> | Correção 2: A justificativa “não temos acesso ao profissional” não autoriza substituir o método por pesquisa documental | ✅ Aplicado | [`b6620d8`](https://github.com/KawanMark/template-ihc2026/commit/b6620d8b8bc77a4846ac055daaf5fadbe145b09b) |
+> | Correção 3: O questionário obrigatório foi disponibilizado online, mas também foi colado dentro do GitHub | ✅ Aplicado | [`df15e3b`](https://github.com/KawanMark/template-ihc2026/commit/df15e3b3525373f8be38403f4ff177f14f7d7b32) |
+> | Correção 4: O questionário pretende avaliar uma interface que o participante não vê adequadamente | 🟨 Protocolo revisado; operação online pendente | [`40e8700`](https://github.com/KawanMark/template-ihc2026/commit/40e8700be3fb833e28586bc7436d6cd26206f249) |
+> | Correção 5: A introdução do questionário precisa explicar melhor o objetivo específico da pesquisa | 🟨 Protocolo revisado; operação online pendente | [`61bff56`](https://github.com/KawanMark/template-ihc2026/commit/61bff568a65e4067d6da047668481f564151fc55) |
+> | Correção 6: O público do questionário está muito heterogêneo para um único conjunto de conclusões | ✅ Aplicado | [`c7ece7b`](https://github.com/KawanMark/template-ihc2026/commit/c7ece7b5a1813db3f280dee9e60d077f6b21ff02) |
+> | Correção 7: A pergunta sobre “94%” é boa, mas o instrumento precisa evitar testar um número sem significado definido | ✅ Aplicado | [`d1897db`](https://github.com/KawanMark/template-ihc2026/commit/d1897db0782462bdaa3a4e92841a199c1b5566c8) |
+> | Correção 8: O consentimento do questionário está bem encaminhado, mas o mecanismo de exclusão por código precisa ser operacionalizado | 🟨 Protocolo revisado; operação online pendente | [`c00f579`](https://github.com/KawanMark/template-ihc2026/commit/c00f579cc12b825c7985a6e2746de928ec8eb062), [`4d5d9d6`](https://github.com/KawanMark/template-ihc2026/commit/4d5d9d631cd74f5b7faa0ad0bfa7f29267647032) |
+> | Correção 9: I03 é uma entrevista válida, mas o protocolo não é totalmente autossuficiente | 🟨 Protocolo revisado; operação online pendente | [`f24b3b4`](https://github.com/KawanMark/template-ihc2026/commit/f24b3b4435dd44e25d9bf1d93b2cf87baa0689ed) |
+> | Correção 10: A entrevista precisa de orientação mínima para aprofundamento das respostas | 🟨 Protocolo revisado; operação online pendente | [`790de9c`](https://github.com/KawanMark/template-ihc2026/commit/790de9cae0e8d4eae4915809b52b8f49090483cf) |
+> | Correção 11: A pergunta 2 da entrevista concentra várias responsabilidades em uma mesma questão | 🟨 Protocolo revisado; operação online pendente | [`ac8dcff`](https://github.com/KawanMark/template-ihc2026/commit/ac8dcffea9f36329f38ba165a2c41c055ee474c4) |
+> | Correção 12: A Parte A está conceitualmente boa, mas A01/A02/A03 foram construídas em torno das fontes documentais | ✅ Aplicado | [`b8975a7`](https://github.com/KawanMark/template-ihc2026/commit/b8975a756c72df5f134201e095aa8ebce50d0179) |
+> | Correção 13: A pesquisa documental foi útil, mas deve ser mantida como evidência complementar | ✅ Aplicado | [`b6620d8`](https://github.com/KawanMark/template-ihc2026/commit/b6620d8b8bc77a4846ac055daaf5fadbe145b09b) |
+> | Correção 14: A síntese e a rastreabilidade são coerentes ao preservar hipóteses abertas | 🟨 Protocolo revisado; operação online pendente | [`b6620d8`](https://github.com/KawanMark/template-ihc2026/commit/b6620d8b8bc77a4846ac055daaf5fadbe145b09b), [`28dad55`](https://github.com/KawanMark/template-ihc2026/commit/28dad558886b3ff5d15f87065e17e03d51d0b8b7) |
+>
+> \- Kawan
+
+
 ## Avaliação geral
 
 A equipe demonstrou uma boa preocupação em conectar a coleta de dados às dúvidas reais do projeto. As hipóteses prioritárias estão bem selecionadas, a Parte A está organizada por integrante, os aspectos éticos são tratados de maneira contextualizada e tanto o questionário quanto a entrevista procuram investigar pontos que realmente importam para a evolução da Mesa de inspeção.
@@ -67,6 +89,11 @@ Kawan precisa escolher e planejar um dos métodos permitidos, diferente dos mét
 
 Como Gabriel já possui questionário e Alexandre entrevista, o terceiro instrumento deve ser outro método autorizado.
 
+
+> **✅ Aplicado** ([`065e8f5`](https://github.com/KawanMark/template-ihc2026/commit/065e8f523d381ea0110ecf72fe8b24891c0f2074)): Correção 1: planeja método autorizado, distinto de questionário/entrevista, com público, recrutamento, roteiro, ficha, consentimento, análise e limite de proxies. Não alega aplicação.
+>
+> \- Kawan
+
 ### 2. A justificativa “não temos acesso ao profissional” não autoriza substituir o método por pesquisa documental
 
 O documento explica que a equipe adotou pesquisa documental porque não possui acesso ao profissional que interpreta as imagens.
@@ -89,6 +116,11 @@ Portanto, mesmo que a equipe ainda não possua acesso ao profissional, o instrum
 
 A pesquisa documental pode permanecer como complemento, não como substituição.
 
+
+> **✅ Aplicado** ([`b6620d8`](https://github.com/KawanMark/template-ihc2026/commit/b6620d8b8bc77a4846ac055daaf5fadbe145b09b)): Correção 2: a falta de acesso permanece limite de recrutamento; a documentação conserva seu valor e não conta como terceiro instrumento obrigatório.
+>
+> \- Kawan
+
 ### 3. O questionário obrigatório foi disponibilizado online, mas também foi colado dentro do GitHub
 
 A equipe atendeu uma parte importante da atividade: I02 possui um link de Google Forms e há uma captura em `assets/07_coleta/i02_questionario.png`.
@@ -110,6 +142,11 @@ A equipe deve manter no documento:
 - link público do questionário.
 
 O conteúdo das perguntas deve permanecer no próprio formulário online.
+
+
+> **✅ Aplicado** ([`df15e3b`](https://github.com/KawanMark/template-ihc2026/commit/df15e3b3525373f8be38403f4ff177f14f7d7b32)): Correção 3: remove a reprodução de I02 do documento e do script, preserva identificação/protocolo/link e conserva o roteiro textual da entrevista.
+>
+> \- Kawan
 
 ### 4. O questionário pretende avaliar uma interface que o participante não vê adequadamente
 
@@ -137,6 +174,11 @@ Isso compromete especialmente as perguntas 3, 4, 5 e 6.
 
 A equipe deve apresentar no formulário a mesma imagem/estado do protótipo para todos os participantes e então formular as perguntas sobre aquilo que eles realmente veem.
 
+
+> **🟨 Protocolo revisado; operação online pendente** ([`40e8700`](https://github.com/KawanMark/template-ihc2026/commit/40e8700be3fb833e28586bc7436d6cd26206f249)): O protocolo identifica a prancha original real como estímulo uniforme e exige ampliação/verificação. A imagem ainda não foi inserida no Forms nesta revisão.
+>
+> \- Kawan
+
 ### 5. A introdução do questionário precisa explicar melhor o objetivo específico da pesquisa
 
 Há consentimento e uma descrição ética adequada.
@@ -159,6 +201,11 @@ Mas o participante precisa saber:
 - como os dados serão usados.
 
 A parte ética está bem encaminhada; falta tornar a finalidade mais informativa.
+
+
+> **🟨 Protocolo revisado; operação online pendente** ([`61bff56`](https://github.com/KawanMark/template-ihc2026/commit/61bff568a65e4067d6da047668481f564151fc55)): A abertura está completa no protocolo. A substituição no formulário publicado e sua verificação ainda não foram executadas.
+>
+> \- Kawan
 
 ### 6. O público do questionário está muito heterogêneo para um único conjunto de conclusões
 
@@ -189,6 +236,11 @@ Mas não podem demonstrar que:
 
 Essa separação deve aparecer explicitamente na análise dos resultados futuros.
 
+
+> **✅ Aplicado** ([`c7ece7b`](https://github.com/KawanMark/template-ihc2026/commit/c7ece7b5a1813db3f280dee9e60d077f6b21ff02)): Correção 6: distingue operadores, perfis próximos e pessoas sem experiência direta, com limites de conclusão em cada estrato.
+>
+> \- Kawan
+
 ### 7. A pergunta sobre “94%” é boa, mas o instrumento precisa evitar testar um número sem significado definido
 
 A equipe já reconhece no próprio documento que:
@@ -213,6 +265,11 @@ A coleta deve permitir também concluir:
 
 Essa alternativa precisa permanecer aberta.
 
+
+> **✅ Aplicado** ([`d1897db`](https://github.com/KawanMark/template-ihc2026/commit/d1897db0782462bdaa3a4e92841a199c1b5566c8)): Correção 7: o questionário explora ambiguidade e permite remover/substituir o score; não busca validar um componente previamente decidido.
+>
+> \- Kawan
+
 ### 8. O consentimento do questionário está bem encaminhado, mas o mecanismo de exclusão por código precisa ser operacionalizado
 
 O documento afirma que o participante receberá um código para solicitar exclusão dos dados antes da consolidação.
@@ -233,6 +290,11 @@ O `README` dos instrumentos inclusive registra que esse canal ainda precisa ser 
 Portanto, o procedimento ético ainda não está pronto para execução sem dúvida.
 
 Antes de aplicar, a equipe precisa fechar esse mecanismo.
+
+
+> **🟨 Protocolo revisado; operação online pendente** ([`c00f579`](https://github.com/KawanMark/template-ihc2026/commit/c00f579cc12b825c7985a6e2746de928ec8eb062), [`4d5d9d6`](https://github.com/KawanMark/template-ihc2026/commit/4d5d9d631cd74f5b7faa0ad0bfa7f29267647032)): Código, vínculo, responsáveis e prazo estão definidos. Kawan confirmou unifkasilva@fei.edu.br como canal privado; falta configurar e verificar o campo de código, contato e prazo no Forms antes de aplicar.
+>
+> \- Kawan
 
 ### 9. I03 é uma entrevista válida, mas o protocolo não é totalmente autossuficiente
 
@@ -257,6 +319,11 @@ O protocolo deveria conter o texto de abertura específico da entrevista:
 
 A equipe que for a campo não deve precisar abrir outro instrumento e decidir sozinha como adaptá-lo.
 
+
+> **🟨 Protocolo revisado; operação online pendente** ([`f24b3b4`](https://github.com/KawanMark/template-ihc2026/commit/f24b3b4435dd44e25d9bf1d93b2cf87baa0689ed)): O protocolo textual de I03 contém abertura/consentimento integral e executável. A versão online para notas ainda precisa de sincronização.
+>
+> \- Kawan
+
 ### 10. A entrevista precisa de orientação mínima para aprofundamento das respostas
 
 As nove perguntas são boas como roteiro-base.
@@ -273,6 +340,11 @@ O protocolo deveria orientar o entrevistador sobre como aprofundar respostas rel
 - distinguir “isso acontece no seu trabalho?” de “você imagina que aconteça?”.
 
 Não é necessário criar dezenas de perguntas adicionais. É necessário explicar **como conduzir** uma entrevista semiestruturada.
+
+
+> **🟨 Protocolo revisado; operação online pendente** ([`790de9c`](https://github.com/KawanMark/template-ihc2026/commit/790de9cae0e8d4eae4915809b52b8f49090483cf)): O roteiro textual orienta exemplos concretos, sequência e distinção entre prática e suposição. O apoio online de notas ainda precisa ser sincronizado.
+>
+> \- Kawan
 
 ### 11. A pergunta 2 da entrevista concentra várias responsabilidades em uma mesma questão
 
@@ -295,6 +367,11 @@ Se o participante responder apenas “não”, o entrevistador precisa saber com
 
 O protocolo deve orientar esse aprofundamento porque essa é uma das principais lacunas do projeto.
 
+
+> **🟨 Protocolo revisado; operação online pendente** ([`ac8dcff`](https://github.com/KawanMark/template-ihc2026/commit/ac8dcffea9f36329f38ba165a2c41c055ee474c4)): O roteiro textual investiga separadamente operação, análise, registro, decisão, formalização e passagem entre pessoas. A sincronização online permanece pendente.
+>
+> \- Kawan
+
 ### 12. A Parte A está conceitualmente boa, mas A01/A02/A03 foram construídas em torno das fontes documentais
 
 As três contribuições individuais de necessidades e ética estão bem relacionadas às hipóteses.
@@ -315,6 +392,11 @@ Várias das principais dúvidas do projeto são justamente as que documentação
 
 O terceiro método permitido deve ser escolhido de modo a complementar questionário e entrevista e trazer conhecimento que esses dois instrumentos não fornecem.
 
+
+> **✅ Aplicado** ([`b8975a7`](https://github.com/KawanMark/template-ihc2026/commit/b8975a756c72df5f134201e095aa8ebce50d0179)): Correção 12: Parte A contempla preferências, dificuldades e coordenação que fontes documentais não demonstram, mantendo limites e aspectos éticos.
+>
+> \- Kawan
+
 ### 13. A pesquisa documental foi útil, mas deve ser mantida como evidência complementar
 
 ED01 a ED05 são uma boa contribuição ao projeto.
@@ -334,6 +416,11 @@ Ela apenas precisa ser reposicionada:
 
 > **fonte secundária complementar do projeto**, e não instrumento individual válido da Parte B.
 
+
+> **✅ Aplicado** ([`b6620d8`](https://github.com/KawanMark/template-ihc2026/commit/b6620d8b8bc77a4846ac055daaf5fadbe145b09b)): Correção 2: a falta de acesso permanece limite de recrutamento; a documentação conserva seu valor e não conta como terceiro instrumento obrigatório.
+>
+> \- Kawan
+
 ### 14. A síntese e a rastreabilidade são coerentes ao preservar hipóteses abertas
 
 A equipe não afirma que a pesquisa documental resolveu:
@@ -351,6 +438,11 @@ A coleta planejada deveria justamente atacar algumas dessas lacunas.
 
 O cuidado agora é não considerar a Entrega 07 “concluída” metodologicamente enquanto um dos três métodos obrigatórios continua inválido.
 
+
+> **🟨 Protocolo revisado; operação online pendente** ([`b6620d8`](https://github.com/KawanMark/template-ihc2026/commit/b6620d8b8bc77a4846ac055daaf5fadbe145b09b), [`28dad55`](https://github.com/KawanMark/template-ihc2026/commit/28dad558886b3ff5d15f87065e17e03d51d0b8b7)): Os três métodos planejados são autorizados e distintos. O status 🟦 registra revisão, sem encobrir as pendências online ou declarar coleta aplicada.
+>
+> \- Kawan
+
 ## Recomendações de melhoria
 
 ### 1. Substituir I01 por um método permitido, mantendo a pesquisa documental como complemento
@@ -360,6 +452,11 @@ Não é necessário perder ED01–ED05.
 A equipe deve apenas escolher para Kawan um instrumento autorizado diferente de questionário e entrevista e documentá-lo integralmente.
 
 A escolha deve ser feita pela pergunta de pesquisa, não pela facilidade de produzir um artefato.
+
+
+> **ℹ️ Situação da recomendação** ([`065e8f5`](https://github.com/KawanMark/template-ihc2026/commit/065e8f523d381ea0110ecf72fe8b24891c0f2074), [`b6620d8`](https://github.com/KawanMark/template-ihc2026/commit/b6620d8b8bc77a4846ac055daaf5fadbe145b09b)): Encaminhada nas correções 1, 2, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ### 2. Tornar cada instrumento executável por outra equipe
 
@@ -379,11 +476,21 @@ Ao terminar a revisão, outra equipe deveria conseguir responder sem perguntar a
 
 Esse é um bom teste de completude.
 
+
+> **ℹ️ Situação da recomendação** ([`065e8f5`](https://github.com/KawanMark/template-ihc2026/commit/065e8f523d381ea0110ecf72fe8b24891c0f2074), [`c00f579`](https://github.com/KawanMark/template-ihc2026/commit/c00f579cc12b825c7985a6e2746de928ec8eb062), [`4d5d9d6`](https://github.com/KawanMark/template-ihc2026/commit/4d5d9d631cd74f5b7faa0ad0bfa7f29267647032), [`f24b3b4`](https://github.com/KawanMark/template-ihc2026/commit/f24b3b4435dd44e25d9bf1d93b2cf87baa0689ed), [`790de9c`](https://github.com/KawanMark/template-ihc2026/commit/790de9cae0e8d4eae4915809b52b8f49090483cf)): Encaminhada nas correções 1, 8, 9, 10, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
+
 ### 3. No questionário, usar o protótipo real como estímulo
 
 Se a equipe quer estudar a interpretação de mapa, score e parecer, mostre o estado real que contém esses elementos.
 
 Não descreva a tela em palavras e depois peça ao participante que avalie a tela imaginada.
+
+
+> **ℹ️ Situação da recomendação** ([`40e8700`](https://github.com/KawanMark/template-ihc2026/commit/40e8700be3fb833e28586bc7436d6cd26206f249)): Encaminhada nas correções 4, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ### 4. Não induzir a permanência do score
 
@@ -397,6 +504,11 @@ A coleta deve estar aberta à possibilidade de descobrir que o participante:
 
 A função da coleta não é provar que o componente desenhado está correto.
 
+
+> **ℹ️ Situação da recomendação** ([`d1897db`](https://github.com/KawanMark/template-ihc2026/commit/d1897db0782462bdaa3a4e92841a199c1b5566c8)): Encaminhada nas correções 7, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
+
 ### 5. Preparar a entrevista para obter exemplos concretos
 
 Sempre que possível, privilegiem perguntas sobre:
@@ -408,6 +520,11 @@ Sempre que possível, privilegiem perguntas sobre:
 - dificuldade que realmente ocorreu.
 
 Isso produz dados mais úteis que opiniões abstratas.
+
+
+> **ℹ️ Situação da recomendação** ([`790de9c`](https://github.com/KawanMark/template-ihc2026/commit/790de9cae0e8d4eae4915809b52b8f49090483cf), [`ac8dcff`](https://github.com/KawanMark/template-ihc2026/commit/ac8dcffea9f36329f38ba165a2c41c055ee474c4)): Encaminhada nas correções 10, 11, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ## Pontos que devem alimentar as próximas entregas
 
@@ -421,6 +538,11 @@ Isso produz dados mais úteis que opiniões abstratas.
 - A entrevista deve registrar claramente experiência direta versus opinião ou suposição.
 - Alterações no protótipo devem ser rastreadas até os dados obtidos e não apenas até referências de mercado.
 - A Entrega 08 deve usar somente necessidades suficientemente sustentadas ao formular metas e requisitos de usabilidade.
+
+
+> **ℹ️ Encaminhamento:** os limites de P01/P02/P03, hipóteses abertas e vínculo com a avaliação foram preservados nos documentos e na matriz. Esta rodada não produz MoLIC, Figma ou avaliações das Entregas 10–14. Na Entrega 7, as pendências online estão no checklist e no README dos instrumentos.
+>
+> \- Kawan
 
 ## Síntese das ações recomendadas
 

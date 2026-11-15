@@ -352,3 +352,7 @@ Entretanto, a Entrega 04 ainda não pode ser considerada metodologicamente compl
 O terceiro cenário também merece uma revisão substancial: ele reintroduz uma proto-persona ainda não validada como usuário direto, antecipa uma interface móvel que havia sido retirada do recorte e preenche com detalhes inventados justamente as lacunas que deveriam ser investigadas.
 
 A direção para revisão é bastante objetiva: **menos “completar a história” e mais “usar a história para descobrir o que ainda não sabemos”**. Esse é o valor do cenário de análise/problema.
+
+> **Conferência de situação (15/11/2026)** ([`907ef6d`](https://github.com/KawanMark/template-ihc2026/commit/907ef6d)): as correções de conteúdo registradas em 25/10/2026 permanecem no documento. O status foi alinhado para 🟦 revisada após feedback, sem refazer os artefatos já corrigidos.
+>
+> \- Kawan

@@ -1,5 +1,26 @@
 # Feedback do Professor > Entrega 06 > Equipe 09
 
+> **Status da aplicação (15/11/2026):** revisão solicitada para as entregas da equipe, na branch `feedbacks`. Autoria acadêmica preservada; aplicação registrada por Kawan. O texto do professor está intacto, com anotações em blocos de citação. 🟦 indica revisão; pendências de configuração/verificação online e lacunas de evidência permanecem explícitas.
+>
+> | Item do parecer | Situação nesta rodada | Commit(s) / referência |
+> |---|---|---|
+> | Correção 1: PF02 declara cobrir T03–T06, mas o protótipo não cobre efetivamente todas essas tarefas | ✅ Aplicado | [`7478605`](https://github.com/KawanMark/template-ihc2026/commit/7478605d754b82ca3ab0ae9c9a31f3ea2aed622b) |
+> | Correção 2: P02 aparece no escopo, mas sua interação não está claramente representada | ✅ Aplicado | [`55840c5`](https://github.com/KawanMark/template-ihc2026/commit/55840c52ab1eceab76fd5f6b445fe82e517afdf4) |
+> | Correção 3: Os estados PP01–PP06 estão bem descritos no texto, mas não estão todos visualmente demonstrados em `assets/06_prototipos/` | ✅ Aplicado | [`cb04295`](https://github.com/KawanMark/template-ihc2026/commit/cb042954f1d03d37794e726c18feaf26deaf0485) |
+> | Correção 4: A entrega mostra a versão anterior ao walkthrough, mas não mostra de forma suficientemente direta a versão revisada | ✅ Aplicado | [`2d7474d`](https://github.com/KawanMark/template-ihc2026/commit/2d7474d4370683a99b58355a3f5956a0c657ad3d) |
+> | Correção 5: Há uma pequena inconsistência entre a versão visual posterior dos estados e as alterações descritas na seção 5 | ✅ Aplicado | [`01a4557`](https://github.com/KawanMark/template-ihc2026/commit/01a4557bb25584e0ee55a54bc75d134267d5a308) |
+> | Correção 6: A associação de “veredito final” à Mesa de inspeção ainda merece revisão | ✅ Aplicado | [`c79795b`](https://github.com/KawanMark/template-ihc2026/commit/c79795b9f934ce8db55f97196826feacfe2408e4) |
+> | Correção 7: O índice “94% · limiar 70% (calibrado)” continua semanticamente forte demais | ✅ Aplicado | [`5d018c1`](https://github.com/KawanMark/template-ihc2026/commit/5d018c101d9dd9a1dc7563330613d54612d0d59a) |
+> | Correção 8: O walkthrough foi realizado e está documentado, mas a evidência da sessão ainda é principalmente relato da própria equipe | 🟨 Tratado com lacunas de registro | [`8653884`](https://github.com/KawanMark/template-ihc2026/commit/865388421d7754e904150df5de8d457d50df69ef) |
+> | Correção 9: O participante do walkthrough é adequado para esta iteração, mas não valida o domínio profissional | ✅ Aplicado | [`8653884`](https://github.com/KawanMark/template-ihc2026/commit/865388421d7754e904150df5de8d457d50df69ef) |
+> | Correção 10: A prancha possui detalhes que começam a se aproximar de média fidelidade | ✅ Aplicado | [`3703be7`](https://github.com/KawanMark/template-ihc2026/commit/3703be7b8c315ca947391d21d4e6ade3087b32d9) |
+> | Correção 11: Algumas ferramentas da prancha precisam continuar rastreadas como hipóteses, não como requisitos | ✅ Aplicado | [`3703be7`](https://github.com/KawanMark/template-ihc2026/commit/3703be7b8c315ca947391d21d4e6ade3087b32d9) |
+> | Correção 12: A equipe corrigiu corretamente o problema de P03 observado na Entrega 05 | ℹ️ Preservado e conferido | [`0e92077`](https://github.com/KawanMark/template-ihc2026/commit/0e92077) |
+> | Correção 13: A rastreabilidade da Entrega 06 está atualizada e registra o ciclo de revisão | ✅ Aplicado | [`7478605`](https://github.com/KawanMark/template-ihc2026/commit/7478605d754b82ca3ab0ae9c9a31f3ea2aed622b) |
+>
+> \- Kawan
+
+
 ## Avaliação geral
 
 A equipe apresentou uma solução integrada de prototipação de baixa fidelidade e **há material visual do protótipo dentro do próprio repositório**, em `assets/06_prototipos/`: a prancha `mesa_inspecao.png` e o arquivo editável `mesa_inspecao.tldr`. Portanto, o requisito essencial de existir uma representação visual do protótipo foi atendido.
@@ -63,6 +84,11 @@ A equipe deve escolher uma das duas alternativas:
 
 Não é necessário criar mais telas apenas para “cumprir quantidade”. O importante é não declarar cobertura de uma tarefa que a interface não permite executar.
 
+
+> **✅ Aplicado** ([`7478605`](https://github.com/KawanMark/template-ihc2026/commit/7478605d754b82ca3ab0ae9c9a31f3ea2aed622b)): Correção 1: PF02 cobre T03 de P01; emitir o PDF não executa T04–T06 de P02. Ajusta a cobertura declarada na entrega e na matriz.
+>
+> \- Kawan
+
 ### 2. P02 aparece no escopo, mas sua interação não está claramente representada
 
 A seção 1 afirma:
@@ -84,6 +110,11 @@ Se P02 não interage diretamente com a Mesa de inspeção nesta versão, indique
 
 Isso seria metodologicamente mais preciso do que afirmar que a interface cobre P01/P02 indistintamente.
 
+
+> **✅ Aplicado** ([`55840c5`](https://github.com/KawanMark/template-ihc2026/commit/55840c52ab1eceab76fd5f6b445fe82e517afdf4)): Correção 2: identifica usuário direto, artefato de saída, encaminhamento externo e limite da participação de P02.
+>
+> \- Kawan
+
 ### 3. Os estados PP01–PP06 estão bem descritos no texto, mas não estão todos visualmente demonstrados em `assets/06_prototipos/`
 
 A seção 3 descreve seis estados:
@@ -102,6 +133,11 @@ Entretanto, o material visual da Entrega 06 em `assets/06_prototipos/` apresenta
 O arquivo editável mantém páginas auxiliares, o que é positivo, e o repositório atual também possui representações posteriores dos estados em outras entregas. Mesmo assim, para esta entrega, o ideal seria preservar em `assets/06_prototipos/` uma prancha ou conjunto de imagens que permita reconhecer visualmente os estados principais e os erros/retornos.
 
 A prototipação em papel não precisa de dezenas de telas. Mas, se a documentação afirma que existem seis estados, o leitor deveria conseguir enxergar esses estados, não apenas imaginá-los a partir de uma descrição.
+
+
+> **✅ Aplicado** ([`cb04295`](https://github.com/KawanMark/template-ihc2026/commit/cb042954f1d03d37794e726c18feaf26deaf0485)): Correção 3: permite visualizar PP01–PP06 diretamente na Entrega 6, sem depender dos diretórios das entregas futuras.
+>
+> \- Kawan
 
 ### 4. A entrega mostra a versão anterior ao walkthrough, mas não mostra de forma suficientemente direta a versão revisada
 
@@ -128,6 +164,11 @@ Esses são justamente pontos que o walkthrough levou a equipe a mudar.
 
 Sugiro manter a imagem original e acrescentar uma imagem da versão pós-walkthrough, ainda em baixa fidelidade. Assim a equipe demonstra visualmente que a revisão realmente foi incorporada.
 
+
+> **✅ Aplicado** ([`2d7474d`](https://github.com/KawanMark/template-ihc2026/commit/2d7474d4370683a99b58355a3f5956a0c657ad3d)): Correção 4 e recomendações 1/2: preserva o antes e torna visíveis as seis alterações posteriores ao walkthrough, sem alegar novo teste.
+>
+> \- Kawan
+
 ### 5. Há uma pequena inconsistência entre a versão visual posterior dos estados e as alterações descritas na seção 5
 
 O repositório atual possui uma representação posterior de PP01–PP06 em outro diretório, utilizada como referência para as entregas seguintes.
@@ -139,6 +180,11 @@ Ao mesmo tempo, o bloco de melhorias da mesma representação já descreve a ter
 Isso significa que o documento textual aprendeu com OBS-04, mas a atualização visual ainda não foi propagada de forma uniforme.
 
 A equipe precisa sincronizar os artefatos para que a decisão registrada na seção 5 apareça também nas representações visuais reutilizadas depois.
+
+
+> **✅ Aplicado** ([`01a4557`](https://github.com/KawanMark/template-ihc2026/commit/01a4557bb25584e0ee55a54bc75d134267d5a308)): Correção 5: a referência posterior usa os mesmos estados revisados; mantém os originais testados sem propagar os rótulos institucionais ambíguos.
+>
+> \- Kawan
 
 ### 6. A associação de “veredito final” à Mesa de inspeção ainda merece revisão
 
@@ -157,6 +203,11 @@ O importante é que a interface comunique claramente:
 e não:
 
 > “Esta é a decisão final sobre a carga.”
+
+
+> **✅ Aplicado** ([`c79795b`](https://github.com/KawanMark/template-ihc2026/commit/c79795b9f934ce8db55f97196826feacfe2408e4)): Correção 6: a conclusão de P01 é um parecer técnico e não um veredito administrativo sobre a carga.
+>
+> \- Kawan
 
 ### 7. O índice “94% · limiar 70% (calibrado)” continua semanticamente forte demais
 
@@ -178,6 +229,11 @@ A equipe ainda precisa investigar:
 
 Mantenham isso como hipótese de design a ser investigada, não como requisito consolidado.
 
+
+> **✅ Aplicado** ([`5d018c1`](https://github.com/KawanMark/template-ihc2026/commit/5d018c101d9dd9a1dc7563330613d54612d0d59a)): Correção 7: não consolida os valores ilustrativos como probabilidade ou limiar calibrado de domínio.
+>
+> \- Kawan
+
 ### 8. O walkthrough foi realizado e está documentado, mas a evidência da sessão ainda é principalmente relato da própria equipe
 
 O item 4 atende ao requisito básico: existe participante externo à elaboração, tarefa, percurso, observações e consequência para o design.
@@ -198,6 +254,11 @@ Não é necessário identificar nominalmente o participante.
 Atualmente, as seis “evidências registradas” são paráfrases do que ocorreu. São úteis, mas dependem inteiramente do relato posterior da equipe.
 
 Esta é uma recomendação de melhoria, não uma exigência de repetir o walkthrough.
+
+
+> **🟨 Tratado com lacunas de registro** ([`8653884`](https://github.com/KawanMark/template-ihc2026/commit/865388421d7754e904150df5de8d457d50df69ef)): A proveniência disponível está explícita na Entrega 6. Data/duração/notas primárias da sessão não foram recuperadas; continuam [?], sem inventar evidência ou repetir o walkthrough.
+>
+> \- Kawan
 
 ### 9. O participante do walkthrough é adequado para esta iteração, mas não valida o domínio profissional
 
@@ -222,6 +283,11 @@ Ele não pode validar, por si só:
 - se as ferramentas de tratamento correspondem à prática profissional.
 
 A equipe demonstrou consciência dessa limitação no final da seção 4. É importante manter essa distinção nas próximas entregas.
+
+
+> **✅ Aplicado** ([`8653884`](https://github.com/KawanMark/template-ihc2026/commit/865388421d7754e904150df5de8d457d50df69ef)): Correção 8: preserva o relato e identifica dados ausentes, sem inventar data, duração, notas ou nova sessão. Mantém o limite de validação do colega (item 9).
+>
+> \- Kawan
 
 ### 10. A prancha possui detalhes que começam a se aproximar de média fidelidade
 
@@ -250,6 +316,11 @@ O valor da prancha está em testar:
 
 Não é necessário decidir agora exatamente todos os sliders, filtros e tratamentos que existirão no produto final.
 
+
+> **✅ Aplicado** ([`3703be7`](https://github.com/KawanMark/template-ihc2026/commit/3703be7b8c315ca947391d21d4e6ade3087b32d9)): Correções 10/11: preserva baixa fidelidade e registra H43 para investigar necessidade e simplificação dos filtros.
+>
+> \- Kawan
+
 ### 11. Algumas ferramentas da prancha precisam continuar rastreadas como hipóteses, não como requisitos
 
 Na lateral esquerda aparecem recursos como:
@@ -276,6 +347,11 @@ Nas próximas iterações, a equipe deve investigar quais controles:
 - devem ser agrupados;
 - podem ser removidos.
 
+
+> **✅ Aplicado** ([`3703be7`](https://github.com/KawanMark/template-ihc2026/commit/3703be7b8c315ca947391d21d4e6ade3087b32d9)): Correções 10/11: preserva baixa fidelidade e registra H43 para investigar necessidade e simplificação dos filtros.
+>
+> \- Kawan
+
 ### 12. A equipe corrigiu corretamente o problema de P03 observado na Entrega 05
 
 Este é um ponto importante de continuidade e deve ser preservado.
@@ -290,6 +366,11 @@ T07–T09 não foram usados para justificar um aplicativo móvel no protótipo. 
 
 Essa decisão torna o escopo mais defensável.
 
+
+> **ℹ️ Preservado e conferido** ([`0e92077`](https://github.com/KawanMark/template-ihc2026/commit/0e92077)): P03 permanece stakeholder, sem tela móvel e com H42 aberta.
+>
+> \- Kawan
+
 ### 13. A rastreabilidade da Entrega 06 está atualizada e registra o ciclo de revisão
 
 A matriz registra a criação da Mesa de inspeção, os fluxos PF01/PF02, os estados PP01–PP06, o walkthrough e as principais decisões posteriores.
@@ -300,6 +381,11 @@ A equipe também criou prefixos específicos `PF` e `PP`, mantendo a convenção
 
 O cuidado agora é não usar a rastreabilidade para declarar uma cobertura maior do que a interface realmente possui - especialmente em relação a T04–T06.
 
+
+> **✅ Aplicado** ([`7478605`](https://github.com/KawanMark/template-ihc2026/commit/7478605d754b82ca3ab0ae9c9a31f3ea2aed622b)): Correção 1: PF02 cobre T03 de P01; emitir o PDF não executa T04–T06 de P02. Ajusta a cobertura declarada na entrega e na matriz.
+>
+> \- Kawan
+
 ## Recomendações de melhoria
 
 ### 1. Acrescentar uma prancha “depois”
@@ -307,6 +393,11 @@ O cuidado agora é não usar a rastreabilidade para declarar uma cobertura maior
 Mantenham `mesa_inspecao.png` como registro da versão testada e acrescentem uma segunda imagem mostrando as alterações decorrentes de OBS-01 a OBS-06.
 
 Isso tornaria o ciclo iterativo imediatamente verificável.
+
+
+> **ℹ️ Situação da recomendação** ([`2d7474d`](https://github.com/KawanMark/template-ihc2026/commit/2d7474d4370683a99b58355a3f5956a0c657ad3d)): Encaminhada nas correções 4, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ### 2. Mostrar visualmente pelo menos os estados essenciais
 
@@ -322,6 +413,11 @@ Uma única prancha pode mostrar miniaturas ou recortes de:
 
 O importante é tornar visível o que muda de um estado para outro.
 
+
+> **ℹ️ Situação da recomendação** ([`cb04295`](https://github.com/KawanMark/template-ihc2026/commit/cb042954f1d03d37794e726c18feaf26deaf0485)): Encaminhada nas correções 3, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
+
 ### 3. Explicitar a fronteira entre P01 e P02
 
 A documentação deveria dizer claramente:
@@ -332,6 +428,11 @@ A documentação deveria dizer claramente:
 - se a interação de P02 está ou não dentro do escopo desta versão.
 
 Isso evitará que o protótipo misture parecer técnico e ato formal.
+
+
+> **ℹ️ Situação da recomendação** ([`7478605`](https://github.com/KawanMark/template-ihc2026/commit/7478605d754b82ca3ab0ae9c9a31f3ea2aed622b), [`55840c5`](https://github.com/KawanMark/template-ihc2026/commit/55840c52ab1eceab76fd5f6b445fe82e517afdf4)): Encaminhada nas correções 1, 2, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ### 4. Usar a própria OBS-03 como hipótese para a Entrega 07
 
@@ -347,11 +448,21 @@ Em vez de apenas melhorar a legenda, a equipe deve investigar se usuários do do
 
 A melhor solução pode não ser “explicar melhor o 94%”; pode ser apresentar a informação de outra forma.
 
+
+> **ℹ️ Situação da recomendação** ([`5d018c1`](https://github.com/KawanMark/template-ihc2026/commit/5d018c101d9dd9a1dc7563330613d54612d0d59a)): Encaminhada nas correções 7, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
+
 ### 5. Preservar a baixa fidelidade
 
 Continuem priorizando fluxo, significado e decisão.
 
 Ainda não é hora de transformar a Mesa de inspeção em uma réplica visual detalhada de um produto final.
+
+
+> **ℹ️ Situação da recomendação** ([`3703be7`](https://github.com/KawanMark/template-ihc2026/commit/3703be7b8c315ca947391d21d4e6ade3087b32d9)): Encaminhada nas correções 10, 11, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ## Pontos que devem alimentar as próximas entregas
 
@@ -366,6 +477,11 @@ Ainda não é hora de transformar a Mesa de inspeção em uma réplica visual de
 - A Entrega 08 deverá transformar algumas dessas preocupações em metas verificáveis de usabilidade, sem confundir desempenho do modelo com qualidade da interação.
 - As Entregas 09–11 devem preservar a diferença entre conclusão da análise de imagem, comunicação de suspeita e decisão aduaneira.
 - P03 deve continuar fora da camada interativa até que H42 receba evidência suficiente.
+
+
+> **ℹ️ Encaminhamento:** os limites de P01/P02/P03, hipóteses abertas e vínculo com a avaliação foram preservados nos documentos e na matriz. Esta rodada não produz MoLIC, Figma ou avaliações das Entregas 10–14. Na Entrega 7, as pendências online estão no checklist e no README dos instrumentos.
+>
+> \- Kawan
 
 ## Síntese das ações recomendadas
 

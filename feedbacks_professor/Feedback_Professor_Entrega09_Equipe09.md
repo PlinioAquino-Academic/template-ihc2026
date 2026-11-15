@@ -1,5 +1,35 @@
 # Feedback do Professor > Entrega 09 > Equipe 09
 
+> **Status da aplicação (15/11/2026):** revisão solicitada para as entregas da equipe, na branch `feedbacks`. Autoria acadêmica preservada; aplicação registrada por Kawan. O texto do professor está intacto, com anotações em blocos de citação. 🟦 indica revisão; pendências de configuração/verificação online e lacunas de evidência permanecem explícitas.
+>
+> | Item do parecer | Situação nesta rodada | Commit(s) / referência |
+> |---|---|---|
+> | Correção 1: Os Cenários de Interação não foram construídos como evolução direta dos Cenários de Problema | ✅ Aplicado | [`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038) |
+> | Correção 2: As “Questões de refinamento” repetem um formalismo da Entrega 04 que não substitui o Cenário de Interação | ✅ Aplicado | [`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038) |
+> | Correção 3: CI01 possui uma boa solução conceitual, mas precisa preservar melhor o problema original | ✅ Aplicado | [`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038) |
+> | Correção 4: CI02 precisa deixar claro se P02 realmente interage com a Mesa ou apenas lê um documento produzido por P01 | ✅ Aplicado | [`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c) |
+> | Correção 5: CI03 é uma intervenção válida sobre CP03, mas não é propriamente um cenário de interação de P03 | ✅ Aplicado | [`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c) |
+> | Correção 6: O Design Centrado na Comunicação de CI01 está próximo da teoria | ✅ Aplicado | [`2be3d79`](https://github.com/KawanMark/template-ihc2026/commit/2be3d790ae01f984f8c47de1a77109ef6f73369a) |
+> | Correção 7: CI02 e CI03 usam falas que não correspondem claramente a uma conversa real usuário–sistema | ✅ Aplicado | [`2be3d79`](https://github.com/KawanMark/template-ihc2026/commit/2be3d790ae01f984f8c47de1a77109ef6f73369a) |
+> | Correção 8: A seção de Design Centrado na Comunicação deveria deixar mais clara a autoria individual | ✅ Aplicado | [`2be3d79`](https://github.com/KawanMark/template-ihc2026/commit/2be3d790ae01f984f8c47de1a77109ef6f73369a) |
+> | Correção 9: O Mapa de Objetivos não segue o formalismo ensinado | ✅ Aplicado | [`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858), [`90a099f`](https://github.com/KawanMark/template-ihc2026/commit/90a099f3d88c415e1fc519bddaf84807247060bc), [`d93b2f0`](https://github.com/KawanMark/template-ihc2026/commit/d93b2f0974dfbe608201b6c1346803ef1f9e9a01) |
+> | Correção 10: O mapa não distingue objetivo final de objetivo instrumental | ✅ Aplicado | [`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858) |
+> | Correção 11: O mapa não representa instrumental direto e indireto | ✅ Aplicado | [`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858) |
+> | Correção 12: O mapa precisa representar claramente os papéis | ✅ Aplicado | [`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858) |
+> | Correção 13: Alguns objetivos descrevem como a solução funciona, e não apenas o que o usuário deseja alcançar | ✅ Aplicado | [`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858) |
+> | Correção 14: O objetivo raiz também precisa ser tratado segundo a teoria | ✅ Aplicado | [`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858) |
+> | Correção 15: O dicionário de objetivos é útil, mas prioridade não substitui classificação | ✅ Aplicado | [`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858) |
+> | Correção 16: O Esquema Conceitual de Signos é a parte mais forte da entrega | ✅ Aplicado | [`e61916a`](https://github.com/KawanMark/template-ihc2026/commit/e61916a9578e0f70ce1100464b2bd37757438ea1) |
+> | Correção 17: Alguns “signos” agregam conceitos diferentes demais em uma única linha | ✅ Aplicado | [`e61916a`](https://github.com/KawanMark/template-ihc2026/commit/e61916a9578e0f70ce1100464b2bd37757438ea1) |
+> | Correção 18: A coluna “Origem” precisa ser padronizada conceitualmente | ✅ Aplicado | [`6adc0f8`](https://github.com/KawanMark/template-ihc2026/commit/6adc0f802ab6eb4ec8648c40bb8942a249b2789b) |
+> | Correção 19: S04 ainda consolida indicador/limiar que permanece hipótese de design | ✅ Aplicado | [`6adc0f8`](https://github.com/KawanMark/template-ihc2026/commit/6adc0f802ab6eb4ec8648c40bb8942a249b2789b) |
+> | Correção 20: Os mecanismos de prevenção e recuperação estão, em geral, bem aplicados | ✅ Aplicado | [`e61916a`](https://github.com/KawanMark/template-ihc2026/commit/e61916a9578e0f70ce1100464b2bd37757438ea1) |
+> | Correção 21: A rastreabilidade da Entrega 09 está internamente inconsistente | ✅ Aplicado | [`938db20`](https://github.com/KawanMark/template-ihc2026/commit/938db203dcc7f4682ecb0201c2d00cfce0dc2337), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c) |
+> | Correção 22: A rastreabilidade ainda utiliza “mapa residual” em R01/R03 enquanto a Entrega 09 trabalha com “mapa de atenção” | ✅ Aplicado | [`1592683`](https://github.com/KawanMark/template-ihc2026/commit/1592683d9247db11a38ecc8b93a7df1e50478f04), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c) |
+>
+> \- Kawan
+
+
 ## Avaliação geral
 
 A equipe entregou os quatro grupos de artefatos esperados para esta etapa:
@@ -81,6 +111,11 @@ O mesmo ocorre em CI02 e CI03.
 
 A equipe precisa voltar aos textos completos de CP01–CP03 e produzir uma **evolução textual reconhecível**, destacando as alterações da solução sobre o cenário original.
 
+
+> **✅ Aplicado** ([`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038)): Correção 1: preserva o cenário refinado integral como base e destaca somente intervenções e limites. CI02 usa PDF externo; CI03 é uso do resultado por P03, com preparação por P01. Não inventa redução de tempo ou retorno automático.
+>
+> \- Kawan
+
 ### 2. As “Questões de refinamento” repetem um formalismo da Entrega 04 que não substitui o Cenário de Interação
 
 A Entrega 09 adiciona novamente:
@@ -99,6 +134,11 @@ Aqui a pergunta principal é:
 As questões Q1–Q3 podem ser mantidas como apoio interno de projeto, mas não devem substituir a construção direta do Cenário de Interação a partir do Cenário de Problema.
 
 Neste momento, elas tornam a seção mais longa sem resolver a principal falha: a ausência de correspondência clara entre o texto original e o texto transformado.
+
+
+> **✅ Aplicado** ([`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038)): Correção 1: preserva o cenário refinado integral como base e destaca somente intervenções e limites. CI02 usa PDF externo; CI03 é uso do resultado por P03, com preparação por P01. Não inventa redução de tempo ou retorno automático.
+>
+> \- Kawan
 
 ### 3. CI01 possui uma boa solução conceitual, mas precisa preservar melhor o problema original
 
@@ -126,6 +166,11 @@ A equipe deveria mostrar, dentro da narrativa original, como a intervenção alt
 
 Assim ficará evidente que o Cenário de Interação resolve aspectos concretos do Cenário de Problema.
 
+
+> **✅ Aplicado** ([`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038)): Correção 1: preserva o cenário refinado integral como base e destaca somente intervenções e limites. CI02 usa PDF externo; CI03 é uso do resultado por P03, com preparação por P01. Não inventa redução de tempo ou retorno automático.
+>
+> \- Kawan
+
 ### 4. CI02 precisa deixar claro se P02 realmente interage com a Mesa ou apenas lê um documento produzido por P01
 
 CI02 afirma que Eduardo:
@@ -151,6 +196,11 @@ Se P02 não utiliza diretamente a Mesa, o cenário deve explicar que a solução
 
 Se P02 realmente interage com alguma interface, essa interação precisa aparecer explicitamente.
 
+
+> **✅ Aplicado** ([`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c)): Correção 1: preserva o cenário refinado integral como base e destaca somente intervenções e limites. CI02 usa PDF externo; CI03 é uso do resultado por P03, com preparação por P01. Não inventa redução de tempo ou retorno automático. Conferência das correções 4/5/21/22: corrige âncoras de CP, torna S18 explícito no PDF e evita que o fluxograma auxiliar e a matriz propaguem decisões de P02 como ações da Mesa.
+>
+> \- Kawan
+
 ### 5. CI03 é uma intervenção válida sobre CP03, mas não é propriamente um cenário de interação de P03
 
 A equipe corrigiu corretamente o problema das entregas anteriores e não voltou a criar uma tela móvel para Marcos.
@@ -170,6 +220,11 @@ Então existem duas possibilidades metodologicamente coerentes:
 
 A equipe precisa escolher e deixar isso claro.
 
+
+> **✅ Aplicado** ([`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c)): Correção 1: preserva o cenário refinado integral como base e destaca somente intervenções e limites. CI02 usa PDF externo; CI03 é uso do resultado por P03, com preparação por P01. Não inventa redução de tempo ou retorno automático. Conferência das correções 4/5/21/22: corrige âncoras de CP, torna S18 explícito no PDF e evita que o fluxograma auxiliar e a matriz propaguem decisões de P02 como ações da Mesa.
+>
+> \- Kawan
+
 ### 6. O Design Centrado na Comunicação de CI01 está próximo da teoria
 
 CI01 apresenta:
@@ -186,6 +241,11 @@ Essa estrutura está alinhada ao formalismo do Design Centrado na Comunicação.
 As conversas “caso”, “análise”, “comparação”, “registro” e “exportação” também são coerentes com o objetivo de P01.
 
 Esse é o melhor dos três conjuntos e pode servir como referência interna para a revisão dos demais.
+
+
+> **✅ Aplicado** ([`2be3d79`](https://github.com/KawanMark/template-ihc2026/commit/2be3d790ae01f984f8c47de1a77109ef6f73369a)): Correções 7/8: identifica autor, cenário e papel de cada contribuição; DCC02 modela leitura estática e DCC03 modela a preparação real por P01.
+>
+> \- Kawan
 
 ### 7. CI02 e CI03 usam falas que não correspondem claramente a uma conversa real usuário–sistema
 
@@ -215,6 +275,11 @@ A equipe deve revisar CI02/CI03 para modelar a interação real:
 
 ou declarar explicitamente que o parecer é um artefato de comunicação estático e modelar essa situação de maneira consistente.
 
+
+> **✅ Aplicado** ([`2be3d79`](https://github.com/KawanMark/template-ihc2026/commit/2be3d790ae01f984f8c47de1a77109ef6f73369a)): Correções 7/8: identifica autor, cenário e papel de cada contribuição; DCC02 modela leitura estática e DCC03 modela a preparação real por P01.
+>
+> \- Kawan
+
 ### 8. A seção de Design Centrado na Comunicação deveria deixar mais clara a autoria individual
 
 A quantidade mínima exige uma solução por integrante.
@@ -230,6 +295,11 @@ Sugiro dividir em:
 - DCC03 - associado a CI03 - autor Alexandre.
 
 Isso torna a responsabilidade individual verificável e facilita comparar cenário e conversa.
+
+
+> **✅ Aplicado** ([`2be3d79`](https://github.com/KawanMark/template-ihc2026/commit/2be3d790ae01f984f8c47de1a77109ef6f73369a)): Correções 7/8: identifica autor, cenário e papel de cada contribuição; DCC02 modela leitura estática e DCC03 modela a preparação real por P01.
+>
+> \- Kawan
 
 ### 9. O Mapa de Objetivos não segue o formalismo ensinado
 
@@ -256,6 +326,11 @@ O Mapa de Objetivos trabalhado em aula possui outra finalidade:
 
 O SVG atual não apresenta essa classificação.
 
+
+> **✅ Aplicado** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858), [`90a099f`](https://github.com/KawanMark/template-ihc2026/commit/90a099f3d88c415e1fc519bddaf84807247060bc), [`d93b2f0`](https://github.com/KawanMark/template-ihc2026/commit/d93b2f0974dfbe608201b6c1346803ef1f9e9a01)): Correção 9: distingue finais, instrumentais diretos/indiretos, papéis e relação instrumenta. Remove detalhes de solução dos objetivos; objetivos finais externos não criam telas. Complemento da correção 9: apresenta o grafo por finalidade e papel, sem cruzamentos ambíguos. Todas as setas coincidem com as relações da fonte Mermaid e do dicionário. Conferência visual da correção 9: evita que o limite de atuação atravesse a borda das elipses; conteúdo e relações preservados.
+>
+> \- Kawan
+
 ### 10. O mapa não distingue objetivo final de objetivo instrumental
 
 No diagrama teórico, objetivos finais e instrumentais possuem representações diferentes.
@@ -273,6 +348,11 @@ Não basta colocar um objetivo “embaixo” de outro.
 
 A relação precisa possuir significado de instrumentação.
 
+
+> **✅ Aplicado** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858)): Correção 9: distingue finais, instrumentais diretos/indiretos, papéis e relação instrumenta. Remove detalhes de solução dos objetivos; objetivos finais externos não criam telas.
+>
+> \- Kawan
+
 ### 11. O mapa não representa instrumental direto e indireto
 
 A teoria diferencia:
@@ -288,6 +368,11 @@ Já preparar um parecer para que P02 ou outro ator tome uma decisão futura pode
 
 A equipe não precisa forçar todos os objetivos a essas categorias, mas deve demonstrar que avaliou a relação conforme o formalismo ensinado.
 
+
+> **✅ Aplicado** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858)): Correção 9: distingue finais, instrumentais diretos/indiretos, papéis e relação instrumenta. Remove detalhes de solução dos objetivos; objetivos finais externos não criam telas.
+>
+> \- Kawan
+
 ### 12. O mapa precisa representar claramente os papéis
 
 No exemplo apresentado em aula, os objetivos são associados aos papéis que podem persegui-los.
@@ -301,6 +386,11 @@ Isso é especialmente importante porque:
 - O09 envolve P01/P02 e um destinatário P03.
 
 O papel não deve ser inferido apenas pelo cenário.
+
+
+> **✅ Aplicado** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858)): Correção 9: distingue finais, instrumentais diretos/indiretos, papéis e relação instrumenta. Remove detalhes de solução dos objetivos; objetivos finais externos não criam telas.
+>
+> \- Kawan
 
 ### 13. Alguns objetivos descrevem como a solução funciona, e não apenas o que o usuário deseja alcançar
 
@@ -318,6 +408,11 @@ A equipe precisa rever se o objetivo humano existe independentemente desses meca
 
 O mapa deve capturar a intenção do usuário; a interface e os signos explicam como essa intenção será apoiada.
 
+
+> **✅ Aplicado** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858)): Correção 9: distingue finais, instrumentais diretos/indiretos, papéis e relação instrumenta. Remove detalhes de solução dos objetivos; objetivos finais externos não criam telas.
+>
+> \- Kawan
+
 ### 14. O objetivo raiz também precisa ser tratado segundo a teoria
 
 “Analisar e comunicar um achado na radiografia” funciona como um bom resumo do projeto, mas não está classificado como:
@@ -329,6 +424,11 @@ O mapa deve capturar a intenção do usuário; a interface e os signos explicam 
 Se permanecer no mapa, sua função precisa ficar explícita.
 
 Caso seja apenas um título/agregador, não deve parecer um objetivo da mesma natureza dos demais.
+
+
+> **✅ Aplicado** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858)): Correção 9: distingue finais, instrumentais diretos/indiretos, papéis e relação instrumenta. Remove detalhes de solução dos objetivos; objetivos finais externos não criam telas.
+>
+> \- Kawan
 
 ### 15. O dicionário de objetivos é útil, mas prioridade não substitui classificação
 
@@ -350,6 +450,11 @@ Porém, falta justamente o que é central no método:
 
 Sugiro acrescentar essa classificação ao dicionário e reconstruir o diagrama com a notação correspondente.
 
+
+> **✅ Aplicado** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858)): Correção 9: distingue finais, instrumentais diretos/indiretos, papéis e relação instrumenta. Remove detalhes de solução dos objetivos; objetivos finais externos não criam telas.
+>
+> \- Kawan
+
 ### 16. O Esquema Conceitual de Signos é a parte mais forte da entrega
 
 A equipe produziu uma tabela única com:
@@ -369,6 +474,11 @@ Isso está bastante próximo do modelo teórico.
 Também há boa preocupação em explicar as siglas PP/PA/AL/RA/CE.
 
 O esquema é suficientemente rico para apoiar a próxima entrega.
+
+
+> **✅ Aplicado** ([`e61916a`](https://github.com/KawanMark/template-ihc2026/commit/e61916a9578e0f70ce1100464b2bd37757438ea1)): Correção 17: decompõe S01, S04, S06 e S11 sem reutilizar IDs, preserva esquema único e distingue operações normais de recuperação de ruptura.
+>
+> \- Kawan
 
 ### 17. Alguns “signos” agregam conceitos diferentes demais em uma única linha
 
@@ -397,6 +507,11 @@ S11 é o exemplo mais claro:
 
 Colocá-los no mesmo signo dificulta definir origem, valor padrão e prevenção corretamente.
 
+
+> **✅ Aplicado** ([`e61916a`](https://github.com/KawanMark/template-ihc2026/commit/e61916a9578e0f70ce1100464b2bd37757438ea1)): Correção 17: decompõe S01, S04, S06 e S11 sem reutilizar IDs, preserva esquema único e distingue operações normais de recuperação de ruptura.
+>
+> \- Kawan
+
 ### 18. A coluna “Origem” precisa ser padronizada conceitualmente
 
 A equipe usa valores como:
@@ -417,6 +532,11 @@ O próprio modelo da atividade pede distinguir informação:
 
 A equipe deve adotar uma classificação uniforme e, se necessário, usar “observações” para detalhar a fonte específica.
 
+
+> **✅ Aplicado** ([`6adc0f8`](https://github.com/KawanMark/template-ihc2026/commit/6adc0f802ab6eb4ec8648c40bb8942a249b2789b)): Correção 18: usa domínio/usuário/aplicação; S14/S15 são candidatos H31/H37 e não requisitos consolidados.
+>
+> \- Kawan
+
 ### 19. S04 ainda consolida indicador/limiar que permanece hipótese de design
 
 A equipe foi cuidadosa ao escrever “quando disponíveis” e ao afirmar que o valor não representa probabilidade comprovada de contrabando.
@@ -432,6 +552,11 @@ Entretanto, o projeto ainda não demonstrou que o usuário necessita:
 Portanto, o esquema não deve dar a esses elementos a aparência de requisito consolidado.
 
 Eles podem ser mantidos como signos candidatos ou explicitamente provisórios até a avaliação.
+
+
+> **✅ Aplicado** ([`6adc0f8`](https://github.com/KawanMark/template-ihc2026/commit/6adc0f802ab6eb4ec8648c40bb8942a249b2789b)): Correção 18: usa domínio/usuário/aplicação; S14/S15 são candidatos H31/H37 e não requisitos consolidados.
+>
+> \- Kawan
 
 ### 20. Os mecanismos de prevenção e recuperação estão, em geral, bem aplicados
 
@@ -449,6 +574,11 @@ Isso demonstra compreensão razoável das categorias de ruptura comunicativa.
 A equipe deve apenas tomar cuidado para não classificar uma operação normal como recuperação.
 
 Por exemplo, restaurar zoom ou ocultar um mapa pode ser apenas uma ação normal de visualização, a menos que esteja realmente sendo usada para recuperar uma ruptura.
+
+
+> **✅ Aplicado** ([`e61916a`](https://github.com/KawanMark/template-ihc2026/commit/e61916a9578e0f70ce1100464b2bd37757438ea1)): Correção 17: decompõe S01, S04, S06 e S11 sem reutilizar IDs, preserva esquema único e distingue operações normais de recuperação de ruptura.
+>
+> \- Kawan
 
 ### 21. A rastreabilidade da Entrega 09 está internamente inconsistente
 
@@ -473,6 +603,11 @@ A matriz precisa ser atualizada:
 - R03 deve apontar para CI01/CI02/CI03 e seus signos pertinentes;
 - a observação sobre campos pendentes deve ser atualizada.
 
+
+> **✅ Aplicado** ([`938db20`](https://github.com/KawanMark/template-ihc2026/commit/938db203dcc7f4682ecb0201c2d00cfce0dc2337), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c)): Correção 21: atualiza cenários, objetivos, signos e limites da participação de P02/P03; remove a afirmação de que a Entrega 9 não foi realizada. Conferência das correções 4/5/21/22: corrige âncoras de CP, torna S18 explícito no PDF e evita que o fluxograma auxiliar e a matriz propaguem decisões de P02 como ações da Mesa.
+>
+> \- Kawan
+
 ### 22. A rastreabilidade ainda utiliza “mapa residual” em R01/R03 enquanto a Entrega 09 trabalha com “mapa de atenção”
 
 A equipe já registrou em entregas anteriores que mapa residual e mapa de atenção não são equivalentes.
@@ -486,6 +621,11 @@ Não mantenham dois termos diferentes para o mesmo componente sem explicar:
 - qual pertence à versão técnica atual;
 - qual pertence à hipótese anterior;
 - qual será efetivamente apresentado ao usuário.
+
+
+> **✅ Aplicado** ([`1592683`](https://github.com/KawanMark/template-ihc2026/commit/1592683d9247db11a38ecc8b93a7df1e50478f04), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c)): Correção 22: normaliza R01/R03 e a apresentação atual no README conforme a versão técnica consultada do TCC. Mantém a formulação inicial como histórico; não altera código nem escopo formal do TCC. Conferência das correções 4/5/21/22: corrige âncoras de CP, torna S18 explícito no PDF e evita que o fluxograma auxiliar e a matriz propaguem decisões de P02 como ações da Mesa.
+>
+> \- Kawan
 
 ## Recomendações de melhoria
 
@@ -504,6 +644,11 @@ Destaquem claramente:
 
 Assim ficará evidente a evolução.
 
+
+> **ℹ️ Situação da recomendação** ([`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038)): Encaminhada nas correções 1, 2, 3, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
+
 ### 2. Separar os três DCCs
 
 Criem DCC01, DCC02 e DCC03, cada um identificado por:
@@ -518,11 +663,21 @@ Criem DCC01, DCC02 e DCC03, cada um identificado por:
 
 Isso facilitará verificar a responsabilidade individual.
 
+
+> **ℹ️ Situação da recomendação** ([`2be3d79`](https://github.com/KawanMark/template-ihc2026/commit/2be3d790ae01f984f8c47de1a77109ef6f73369a)): Encaminhada nas correções 7, 8, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
+
 ### 3. Não inventar diálogo quando existe apenas leitura de documento
 
 Se P02 ou P03 apenas recebe um parecer, modele com precisão o que a interface realmente oferece.
 
 Não escreva uma pergunta do usuário e uma resposta dinâmica do sistema se essa ação não existe.
+
+
+> **ℹ️ Situação da recomendação** ([`af98436`](https://github.com/KawanMark/template-ihc2026/commit/af98436ac10a061e2458a99d2ff0f6999c9c8038), [`71b4fd5`](https://github.com/KawanMark/template-ihc2026/commit/71b4fd5250488a5d30686ee862671a015ed33f9c), [`2be3d79`](https://github.com/KawanMark/template-ihc2026/commit/2be3d790ae01f984f8c47de1a77109ef6f73369a)): Encaminhada nas correções 4, 5, 7, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ### 4. Reconstruir o Mapa de Objetivos usando o formalismo da aula
 
@@ -538,6 +693,11 @@ O novo mapa deve mostrar:
 
 Evitem representar apenas uma árvore de “passos”.
 
+
+> **ℹ️ Situação da recomendação** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858), [`90a099f`](https://github.com/KawanMark/template-ihc2026/commit/90a099f3d88c415e1fc519bddaf84807247060bc), [`d93b2f0`](https://github.com/KawanMark/template-ihc2026/commit/d93b2f0974dfbe608201b6c1346803ef1f9e9a01)): Encaminhada nas correções 9, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
+
 ### 5. Reformular objetivos que já contêm detalhes da solução
 
 Perguntem para cada Oxx:
@@ -545,6 +705,11 @@ Perguntem para cada Oxx:
 > “Esse objetivo ainda existiria se eu trocasse completamente a interface?”
 
 Se a resposta for não, provavelmente o texto está descrevendo a solução, e não o objetivo humano.
+
+
+> **ℹ️ Situação da recomendação** ([`9f85b0c`](https://github.com/KawanMark/template-ihc2026/commit/9f85b0cdddd6e3e10493ed21e637969b8028d858)): Encaminhada nas correções 13, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ### 6. Refinar a granularidade dos signos
 
@@ -556,6 +721,11 @@ Separem signos quando:
 - têm prevenção/recuperação diferentes.
 
 Isso deixará o esquema mais útil para MoLIC e Figma.
+
+
+> **ℹ️ Situação da recomendação** ([`e61916a`](https://github.com/KawanMark/template-ihc2026/commit/e61916a9578e0f70ce1100464b2bd37757438ea1), [`6adc0f8`](https://github.com/KawanMark/template-ihc2026/commit/6adc0f802ab6eb4ec8648c40bb8942a249b2789b)): Encaminhada nas correções 17, 18, com o alcance e as pendências explicitados acima.
+>
+> \- Kawan
 
 ## Pontos que devem alimentar as próximas entregas
 
@@ -571,6 +741,11 @@ Isso deixará o esquema mais útil para MoLIC e Figma.
 - A rastreabilidade R01/R03 deve deixar de marcar a Entrega 09 como pendente.
 - A terminologia “mapa residual” versus “mapa de atenção” precisa ser normalizada conforme a contribuição técnica atual.
 - Os futuros diagramas MoLIC devem representar conversas que realmente podem ocorrer, não diálogos fictícios com documentos estáticos.
+
+
+> **ℹ️ Encaminhamento:** os limites de P01/P02/P03, hipóteses abertas e vínculo com a avaliação foram preservados nos documentos e na matriz. Esta rodada não produz MoLIC, Figma ou avaliações das Entregas 10–14. Na Entrega 7, as pendências online estão no checklist e no README dos instrumentos.
+>
+> \- Kawan
 
 ## Síntese das ações recomendadas
 
