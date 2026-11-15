@@ -171,7 +171,7 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 **Roteiro:**
 
 1. Com quais atividades de inspeção ou despacho você tem experiência direta?
-2. Quem opera o escâner, interpreta a imagem e formaliza a decisão? Esses papéis coincidem?
+2. Quem opera o escâner? Quem interpreta a imagem? Quem registra o apontamento? Quem decide e quem formaliza o ato? Perguntar uma função por vez e, para cada passagem, “Como a informação chega à próxima pessoa?”. Só depois verificar quais papéis coincidem no contexto do participante, sem sugerir que sejam necessariamente pessoas distintas.
 3. Que informações são consultadas junto da imagem e onde ficam disponíveis?
 4. Como uma suspeita é registrada e encaminhada? O que acompanha esse registro?
 5. Como é definida a ordem de análise e quem pode alterá-la?
