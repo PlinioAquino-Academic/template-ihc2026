@@ -80,7 +80,11 @@ As evidências dizem respeito à compreensão do esboço por um colega, sem vali
 
 ## 5. Alterações após a simulação
 
-São decisões para a próxima versão; a figura mantém o esboço original para permitir a comparação.
+[H] A prancha abaixo representa a revisão projetada a partir de OBS-01–OBS-06. A Figura 1 preserva o esboço testado. A revisão ainda não foi submetida a novo walkthrough nem validada com profissionais.
+
+![Mesa de inspeção após o walkthrough](../assets/06_prototipos/mesa_inspecao_revisada.svg)
+
+*Figura 3. Versão revisada em baixa fidelidade: contexto, comparação persistente, comentário visível, parecer técnico e validação.*
 
 | Antes | Problema | Depois | Justificativa |
 |---|---|---|---|
@@ -101,5 +105,5 @@ Os diagramas e estados completos continuam guardados como [referência para as e
 - [x] Estados estão numerados, com controles, caminhos principais e retornos descritos.
 - [x] Simulação/walkthrough documentado, com perfil, tarefa e evidências.
 - [x] Observações geraram decisões de revisão justificadas.
-- [x] O protótipo permanece em baixa fidelidade, com apenas a prancha principal.
+- [x] O protótipo permanece em baixa fidelidade, com a prancha testada, a revisada e os estados essenciais.
 - [x] Material detalhado preservado e rastreabilidade atualizada.
