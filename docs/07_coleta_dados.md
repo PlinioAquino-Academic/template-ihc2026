@@ -81,6 +81,14 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 
 **Ética:** não usar fotos de apreensões ou operações identificáveis. Os episódios dos cenários anteriores continuam ficcionais. A pesquisa não envolve gravações nem contato com equipes de fiscalização.
 
+### Procedimento de exclusão por código, antes de aplicar
+
+[H] Cada responsável emite um código aleatório de 12 caracteres hexadecimais por sessão/resposta, sem nome ou contato associado, registra-o no próprio instrumento/notas e entrega uma cópia ao participante no convite privado. I02 precisa de campo próprio no Forms para o código antes da aplicação; sem esse vínculo, não é possível prometer localização de uma resposta específica. I01/I03 usam o código no cabeçalho da ficha. Não publicar códigos ou respostas brutas no GitHub.
+
+[H] Responsáveis por pedidos: Gabriel para I02, Alexandre para I03 e Kawan para I01. Um pedido deve conter somente instrumento e código; o responsável localiza o registro correspondente, exclui a resposta/notas e eventuais cópias de trabalho e confirma a exclusão pelo canal privado. Não exigir nome para localizar o registro. Definir e comunicar uma data exata de exclusão antes de cada convite: pelo menos sete dias após a sessão, sem consolidação antes dessa data. Quem consolidar verifica os pedidos antes de gerar a síntese. Informar essa data e que após anonimização/consolidação irreversível o vínculo individual não poderá ser recuperado.
+
+[?] **Pendência anterior à aplicação:** falta confirmar o endereço/canal privado da equipe que constará no convite e no consentimento, configurar o campo de código em I02 e verificar o fluxo online. Não houve aplicação, geração de códigos reais ou pedido de exclusão. A coleta permanece impedida até esses pontos serem concluídos; não prometer um canal ainda inexistente.
+
 **Armazenamento e privacidade:** referências e sínteses sem dados pessoais permanecem no repositório. Cópias de trabalho serão mantidas apenas quando a licença permitir e descartadas até 90 dias após o encerramento da disciplina. Se houver aplicação dos instrumentos abaixo, respostas e consentimentos ficarão restritos à equipe, identificados por códigos, com descarte no mesmo prazo. Não serão solicitados nome, empregador, unidade exata ou informações sigilosas.
 
 ## Parte B — instrumentos de coleta
