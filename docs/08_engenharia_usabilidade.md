@@ -34,6 +34,20 @@ O mapa indica regiões relevantes para a predição, sem provar a presença de i
 
 **Contexto de uso adotado:** P01 examina a radiografia em estação com teclado, mouse e monitor dedicado; P02 recebe o parecer para apoiar o despacho. A sala de operação é documentada, mas iluminação, interrupções, volume por turno e pressão temporal continuam hipóteses (H14–H16, ?07). O protótipo trabalha um caso por vez. Essas condições orientam os princípios abaixo.
 
+### 2.1 Princípios de negócio/domínio
+
+| Regra do domínio e base | Consequência para o projeto | Limite da evidência |
+|---|---|---|
+| [F] O despacho possui responsável e atos formais, conforme C02; ED01/ED03 distinguem operação e fiscalização. | [H39] P01 registra a conclusão técnica; P02 é destinatário do parecer e formaliza o ato fora da Mesa. A Mesa não autoriza desembaraço. | A divisão concreta de cargos e o encaminhamento completo dependem de H01/H39/?08; não pressupor P02 como usuário da Mesa. |
+| [F] ED01/ED02 documentam imagem vinculada a metadados e transmissão à RFB. | [H11/H26] Manter o caso identificável e conferir correspondência entre imagem, região e parecer; upload local é demonstrativo. | Não simular transmissão automática como se fosse integração real. Campos usados pelo analista ainda a investigar. |
+| [F] C02 documenta o registro motivado do ato e a responsabilidade do auditor. | [H28/H32] O parecer identifica caso, autoria e fundamento como apoio; seu formato e guarda não substituem os registros institucionais. | Não implementar histórico agregado ou prometer conformidade legal da trilha sem evidência. |
+| [F] Os quatro canais do despacho possuem semântica própria (C02/RC05). | Separar canal aduaneiro, resultado do modelo e conclusão da imagem; nenhum score determina o canal. | A ligação entre imagem e parametrização permanece ?08. |
+| [F] A pesquisa usa fontes públicas e casos fictícios (Entrega 7). | Não expor declarações, cargas ou pessoas identificáveis; consentimento e acesso restrito para dados de pesquisa. | A demonstração não pressupõe acesso a sistemas fiscais restritos. |
+
+Fontes já investigadas: [C02](02_analise_concorrencia.md) e [ED01–ED03 e aspectos éticos](07_coleta_dados.md). As regras locais de retenção e guarda citadas nas entregas anteriores conservam seu alcance local; não são generalizadas para todos os portos.
+
+### 2.2 Princípios de interface
+
 | Contexto de uso | Referência | O que orienta e por que importa | Link |
 |---|---|---|---|
 | P01 compara a imagem com o destaque do modelo. | Mayhew — engenharia de usabilidade, conforme aula 8 | Relacionar usuário, tarefa e plataforma antes de fixar a solução; avaliar e revisar as decisões com base nas metas. | [Material da aula 8 no Moodle](https://moodle.fei.edu.br/mod/resource/view.php?id=2524), págs. 8–15; [perfil](03_personas_contexto_jornada.md) e [tarefas](05_analise_tarefas.md). |
