@@ -512,3 +512,7 @@ O próximo passo não é acrescentar mais funções. É deixar mais clara a rela
 **persona → tarefa → estado da interface → observação do walkthrough → alteração de design**.
 
 Quando essa cadeia estiver explícita, a prototipação cumprirá plenamente seu papel no projeto.
+
+> **Complemento de preservação documental** ([`5d174d2`](https://github.com/KawanMark/template-ihc2026/commit/5d174d29fca861af555406e56d0dd357bb300ad9)): o registro detalhado original continua íntegro na seção histórica da referência da Entrega 11. A abertura aponta para a prancha e os estados revisados; os valores e rótulos históricos não são requisitos atuais.
+>
+> \- Kawan
