@@ -141,7 +141,7 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 
 **Estímulo visual planejado:** o mesmo estado real do protótipo para todos, conforme protocolo abaixo. O conteúdo das perguntas fica exclusivamente no [questionário online](https://docs.google.com/forms/d/e/1FAIpQLSdSndNp5FioH8sv7jDSutkHYdAmeOqOeKNn247wJcviVF-Pkg/viewform), conforme a orientação específica do professor. Não há cópia das perguntas nem código que as reproduza no repositório.
 
-**Encerramento e análise:** esclarecer que o resultado não comprova ilícito nem autoriza liberação da carga. Fornecer um código para solicitar exclusão antes da consolidação. Contar respostas por perfil e agrupar dúvidas sobre indicador, mapa e decisão humana. A análise serve para revisar a linguagem; não mede aceitação profissional ou desempenho do algoritmo.
+**Encerramento e análise:** esclarecer que o resultado não comprova ilícito nem autoriza liberação da carga. Fornecer um código para solicitar exclusão antes da consolidação. Analisar em três estratos separados: (1) intérpretes de radiografias de carga, (2) profissionais de áreas próximas sem essa tarefa direta, (3) IA ou ausência de experiência no domínio. Apresentar contagens e dúvidas por estrato, sem média conjunta ou afirmação de validação de P01 a partir de (2)/(3). Pessoas de IA sem prática de carga não integram automaticamente o perfil profissional. Em (1), investigar vocabulário e utilidade percebida no contexto relatado; em (2)/(3), somente ambiguidade e compreensão geral. Nenhum estrato demonstra desempenho do algoritmo ou aceitação profissional representativa. Se alguém não informar perfil, manter `não informado`, sem inferir sua experiência.
 
 ### I03 — entrevista semiestruturada
 
