@@ -107,6 +107,8 @@ As MU dizem o que será observado no protótipo; os pesos expressam a importânc
 
 A organização segue a **engenharia de usabilidade de Mayhew**, trabalhada na aula: perfil e tarefas alimentam plataforma, princípios e metas; seguem-se modelo conceitual, protótipos e avaliações iterativas. No recorte da disciplina, o ciclo é **compreender o contexto → definir requisitos → projetar → avaliar → revisar**. A pesquisa documental sustenta a primeira definição; a ausência de acesso profissional continua como limite da base de conhecimento.
 
+No ciclo de Mayhew, a análise de requisitos reúne perfil, tarefas, plataforma, princípios e metas (Entregas 1–8). O projeto essencial/reengenharia do trabalho revê como a comparação e o registro podem apoiar P01 sem assumir o ato de P02; o modelo conceitual organiza objetivos e signos (Entrega 9). Protótipos e avaliação verificam esse modelo; padrões de tela e diálogo orientam a consistência (Entregas 10/11), e o projeto detalhado é avaliado e revisto quando as metas não forem alcançadas (Entregas 12–14). São níveis de projeto, com retornos aos requisitos quando necessário.
+
 A Entrega 9 transforma PF01/PF02 em objetivos e signos; as Entregas 10/11 modelam e prototipam a interação. A avaliação heurística verifica estados, linguagem e recuperação; o teste observado verifica MU01–MU06. Quando uma meta falhar, registrar o problema e sua origem na rastreabilidade, revisar o fluxo e repetir a tarefa afetada. Evidência nova sobre H39 ou H42 também pode exigir revisão das personas e das tarefas.
 
 ## Checklist
