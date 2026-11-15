@@ -124,31 +124,35 @@ O processo prolonga a permanência da carga no pátio, gera atrito com o operado
 
 ## 3. Mapas de objetivos
 
-Os mapas individuais usam os mesmos identificadores do mapa consolidado. A consolidação reúne objetivos repetidos de registro e consulta, mantendo um único parecer para o caso.
+[H] Os objetivos representam intenções humanas, independentemente de mapa, widget ou exportação. **Final** é a razão para a atividade; **instrumental direto** apoia a realização durante a atividade; **instrumental indireto** prepara informação para uma atividade posterior. A seta `instrumenta` sai do objetivo que apoia e chega ao objetivo apoiado; não indica ordem de passos nem relação “é parte de”.
 
-| Autor / mapa individual | Objetivo principal e decomposição |
-|---|---|
-| Kawan — CI01 | **O01 Examinar o caso com apoio visual** → O02 Conferir caso; O03 Comparar original e mapa; O04 Registrar regiões e comentários; O05 Concluir e exportar parecer. |
-| Gabriel — CI02 | **O06 Compreender o fundamento do parecer** → O02 Conferir caso; O07 Relacionar região, comentário e conclusão; O08 Reconhecer limites e informação insuficiente. |
-| Alexandre — CI03 | **O09 Preparar a informação para conferência física** → O02 Conferir caso; O07 Relacionar região, comentário e conclusão; O08 Reconhecer limites e informação insuficiente. |
+O título do diagrama é apenas um agrupamento conceitual, sem objetivo raiz adicional. O01 é final de P01 no recorte da Mesa. O06 e O09 são finais externos de P02/P03; mostrá-los delimita quem recebe valor do parecer e não acrescenta telas. O05 é indireto porque P01 prepara a informação usada depois por esses atores.
 
-![Mapa consolidado de objetivos](../assets/09_modelo_conceitual/mapa_objetivos.svg)
+| Contribuição individual | Final considerado | Instrumentação proposta |
+|---|---|---|
+| Kawan, CI01 | O01, P01 | O02/O03/O04/O07/O08 instrumentam a conclusão; O05 prepara a comunicação posterior. |
+| Gabriel, CI02 | O06, P02, fora da Mesa | O02/O07/O08 apoiam a compreensão da evidência; O05 de P01 instrumenta indiretamente a decisão futura. |
+| Alexandre, CI03 | O09, P03, fora da Mesa | A preparação por P01 em O04/O05, com conferência O02/O07/O08, apoia a comunicação para a conferência física. |
 
-[Mapa em fonte Mermaid editável](../assets/09_modelo_conceitual/mapa_objetivos.mmd). O SVG também é editável. O09 cobre a preparação do documento na origem; a execução da vistoria permanece fora da interface.
+![Mapa consolidado de objetivos finais e instrumentais](../assets/09_modelo_conceitual/mapa_objetivos.svg)
+
+[Fonte Mermaid editável](../assets/09_modelo_conceitual/mapa_objetivos.mmd). Elipses são finais, retângulos são instrumentais diretos e retângulos tracejados são indiretos. O papel aparece em cada objetivo; moldura tracejada de finais identifica sua realização fora da Mesa. Cores são dispensáveis para a leitura.
 
 ### Dicionário de objetivos
 
-| ID | Objetivo | Persona | Cenário | Prioridade |
-|---|---|---|---|---|
-| O01 | Examinar o caso com apoio visual | P01 | CI01 | alta |
-| O02 | Conferir caso | P01/P02 | CI01–CI03 | alta |
-| O03 | Comparar original e mapa | P01 | CI01 | alta |
-| O04 | Registrar regiões e comentários | P01 | CI01 | alta |
-| O05 | Concluir e exportar parecer | P01 | CI01 | alta |
-| O06 | Compreender o fundamento do parecer | P02 | CI02 | alta |
-| O07 | Relacionar região, comentário e conclusão | P01/P02 | CI01–CI03 | alta |
-| O08 | Reconhecer limites e informação insuficiente | P01/P02 | CI01–CI03 | alta |
-| O09 | Preparar a informação para conferência física | P01/P02; destinatário P03 | CI03 | média |
+| ID | Objetivo humano | Classificação | Papel | Cenário | Prioridade | Instrumenta |
+|---|---|---|---|---|---|---|
+| O01 | Concluir de forma fundamentada a análise da imagem | Final | P01 | CI01 | alta |  |
+| O02 | Conferir correspondência entre caso e evidência | Instrumental direto | P01/P02 | CI01–CI03 | alta | O01/O06/O09 |
+| O03 | Confrontar evidências para esclarecer a dúvida | Instrumental direto | P01 | CI01 | alta | O01 |
+| O04 | Descrever e localizar o achado observado | Instrumental direto | P01 | CI01/CI03 | alta | O01/O05 |
+| O05 | Comunicar uma conclusão rastreável a quem decidirá | Instrumental indireto | P01 | CI01/CI03 | alta | O06/O09, ações posteriores externas |
+| O06 | Decidir sobre a carga com fundamento | Final externo | P02 | CI02 | alta |  |
+| O07 | Relacionar o achado com o contexto da carga | Instrumental direto | P01/P02 | CI01–CI03 | alta | O01/O06/O09 |
+| O08 | Reconhecer limites e informação insuficiente | Instrumental direto | P01/P02 | CI01–CI03 | alta | O01/O06/O09 |
+| O09 | Esclarecer a suspeita na conferência física | Final externo | P03, destinatário; P01 prepara informação | CI03 | média |  |
+
+[H] A classificação é proposta de design a avaliar. As tarefas T04–T06 e T07–T09 continuam externas à Mesa; O09 não pressupõe interface de P03.
 
 ## 4. Esquema conceitual de signos
 
