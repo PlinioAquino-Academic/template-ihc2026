@@ -65,7 +65,9 @@ A classificação segue o papel de cada persona no design, e não a frequência 
 
 A ficha usa as mesmas marcas de P02: **[F]** sustentado por fonte, **[H]** hipótese de perfil ainda não investigada, **[?]** lacuna, e **ficcional** para detalhe de identidade que não embasa decisão de design.
 
-![Persona P01](../assets/03_personas/persona_p01.jpeg)
+![Retrato ilustrativo neutro de P01](../assets/03_personas/persona_p01_neutra.png)
+
+*Ilustração ficcional, sem ambiente que atribua ao personagem um posto ou cargo não investigado. Não é fotografia de participante.*
 
 | Campo | Descrição |
 |---|---|
