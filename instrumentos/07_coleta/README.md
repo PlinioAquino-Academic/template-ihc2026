@@ -1,6 +1,6 @@
 # Instrumentos online da Entrega 7
 
-Criados em **05/11/2026**, usando o `agent-browser` e o [gerador em Google Apps Script](criar_formularios.gs). Os instrumentos estão publicados; não foram aplicados. As perguntas também estão na [Entrega 7](../../docs/07_coleta_dados.md).
+Criados em **05/11/2026**. Os instrumentos estão publicados; não foram aplicados. A [Entrega 7](../../docs/07_coleta_dados.md) registra objetivos, público, ética, procedimentos e análise. As perguntas de I02 ficam exclusivamente no formulário online; o código local apenas consulta os links existentes.
 
 | Instrumento | Acesso para leitura/preenchimento | Edição pela equipe |
 |---|---|---|
@@ -21,6 +21,6 @@ Uma eventual recusa enviada não deve contar como resposta válida. Antes de apl
 
 ## Manutenção
 
-O [projeto no Apps Script](https://script.google.com/home/projects/1pnhS6OUvm2rhswMvrKRRakXRe-88Z5PIljkYtO9kIy4lLqHdVib6VcKg/edit) guarda a função `criarInstrumentosEntrega7`. Ela reutiliza os formulários no mesmo projeto; copiar o código para outro projeto cria outros formulários. A execução publica os instrumentos, sem enviar respostas.
+O [projeto no Apps Script](https://script.google.com/home/projects/1pnhS6OUvm2rhswMvrKRRakXRe-88Z5PIljkYtO9kIy4lLqHdVib6VcKg/edit) e os links de edição exigem permissão da conta proprietária. O arquivo local `criar_formularios.gs` contém somente `consultarInstrumentosEntrega7`, sem criação ou cópia das perguntas. Alterações do questionário devem ser feitas no próprio Forms; não recriar a versão antiga a partir do histórico Git.
 
 Referência técnica: Google, [FormApp](https://developers.google.com/apps-script/reference/forms/form-app) e [Form](https://developers.google.com/apps-script/reference/forms/form).

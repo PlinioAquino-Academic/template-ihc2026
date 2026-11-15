@@ -135,15 +135,7 @@ O levantamento retoma as hipóteses da [Entrega 1](01_conhecendo_o_problema.md),
 
 **Consentimento:** “Este questionário acadêmico investiga a compreensão de uma interface. Participar é voluntário e você pode interromper sem prejuízo. Não informe pessoas, empresas ou operações identificáveis. As respostas serão usadas sem identificação e descartadas até 90 dias após o encerramento da disciplina. Você aceita participar?” **Sim / Não (encerrar).**
 
-**Exemplo apresentado:** “A tela mostra uma radiografia, um mapa colorido e o cartão ‘Indício de anomalia — 94%; limiar 70%’. Uma pessoa registra o parecer.” Os valores são ilustrativos do protótipo.
-
-1. Qual sua relação com inspeção de cargas? **Interpreto radiografias / atuo em logística ou atividade aduaneira / estudo ou pesquiso IA / não tenho experiência / prefiro não responder.**
-2. O que você entende por “indício de anomalia”? **Resposta aberta.**
-3. O que o valor “94%” significa para você? **Resposta aberta.**
-4. O que o mapa colorido permite concluir? **Resposta aberta.**
-5. Que informação falta para compreender o resultado? **Resposta aberta.**
-6. A diferença entre resultado do modelo e parecer humano está clara? **1 — nada clara a 5 — muito clara / não sei avaliar.** Explique, se desejar.
-7. Que expressão você mudaria na tela e por quê? **Resposta aberta, opcional.**
+**Estímulo visual planejado:** o mesmo estado real do protótipo para todos, conforme protocolo abaixo. O conteúdo das perguntas fica exclusivamente no [questionário online](https://docs.google.com/forms/d/e/1FAIpQLSdSndNp5FioH8sv7jDSutkHYdAmeOqOeKNn247wJcviVF-Pkg/viewform), conforme a orientação específica do professor. Não há cópia das perguntas nem código que as reproduza no repositório.
 
 **Encerramento e análise:** esclarecer que o resultado não comprova ilícito nem autoriza liberação da carga. Fornecer um código para solicitar exclusão antes da consolidação. Contar respostas por perfil e agrupar dúvidas sobre indicador, mapa e decisão humana. A análise serve para revisar a linguagem; não mede aceitação profissional ou desempenho do algoritmo.
 
@@ -177,7 +169,7 @@ Os dois instrumentos foram criados no Google Forms em **05/11/2026**, com acesso
 - **I02 — [Questionário de compreensão da triagem](https://docs.google.com/forms/d/e/1FAIpQLSdSndNp5FioH8sv7jDSutkHYdAmeOqOeKNn247wJcviVF-Pkg/viewform)** — Gabriel. [Captura do formulário vazio](../assets/07_coleta/i02_questionario.png).
 - **I03 — [Roteiro de entrevista](https://docs.google.com/forms/d/e/1FAIpQLSfsc7UUP9KlAzQQzuqxQjVzSOzdyPg5rU0ag7LPhFXdi7pfGg/viewform)** — Alexandre. Formulário para notas do entrevistador, não para resposta autônoma do participante. [Captura do roteiro vazio](../assets/07_coleta/i03_roteiro_entrevista.png).
 
-Os instrumentos estão publicados, mas **não foram aplicados**. A verificação percorreu as seções sem enviar respostas. O conteúdo textual permanece acima; o [código de criação e os links de edição](../instrumentos/07_coleta/README.md) também foram preservados.
+Os instrumentos estão publicados, mas **não foram aplicados**. A verificação percorreu as seções sem enviar respostas. O protocolo e os [links de edição](../instrumentos/07_coleta/README.md) estão preservados. As perguntas de I02 ficam somente no Google Forms; o roteiro de I03 continua textual para apoiar o entrevistador.
 
 ## Resultados da pesquisa documental
 
