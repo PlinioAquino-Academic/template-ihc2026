@@ -23,12 +23,14 @@ O mapa indica regiões relevantes para a predição, sem provar a presença de i
 | Software | Interface para uso em computador, com protótipo navegável no Figma; demonstração técnica local em navegador, quando integrada. Windows/Linux como ambientes previstos, sem dependência de celular. | Manter os mesmos termos e estados entre os protótipos. |
 | Hardware | Mouse, teclado e um monitor; referência de avaliação: 1920 × 1080, em tela de 22–24 polegadas. | Dar prioridade à radiografia e verificar a legibilidade dos painéis. É uma condição de teste, não um levantamento do posto real. |
 | Capacidades | Abrir um caso, ajustar visualização, comparar camadas, marcar regiões e gerar parecer. | Ajustes e marcações devem ser reversíveis, preservando a imagem original. |
-| Restrições | Sem validação profissional da interface; mapa de atenção aproximado e sem classificação do tipo de ilícito. | Explicar limites do resultado e separar indicação automática de conclusão humana. |
+| Restrições | Mapa de atenção aproximado e sem classificação do tipo de ilícito. | Explicar limites do resultado e separar indicação automática de conclusão humana. |
 | Conectividade | Demonstração local ou navegável, sem integração institucional. | Falhas de processamento/exportação devem permitir tentar novamente sem perder anotações. |
 | Tempo de processamento | Latência real ainda não medida; no teste, usar espera simulada fixa de 3 segundos. | Exibir “Analisando imagem”; em erro, explicar a falha. Não mostrar percentual sem progresso conhecido. |
 | Dados/histórico | Um caso aberto por vez, com imagem, identificação fictícia e parecer. Histórico agregado fora do recorte. | Evitar troca de caso sem aviso sobre registros não exportados. |
 | Privacidade | Casos fictícios ou imagens públicas com origem identificada; participantes futuros identificados por códigos. | Não expor nomes, placas, empresas ou operações reais na demonstração. |
 | Papéis | P01 examina e registra; P02 consulta o parecer como apoio à decisão. P03 continua stakeholder (H42). | A Mesa não autoriza desembaraço nem cria uma interface móvel para P03. |
+
+**Limitação da evidência atual:** [F] não houve validação profissional da interface nem aplicação dos instrumentos com pessoas. A pesquisa documental da Entrega 7 é complementar. [H] Plataforma, vocabulário, equipamentos e critérios iniciais devem ser revistos após investigação profissional; isso não é uma restrição do software.
 
 ## 2. Princípios do projeto
 
