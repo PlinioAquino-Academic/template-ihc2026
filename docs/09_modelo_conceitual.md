@@ -81,20 +81,46 @@ O processo prolonga a permanência da carga no pátio, gera atrito com o operado
 
 ## 2. Design centrado na comunicação
 
-**Convenção:** `U` é o usuário; `D` é o preposto do designer/sistema. As falas descrevem a intenção da interação, não um roteiro de entrevista. Em CI02/CI03, o parecer comunica por seu conteúdo; ações institucionais externas não são comandos da Mesa.
+**Convenção:** `U` = usuário; `D` = preposto do designer/sistema. As falas representam somente intenções que podem ser expressas à Mesa. PDF estático transmite conteúdo fixo; sua leitura não gera resposta dinâmica do sistema.
 
-| Cenário / tópico > subtópico | Falas e signos | Intenção |
+### DCC01 — CI01, exame e registro
+
+**Autor(a):** Kawan Mark Geronimo Da Silva — 22.222.010-5.<br>
+**Usuário/papel:** P01, operador da estação de imagem.
+
+| Tópico > subtópico | Falas e signos | Intenção |
 |---|---|---|
-| CI01 — caso > identificação | U: “Quero examinar este caso.” D: “Esta é a imagem e esta é a carga informada.” **S01/S02** | Conferir o contexto antes de analisar. |
-| CI01 — análise > andamento | D: “Analisando imagem”; ou “Não foi possível analisar. Tente novamente.” **S03** | Distinguir espera, resultado e falha. |
-| CI01 — análise > resultado | U: “O que o modelo indicou?” D: “Este é o resultado e esta é a região relevante para a predição.” **S04/S05** | Explicar o apoio e seus limites. |
-| CI01 — comparação > visualização | U: “Quero ver o original e comparar.” D: “Você pode ocultar o mapa ou ver lado a lado.” **S02/S05/S06** | Preservar a leitura da imagem. |
-| CI01 — registro > achado | U: “Quero registrar esta região e o que observei.” D: “Região numerada, com comentário editável.” **S07/S08** | Vincular observação à marcação. |
-| CI01 — registro > conclusão | U: “Quero concluir o parecer.” D: “Informe conclusão, justificativa e responsável.” **S09/S10/S11** | Distinguir julgamento humano e modelo. |
-| CI01 — exportação > revisão/erro | D: “Revise o caso e as regiões”; “Preencha o responsável”; ou “Falha ao exportar; seus dados foram mantidos.” **S01/S07–S12** | Apoiar revisão e recuperação. |
-| CI02 — consulta > fundamento | U: “Qual foi o motivo da suspeita?” D, no parecer: “Caso, responsável, região e comentário.” **S01/S07/S08/S11/S12** | Dar contexto ao destinatário. |
-| CI02 — consulta > alcance | D, no parecer: “Resultado do modelo e parecer humano; sem autorização de desembaraço.” **S04/S09/S12** | Separar apoio e ato formal. |
-| CI03 — encaminhamento > referência | U: “O documento identifica a carga e a região observada?” D, no parecer: “Imagem numerada e comentário correspondente.” **S01/S07/S08/S12** | Apoiar conferência do conteúdo antes da entrega externa. |
+| Caso > identificação | U: “Quero examinar este caso.” D: “Esta é a imagem e a carga informada.” S01/S02/S13 | Conferir correspondência e contexto. |
+| Análise > andamento | D: “Analisando imagem”; ou “Não foi possível analisar. Tente novamente.” S03 | Distinguir espera, resultado e falha. |
+| Análise > resultado | U: “Quero consultar a indicação do modelo.” D: “Este resultado e mapa são apoios aproximados, sem prova de ilícito.” S04/S05; S14/S15 somente se o candidato numérico for avaliado | Comunicar o alcance do resultado. |
+| Comparação > visualização | U: “Quero comparar sem o mapa cobrir a imagem.” D: “Oculte o mapa ou escolha a vista lado a lado.” S02/S05/S06/S16/S17 | Preservar original e controle da visualização. |
+| Registro > achado | U: “Quero registrar esta região e minha observação.” D: “Região numerada e comentário editável.” S07/S08 | Vincular o achado à marcação humana. |
+| Registro > conclusão | U: “Quero concluir o parecer.” D: “Informe conclusão, justificativa e responsável.” S09/S10/S11 | Separar julgamento humano e modelo. |
+| Exportação > revisão/erro | U: “Quero emitir o parecer.” D: “Revise o caso”; “Preencha o responsável”; ou “Falha ao exportar; seus dados foram mantidos.” S01/S07–S12/S18 | Prevenir omissões e apoiar recuperação. |
+
+### DCC02 — CI02, leitura do artefato comunicativo
+
+**Autor(a):** Gabriel Albertini Pinheiro — 22.122.094-8.<br>
+**Papel:** P02, destinatário externo. **Suporte:** PDF estático em leitor externo; nenhuma conversa dinâmica de P02 com a Mesa.
+
+| Tópico > subtópico | Ação do destinatário / informação fixa comunicada | Signos e intenção |
+|---|---|---|
+| Consulta > identificação | Abre o PDF recebido e localiza caso, responsável e data. | S01/S11/S18/S12: reconhecer a correspondência do documento. |
+| Consulta > fundamento | Lê região, comentário, contexto da carga e conclusão. O conteúdo não muda em resposta à leitura. | S07/S08/S09/S13: compreender a origem da suspeita. |
+| Consulta > limites | Lê a distinção entre resultado automático e parecer, sem autorização de desembaraço. | S04/S05/S09/S12: reconhecer o alcance e a insuficiência da evidência. |
+| Consulta > informação insuficiente | Interrompe o uso do documento e solicita esclarecimento por canal institucional externo. | Nenhum comando da Mesa. Não inventar resposta ou tela de decisão. |
+
+### DCC03 — CI03, preparação do resultado na origem
+
+**Autor(a):** Alexandre Domiciano Pierri — 22.125.061-6.<br>
+**Usuário/papel da Mesa:** P01 prepara/revisa. **Destinatários externos:** P02 decide e encaminha; P03 usa o resultado, sem interface própria.
+
+| Tópico > subtópico | Falas e signos da interação efetiva | Intenção |
+|---|---|---|
+| Revisão > caso | U (P01): “Quero conferir o caso deste parecer.” D: “Esta identificação acompanha esta imagem.” S01/S02/S13 | Evitar troca de documento ou caso. |
+| Revisão > referência | U (P01): “Quero corrigir a região ou o comentário.” D: “Edite ou exclua a marcação e o texto correspondente.” S07/S08 | Tornar a referência radiográfica comunicável, sem prometer coordenada física exata. |
+| Emissão > integridade | U (P01): “Quero emitir o parecer revisado.” D: “Complete o campo indicado”; ou “Parecer exportado localmente.” S09–S12/S18 | Verificar conteúdo e preservar o registro em falha. |
+| Encaminhamento > uso externo | P02 e P03 leem o conteúdo fixo e seguem o procedimento institucional, fora da Mesa. | S12: limite da conversa; sem envio automático nem diálogo de P03 com o sistema. |
 
 ## 3. Mapas de objetivos
 
