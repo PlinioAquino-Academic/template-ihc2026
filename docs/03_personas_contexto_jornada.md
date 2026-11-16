@@ -1,9 +1,9 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** 02/09/2026
-**Status:** 🟩 concluída — revisada após feedback
-**Revisão:** 12/11/2026
-**Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
+**Data:** 02/09/2026  
+**Status:** 🟦 revisada após feedback  
+**Revisão:** 12/11/2026  
+**Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).  
 ## Objetivo da atividade
 
 Representar grupos de usuários de forma útil para decisões de design. Persona não é personagem decorativo: suas características devem alterar requisitos, prioridades, linguagem, fluxos ou critérios de avaliação.
