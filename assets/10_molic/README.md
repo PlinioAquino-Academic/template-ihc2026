@@ -1,6 +1,5 @@
-# Materiais para a Entrega 10
+# MoLIC
 
-- [Fluxo da Mesa de inspeção](prototipo_fluxo_01.svg): fluxograma preservado da versão extensa da Entrega 6, para consulta na elaboração do MoLIC.
-- [Referência detalhada](../11_figma/referencia_mesa_inspecao.md): descrição dos estados e decisões anteriores.
+Os modelos `molic_m01.svg`, `molic_m02.svg` e `molic_m03.svg` são fontes vetoriais editáveis. A legenda e a leitura estão na [Entrega 10](../../docs/10_molic.md).
 
-O fluxograma não utiliza a notação MoLIC e não substitui os diagramas individuais exigidos na Entrega 10. Os códigos PP pertencem ao protótipo de baixa fidelidade.
+`prototipo_fluxo_01.svg` é a referência histórica da Entrega 6; não substitui os modelos MoLIC.

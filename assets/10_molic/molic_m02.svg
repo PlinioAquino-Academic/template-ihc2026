@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="1130" viewBox="0 0 1160 1130" role="img" aria-labelledby="title desc">
+<title id="title">M02 — Compreender o fundamento</title><desc id="desc">Conversa MoLIC com abertura, cenas, processos, encerramento e recuperação. Fonte editável em SVG.</desc>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#263445" stroke-width="1.5"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#182536;font-size:19px}.title{font-size:27px;font-weight:bold}.small{font-size:17px}.edge{fill:none;stroke:#263445;stroke-width:1.7;marker-end:url(#a)}.speech{paint-order:stroke;stroke:white;stroke-width:7;stroke-linejoin:round}</style>
+<text x="30" y="40" class="title" text-anchor="start">M02 — Compreender o fundamento</text>
+<text x="30" y="74" class="small" text-anchor="start">u: usuário · d: preposto · d+u: diálogo · [SP]: prevenção · [SR]: recuperação</text>
+<text x="30" y="101" class="small" text-anchor="start">● abertura · ◉ encerramento · ■ processo · cena = tópico de conversa</text>
+<circle cx="230" cy="140" r="10" fill="#182536"/>
+<path class="edge" d="M230,150 V190"/>
+<text x="250" y="172" class="speech small" text-anchor="start">u: iniciar; gco: M02</text>
+<rect x="35" y="190" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,225 H425" stroke="#263445"/>
+<text x="53" y="214" class="" text-anchor="start">C1 · Conferir documento recebido</text>
+<text x="53" y="250" class="small" text-anchor="start">d: caso, responsável e data (S01/S11)</text>
+<text x="53" y="273" class="small" text-anchor="start">u: comparar com o caso esperado</text>
+<rect x="35" y="395" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,430 H425" stroke="#263445"/>
+<text x="53" y="419" class="" text-anchor="start">C2 · Relacionar evidências</text>
+<text x="53" y="455" class="small" text-anchor="start">d: imagem/região/comentário (S07/S08)</text>
+<text x="53" y="478" class="small" text-anchor="start">d+u: leitura do parecer de apoio (S12)</text>
+<path class="edge" d="M230,302 V395"/>
+<text x="250" y="330" class="speech small" text-anchor="start">u: examinar fundamento</text>
+<rect x="35" y="600" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,635 H425" stroke="#263445"/>
+<text x="53" y="624" class="" text-anchor="start">C3 · Distinguir modelo e conclusão</text>
+<text x="53" y="660" class="small" text-anchor="start">d: resultado do modelo (S04)</text>
+<text x="53" y="683" class="small" text-anchor="start">d: conclusão humana e limite (S09)</text>
+<path class="edge" d="M230,507 V600"/>
+<text x="250" y="535" class="speech small" text-anchor="start">u: compreender alcance</text>
+<rect x="35" y="805" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,840 H425" stroke="#263445"/>
+<text x="53" y="829" class="" text-anchor="start">C4 · Encerrar consulta</text>
+<text x="53" y="865" class="small" text-anchor="start">d: documento de apoio; sem ato formal</text>
+<text x="53" y="888" class="small" text-anchor="start">u: concluir leitura (O06/O07/O08)</text>
+<path class="edge" d="M230,712 V805"/>
+<text x="250" y="740" class="speech small" text-anchor="start">u: informação suficiente</text>
+<path class="edge" d="M230,917 V982"/>
+<text x="250" y="949" class="speech small" text-anchor="start">u: encerrar; gcc: M02</text>
+<circle cx="230" cy="994" r="12" fill="white" stroke="#182536" stroke-width="2"/><circle cx="230" cy="994" r="8" fill="#182536"/>
+<path class="edge" d="M425,260 H510 V275 H755" stroke-dasharray="7 5"/>
+<text x="470" y="223" class="speech small" text-anchor="start">u: caso não corresponde</text>
+<rect x="755" y="260" width="380" height="112" rx="18" fill="#fffaf1" stroke="#263445" stroke-width="1.7"/>
+<text x="773" y="286" class="" text-anchor="start">Interromper uso do documento</text>
+<text x="773" y="315" class="small" text-anchor="start">d: identificação não corresponde</text>
+<text x="773" y="338" class="small" text-anchor="start">u: obter documento correto fora da Mesa</text>
+<path class="edge" d="M945,372 V430" stroke-dasharray="7 5"/>
+<text x="760" y="405" class="speech small" text-anchor="start">u: encerrar; esclarecer externamente</text>
+<circle cx="945" cy="442" r="11" fill="white" stroke="#182536" stroke-width="2"/><circle cx="945" cy="442" r="7" fill="#182536"/>
+<path class="edge" d="M425,465 H525 V480 H755" stroke-dasharray="7 5"/>
+<text x="470" y="428" class="speech small" text-anchor="start">u: informação insuficiente</text>
+<rect x="755" y="465" width="380" height="112" rx="18" fill="#fffaf1" stroke="#263445" stroke-width="1.7"/>
+<text x="773" y="491" class="" text-anchor="start">Solicitar esclarecimento</text>
+<text x="773" y="520" class="small" text-anchor="start">d: vínculo/comentário insuficiente</text>
+<text x="773" y="543" class="small" text-anchor="start">u: contatar emissor por canal externo</text>
+<path class="edge" d="M945,577 V635" stroke-dasharray="7 5"/>
+<text x="760" y="610" class="speech small" text-anchor="start">u: encerrar consulta incompleta</text>
+<circle cx="945" cy="647" r="11" fill="white" stroke="#182536" stroke-width="2"/><circle cx="945" cy="647" r="7" fill="#182536"/>
+<text x="35" y="1074" class="small" text-anchor="start">Este modelo descreve a conversa mediada pelo PDF; não adiciona leitor ou despacho à Mesa.</text>
+<text x="35" y="1097" class="small" text-anchor="start">Voltar à identificação ou reler a evidência é permitido durante a leitura. A decisão formal é externa.</text>
+</svg>

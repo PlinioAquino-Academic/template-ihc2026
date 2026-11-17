@@ -226,3 +226,13 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 - Não force relação inexistente: se algo ainda não foi modelado, marque `PENDENTE`.
 - Ao remover uma funcionalidade, registre a decisão em vez de apagar silenciosamente o histórico.
 - Dashboard, CRUD, filtros e relatórios só devem aparecer quando houver objetivo/tarefa que os justifique.
+
+## Entrega 10 — conversas modeladas (11/11/2026)
+
+| Origem | Objetivos/signos | MoLIC | Decisão |
+|---|---|---|---|
+| R01 / CI01 / T01–T02 | O01–O03/O08; S01–S06 | M01 | Entrada, análise, comparação e recuperação. |
+| R03 / CI01–CI02 / T03–T06 | O04–O08; S01/S04/S07–S12 | M01/M02 | Registro/exportação e leitura do parecer; decisão formal externa. |
+| R03 / CI03 / CP03 exploratório | O09/O02/O07/O08; S01/S04/S07–S12 | M03 | Preparação na origem; P03 continua stakeholder. |
+
+[Diagramas e fontes](docs/10_molic.md). F01–F12 são estados previstos para a Entrega 11, ainda sem arquivo publicado no Figma. Não foram acrescentadas funcionalidades ao escopo nem realizadas sessões com usuários.

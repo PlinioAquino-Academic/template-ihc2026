@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="1745" viewBox="0 0 1160 1745" role="img" aria-labelledby="title desc">
+<title id="title">M03 — Preparar informação para conferência</title><desc id="desc">Conversa MoLIC com abertura, cenas, processos, encerramento e recuperação. Fonte editável em SVG.</desc>
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#263445" stroke-width="1.5"/></marker></defs><rect width="100%" height="100%" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#182536;font-size:19px}.title{font-size:27px;font-weight:bold}.small{font-size:17px}.edge{fill:none;stroke:#263445;stroke-width:1.7;marker-end:url(#a)}.speech{paint-order:stroke;stroke:white;stroke-width:7;stroke-linejoin:round}</style>
+<text x="30" y="40" class="title" text-anchor="start">M03 — Preparar informação para conferência</text>
+<text x="30" y="74" class="small" text-anchor="start">u: usuário · d: preposto · d+u: diálogo · [SP]: prevenção · [SR]: recuperação</text>
+<text x="30" y="101" class="small" text-anchor="start">● abertura · ◉ encerramento · ■ processo · cena = tópico de conversa</text>
+<circle cx="230" cy="140" r="10" fill="#182536"/>
+<path class="edge" d="M230,150 V190"/>
+<text x="250" y="172" class="speech small" text-anchor="start">u: iniciar; gco: M03</text>
+<rect x="35" y="190" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,225 H425" stroke="#263445"/>
+<text x="53" y="214" class="" text-anchor="start">C1 · Conferir caso na origem</text>
+<text x="53" y="250" class="small" text-anchor="start">d: identificação e carga (S01)</text>
+<text x="53" y="273" class="small" text-anchor="start">u: comparar com a solicitação</text>
+<rect x="35" y="395" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,430 H425" stroke="#263445"/>
+<text x="53" y="419" class="" text-anchor="start">C2 · Revisar referência espacial</text>
+<text x="53" y="455" class="small" text-anchor="start">d: imagem e região numerada (S07)</text>
+<text x="53" y="478" class="small" text-anchor="start">d+u: comentário correspondente (S08)</text>
+<path class="edge" d="M230,302 V395"/>
+<text x="250" y="330" class="speech small" text-anchor="start">u: conferir referência</text>
+<rect x="35" y="600" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,635 H425" stroke="#263445"/>
+<text x="53" y="624" class="" text-anchor="start">C3 · Revisar fundamento e autoria</text>
+<text x="53" y="660" class="small" text-anchor="start">d+u: conclusão, justificativa e autor</text>
+<text x="53" y="683" class="small" text-anchor="start">S09/S10/S11; limites (S04)</text>
+<path class="edge" d="M230,507 V600"/>
+<text x="250" y="535" class="speech small" text-anchor="start">u: preparar documento de apoio</text>
+<rect x="216" y="840" width="28" height="28" fill="#182536"/>
+<text x="270" y="848" class="small" text-anchor="start">Validar conteúdo (S01/S07–S11)</text>
+<path class="edge" d="M230,712 V840"/>
+<text x="250" y="740" class="speech small" text-anchor="start">u: solicitar revisão</text>
+<rect x="35" y="1010" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,1045 H425" stroke="#263445"/>
+<text x="53" y="1034" class="" text-anchor="start">C4 · Conferir prévia do parecer</text>
+<text x="53" y="1070" class="small" text-anchor="start">d: conteúdo e caso (S12)</text>
+<text x="53" y="1093" class="small" text-anchor="start">u: confirmar ou voltar para corrigir</text>
+<path class="edge" d="M230,868 V1010"/>
+<text x="250" y="896" class="speech small" text-anchor="start">d: conteúdo completo</text>
+<rect x="216" y="1250" width="28" height="28" fill="#182536"/>
+<text x="270" y="1258" class="small" text-anchor="start">Exportar documento (S12)</text>
+<path class="edge" d="M230,1122 V1250"/>
+<text x="250" y="1150" class="speech small" text-anchor="start">u: exportar parecer</text>
+<rect x="35" y="1420" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,1455 H425" stroke="#263445"/>
+<text x="53" y="1444" class="" text-anchor="start">C5 · Preparar entrega externa</text>
+<text x="53" y="1480" class="small" text-anchor="start">d: PDF disponível; sem envio automático</text>
+<text x="53" y="1503" class="small" text-anchor="start">u: concluir preparação (O09)</text>
+<path class="edge" d="M230,1278 V1420"/>
+<text x="250" y="1306" class="speech small" text-anchor="start">d: documento gerado</text>
+<path class="edge" d="M230,1532 V1597"/>
+<text x="250" y="1564" class="speech small" text-anchor="start">u: encerrar; gcc: M03</text>
+<circle cx="230" cy="1609" r="12" fill="white" stroke="#182536" stroke-width="2"/><circle cx="230" cy="1609" r="8" fill="#182536"/>
+<path class="edge" d="M425,260 H510 V275 H755" stroke-dasharray="7 5"/>
+<text x="470" y="223" class="speech small" text-anchor="start">u: caso divergente</text>
+<rect x="755" y="260" width="380" height="112" rx="18" fill="#fffaf1" stroke="#263445" stroke-width="1.7"/>
+<text x="773" y="286" class="" text-anchor="start">Corrigir vínculo do caso</text>
+<text x="773" y="315" class="small" text-anchor="start">d: caso deve corresponder à imagem</text>
+<text x="773" y="338" class="small" text-anchor="start">u: selecionar o caso correto</text>
+<path class="edge" d="M755,355 H710 V280 H425" stroke-dasharray="7 5"/>
+<text x="470" y="390" class="speech small" text-anchor="start">u: voltar e conferir</text>
+<path class="edge" d="M425,465 H525 V480 H755" stroke-dasharray="7 5"/>
+<text x="470" y="428" class="speech small" text-anchor="start">u: referência incoerente</text>
+<rect x="755" y="465" width="380" height="112" rx="18" fill="#fffaf1" stroke="#263445" stroke-width="1.7"/>
+<text x="773" y="491" class="" text-anchor="start">Corrigir região ou comentário</text>
+<text x="773" y="520" class="small" text-anchor="start">d: marcação humana editável</text>
+<text x="773" y="543" class="small" text-anchor="start">u: ajustar/excluir e comentar</text>
+<path class="edge" d="M755,560 H702 V485 H425" stroke-dasharray="7 5"/>
+<text x="470" y="595" class="speech small" text-anchor="start">u: guardar correção</text>
+<path class="edge" d="M244,854 H540 V859 H755" stroke-dasharray="7 5"/>
+<text x="470" y="817" class="speech small" text-anchor="start">d: revisão necessária</text>
+<rect x="755" y="844" width="380" height="112" rx="18" fill="#fffaf1" stroke="#263445" stroke-width="1.7"/>
+<text x="773" y="870" class="" text-anchor="start">Completar informação</text>
+<text x="773" y="899" class="small" text-anchor="start">d: omissão ou divergência [SR/SP]</text>
+<text x="773" y="922" class="small" text-anchor="start">u: completar ou rever conclusão</text>
+<path class="edge" d="M755,939 H694 V690 H425" stroke-dasharray="7 5"/>
+<text x="470" y="974" class="speech small" text-anchor="start">u: corrigir sem perder registros</text>
+<path class="edge" d="M244,1264 H555 V1279 H755" stroke-dasharray="7 5"/>
+<text x="470" y="1227" class="speech small" text-anchor="start">d: exportação falhou</text>
+<rect x="755" y="1264" width="380" height="112" rx="18" fill="#fffaf1" stroke="#263445" stroke-width="1.7"/>
+<text x="773" y="1290" class="" text-anchor="start">Recuperar exportação</text>
+<text x="773" y="1319" class="small" text-anchor="start">d: falha; registros mantidos [SR]</text>
+<text x="773" y="1342" class="small" text-anchor="start">u: verificar destino / repetir</text>
+<path class="edge" d="M755,1359 H686 V1100 H425" stroke-dasharray="7 5"/>
+<text x="470" y="1394" class="speech small" text-anchor="start">u: tentar novamente</text>
+<text x="35" y="1689" class="small" text-anchor="start">Em C4, voltar leva a C2/C3. O modelo reutiliza o mesmo registro e a mesma exportação de M01.</text>
+<text x="35" y="1712" class="small" text-anchor="start">Não modela vistoria física, aplicativo para P03 ou registro de desfecho em sistema institucional.</text>
+</svg>
