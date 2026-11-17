@@ -248,3 +248,15 @@ Cada prefixo designa um único tipo de informação, do início ao fim do semest
 
 [Protótipo e catálogo](docs/11_figma.md). As telas derivam da interface de demonstração do TCC (`codigo/interface/`), com o mapa de atenção real do modelo para a imagem de teste; caso e responsável são fictícios. Não houve sessão com usuários.
 
+As pranchas SVG preparadas em 11/11/2026 (`assets/11_figma/f01.svg`–`f12.svg`) continuam como fontes vetoriais com os mesmos IDs F e foram a especificação de conexões usada na montagem do Figma.
+
+## Entrega 12 — critérios de avaliação (11/11/2026)
+
+| Cadeia | Pergunta/tarefa | Meta | Evidência futura |
+|---|---|---|---|
+| R01 / CI01 / M01 / F03–F05 | QA01–QA02 / UT01 | MU01/MU02 | Comparação e explicação dos limites do modelo. |
+| R03 / CI01–CI03 / M01–M03 / F06–F09/F12 | QA03–QA04 / UT02 | MU03/MU04 | Parecer correto, completo, relacionável à imagem e tempo. |
+| R03 / M01/M03 / F10C/D | QA05 / UT03 | MU05 | Bloqueio de emissão incompleta e recuperação. |
+| R01/R03 / UT01–UT02 | QA06 | MU06 | Facilidade 1–5 e comentário. |
+
+O plano DECIDE e os instrumentos estão prontos. Nenhum dado foi coletado. Proxies dependem de justificativa individual e validação de adequação com o professor; não substituem validação profissional do TCC.

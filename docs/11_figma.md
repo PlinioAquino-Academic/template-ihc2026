@@ -3,7 +3,7 @@
 **Data:** 17/11/2026<br>
 **Status:** 🟩 concluída (pendente: conferir o acesso público ao link do Figma)<br>
 **Responsabilidade:** 1 protótipo integrado por equipe, cobrindo os fluxos MoLIC<br>
-**Elaboração do protótipo:** Gabriel Albertini Pinheiro (22.122.094-8), a partir dos modelos M01 (Kawan Mark Geronimo Da Silva), M02 (Gabriel Albertini Pinheiro) e M03 (Alexandre Domiciano Pierri) da [Entrega 10](10_molic.md)
+**Autoria:** pranchas SVG e especificação das conexões por Kawan Mark Geronimo Da Silva (22.222.010-5), em 11/11/2026; protótipo navegável e montagem no Figma por Gabriel Albertini Pinheiro (22.122.094-8). A base são os modelos M01 (Kawan), M02 (Gabriel) e M03 (Alexandre Domiciano Pierri, 22.125.061-6) da [Entrega 10](10_molic.md).
 
 ## Objetivo da atividade
 
@@ -36,7 +36,11 @@ O arquivo tem uma página, **Protótipo F01–F12**, com as 16 telas e estados o
 
 **Versão HTML equivalente:** [`assets/11_figma/prototipo/index.html`](../assets/11_figma/prototipo/index.html), que abre localmente no navegador. As telas foram geradas em HTML por [`gerar_prototipo.py`](../assets/11_figma/prototipo/gerar_prototipo.py) com o CSS da interface do TCC ([`base_tcc.css`](../assets/11_figma/prototipo/base_tcc.css)) e as revisões em [`prototipo.css`](../assets/11_figma/prototipo/prototipo.css), e depois importadas no Figma. Para alterar uma tela, edite o gerador, gere de novo o HTML e atualize as telas no Figma, mantendo os mesmos IDs F.
 
-### 2.1 Interação simulada e funcionalidade real
+### 2.1 Pranchas SVG preparadas antes da montagem
+
+Em 11/11/2026, a equipe preparou 16 pranchas vetoriais editáveis com os mesmos IDs e a especificação das conexões: [F01](../assets/11_figma/f01.svg), [F02](../assets/11_figma/f02.svg), [F03](../assets/11_figma/f03.svg), [F04](../assets/11_figma/f04.svg), [F05](../assets/11_figma/f05.svg), [F06](../assets/11_figma/f06.svg), [F07](../assets/11_figma/f07.svg), [F08](../assets/11_figma/f08.svg), [F09](../assets/11_figma/f09.svg), [F10a](../assets/11_figma/f10a.svg), [F10b](../assets/11_figma/f10b.svg), [F10c](../assets/11_figma/f10c.svg), [F10d](../assets/11_figma/f10d.svg), [F11a](../assets/11_figma/f11a.svg), [F11b](../assets/11_figma/f11b.svg) e [F12](../assets/11_figma/f12.svg). As telas do Figma seguem essas pranchas, com o visual da interface do TCC. As pranchas continuam no repositório como fonte vetorial e registro da especificação.
+
+### 2.2 Interação simulada e funcionalidade real
 
 | No protótipo | Situação |
 |---|---|
