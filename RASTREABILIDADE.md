@@ -260,3 +260,11 @@ As pranchas SVG preparadas em 11/11/2026 (`assets/11_figma/f01.svg`–`f12.svg`)
 | R01/R03 / UT01–UT02 | QA06 | MU06 | Facilidade 1–5 e comentário. |
 
 O plano DECIDE e os instrumentos estão prontos. Nenhum dado foi coletado. Proxies dependem de justificativa individual e validação de adequação com o professor; não substituem validação profissional do TCC.
+
+## Entregas 13 e 14 — avaliação do protótipo (17/11/2026)
+
+| Origem | Artefato de avaliação | Situação |
+|---|---|---|
+| M01/M03, F11b → F07, S09, UT02 | [Inspeção V01](docs/13_avaliacao_heuristica.md#4-avaliação-heurística--inspeção-preliminar-da-versão-html) | Conclusão humana trocada na cópia HTML. Confirmar no Figma. |
+| M01/M03, F10c, S08/S10/S11, UT03 | [Inspeção V02](docs/13_avaliacao_heuristica.md#4-avaliação-heurística--inspeção-preliminar-da-versão-html) | Recuperação por atalho da simulação na cópia HTML. Confirmar no Figma. |
+| QA01–QA06, MU01–MU06, UT01–UT03 | [Protocolo e fichas U01–U03](docs/14_observacao_usuario.md) | Checagem técnica registrada. Piloto, sessões, vídeo e resultados pendentes. |

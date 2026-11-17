@@ -1,126 +1,134 @@
-# Entrega 14 — Avaliação de usabilidade por observação de usuários
+# Entrega 14 — Observação de usuários
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
-**Responsabilidade:** solução consolidada por equipe. O número de participantes finais observados deve ser igual ao número de integrantes, conforme o modelo da disciplina; recomenda-se que cada integrante seja responsável por conduzir/analisar ao menos um participante.
+**Data:** 17/11/2026<br>
+**Status:** 🟨 preparação concluída; piloto, três sessões e relatório de resultados pendentes.<br>
+**Responsáveis:** Kawan Mark Geronimo Da Silva, Gabriel Albertini Pinheiro e Alexandre Domiciano Pierri.
 
-## Objetivo da atividade
+Aplicar o [plano DECIDE](12_planejamento_avaliacao.md) à Mesa de inspeção. A aula exige observar uso real e registrar a interação; a pesquisa documental da Entrega 7 não substitui essa etapa. Não há participantes, gravações ou métricas coletados nesta versão.
 
-Observar usuários representativos realizando tarefas reais ou realisticamente simuladas para identificar problemas de eficácia, eficiência, compreensão e satisfação que não podem ser inferidos apenas por inspeção.
+## A. Fluxograma do processo
 
-> **Participantes finais não devem ser membros da equipe.** Um integrante pode participar do teste piloto apenas para validar roteiro/equipamentos, sem contar na amostra final.
+![Processo da observação](../assets/14_testes/fluxograma_avaliacao.svg)
 
-### Quando o usuário é um perfil profissional especializado
+[Fonte SVG editável](../assets/14_testes/fluxograma_avaliacao.svg).
 
-Em TCCs técnicos, o público pode ser DBA, analista, pesquisador, administrador, técnico ou outro especialista. Priorize participantes que possuam relação real com as tarefas. Se não for possível recrutar o perfil ideal, qualquer participante aproximado/proxy deve ser **justificado previamente e tratado como limitação**; não apresente o resultado como equivalente ao de especialistas reais.
+## B. Preparação e execução
 
-O teste avalia a **interação com o protótipo**. Não é necessário que o participante valide o desempenho científico do algoritmo. Resultados simulados podem ser usados quando declarados e coerentes com a tarefa.
+### 1. Objetivos e versão
 
-Tarefas podem envolver, por exemplo, interpretar um dashboard, configurar uma análise, encontrar uma execução no histórico usando filtros, comparar resultados, gerar relatório, revisar alerta ou administrar permissões.
+Verificar comparação (MU01), entendimento dos limites da IA (MU02), parecer completo (MU03), tempo de registro (MU04), recuperação (MU05) e facilidade (MU06). O teste avalia a interação, não a validade científica do modelo.
 
-## A. Fluxograma do processo — equipe
+**Versão a avaliar:** Figma navegável da [Entrega 11](11_figma.md), fluxo a partir de F01, com os 16 estados. Antes do piloto, abrir o link em janela anônima e registrar URL/node, versão, commit, data e dispositivo. A cópia HTML do commit `f15c58e` serviu à checagem técnica. Use uma única versão congelada nas sessões finais.
 
-![Fluxograma](../assets/14_testes/fluxograma_avaliacao.svg)
+| Tarefa | Checagem técnica na cópia HTML | Condição para aplicar no Figma |
+|---|---|---|
+| UT01 | Os controles de visualização levam de F03 a F04 e F05. | Confirmar retorno à comparação, mesma imagem e manutenção do contexto inicial. |
+| UT02 | F06–F08 representam anotação e parecer por estados fixos. A confirmação da conclusão divergente troca a opção em F07 (V01). | Confirmar que a pessoa consegue escolher e preservar a conclusão e que os dados do parecer correspondem a suas ações. |
+| UT03 | F10c mostra três omissões e a saída depende da faixa de simulação (V02). A falha F08 → F10d pode ser acionada pela faixa e “Tentar novamente” chega a F09. | Preparar estado inicial com apenas autoria ausente. Confirmar correção pelo fluxo da interface e falha controlada, igual para todos, com preservação dos dados. |
 
-O fluxograma deve representar, no mínimo: planejamento → recrutamento → consentimento → preparação → execução das tarefas/observação → pós-teste → consolidação/análise → recomendações.
+V01 e V02 estão na [Entrega 13](13_avaliacao_heuristica.md). Reproduzir no Figma antes do piloto. Se uma limitação impedir o critério do DECIDE, registrar o bloqueio e suspender a medição dessa tarefa até resolver o fluxo. O moderador prepara os estados fora da medição para que a faixa de simulação não indique a solução ao participante.
 
-## B. Procedimento de preparação e execução — equipe
+### 2. Participantes e recrutamento
 
-### Passo 1 — Objetivos e versão avaliada
+São necessários **três participantes externos**, pois a equipe tem três integrantes. As linhas abaixo são vagas planejadas, não pessoas já recrutadas.
 
-**Versão/commit/Figma:** {{...}}  
-**Metas de usabilidade relacionadas:** {{MU01...}}
+| Vaga | Perfil a recrutar / justificativa exigida | Responsável |
+|---|---|---|
+| U01 | Profissional ligado à inspeção/análise de imagens; ou proxy com experiência pertinente registrada. | Kawan |
+| U02 | Profissional que lê relatórios para tomar decisões; ou proxy com essa experiência registrada. | Gabriel |
+| U03 | Profissional ligado à preparação/conferência de evidências; ou proxy com experiência pertinente registrada. | Alexandre |
 
-### Passo 2 — Participantes
+Na ausência de acesso ao público ideal, a alternativa é recrutar adultos externos com experiência em análise de imagens/dados ou leitura de relatórios. Antes das sessões, justificar a relação de cada proxy com as tarefas e validar sua adequação com o professor. Não basta ser colega disponível; integrantes e autores das telas não entram na amostra final. Os resultados com proxies tratam apenas de compreensão e interação no cenário simulado, sem validar rotina aduaneira ou decisões de especialistas.
 
-| ID | Perfil | Critérios que justificam participação | Integrante responsável |
+### 3. Consentimento e privacidade
+
+Usar o [termo preparado](../instrumentos/12_avaliacao/consentimento.md) antes da sessão. Gravação prevista de tela e áudio, sem webcam, somente mediante autorização específica. Se houver recusa à gravação, respeitar a escolha e registrar a limitação da evidência; não produzir vídeo sem consentimento.
+
+Guardar consentimentos e registros brutos em pasta privada da equipe, acessível ao professor quando necessário. Publicar apenas resumos anônimos U01–U03. O vídeo acadêmico terá link restrito ao professor, nunca dados pessoais expostos no Git. Descartar os registros brutos em até 90 dias após a sessão. Usar caso/carga fictícios e responsável fictício no protótipo; fechar notificações e outras janelas.
+
+### 4. Piloto
+
+**Situação:** não realizado. Um integrante pode atuar como participante apenas no piloto. Validar instruções, duração, estados iniciais, resets, variantes de falha, cronômetro e gravação. Registrar data, versão, defeitos encontrados e mudanças antes de iniciar a coleta final; mudanças posteriores exigem identificar quais participantes usaram cada versão.
+
+### 5. Tarefas
+
+| ID | Instrução resumida — ler a versão integral no roteiro | Sucesso / medidas | Ligação |
 |---|---|---|---|
-| U01 | {{sem nome real}} | {{...}} | {{...}} |
+| UT01 | Examinar a área indicada, comparar com a imagem sem destaque e explicar o alcance do resultado. | Comparação concluída sem ajuda; distingue indício de prova e de autorização. Tempo, erros, ajudas e facilidade. | T01/T02; O02/O03/O08; M01; F03–F05. |
+| UT02 | Registrar a região/observação e preparar parecer para outra pessoa com conclusão e autoria fictícia. | Caso correto, região comentada, conclusão, justificativa e responsável; mediana ≤ 180 s sem ajuda. | T03; consulta de T05/T06; O04–O07/O09; M01/M03; F06–F09/F12. |
+| UT03 | Resolver a falta do responsável e eventual falha, preservando o registro ao emitir o parecer. | Bloqueia emissão incompleta; recupera omissão e falha de exportação sem perder dados. | O05/O08; M01/M03; F07/F10C/D/F08/F09. |
 
-### Passo 3 — Consentimento e privacidade
+Limite de 5 minutos por tarefa. Estados iniciais são independentes: caso pronto em UT01/UT02; registro sem responsável e primeira exportação válida com falha simulada em UT03. Não depender do sucesso anterior para aplicar a próxima tarefa. O [roteiro](../instrumentos/12_avaliacao/roteiro.md) traz instruções neutras e condições iguais para todos.
 
-- Termo/registro de consentimento: {{link}}
-- Gravação de tela/áudio/vídeo: sim/não e finalidade.
-- Forma de anonimização: IDs `U01`, `U02`...
-- Local e período de armazenamento: {{...}}
+### 6. Protocolo do moderador
 
-### Passo 4 — Teste piloto
+1. Receber a pessoa, explicar que o produto está sendo avaliado e obter consentimento.
+2. Registrar perfil mínimo e condição profissional/proxy; permitir exploração inicial padronizada.
+3. Preparar estado inicial, ler a instrução e iniciar o cronômetro.
+4. Observar sem ensinar o caminho; separar pedidos de ajuda e intervenções. Não exigir fala contínua durante a medição.
+5. Registrar sucesso, erros, ajudas e tempo. Encerrar em desistência ou limite, sem penalizar a pessoa.
+6. Perguntar facilidade de 1 a 5 e motivo; aplicar pergunta de compreensão após UT01.
+7. Fazer pós-teste, agradecer, salvar registros anonimizados e verificar autorizações antes de compartilhar evidências.
 
-**Data:** {{...}}  
-**O que foi validado:** roteiro, duração, entendimento das instruções, protótipo, gravação.  
-**Mudanças após piloto:** {{...}}
+**Materiais:** [perfil/pós-teste](../instrumentos/12_avaliacao/questionarios.md), [planilha de observação](../instrumentos/12_avaliacao/observacoes.csv) e fichas [U01](../instrumentos/14_observacao/u01.md), [U02](../instrumentos/14_observacao/u02.md), [U03](../instrumentos/14_observacao/u03.md).
 
-### Passo 5 — Tarefas
+### 7. Sessão remota e vídeo pedidos na aula
 
-| ID | Cenário/instrução apresentada | Critério de sucesso | Métricas | Ligação com modelo |
-|---|---|---|---|---|
-| UT01 | {{“Você precisa...” sem dizer o controle}} | {{resultado observável}} | sucesso, tempo, erros, ajudas, satisfação | {{T01/M01/F01}} |
+Para a atividade remota pedida pelo professor, abrir uma sala virtual por sessão e testar conexão, compartilhamento, zoom e áudio antes; mostrar apenas a janela do protótipo, silenciar notificações e combinar como interromper. Guardar interrupções técnicas separadamente do desempenho. O vídeo deve ilustrar instrução, uso e resultados, com IDs anônimos e acesso autorizado ao professor.
 
-### Passo 6 — Protocolo do moderador
+A aula também solicita assistir à palestra de Felipe Melo no [Moodle](https://moodle.fei.edu.br/course/section.php?id=843). A cópia local indica a palestra, sem transcrição. As recomendações acima vêm dos slides de planejamento/observação, não foram atribuídas ao palestrante. **Pendente:** assistir à palestra e complementar as recomendações específicas antes da sessão remota.
 
-1. Receber participante e explicar que **o produto está sendo avaliado, não a pessoa**.
-2. Obter consentimento.
-3. Aplicar perfil pré-teste mínimo necessário.
-4. Ler instruções padronizadas.
-5. Observar sem ensinar o caminho; registrar pedidos de ajuda separadamente.
-6. Se usar *think aloud*, explicar e aplicar de forma consistente.
-7. Após cada tarefa, registrar satisfação/SEQ ou escala definida.
-8. Fazer pós-teste/entrevista breve.
-9. Encerrar e explicar uso dos dados.
+**Link do vídeo do teste:** ainda não existe; depende da aplicação e das autorizações.
 
-## C. Resultados — por participante
+## C. Resultados por participante
 
-### U01 — {{perfil resumido}}
-
-| Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
-|---|---|---:|---|---:|---|---|---|
-| UT01 | total/parcial/falha | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{escala}} | {{fala/comportamento}} |
-
-**Link da gravação (se autorizado):** {{...}}  
-**Resposta pós-teste:** {{...}}
-
-> Repita para U02, U03...
+As fichas individuais estão preparadas para registrar UT01–UT03, incluindo grau de sucesso, erros e tipos, ajudas, tempo, facilidade e evidência. **Nenhuma foi aplicada.** Campo vazio significa dado não coletado, não valor zero, falha ou satisfação neutra. Não há gravação ou resposta pós-teste a relatar.
 
 ## D. Consolidação por tarefa
 
-| Tarefa | Taxa de sucesso | Tempo típico | Erros recorrentes | Satisfação | Meta atendida? | Problemas prioritários |
-|---|---:|---|---|---|---|---|
-| UT01 | {{...}} | {{...}} | {{...}} | {{...}} | sim/não | {{...}} |
+| Tarefa / meta | Sucesso | Tempo típico | Erros / ajudas | Facilidade | Meta atendida? |
+|---|---|---|---|---|---|
+| UT01 / MU01–MU02 | Não coletado | Não coletado | Não coletado | Não coletada | Não avaliada |
+| UT02 / MU03–MU04 | Não coletado | Não coletado | Não coletado | Não coletada | Não avaliada |
+| UT03 / MU05 | Não coletado | Não coletado | Não coletado | Não coletada | Não avaliada |
+
+MU06 considera a mediana de facilidade de UT01/UT02. Apresentar contagens `n/3`, mediana, falhas e limitações conforme o plano. Não calcular médias ou taxas antes da coleta.
 
 ## E. Achados e recomendações
 
-| ID | Achado | Evidência (quant. + qual.) | Impacto | Recomendação | Artefatos a revisar |
-|---|---|---|---|---|---|
-| AU01 | {{...}} | {{2/4 falharam + fala U03...}} | {{...}} | {{...}} | {{MoLIC/Figma/signos...}} |
+Preencher somente com observações registradas; relacionar quantidade de ocorrências, comportamento/fala, impacto e artefato a revisar.
 
-## F. Comparação com a avaliação heurística
+| ID | Achado / tarefa | Evidência quantitativa e qualitativa | Impacto | Recomendação / artefato |
+|---|---|---|---|---|
 
-| Problema | Detectado na heurística? | Detectado por usuários? | O que aprendemos |
+Não há AU registrado. Recomendações dependem de evidência; as decisões prévias de design não serão apresentadas como descobertas de usuários.
+
+## F. Comparação com a heurística
+
+| Problema | ID da heurística | Evidência dos usuários | Aprendizado / decisão |
 |---|---|---|---|
-| {{...}} | sim/não | sim/não | {{...}} |
 
-## G. Conclusão
+Comparação pendente das duas coletas. Preservar problemas exclusivos de cada método, sem inferir que uma ausência de relato prova que não há problema.
 
-A conclusão deve responder:
+## G. Conclusão e pendências reais
 
-1. Quais metas de usabilidade foram atingidas?
-2. Quais problemas foram recorrentes e com quais perfis/tarefas?
-3. O que surpreendeu a equipe?
-4. Quais mudanças são prioritárias?
-5. Que limitações do teste impedem generalizações amplas?
+Ainda não é possível afirmar quais metas foram atingidas, quais problemas foram recorrentes, o que surpreendeu a equipe ou quais mudanças têm prioridade empírica. O relatório final deverá responder esses pontos com os registros individuais e comparar inspeção/observação.
+
+Para concluir: conferir acesso e corrigir no Figma os bloqueios confirmados; realizar as três inspeções; recrutar e justificar os participantes; obter consentimentos; executar piloto e sessões; produzir vídeo autorizado; consolidar métricas, achados e revisões. Participantes proxy, amostra pequena, contexto simulado e ausência de integração limitam qualquer conclusão à versão e às condições testadas.
 
 ## Checklist
 
-- [ ] Número de participantes finais atende ao enunciado.
-- [ ] Participantes são representativos do público e não são membros da equipe.
-- [ ] Se foram usados participantes proxy, a justificativa e a limitação estão explícitas.
-- [ ] O teste avalia a interação; não confunde usabilidade do protótipo com desempenho técnico do TCC.
-- [ ] Tarefas administrativas/analíticas usadas no teste são rastreáveis a objetivos e cenários.
-- [ ] Há consentimento e anonimização.
-- [ ] Foi realizado teste piloto.
-- [ ] Tarefas têm critérios de sucesso definidos antes do teste.
-- [ ] Moderadores não ensinaram o caminho durante a tarefa.
-- [ ] Resultados estão separados por usuário e por tarefa.
-- [ ] Foram registrados sucesso, erros, ajudas, tempo e satisfação quando aplicáveis.
-- [ ] Conclusão combina evidência quantitativa e qualitativa.
-- [ ] Achados geram recomendações e atualização da rastreabilidade.
+- [x] Fluxograma, preparação, tarefas e protocolo documentados.
+- [x] Três vagas externas e responsabilidades definidas.
+- [x] Alternativa de proxies e suas limitações explicitadas previamente.
+- [x] Avaliação de interação separada da avaliação técnica do TCC.
+- [x] Instrumentos, critérios, anonimização e autorização de gravação preparados.
+- [ ] Protótipo navegável e inspeções concluídos antes da aplicação.
+- [ ] Três participantes externos recrutados, adequados e consentidos.
+- [ ] Piloto realizado e alterações registradas.
+- [ ] Sessões observadas sem ensino do caminho, com métricas por pessoa/tarefa.
+- [ ] Palestra conferida e vídeo autorizado do teste disponível ao professor.
+- [ ] Consolidação, comparação com heurística e conclusão sustentadas por dados.
+- [ ] Achados geraram recomendações e atualização da rastreabilidade.
+
+**Referências:** aula 14, *Teste de Usabilidade com Observação do Usuário*, págs. 4–16; *Plano de Avaliação de Usabilidade com Observação*, págs. 2–6; modelo de consentimento 01; atividade remota no conteúdo do tópico. Cópias locais em `FEI_CC8122_IHC/14 - Tópico 14/`.

@@ -1,5 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="1250" viewBox="0 0 940 1250" role="img" aria-labelledby="t"><title id="t">Processo da observação de usuários</title><defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="#29455f"/></marker></defs><rect width="100%" height="100%" fill="white"/><style>text{font-family:Arial,sans-serif;fill:#172c40;font-size:20px}.a{fill:none;stroke:#29455f;stroke-width:2;marker-end:url(#a)}</style>
+<text x="30" y="40" font-size="27" font-weight="bold">Processo da observação de usuários</text>
+<rect x="45" y="85" width="675" height="90" rx="14" fill="#f1f4f7" stroke="#526476"/><text x="65" y="117" font-weight="bold">1. Planejamento</text><text x="65" y="149" font-size="18">Definir metas, tarefas, métricas, versão e instrumentos.</text>
+<path class="a" d="M380 175 V220"/>
+<rect x="45" y="220" width="675" height="90" rx="14" fill="#f1f4f7" stroke="#526476"/><text x="65" y="252" font-weight="bold">2. Recrutamento</text><text x="65" y="284" font-size="18">Três pessoas externas; justificar perfil/proxy antes da coleta.</text>
+<path class="a" d="M380 310 V355"/>
+<rect x="45" y="355" width="675" height="90" rx="14" fill="#f1f4f7" stroke="#526476"/><text x="65" y="387" font-weight="bold">3. Consentimento</text><text x="65" y="419" font-size="18">Explicar voluntariedade, privacidade e autorização de gravação.</text>
+<path class="a" d="M380 445 V490"/>
+<rect x="45" y="490" width="675" height="90" rx="14" fill="#f1f4f7" stroke="#526476"/><text x="65" y="522" font-weight="bold">4. Preparação e piloto</text><text x="65" y="554" font-size="18">Conferir estados iniciais; executar piloto e ajustar roteiro.</text>
+<path class="a" d="M380 580 V625"/>
+<rect x="45" y="625" width="675" height="90" rx="14" fill="#f1f4f7" stroke="#526476"/><text x="65" y="657" font-weight="bold">5. Execução e observação</text><text x="65" y="689" font-size="18">Ler tarefas neutras, cronometrar e registrar sem ensinar caminho.</text>
+<path class="a" d="M380 715 V760"/>
+<rect x="45" y="760" width="675" height="90" rx="14" fill="#f1f4f7" stroke="#526476"/><text x="65" y="792" font-weight="bold">6. Pós-teste</text><text x="65" y="824" font-size="18">Facilidade 1–5, compreensão, dificuldades e sugestões.</text>
+<path class="a" d="M380 850 V895"/>
+<rect x="45" y="895" width="675" height="90" rx="14" fill="#f1f4f7" stroke="#526476"/><text x="65" y="927" font-weight="bold">7. Consolidação e análise</text><text x="65" y="959" font-size="18">Resultados por usuário/tarefa; comparar MU01–MU06.</text>
+<path class="a" d="M380 985 V1030"/>
+<rect x="45" y="1030" width="675" height="90" rx="14" fill="#f1f4f7" stroke="#526476"/><text x="65" y="1062" font-weight="bold">8. Recomendações</text><text x="65" y="1094" font-size="18">Priorizar mudanças, revisar protótipo e reavaliar.</text>
+<path class="a" stroke-dasharray="7 5" d="M720 1075 H900 V130 H720"/><text x="750" y="1042" font-size="17">Reavaliar</text><text x="45" y="1225" font-size="18">Fluxo planejado. Recrutamento, piloto, sessões e resultados permanecem pendentes.</text></svg>
