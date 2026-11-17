@@ -34,19 +34,19 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Item | Descrição |
 |---|---|
 | Tema central do TCC | Análise automática de imagens radiográficas de contêineres de carga para detectar mercadorias ilícitas e anomalias ocultas sem depender de exemplos reais prévios de contrabando. |
-| Resultado técnico esperado do TCC | Modelo de IA/ML (Autoencoder autossupervisionado), algoritmos de injeção sintética de anomalias e estudo experimental de avaliação da detecção. |
+| Resultado técnico esperado do TCC | Modelo de classificação (EfficientNet-B1), anomalias sintéticas e estudo experimental; a versão técnica consultada produz mapas de atenção por Grad-CAM. Autoencoder/mapa residual corresponde à formulação inicial da Entrega 1. |
 | O TCC já previa interface? | não |
-| Capacidade técnica que pode gerar valor para pessoas | Detectar e localizar anomalias em imagens de raio-X de contêineres, gerando imagens residuais que apontam as regiões discrepantes. |
+| Capacidade técnica que pode gerar valor para pessoas | Classificar imagens e indicar aproximadamente regiões relevantes para a predição por mapa de atenção; não equivale ao mapa residual da formulação inicial. |
 | Usuário principal adotado em IHC | Operador da estação de imagem de raio-X (H01). A autoridade para decidir sobre a carga pode caber a outro cargo, o Auditor-Fiscal (H39). |
 | Objetivo principal desse usuário | Chegar a uma conclusão confiável sobre cada contêiner examinado e registrá-la de forma defensável, sob incerteza (H38). |
-| Interface/recorte explorado na disciplina | Visualizador comparativo (imagem original × mapa residual) e registro do resultado da análise com justificativa. Ordem de exame por nível de anomalia, score numérico e formato da trilha de registro são hipóteses a investigar (H25, H31, H32). |
+| Interface/recorte explorado na disciplina | Visualizador comparativo (imagem original × mapa de atenção) e registro do resultado da análise com justificativa. Ordem de exame por nível de anomalia, score numérico e formato da trilha de registro são hipóteses a investigar (H25, H31, H32). |
 | Relação com o escopo formal do TCC | protótipo demonstrativo |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Quem opera a estação de imagem de raio-X precisa chegar, contêiner a contêiner, a uma conclusão em que confie sobre o que a imagem mostra e registrá-la de forma defensável, em uma sala de controle de recinto alfandegado. A decisão formal de liberar, exigir ou reter a carga pode caber a outro cargo, o Auditor-Fiscal, e essa divisão de papéis ainda está em investigação. Hoje a imagem é examinada em softwares dos fabricantes dos scanners, que já oferecem apoio analítico como pseudo-cor por material, realce de bordas e comparação com imagens semelhantes, mas a interpretação final continua visual e humana. A equipe supõe que a sobreposição de mercadorias e a fadiga visual dificultam essa leitura, com risco de deixar passar uma anomalia ou de reter uma carga regular. O tema do TCC investiga a detecção autossupervisionada de anomalias em imagens radiográficas de carga, que aprende o padrão de cargas normais e produz mapas residuais indicando as regiões discrepantes. Para fins da disciplina de IHC, será explorada uma interface que permita a esse operador comparar a imagem original com o mapa residual, entender onde e por que a IA apontou discrepância e registrar o resultado da análise com justificativa.
+Quem opera a estação de imagem de raio-X precisa chegar, contêiner a contêiner, a uma conclusão em que confie sobre o que a imagem mostra e registrá-la de forma defensável, em uma sala de controle de recinto alfandegado. A decisão formal de liberar, exigir ou reter a carga pode caber a outro cargo, o Auditor-Fiscal, e essa divisão de papéis ainda está em investigação. Hoje a imagem é examinada em softwares dos fabricantes dos scanners, que já oferecem apoio analítico como pseudo-cor por material, realce de bordas e comparação com imagens semelhantes, mas a interpretação final continua visual e humana. A equipe supõe que a sobreposição de mercadorias e a fadiga visual dificultam essa leitura, com risco de deixar passar uma anomalia ou de reter uma carga regular. A versão técnica do TCC consultada investiga classificação de imagens de carga com anomalias sintéticas e usa mapas de atenção para indicar regiões relevantes para a predição. A formulação inicial de autoencoder/mapa residual está preservada na Entrega 1 como histórico; os dois métodos não são equivalentes. Para fins da disciplina de IHC, será explorada uma interface que permita a esse operador comparar a imagem original com o mapa de atenção, examinar as regiões relevantes para a predição e registrar o resultado da análise com justificativa.
 
 As afirmações deste resumo que ainda são hipóteses (papéis, dificuldades e contexto) estão registradas com seus IDs na [Entrega 1](docs/01_conhecendo_o_problema.md) e na [Matriz de rastreabilidade](RASTREABILIDADE.md).
 
@@ -99,10 +99,10 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟦 |
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟦 |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟦 |
-| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | 🟩 |
-| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | pesquisa documental + três instrumentos individuais | 🟩 |
-| 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | 🟩 |
-| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | 🟩 |
+| 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | 🟦 |
+| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | pesquisa documental + três instrumentos individuais | 🟦 |
+| 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | 🟦 |
+| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | 🟦 |
 | 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | ⬜ |
 | 11 | [Protótipo no Figma](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados | ⬜ |
 | 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | ⬜ |
@@ -110,6 +110,8 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | avaliação consolidada; nº de participantes finais = nº de integrantes | ⬜ |
 
 Estados: ⬜ não iniciada, 🟨 em andamento, 🟩 concluída, 🟦 revisada após feedback.
+
+A revisão da Entrega 7 possui [pendências de configuração e verificação dos formulários online](instrumentos/07_coleta/README.md#pendências-online-após-o-feedback-de-15112026). 🟦 registra a revisão; não declara que essas alterações externas foram executadas nem que houve coleta com pessoas.
 
 > Se o docente definir quantidade diferente para a turma/semestre, a orientação da disciplina prevalece.
 

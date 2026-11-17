@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
 **Data:** 26/08/2026 (versão original)
-**Revisão:** 06/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe09.md)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe09.md)
 **Status:** 🟦 revisada após feedback
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
@@ -65,7 +65,7 @@ Para nossa análise, o InSight não será tratado como concorrente idêntico ao 
 | Funcionalidade                  | Como é realizada                                                                                                                                                         | Evidência/print                                                       | Observação de IHC                                                                                                                                                   |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Comparação de veículo/carga  | A ferramenta**InSight Vehicle Compare** compara a imagem atual com uma imagem de referência anterior e destaca objetos adicionados ou removidos.                   | `../assets/02_concorrencia/c01_rapiscan_insight_vehicle_compare.png` | Mostra que comparar imagens é um padrão presente no produto. Não mostra a preferência dos analistas entre lado a lado e sobreposição. Relaciona-se à hipótese H30 da Entrega 1.                                    |
-| Detecção de alta densidade    | A ferramenta**InSight High Density** processa imagens de raio-X de transmissão e destaca objetos densos no contêiner, reboque ou caixa de carga.                  | `../assets/02_concorrencia/c01_rapiscan_insight_high_density.png`    | O destaque visual de regiões suspeitas reduz a necessidade de varredura manual da imagem inteira, favorecendo foco e eficiência.                                    |
+| Detecção de alta densidade    | A ferramenta**InSight High Density** processa imagens de raio-X de transmissão e destaca objetos densos no contêiner, reboque ou caixa de carga.                  | `../assets/02_concorrencia/c01_rapiscan_insight_high_density.png`    | [F] O material destaca uma região densa. [H] Reduzir esforço de varredura e favorecer eficiência são benefícios a avaliar (H34), sem medição de usabilidade nesta fonte.                                    |
 | Busca por cargas semelhantes    | A ferramenta **InSight Similar Cargo** recupera imagens salvas semelhantes à imagem atual e as exibe para comparação pelo analista.                             | `../assets/02_concorrencia/c01_rapiscan_insight_similar_cargo.png`   | Sugere que histórico e comparação com casos anteriores podem apoiar decisão, auditoria e treinamento do operador.                                                 |
 | Apoio à interpretação por IA | O produto oferece ferramentas específicas para identificar padrões como contêiner vazio, carga não homogênea, garrafas, cigarros, armas, ocupantes e alta densidade. | Página oficial do InSight                                             | A interface parece organizar a IA em ferramentas operacionais orientadas a tarefas, e não apenas em métricas técnicas. Essa abordagem é útil para nosso projeto. |
 
@@ -103,6 +103,22 @@ Essa característica é importante para o nosso projeto: a interface de IHC deve
 | Ponto positivo: destaque de alta densidade/anomalia                         | InSight High Density destaca objetos densos em contêineres e trailers.                                                     | Nosso mapa residual deve destacar regiões relevantes sem esconder a imagem original.                                 |
 | Limitação: pouca transparência pública sobre fluxo completo de decisão | A página pública mostra ferramentas e imagens, mas não detalha auditoria, fila operacional ou justificativa de veredito. | A ausência não demonstra necessidade. A rastreabilidade do registro tem origem em C02 (RC04).               |
 | Lição de IHC: ferramentas devem ser orientadas à tarefa do fiscal        | InSight separa funções como Empty Container, High Density, Similar Cargo e Vehicle Compare.                               | Evitar interface genérica; organizar o protótipo em torno das tarefas que a investigação sustentar (H04, H05, H06). |
+
+#### Evidências visuais de C01, com marcações
+
+[F] As figuras preservam as imagens públicas já coletadas, com seu contexto. As marcas ligam o elemento observado às funcionalidades; não constituem teste de usabilidade. A resolução original de 660 pixels limita a leitura de comandos pequenos. Abrir o arquivo permite examinar os destaques; não há base para afirmar a usabilidade desses comandos nem inferir prevenção de erros ausente do material público.
+
+![C01, elementos observados](../assets/02_concorrencia/c01_rapiscan_insight_vehicle_compare_marcado.svg)
+
+![C01, elementos observados](../assets/02_concorrencia/c01_rapiscan_insight_high_density_marcado.svg)
+
+![C01, elementos observados](../assets/02_concorrencia/c01_rapiscan_insight_similar_cargo_marcado.svg)
+
+| Marca | O que sustenta | Limite |
+|---|---|---|
+| P1/M1 | Comparação simultânea e ferramentas junto da imagem. | Não demonstra preferência entre mapas sobrepostos e lado a lado. |
+| P2/M2 | Destaque de região densa e centralidade da radiografia. | Não demonstra ganho medido de eficiência ou menor fadiga. |
+| P3/M3 | Consulta de imagem e exibição de referências semelhantes. | Não mostra registro, auditoria ou estados de erro. |
 
 ### Análise C02 — Portal Único Siscomex (fluxo de despacho, canal de risco e registro de decisão)
 
@@ -245,7 +261,7 @@ Limitação da análise: os softwares de inspeção da Smiths Detection são pro
 | [`c03_smiths_daisy_plataforma.png`](../assets/02_concorrencia/c03_smiths_daisy_plataforma.png) | Página oficial da plataforma **DaiSy**, descrita como o software instalado por padrão em todos os sistemas HCV, com "customizable image treatments, options and comparison tools". | Confirma que o tratamento de imagem e as ferramentas de comparação são o núcleo do software do operador, e não um acessório. |
 | [`c03_smiths_vizual_discriminacao.png`](../assets/02_concorrencia/c03_smiths_vizual_discriminacao.png) | Página oficial do **viZual**, que adiciona cor ligada ao número atômico à imagem radioscópica para discriminar orgânico/inorgânico e destacar objetos estranhos. | Evidência de que a cor já carrega significado de material na tela do operador — o mapa residual da nossa IA não pode competir com essa codificação. |
 
-> **Ressalva:** as duas capturas são páginas de produto do fabricante, não telas da estação de trabalho em operação. As telas do RIW não são publicamente acessíveis, e as evidências de funcionalidade vêm dos datasheets listados nas Referências. O link oficial anterior desta análise estava quebrado (retornava 404 e apontava para um site de terceiros); foi substituído pelas páginas de produto verificadas.
+> **Ressalva:** as duas capturas são páginas de produto do fabricante, não telas da estação de trabalho em operação. Não houve acesso interativo à estação RIW. As capturas operacionais complementares da brochura oficial, descritas abaixo, permitem observar elementos estáticos, sem demonstrar rotina, sequência completa ou versão atualmente instalada. O link oficial anterior desta análise estava quebrado (retornava 404 e apontava para um site de terceiros); foi substituído pelas páginas de produto verificadas.
 
 #### Preço/modelo de negócio
 
@@ -264,9 +280,31 @@ Modelo **B2B / Governamental**, integrado à venda ou modernização dos complex
 | --- | --- | --- |
 | Ponto positivo: discriminação de materiais e realce de bordas nativos | Módulos *viZual* e filtros *Edge Enhancement* em toda a linha DaiSy CargoVision. | **Lição direta:** o mapa de calor da nossa IA (mapa residual) não pode poluir visualmente nem conflitar com as cores padrão de discriminação de material ($Z_{eff}$). |
 | Ponto positivo: integração de metadados e anotações na mesma tela | Recurso *Manifest data comparison and annotations* na estação RIW. | Possibilidade a investigar: dados da carga e marcações junto da imagem (H11, RC07). |
-| Limitação: acúmulo de filtros na tela | O uso simultâneo de equalização de histograma, bordas e marcações pode poluir a imagem. | A camada de IA não deve somar mais poluição à imagem. Opacidade ajustável e alternância são alternativas a testar (RC09). |
-| Lição de IHC: centralidade na imagem radiográfica | A estação de trabalho (RIW com tela de 22"/24") prioriza a área de exibição do scanner. | A radiografia deve ter a maior prioridade visual da tela. Onde ficam metadados e ações é alternativa de layout a experimentar (RC10). |
+| Limitação: acúmulo de filtros na tela | O uso simultâneo de equalização de histograma, bordas e marcações pode poluir a imagem. | A camada de IA não deve somar mais poluição à imagem. Opacidade ajustável e alternância são alternativas a testar (RC09), não controles observados nesta captura. |
+| Lição de IHC: centralidade na imagem radiográfica | A estação de trabalho (RIW com tela de 22"/24") prioriza a área de exibição do scanner. | [H] Priorizar a radiografia é orientação do projeto (RC10); posição dos metadados e ações deve ser experimentada, sem inferir layout da RIW a partir da página de produto. |
 
+
+#### Complemento de evidência operacional pública de C03
+
+[F] A busca no material público do fabricante localizou a brochura **Securing Vulnerable Borders**, seção *Image Analysis Solutions*, página 9, ligada à página oficial de DaiSy. As duas imagens abaixo foram extraídas integralmente do PDF, sem reconstruir a tela. O documento não informa data de publicação verificada; as capturas ilustram uma versão divulgada, sem confirmar a estação instalada hoje. Fonte: [brochura oficial, p. 9](https://www.smithsdetection.com/media/g1ypoand/securing-vulnerable-borders-brochure.pdf#page=9), acesso em 15/11/2026.
+
+![Reprodução pública da interface DaiSy](../assets/02_concorrencia/c03_brochura_daisy.jpeg)
+
+*C03-D1. A radiografia ocupa a área principal; vê-se a região marcada, ferramentas acima e painel de informação à direita. A parte inferior reúne outra vista. São elementos visíveis na captura, sem medir eficiência, carga cognitiva ou número de passos.*
+
+![Reprodução pública da interface viZual](../assets/02_concorrencia/c03_brochura_vizual.jpeg)
+
+*C03-D2. Duas vistas da mesma unidade e região selecionada; a vista inferior mostra discriminação cromática, enquanto a superior preserva tons de cinza. Isso documenta uma composição visual possível da versão ilustrada; não comprova preferência do operador nem a adequação de um mapa de atenção do TCC.*
+
+[H] O aprendizado para o projeto é testar comparação e distinção das camadas (H30/RC09), mantendo a leitura da radiografia. [?] Fluxos de erro, permissões, registro completo e uso real da RIW continuam sem observação. A fonte de mercado não valida comportamentos, benefícios ou necessidades humanas.
+
+#### Marcações das capturas de C03
+
+[F] As marcas identificam o conteúdo realmente visível nas páginas de produto. P1/N1 (DaiSy) sustentam a existência anunciada de tratamentos/comparação e delimitam a evidência como descrição do fabricante. P2/M1 (viZual) ligam discriminação cromática e número atômico ao texto publicado. Não são observações de layout ou de comportamento na estação RIW.
+
+![C03, natureza da evidência](../assets/02_concorrencia/c03_smiths_daisy_plataforma_marcado.svg)
+
+![C03, natureza da evidência](../assets/02_concorrencia/c03_smiths_vizual_discriminacao_marcado.svg)
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
@@ -368,7 +406,7 @@ Fontes da análise C02 (Portal Único Siscomex):
 - [x] A síntese compara critérios comuns e produz recomendações.
 - [x] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
 
-> **Sobre o item não marcado (prints de telas/estados):** o requisito está parcialmente atendido. As capturas de C01 mostram recursos da própria interface analisada (High Density, Similar Cargo, Vehicle Compare). As de C02 combinam uma tela pública de entrada do Portal Único com uma página de documentação normativa, e não incluem a tela de trabalho do Auditor-Fiscal, que exige certificado digital. As de C03 são páginas de produto do fabricante: as telas da estação RIW da Smiths Detection não são publicamente acessíveis e a evidência de funcionalidade vem dos datasheets oficiais. Enquanto a equipe não obtiver material público que exiba as estações reais ou acesso supervisionado a uma delas, o item permanece parcialmente atendido, e as análises de C02 e C03 não concluem sobre layout.
+> **Sobre o item não marcado (prints de telas/estados):** o requisito está parcialmente atendido. As capturas de C01 mostram recursos da própria interface analisada (High Density, Similar Cargo, Vehicle Compare). As de C02 combinam uma tela pública de entrada do Portal Único com uma página de documentação normativa, e não incluem a tela de trabalho do Auditor-Fiscal, que exige certificado digital. As de C03 combinam páginas de produto e reproduções da interface na brochura oficial consultada em 15/11/2026; permitem observar elementos estáticos da versão ilustrada, sem avaliação de uso ou confirmação de versão corrente. O item permanece parcialmente atendido por C02, sem acesso à tela de trabalho do Auditor-Fiscal. Não se generaliza sobre usabilidade a partir das capturas de divulgação.
 
 ## Histórico de revisões
 
@@ -376,3 +414,4 @@ Fontes da análise C02 (Portal Único Siscomex):
 |---|---|---|
 | 06/10/2026 | Natureza e marcações dos prints de C02, origem e classificação das recomendações RC03 a RC11, separação entre canal aduaneiro e resultado da IA. | [Parecer do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe09.md), com o tratamento de cada item anotado no próprio parecer. |
 | 12/10/2026 | Público-alvo da seção 1 alinhado a H01 e H39. Em C01, C02 e C03, células que prescreviam solução ou afirmavam sustentação maior que a da matriz passaram a hipótese ou alternativa a testar. Duas células da seção 4 e o título de C03 ajustados. As mudanças em C01 e C03 foram feitas por Gabriel e ficam sujeitas à conferência de Kawan e Alexandre. | Auditoria de coerência de 12/10/2026 (AC-004, AC-005, AC-016). |
+| 15/11/2026 | Marcações dos prints de C01/C03, limites das inferências e capturas operacionais de DaiSy/viZual extraídas da brochura oficial (p. 9). C02 mantém limitação de acesso. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega02_Equipe09.md), complementos desta rodada. |

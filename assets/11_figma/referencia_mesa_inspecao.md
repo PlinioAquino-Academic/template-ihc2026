@@ -1,3 +1,20 @@
+# Referência da Mesa de inspeção para evolução posterior
+
+[F] O protótipo de baixa fidelidade, o relato do walkthrough e OBS-01–OBS-06 estão na [Entrega 6](../../docs/06_prototipacao_papel.md). A prancha testada permanece em `assets/06_prototipos/mesa_inspecao.png` e o arquivo editável original em `mesa_inspecao.tldr`.
+
+[H] A referência atual para evolução é a [prancha pós-walkthrough](../06_prototipos/mesa_inspecao_revisada.svg), junto dos [estados PP01–PP06](estados_prototipo_pp01_pp06.svg), também preservados na Entrega 6. P01 compara, marca, comenta e emite o parecer técnico; P02 recebe o PDF por canal externo ainda em investigação. T04–T06 não são executadas na Mesa. P03 permanece stakeholder (H42).
+
+Os rótulos da conclusão são “Sem ressalvas na imagem” e “Suspeita apontada”. Score/limiar e ferramentas específicas permanecem hipóteses (H31/H37/H43). Esta referência não declara a Entrega 11 concluída nem substitui o protótipo no Figma.
+
+---
+
+## Registro histórico integral da versão testada
+
+[F] O texto a seguir foi preservado da referência extensa em 05/11/2026. Seus rótulos, números e descrições técnicas são os do esboço original, anteriores à revisão; não são requisitos atuais nem evidência de implementação/calibração. Para a evolução da interface, usar exclusivamente a prancha e os estados revisados ligados acima. O registro permite comparar o que foi testado com as mudanças de OBS-01–OBS-06 sem apagar o trabalho anterior.
+
+<details>
+<summary>Abrir o registro histórico, sem status de implementação atual</summary>
+
 # Referência detalhada da Mesa de inspeção
 
 Material preservado da versão extensa da Entrega 6 em 05/11/2026, para reaproveitamento nas entregas 10 e 11. O texto abaixo é histórico: fluxos, estados e decisões técnicas ainda precisam ser alinhados aos modelos e ao protótipo dessas entregas. Não constitui uma entrega de MoLIC ou Figma concluída, nem valida calibração do indicador ou autoridade de liberação da carga.
@@ -160,3 +177,4 @@ A tabela a seguir consolida as alterações projetadas sobre o esboço original 
 - [x] A simulação foi realizada e gerou observações concretas.
 - [x] Mudanças após a simulação foram registradas com justificativa.
 - [x] Rastreabilidade atualizada.
+</details>

@@ -1,7 +1,8 @@
 # Entrega 8 — Ciclo de vida e engenharia de usabilidade
 
-**Data:** 04/11/2026<br>
-**Status:** 🟩 concluída<br>
+**Data:** 04/11/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega08_Equipe09.md)
+**Status:** 🟦 revisada após feedback
 **Autores:** Kawan Mark Geronimo Da Silva (22.222.010-5), Gabriel Albertini Pinheiro (22.122.094-8) e Alexandre Domiciano Pierri (22.125.061-6)
 
 ## Objetivo e recorte
@@ -23,16 +24,32 @@ O mapa indica regiões relevantes para a predição, sem provar a presença de i
 | Software | Interface para uso em computador, com protótipo navegável no Figma; demonstração técnica local em navegador, quando integrada. Windows/Linux como ambientes previstos, sem dependência de celular. | Manter os mesmos termos e estados entre os protótipos. |
 | Hardware | Mouse, teclado e um monitor; referência de avaliação: 1920 × 1080, em tela de 22–24 polegadas. | Dar prioridade à radiografia e verificar a legibilidade dos painéis. É uma condição de teste, não um levantamento do posto real. |
 | Capacidades | Abrir um caso, ajustar visualização, comparar camadas, marcar regiões e gerar parecer. | Ajustes e marcações devem ser reversíveis, preservando a imagem original. |
-| Restrições | Sem validação profissional da interface; mapa de atenção aproximado e sem classificação do tipo de ilícito. | Explicar limites do resultado e separar indicação automática de conclusão humana. |
+| Restrições | Mapa de atenção aproximado e sem classificação do tipo de ilícito. | Explicar limites do resultado e separar indicação automática de conclusão humana. |
 | Conectividade | Demonstração local ou navegável, sem integração institucional. | Falhas de processamento/exportação devem permitir tentar novamente sem perder anotações. |
 | Tempo de processamento | Latência real ainda não medida; no teste, usar espera simulada fixa de 3 segundos. | Exibir “Analisando imagem”; em erro, explicar a falha. Não mostrar percentual sem progresso conhecido. |
 | Dados/histórico | Um caso aberto por vez, com imagem, identificação fictícia e parecer. Histórico agregado fora do recorte. | Evitar troca de caso sem aviso sobre registros não exportados. |
 | Privacidade | Casos fictícios ou imagens públicas com origem identificada; participantes futuros identificados por códigos. | Não expor nomes, placas, empresas ou operações reais na demonstração. |
 | Papéis | P01 examina e registra; P02 consulta o parecer como apoio à decisão. P03 continua stakeholder (H42). | A Mesa não autoriza desembaraço nem cria uma interface móvel para P03. |
 
+**Limitação da evidência atual:** [F] não houve validação profissional da interface nem aplicação dos instrumentos com pessoas. A pesquisa documental da Entrega 7 é complementar. [H] Plataforma, vocabulário, equipamentos e critérios iniciais devem ser revistos após investigação profissional; isso não é uma restrição do software.
+
 ## 2. Princípios do projeto
 
 **Contexto de uso adotado:** P01 examina a radiografia em estação com teclado, mouse e monitor dedicado; P02 recebe o parecer para apoiar o despacho. A sala de operação é documentada, mas iluminação, interrupções, volume por turno e pressão temporal continuam hipóteses (H14–H16, ?07). O protótipo trabalha um caso por vez. Essas condições orientam os princípios abaixo.
+
+### 2.1 Princípios de negócio/domínio
+
+| Regra do domínio e base | Consequência para o projeto | Limite da evidência |
+|---|---|---|
+| [F] O despacho possui responsável e atos formais, conforme C02; ED01/ED03 distinguem operação e fiscalização. | [H39] P01 registra a conclusão técnica; P02 é destinatário do parecer e formaliza o ato fora da Mesa. A Mesa não autoriza desembaraço. | A divisão concreta de cargos e o encaminhamento completo dependem de H01/H39/?08; não pressupor P02 como usuário da Mesa. |
+| [F] ED01/ED02 documentam imagem vinculada a metadados e transmissão à RFB. | [H11/H26] Manter o caso identificável e conferir correspondência entre imagem, região e parecer; upload local é demonstrativo. | Não simular transmissão automática como se fosse integração real. Campos usados pelo analista ainda a investigar. |
+| [F] C02 documenta o registro motivado do ato e a responsabilidade do auditor. | [H28/H32] O parecer identifica caso, autoria e fundamento como apoio; seu formato e guarda não substituem os registros institucionais. | Não implementar histórico agregado ou prometer conformidade legal da trilha sem evidência. |
+| [F] Os quatro canais do despacho possuem semântica própria (C02/RC05). | Separar canal aduaneiro, resultado do modelo e conclusão da imagem; nenhum score determina o canal. | A ligação entre imagem e parametrização permanece ?08. |
+| [F] A pesquisa usa fontes públicas e casos fictícios (Entrega 7). | Não expor declarações, cargas ou pessoas identificáveis; consentimento e acesso restrito para dados de pesquisa. | A demonstração não pressupõe acesso a sistemas fiscais restritos. |
+
+Fontes já investigadas: [C02](02_analise_concorrencia.md) e [ED01–ED03 e aspectos éticos](07_coleta_dados.md). As regras locais de retenção e guarda citadas nas entregas anteriores conservam seu alcance local; não são generalizadas para todos os portos.
+
+### 2.2 Princípios de interface
 
 | Contexto de uso | Referência | O que orienta e por que importa | Link |
 |---|---|---|---|
@@ -54,7 +71,8 @@ O link do material de aula exige acesso ao Moodle da FEI; a referência foi conf
 |---|---|---|---|
 | Entender o papel da IA | P01/P02, leitura da triagem | Explicar que mapa e indicador apoiam a análise, sem provar ilícito. | Evitar confiança excessiva no resultado (H31/H37). |
 | Comparar sem perder o contexto | P01, T01/T02 | Alternar a camada e localizar a mesma região na imagem original. | Preservar a leitura da radiografia (H30, RC09). |
-| Produzir um parecer compreensível | P01/P02, T03/T05/T06 | Relacionar identificação do caso, região, comentário e conclusão. | Apoiar o encaminhamento da análise (R03). |
+| Produzir um parecer compreensível | P01, T03/PF02 | Parecer com caso, região comentada e conclusão técnica, produzido sem ajuda. | Preservar o achado na emissão (R03). |
+| Compreender o parecer recebido | P02, consulta externa associada a T05 | Localizar caso, região, comentário e conclusão no PDF, identificar informação insuficiente e explicar seus limites. | Avaliar a comunicação do artefato recebido; não avaliar T06 nem uso de uma interface de P02 na Mesa. |
 
 ### 3.2 Metas quantitativas
 
@@ -64,28 +82,33 @@ São **critérios propostos**, ainda sem resultados. Nas Entregas 12–14, preve
 |---|---|---|---|---|
 | MU01 | Eficácia — comparar original/mapa (T01/T02, PF01) | 3/3 concluem sem ajuda: localizar região indicada, ocultar o mapa e voltar à comparação. | Registrar sucesso e intervenções por participante. | A comparação é a tarefa central de AC02. |
 | MU02 | Compreensão — interpretar triagem (PF01) | 3/3 distinguem indicação do modelo de prova de ilícito e de autorização de liberação. | Pergunta aberta após a tarefa, avaliada pelos dois critérios. | A interpretação errada afeta toda a análise. |
-| MU03 | Eficácia — registrar parecer (T03/T06, PF02) | 3/3 geram parecer com caso correto, região comentada, responsável fictício e conclusão. | Conferir os quatro itens no documento produzido. | O registro precisa preservar a relação entre achado e caso. |
-| MU04 | Eficiência — registrar um achado (PF02) | Mediana de até 3 minutos, sem ajuda. | Cronometrar da instrução, com caso já aberto, até a exportação; anotar falhas separadamente. | Limite inicial para uma região e um comentário curto; não é meta de produtividade portuária. |
+| MU03 | Eficácia — registrar parecer (P01, T03/PF02) | 3/3 geram parecer com caso correto, região comentada, responsável fictício e conclusão. | Conferir os quatro itens no documento produzido. | O registro precisa preservar a relação entre achado e caso. |
+| MU04 | Eficiência — registrar um achado (PF02) | Mediana de até 3 minutos, sem ajuda. | Cronometrar da instrução, com caso já aberto, até a exportação; anotar falhas separadamente. | [H] Baseline inicial proposta pela equipe para uma região e comentário curto, sem medição anterior. Rever após a primeira rodada, preservando os tempos observados; não representa produtividade portuária. |
 | MU05 | Prevenção/recuperação — parecer incompleto e falha de exportação | Nenhuma exportação sem campos exigidos; 3/3 corrigem a omissão e repetem exportação sem perder dados. | Tentar exportar sem responsável e simular uma falha após o preenchimento. | Evitar documento incompleto e retrabalho. |
-| MU06 | Satisfação — comparação e registro | Mediana ≥ 4 em escala de facilidade de 1 a 5. | Perguntar após cada tarefa: “Quão fácil foi realizar esta tarefa?”, de muito difícil a muito fácil. | Complementar tempo e sucesso com a percepção do participante. |
+| MU06 | Satisfação — comparação e registro | Mediana ≥ 4 em escala de satisfação de 1 a 5. | Perguntar após cada tarefa: “Quão satisfeito(a) você ficou com a interação nesta tarefa?”, de 1 (muito insatisfeito) a 5 (muito satisfeito), com comentário opcional sobre o motivo. | Complementar tempo e sucesso com satisfação declarada; a medida não demonstra confiança no modelo nem facilidade de uso por si só. |
 
 “Sem ajuda” significa sem orientação do facilitador após a instrução; consultar a ajuda da própria interface é permitido e será registrado. Em amostra de três pessoas, apresentar contagens individuais, mediana e falhas, sem generalização estatística. Tempos acima do limite ou tarefas não concluídas permanecem no relatório, sem descarte para melhorar a meta.
 
-### 3.3 Prioridades
+### 3.3 Prioridades das cinco dimensões de Nielsen
 
-| Meta | Peso | Motivo |
-|---|---:|---|
-| MU01 | 20% | Comparação da imagem. |
-| MU02 | 25% | Compreensão do limite da IA. |
-| MU03 | 20% | Integridade do parecer. |
-| MU04 | 10% | Agilidade no registro. |
-| MU05 | 15% | Prevenção e recuperação. |
-| MU06 | 10% | Facilidade percebida. |
-| **Total** | **100%** | Pesos de prioridade, não resultados de avaliação. |
+[H] Pesos de projeto propostos pela equipe para o contexto atual, não resultados de avaliação ou percentuais de desempenho.
+
+| Dimensão de Nielsen | Peso | Justificativa no contexto | Metas específicas relacionadas |
+|---|---:|---|---|
+| Facilidade de aprendizado | 25% | Compreender resultado automático, marcações e parecer na primeira utilização, sem treinamento da tarefa avaliada. | MU01/MU02/MU03 |
+| Facilidade de memorização | 10% | Retomar comparação e registro após intervalo; a frequência profissional permanece hipótese. | MU01/MU03 como tarefas de referência; medir retenção exige sessão de retorno. |
+| Eficiência | 15% | Concluir o registro sem retrabalho, preservando a qualidade da análise. | MU04; recuperação em MU05 |
+| Baixa taxa de erros | 35% | Evitar confusão entre indício, parecer e ato formal; impedir documentos incompletos e perda de dados. | MU02/MU03/MU05 |
+| Satisfação positiva do usuário | 15% | Avaliar a experiência declarada na comparação e no registro. | MU06 |
+| **Total** | **100%** | Prioridade relativa das dimensões. | MU01–MU06 continuam critérios específicos. |
+
+As MU dizem o que será observado no protótipo; os pesos expressam a importância das cinco dimensões. MU01/MU03 na primeira utilização podem informar aprendizado; não demonstram memorização. Para esta última, planejar nas Entregas 12–14 retorno após sete dias, repetindo comparação e registro sem reapresentar os controles, registrando sucesso, ajuda e tempo por participante. [H] Sete dias é uma condição inicial de teste, não uma frequência de trabalho observada. Se não houver retorno, relatar memorização como não avaliada.
 
 ## 4. Ciclo de revisão
 
 A organização segue a **engenharia de usabilidade de Mayhew**, trabalhada na aula: perfil e tarefas alimentam plataforma, princípios e metas; seguem-se modelo conceitual, protótipos e avaliações iterativas. No recorte da disciplina, o ciclo é **compreender o contexto → definir requisitos → projetar → avaliar → revisar**. A pesquisa documental sustenta a primeira definição; a ausência de acesso profissional continua como limite da base de conhecimento.
+
+No ciclo de Mayhew, a análise de requisitos reúne perfil, tarefas, plataforma, princípios e metas (Entregas 1–8). O projeto essencial/reengenharia do trabalho revê como a comparação e o registro podem apoiar P01 sem assumir o ato de P02; o modelo conceitual organiza objetivos e signos (Entrega 9). Protótipos e avaliação verificam esse modelo; padrões de tela e diálogo orientam a consistência (Entregas 10/11), e o projeto detalhado é avaliado e revisto quando as metas não forem alcançadas (Entregas 12–14). São níveis de projeto, com retornos aos requisitos quando necessário.
 
 A Entrega 9 transforma PF01/PF02 em objetivos e signos; as Entregas 10/11 modelam e prototipam a interação. A avaliação heurística verifica estados, linguagem e recuperação; o teste observado verifica MU01–MU06. Quando uma meta falhar, registrar o problema e sua origem na rastreabilidade, revisar o fluxo e repetir a tarefa afetada. Evidência nova sobre H39 ou H42 também pode exigir revisão das personas e das tarefas.
 
@@ -108,3 +131,9 @@ A Entrega 9 transforma PF01/PF02 em objetivos e signos; as Entregas 10/11 modela
 - W3C. *Web Content Accessibility Guidelines (WCAG) 2.2*. Recomendação de 2024. [Critérios de acessibilidade](https://www.w3.org/TR/WCAG22/). Acesso em 04/11/2026.
 - BARBOSA, S. D. J.; SILVA, B. S. *Interação Humano-Computador*. Elsevier/Campus. Referência conceitual da [bibliografia da disciplina](../BIBLIOGRAFIA.md).
 - TCC da equipe: `IHC/TCC/TCC-VisaoRaioxContainer/codigo/main.py`, consultado para caracterizar a contribuição técnica. A avaliação de IHC não depende da execução desse código.
+
+## Histórico de revisões
+
+| Data | Alteração | Origem |
+|---|---|---|
+| 15/11/2026 | Princípios separados entre domínio/interface; tarefa de P01 distinta do uso externo por P02; baseline de tempo; satisfação; prioridades nas cinco dimensões de Nielsen e níveis de Mayhew. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega08_Equipe09.md). |

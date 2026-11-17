@@ -1,8 +1,8 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** 04/09/2026 (versão original)  
-**Revisão:** 06/10/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md)  
-**Status:** 🟦 revisada após feedback  
+**Data:** 04/09/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md)
+**Status:** 🟦 revisada após feedback
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -65,7 +65,9 @@ A classificação segue o papel de cada persona no design, e não a frequência 
 
 A ficha usa as mesmas marcas de P02: **[F]** sustentado por fonte, **[H]** hipótese de perfil ainda não investigada, **[?]** lacuna, e **ficcional** para detalhe de identidade que não embasa decisão de design.
 
-![Persona P01](../assets/03_personas/persona_p01.jpeg)
+![Retrato ilustrativo neutro de P01](../assets/03_personas/persona_p01_neutra.png)
+
+*Ilustração ficcional, sem ambiente que atribua ao personagem um posto ou cargo não investigado. Não é fotografia de participante.*
 
 | Campo | Descrição |
 |---|---|
@@ -330,3 +332,4 @@ As três normas foram lidas em 06/10/2026 na reprodução do site normasbrasil.c
 |---|---|---|
 | 06/10/2026 | Classificação do elenco, ficha de P02, tabela de entradas, mapa de empatia, contexto de uso, jornada e síntese. | [Parecer do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md), com o tratamento de cada item anotado no próprio parecer. |
 | 12/10/2026 | Fichas de P01 e P03 reescritas com a marcação [F], [H], [?] e ficcional, e com as decisões de design convertidas em alternativas a investigar. Tabela de síntese das personas refeita. Indício sobre Santos acrescentado às entradas, à classificação e ao contexto. Marca da etapa 4 da jornada corrigida. As fichas de P01 e P03 foram reescritas por Gabriel e ficam sujeitas à conferência de Kawan e Alexandre. | Auditoria de coerência de 12/10/2026 (AC-001, AC-002, AC-003, AC-011, AC-014) e parecer do professor, correções 2, 3 e 4. |
+| 15/11/2026 | Retrato neutro ficcional de P01, sem ambiente corporativo que contradiga o papel em investigação. As demais revisões de perfil já constam do histórico. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega03_Equipe09.md), complementos desta rodada. |
