@@ -1,5 +1,164 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="820" viewBox="0 0 1500 820">
+<rect width="1500" height="820" fill="#ffffff"/>
+<text x="24" y="31" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#24292f" text-anchor="start">HTA — T01 Inspecionar a imagem do contêiner e manifestar conclusão sobre a carga (situação atual)</text>
+<text x="24" y="51" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#57606a" text-anchor="start">Persona P01 (Gustavo Onofre, operador da estação de imagem) · Cenário CP01 · Autor: Kawan Mark Geronimo Da Silva — 22.222.010-5</text>
+
+<!-- Objetivo 0 -->
+<rect x="460.0" y="72" width="580" height="34" rx="6" fill="#ddf4ff" stroke="#57606a" stroke-width="2.5"/>
+<text x="750.0" y="93" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="bold" fill="#24292f" text-anchor="middle">0. Inspecionar a imagem do contêiner e manifestar conclusão sobre a carga</text>
+
+<!-- Plano 0 -->
+<rect x="1070.0" y="60" width="395" height="84" rx="6" fill="#fbefff" stroke="#8250df" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text x="1078.0" y="76" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#6639ba" text-anchor="start">Plano 0</text>
+<text x="1078.0" y="92" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">1 &gt; 2 &gt; 3 &gt; 4. Se 2 não apresentar dúvida visual: 3 pode ser</text>
+<text x="1078.0" y="108" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">dispensado e segue direto para 4.1. Se 3 mantiver dúvida após</text>
+<text x="1078.0" y="124" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">esgotar comparações, concluir sob incerteza em 4 (pesar H12).</text>
+
+<!-- Trunk lines from 0 to 1, 2, 3, 4 -->
+<line x1="750.0" y1="106" x2="750.0" y2="173" stroke="#57606a" stroke-width="1.5"/>
+<line x1="200.0" y1="173" x2="1250.0" y2="173" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- ================= RAMO 1 ================= -->
+<line x1="200.0" y1="173" x2="200.0" y2="191" stroke="#57606a" stroke-width="1.5"/>
+<rect x="89.0" y="191" width="222" height="48" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+<text x="200.0" y="209" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">1. Receber dados da carga</text>
+<text x="200.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">e confirmar imagem</text>
+
+<rect x="119.0" y="261" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="123.0" y1="313" x2="307.0" y2="313" stroke="#24292f" stroke-width="2"/>
+<text x="215.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">1.1 Identificar unidade,</text>
+<text x="215.0" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">placa e manifesto [F]</text>
+<line x1="103.0" y1="285.0" x2="119.0" y2="285.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="119.0" y="321" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="123.0" y1="373" x2="307.0" y2="373" stroke="#24292f" stroke-width="2"/>
+<text x="215.0" y="339" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">1.2 Verificar integridade</text>
+<text x="215.0" y="356" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">e nitidez da radiografia</text>
+<line x1="103.0" y1="345.0" x2="119.0" y2="345.0" stroke="#57606a" stroke-width="1.5"/>
+
+<line x1="103.0" y1="239" x2="103.0" y2="345.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="89.0" y="530" width="222" height="78" rx="6" fill="#fbefff" stroke="#8250df" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text x="97.0" y="546" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#6639ba" text-anchor="start">Plano 1</text>
+<text x="97.0" y="562" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">1.1 &gt; 1.2. Se a imagem</text>
+<text x="97.0" y="578" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">apresentar falha ou corte,</text>
+<text x="97.0" y="594" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">solicitar novo escaneamento.</text>
+
+<!-- ================= RAMO 2 (GOMS T02) ================= -->
+<line x1="550.0" y1="173" x2="550.0" y2="191" stroke="#57606a" stroke-width="1.5"/>
+<rect x="439.0" y="191" width="222" height="48" rx="6" fill="#fff8c5" stroke="#57606a" stroke-width="2.5"/>
+<text x="550.0" y="209" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">2. Examinar a radiografia</text>
+<text x="550.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">em busca de dúvida → T02</text>
+
+<rect x="469.0" y="261" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="473.0" y1="313" x2="657.0" y2="313" stroke="#24292f" stroke-width="2"/>
+<text x="565.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">2.1 Perceber imagem e</text>
+<text x="565.0" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">cores de material (Zeff) [F]</text>
+<line x1="453.0" y1="285.0" x2="469.0" y2="285.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="469.0" y="321" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="473.0" y1="373" x2="657.0" y2="373" stroke="#24292f" stroke-width="2"/>
+<text x="565.0" y="339" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">2.2 Varrer a imagem em</text>
+<text x="565.0" y="356" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">busca de descontinuidades</text>
+<line x1="453.0" y1="345.0" x2="469.0" y2="345.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="469.0" y="381" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="473.0" y1="437" x2="657.0" y2="437" stroke="#24292f" stroke-width="2"/>
+<text x="565.0" y="399" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">2.3 Ajustar contraste, zoom,</text>
+<text x="565.0" y="415" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">realce de bordas ou cores</text>
+<text x="565.0" y="428" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">(esgotar tratamentos) [F]</text>
+<line x1="453.0" y1="407.0" x2="469.0" y2="407.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="469.0" y="445" width="192" height="48" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="473.0" y1="497" x2="657.0" y2="497" stroke="#24292f" stroke-width="2"/>
+<text x="565.0" y="463" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">2.4 Reter regiões que</text>
+<text x="565.0" y="480" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">seguem em dúvida [H]</text>
+<line x1="453.0" y1="469.0" x2="469.0" y2="469.0" stroke="#57606a" stroke-width="1.5"/>
+
+<line x1="453.0" y1="239" x2="453.0" y2="469.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="439.0" y="530" width="222" height="92" rx="6" fill="#fbefff" stroke="#8250df" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text x="447.0" y="546" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#6639ba" text-anchor="start">Plano 2</text>
+<text x="447.0" y="562" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">2.1 &gt; 2.2. Para cada região</text>
+<text x="447.0" y="578" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">em dúvida, repetir 2.3 até</text>
+<text x="447.0" y="594" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">esclarecer ou esgotar recursos.</text>
+<text x="447.0" y="610" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">Resta dúvida: fazer 2.4 e ir a 3.</text>
+
+<!-- ================= RAMO 3 ================= -->
+<line x1="900.0" y1="173" x2="900.0" y2="191" stroke="#57606a" stroke-width="1.5"/>
+<rect x="789.0" y="191" width="222" height="48" rx="6" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+<text x="900.0" y="209" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">3. Confrontar anomalias</text>
+<text x="900.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">com a declaração da carga</text>
+
+<rect x="819.0" y="261" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="823.0" y1="317" x2="1007.0" y2="317" stroke="#24292f" stroke-width="2"/>
+<text x="915.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">3.1 Consultar descrição</text>
+<text x="915.0" y="295" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">e natureza declarada</text>
+<text x="915.0" y="308" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">(estação ou sistema externo)</text>
+<line x1="803.0" y1="287.0" x2="819.0" y2="287.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="819.0" y="325" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="823.0" y1="381" x2="1007.0" y2="381" stroke="#24292f" stroke-width="2"/>
+<text x="915.0" y="343" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">3.2 Julgar se padrão visual</text>
+<text x="915.0" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">é compatível com a carga</text>
+<text x="915.0" y="372" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">declarada [H]</text>
+<line x1="803.0" y1="351.0" x2="819.0" y2="351.0" stroke="#57606a" stroke-width="1.5"/>
+
+<line x1="803.0" y1="239" x2="803.0" y2="351.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="789.0" y="530" width="222" height="84" rx="6" fill="#fbefff" stroke="#8250df" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text x="797.0" y="546" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#6639ba" text-anchor="start">Plano 3</text>
+<text x="797.0" y="562" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">3.1 &gt; 3.2. Se compatível,</text>
+<text x="797.0" y="578" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">ir para 4.1. Se incompatível</text>
+<text x="797.0" y="594" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">ou dúvida persistir, ir para 4.2</text>
+<text x="797.0" y="608" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#57606a" text-anchor="start">(pesar custos de erro em H12).</text>
+
+<!-- ================= RAMO 4 (CTT T03) ================= -->
+<line x1="1250.0" y1="173" x2="1250.0" y2="191" stroke="#57606a" stroke-width="1.5"/>
+<rect x="1139.0" y="191" width="222" height="48" rx="6" fill="#fff8c5" stroke="#57606a" stroke-width="2.5"/>
+<text x="1250.0" y="209" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">4. Formalizar manifestação</text>
+<text x="1250.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">sobre a carga → T03</text>
+
+<rect x="1169.0" y="261" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1173.0" y1="317" x2="1357.0" y2="317" stroke="#24292f" stroke-width="2"/>
+<text x="1265.0" y="279" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">4.1 Concluir "não apontar"</text>
+<text x="1265.0" y="295" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">e autorizar liberação</text>
+<text x="1265.0" y="308" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">do fluxo [F]</text>
+<line x1="1153.0" y1="287.0" x2="1169.0" y2="287.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="1169.0" y="325" width="192" height="52" rx="6" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1173.0" y1="381" x2="1357.0" y2="381" stroke="#24292f" stroke-width="2"/>
+<text x="1265.0" y="343" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">4.2 Registrar suspeita,</text>
+<text x="1265.0" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="middle">segregar contêiner e</text>
+<text x="1265.0" y="372" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" text-decoration="underline" fill="#57606a" text-anchor="middle">notificar a RFB [F]</text>
+<line x1="1153.0" y1="351.0" x2="1169.0" y2="351.0" stroke="#57606a" stroke-width="1.5"/>
+
+<line x1="1153.0" y1="239" x2="1153.0" y2="351.0" stroke="#57606a" stroke-width="1.5"/>
+
+<rect x="1139.0" y="530" width="222" height="92" rx="6" fill="#fbefff" stroke="#8250df" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text x="1147.0" y="546" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#6639ba" text-anchor="start">Plano 4</text>
+<text x="1147.0" y="562" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">Escolha exclusiva: 4.1 se carga</text>
+<text x="1147.0" y="578" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">regular; 4.2 se houver suspeita</text>
+<text x="1147.0" y="594" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">fundamentada (Portaria FNS 9/24</text>
+<text x="1147.0" y="610" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">art. 8º). Detalhe em T03.</text>
+
+<!-- ================= CAIXA DE ALERTA / RUPTURA ================= -->
+<rect x="1050.0" y="700" width="425" height="75" rx="6" fill="#fff1f0" stroke="#cf222e" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="1058.0" y="718" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">Ruptura ausente hoje [?] (?08, CP01): retorno da RFB</text>
+<text x="1058.0" y="734" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">ou da conferência física sobre o acerto de Gustavo.</text>
+<text x="1058.0" y="750" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">O operador não fica sabendo do desfecho do contêiner.</text>
+
+<!-- ================= LEGENDA ================= -->
+<rect x="24" y="690" width="700" height="96" rx="6" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<rect x="36" y="702" width="26" height="18" rx="3" fill="#ddf4ff" stroke="#57606a" stroke-width="2.5"/>
+<text x="70" y="715" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">Objetivo do usuário (0)</text>
+<rect x="356" y="702" width="26" height="18" rx="3" fill="#f6f8fa" stroke="#57606a" stroke-width="1.5"/>
+<text x="390" y="715" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">Subobjetivo</text>
+<rect x="36" y="732" width="26" height="18" rx="3" fill="#fff8c5" stroke="#57606a" stroke-width="2.5"/>
+<text x="70" y="745" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">Detalhado em outro modelo (T02, T03)</text>
+<rect x="356" y="732" width="26" height="18" rx="3" fill="#ffffff" stroke="#57606a" stroke-width="1.5"/>
+<line x1="356" y1="753" x2="382" y2="753" stroke="#24292f" stroke-width="2"/>
+<text x="390" y="745" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" text-decoration="underline" fill="#24292f" text-anchor="start">Operação final sublinhada (fim da decomposição)</text>
+<text x="36" y="764" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a" text-anchor="start">Nos planos: &gt; em sequência · "ou" / "só um" alternativa · "repetir" laço. [F] fato · [H] hipótese · [?] lacuna.</text>
+<text x="36" y="779" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a" text-anchor="start">A decomposição para nas ações do operador, sem antecipar interfaces ou automações futuras.</text>
 </svg>

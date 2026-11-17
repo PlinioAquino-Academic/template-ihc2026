@@ -1,0 +1,10 @@
+participante,tarefa,versao_url,commit,data,perfil_profissional_ou_proxy,justificativa_perfil,viewport,consentimento_privado_id,gravacao_autorizada,inicio,fim,tempo_segundos,sucesso,erros_total,tipos_erro,pedidos_ajuda,intervencoes,consultas_ajuda,facilidade_1a5,distingue_indicio_de_prova,distingue_apoio_de_liberacao,fala_ou_comportamento,evidencia_privada,limitacoes
+U01,UT01,,,,,,,,,,,,,,,,,,,,,,,
+U01,UT02,,,,,,,,,,,,,,,,,,,,,,,
+U01,UT03,,,,,,,,,,,,,,,,,,,,,,,
+U02,UT01,,,,,,,,,,,,,,,,,,,,,,,
+U02,UT02,,,,,,,,,,,,,,,,,,,,,,,
+U02,UT03,,,,,,,,,,,,,,,,,,,,,,,
+U03,UT01,,,,,,,,,,,,,,,,,,,,,,,
+U03,UT02,,,,,,,,,,,,,,,,,,,,,,,
+U03,UT03,,,,,,,,,,,,,,,,,,,,,,,

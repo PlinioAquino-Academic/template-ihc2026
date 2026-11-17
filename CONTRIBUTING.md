@@ -2,21 +2,18 @@
 
 ## Commits
 
-Prefira commits pequenos e descritivos:
+Prefira commits pequenos e descritivos, em português, começando pela entrega ou pelo arquivo afetado. É o padrão que a equipe vem usando:
 
-- `docs: adiciona persona P02`
-- `docs: revisa cenário C01 após feedback`
-- `assets: adiciona HTA da tarefa T03`
-- `eval: consolida violações heurísticas`
-- `docs: define escopo de IHC para DBA`
-- `docs: revisa H02 após entrevista`
-- `design: adiciona histórico filtrável rastreado a T03`
+- `Entrega 03: reescreve P02 com camada explícita de evidência`
+- `Entrega 04: acrescenta o cenário CP02`
+- `Rastreabilidade: registra normas da RFB sobre escâner em H39, H01 e ?08`
+- `Pareceres: acrescenta às anotações os complementos de verificação`
 
 Evite commits como `alterações`, `final`, `coisas novas`.
 
 ## Branches (opcional)
 
-Se a equipe usar branches, prefira: `entrega/05-analise-tarefas`, `fix/molic-cenario-02`.
+A equipe tem usado uma branch por entrega e autor, como `entrega4_albertini`, e a branch `aplicar-feedback` para a aplicação dos pareceres do professor.
 
 ## Pull requests
 

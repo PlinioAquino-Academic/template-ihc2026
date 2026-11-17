@@ -1,0 +1,29 @@
+flowchart TB
+%% Título/agregador: objetivos humanos apoiados pelo parecer, sem nó raiz.
+%% Elipse = final; retângulo = instrumental direto; tracejado = instrumental indireto ou final externo, conforme rótulo.
+  O01(["O01: Concluir de forma fundamentada a análise da imagem<br/>Final; P01"])
+  O02["O02: Conferir correspondência entre caso e evidência<br/>Instrumental direto; P01/P02"]
+  O03["O03: Confrontar evidências para esclarecer a dúvida<br/>Instrumental direto; P01"]
+  O04["O04: Descrever e localizar o achado observado<br/>Instrumental direto; P01"]
+  O05["O05: Comunicar uma conclusão rastreável a quem decidirá<br/>Instrumental indireto; P01"]
+  O06(["O06: Decidir sobre a carga com fundamento<br/>Final externo; P02"])
+  O07["O07: Relacionar o achado com o contexto da carga<br/>Instrumental direto; P01/P02"]
+  O08["O08: Reconhecer limites e informação insuficiente<br/>Instrumental direto; P01/P02"]
+  O09(["O09: Esclarecer a suspeita na conferência física<br/>Final externo; P03, destinatário; P01 prepara informação"])
+  O02 -->|instrumenta| O01
+  O02 -->|instrumenta| O06
+  O02 -->|instrumenta| O09
+  O03 -->|instrumenta| O01
+  O04 -->|instrumenta| O01
+  O04 -->|instrumenta| O05
+  O07 -->|instrumenta| O01
+  O07 -->|instrumenta| O06
+  O07 -->|instrumenta| O09
+  O08 -->|instrumenta| O01
+  O08 -->|instrumenta| O06
+  O08 -->|instrumenta| O09
+  O05 -.->|instrumenta indiretamente| O06
+  O05 -.->|instrumenta indiretamente| O09
+  style O05 stroke-dasharray: 5 4
+  style O06 stroke-dasharray: 5 4
+  style O09 stroke-dasharray: 5 4

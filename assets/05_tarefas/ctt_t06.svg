@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
+<rect width="1500" height="1050" fill="#ffffff"/>
+<text x="24" y="30" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#24292f" text-anchor="start">CTT — T06 Formalizar o ato sobre a carga bloqueada (situação atual, no Siscomex)</text>
+<text x="24" y="52" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#57606a" text-anchor="start">Persona P02 (Auditor-Fiscal) · Cenário CP02 · Autor: Gabriel Albertini Pinheiro — 22.122.094-8</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="631" cy="89" r="8"/><circle cx="649" cy="89" r="8"/><circle cx="640" cy="82" r="10"/><rect x="631" y="87" width="18" height="10" stroke="none"/></g>
+<text x="640" y="118" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Formalizar o ato sobre a carga bloqueada</text>
+<line x1="640" y1="129" x2="640" y2="163" stroke="#57606a" stroke-width="1.5"/>
+<line x1="130" y1="163" x2="1030" y2="163" stroke="#57606a" stroke-width="1.5"/>
+<line x1="130" y1="163" x2="130" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="430" y1="163" x2="430" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="720" y1="163" x2="720" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1030" y1="163" x2="1030" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<rect x="259.0" y="152" width="42" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="280.0" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+<rect x="562.0" y="152" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="575.0" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+<rect x="854.0" y="152" width="42" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="875.0" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5"><circle cx="130" cy="193" r="7"/><path d="M118,212 Q118,200 130,200 Q142,200 142,212 Z"/></g>
+<text x="130" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Concluir avaliação da</text>
+<text x="130" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">suspeita bloqueada</text>
+<text x="130" y="261" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" fill="#57606a" text-anchor="middle">(gatilho T04-3)</text>
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="419" cy="196" r="5"/><path d="M411,211 Q411,202 419,202 Q427,202 427,211 Z"/><rect x="431" y="189" width="19" height="14" rx="1.5"/><line x1="440" y1="203" x2="440" y2="208"/><line x1="435" y1="209" x2="445" y2="209"/></g>
+<text x="430" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Localizar a</text>
+<text x="430" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">declaração pelo</text>
+<text x="430" y="261" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">número</text>
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5"><circle cx="720" cy="193" r="7"/><path d="M708,212 Q708,200 720,200 Q732,200 732,212 Z"/></g>
+<text x="720" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Escolher o ato</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="1021" cy="202" r="8"/><circle cx="1039" cy="202" r="8"/><circle cx="1030" cy="195" r="10"/><rect x="1021" y="200" width="18" height="10" stroke="none"/></g>
+<text x="1030" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Registrar o ato</text>
+<text x="1030" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">escolhido</text>
+<line x1="1030" y1="257" x2="1030" y2="291" stroke="#57606a" stroke-width="1.5"/>
+<line x1="880" y1="291" x2="1240" y2="291" stroke="#57606a" stroke-width="1.5"/>
+<line x1="880" y1="291" x2="880" y2="311" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1240" y1="291" x2="1240" y2="311" stroke="#57606a" stroke-width="1.5"/>
+<rect x="1047.0" y="280" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="1060.0" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="871" cy="330" r="8"/><circle cx="889" cy="330" r="8"/><circle cx="880" cy="323" r="10"/><rect x="871" y="328" width="18" height="10" stroke="none"/></g>
+<text x="880" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Executar o ato</text>
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1"><rect x="1228" y="316" width="24" height="17" rx="2"/><line x1="1240" y1="333" x2="1240" y2="338"/><line x1="1233" y1="339" x2="1247" y2="339"/><path d="M1234,325 l3,-3 l3,2 l4,-4" fill="none"/></g>
+<text x="1240" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Atualizar a linha do</text>
+<text x="1240" y="374" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">tempo do despacho</text>
+<line x1="880" y1="370" x2="880" y2="404" stroke="#57606a" stroke-width="1.5"/>
+<line x1="480" y1="404" x2="1240" y2="404" stroke="#57606a" stroke-width="1.5"/>
+<line x1="480" y1="404" x2="480" y2="424" stroke="#57606a" stroke-width="1.5"/>
+<line x1="880" y1="404" x2="880" y2="424" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1240" y1="404" x2="1240" y2="424" stroke="#57606a" stroke-width="1.5"/>
+<rect x="667.0" y="393" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="680.0" y="409" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]</text>
+<rect x="1047.0" y="393" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="1060.0" y="409" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="471" cy="443" r="8"/><circle cx="489" cy="443" r="8"/><circle cx="480" cy="436" r="10"/><rect x="471" y="441" width="18" height="10" stroke="none"/></g>
+<text x="480" y="472" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Registrar exigência</text>
+<text x="480" y="487" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">fiscal</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="871" cy="443" r="8"/><circle cx="889" cy="443" r="8"/><circle cx="880" cy="436" r="10"/><rect x="871" y="441" width="18" height="10" stroke="none"/></g>
+<text x="880" y="472" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Determinar</text>
+<text x="880" y="487" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">verificação física</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="1231" cy="443" r="8"/><circle cx="1249" cy="443" r="8"/><circle cx="1240" cy="436" r="10"/><rect x="1231" y="441" width="18" height="10" stroke="none"/></g>
+<text x="1240" y="472" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Desembaraçar</text>
+<line x1="480" y1="498" x2="480" y2="532" stroke="#57606a" stroke-width="1.5"/>
+<line x1="380" y1="532" x2="580" y2="532" stroke="#57606a" stroke-width="1.5"/>
+<line x1="380" y1="532" x2="380" y2="552" stroke="#57606a" stroke-width="1.5"/>
+<line x1="580" y1="532" x2="580" y2="552" stroke="#57606a" stroke-width="1.5"/>
+<rect x="467.0" y="521" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="480.0" y="537" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="371" cy="571" r="8"/><circle cx="389" cy="571" r="8"/><circle cx="380" cy="564" r="10"/><rect x="371" y="569" width="18" height="10" stroke="none"/></g>
+<text x="380" y="600" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Motivar o ato</text>
+<text x="380" y="615" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">(detalhe abaixo)</text>
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1"><rect x="568" y="557" width="24" height="17" rx="2"/><line x1="580" y1="574" x2="580" y2="579"/><line x1="573" y1="580" x2="587" y2="580"/><path d="M574,566 l3,-3 l3,2 l4,-4" fill="none"/></g>
+<text x="580" y="600" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Comunicar a</text>
+<text x="580" y="615" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">exigência e o</text>
+<text x="580" y="630" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">prazo ao</text>
+<text x="580" y="645" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">importador</text>
+<line x1="880" y1="498" x2="880" y2="532" stroke="#57606a" stroke-width="1.5"/>
+<line x1="790" y1="532" x2="970" y2="532" stroke="#57606a" stroke-width="1.5"/>
+<line x1="790" y1="532" x2="790" y2="552" stroke="#57606a" stroke-width="1.5"/>
+<line x1="970" y1="532" x2="970" y2="552" stroke="#57606a" stroke-width="1.5"/>
+<rect x="867.0" y="521" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="880.0" y="537" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="781" cy="571" r="8"/><circle cx="799" cy="571" r="8"/><circle cx="790" cy="564" r="10"/><rect x="781" y="569" width="18" height="10" stroke="none"/></g>
+<text x="790" y="600" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Motivar o ato</text>
+<text x="790" y="615" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">(detalhe abaixo)</text>
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1"><rect x="958" y="557" width="24" height="17" rx="2"/><line x1="970" y1="574" x2="970" y2="579"/><line x1="963" y1="580" x2="977" y2="580"/><path d="M964,566 l3,-3 l3,2 l4,-4" fill="none"/></g>
+<text x="970" y="600" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Registrar a</text>
+<text x="970" y="615" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">determinação [?]</text>
+<text x="970" y="630" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">destino</text>
+<line x1="1240" y1="483" x2="1240" y2="532" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1160" y1="532" x2="1340" y2="532" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1160" y1="532" x2="1160" y2="552" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1340" y1="532" x2="1340" y2="552" stroke="#57606a" stroke-width="1.5"/>
+<rect x="1237.0" y="521" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="1250.0" y="537" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="1149" cy="565" r="5"/><path d="M1141,580 Q1141,571 1149,571 Q1157,571 1157,580 Z"/><rect x="1161" y="558" width="19" height="14" rx="1.5"/><line x1="1170" y1="572" x2="1170" y2="577"/><line x1="1165" y1="578" x2="1175" y2="578"/></g>
+<text x="1160" y="600" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Confirmar o</text>
+<text x="1160" y="615" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">desembaraço</text>
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1"><rect x="1328" y="557" width="24" height="17" rx="2"/><line x1="1340" y1="574" x2="1340" y2="579"/><line x1="1333" y1="580" x2="1347" y2="580"/><path d="M1334,566 l3,-3 l3,2 l4,-4" fill="none"/></g>
+<text x="1340" y="600" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Registrar o</text>
+<text x="1340" y="615" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">desembaraço e</text>
+<text x="1340" y="630" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">liberar a carga</text>
+<rect x="24" y="660" width="980" height="370" rx="8" fill="none" stroke="#d0d7de" stroke-dasharray="6 4"/>
+<text x="40" y="682" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#57606a" text-anchor="start">Detalhe: Motivar o ato (a mesma subárvore em exigência fiscal e verificação física)</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="411" cy="711" r="8"/><circle cx="429" cy="711" r="8"/><circle cx="420" cy="704" r="10"/><rect x="411" y="709" width="18" height="10" stroke="none"/></g>
+<text x="420" y="740" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Motivar o ato</text>
+<line x1="420" y1="751" x2="420" y2="775" stroke="#57606a" stroke-width="1.5"/>
+<line x1="260" y1="775" x2="600" y2="775" stroke="#57606a" stroke-width="1.5"/>
+<line x1="260" y1="775" x2="260" y2="795" stroke="#57606a" stroke-width="1.5"/>
+<line x1="600" y1="775" x2="600" y2="795" stroke="#57606a" stroke-width="1.5"/>
+<rect x="417.0" y="764" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="430.0" y="780" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[&gt;</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="251" cy="814" r="8"/><circle cx="269" cy="814" r="8"/><circle cx="260" cy="807" r="10"/><rect x="251" y="812" width="18" height="10" stroke="none"/></g>
+<text x="260" y="843" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Elaborar o motivo</text>
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="589" cy="808" r="5"/><path d="M581,823 Q581,814 589,814 Q597,814 597,823 Z"/><rect x="601" y="801" width="19" height="14" rx="1.5"/><line x1="610" y1="815" x2="610" y2="820"/><line x1="605" y1="821" x2="615" y2="821"/></g>
+<text x="600" y="843" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Confirmar o motivo</text>
+<line x1="260" y1="854" x2="260" y2="878" stroke="#57606a" stroke-width="1.5"/>
+<line x1="140" y1="878" x2="400" y2="878" stroke="#57606a" stroke-width="1.5"/>
+<line x1="140" y1="878" x2="140" y2="898" stroke="#57606a" stroke-width="1.5"/>
+<line x1="400" y1="878" x2="400" y2="898" stroke="#57606a" stroke-width="1.5"/>
+<rect x="253.0" y="867" width="34" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="270.0" y="883" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">|||</text>
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="129" cy="911" r="5"/><path d="M121,926 Q121,917 129,917 Q137,917 137,926 Z"/><rect x="141" y="904" width="19" height="14" rx="1.5"/><line x1="150" y1="918" x2="150" y2="923"/><line x1="145" y1="924" x2="155" y2="924"/></g>
+<text x="140" y="946" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Editar o texto do</text>
+<text x="140" y="961" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">motivo *</text>
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="389" cy="911" r="5"/><path d="M381,926 Q381,917 389,917 Q397,917 397,926 Z"/><rect x="401" y="904" width="19" height="14" rx="1.5"/><line x1="410" y1="918" x2="410" y2="923"/><line x1="405" y1="924" x2="415" y2="924"/></g>
+<text x="400" y="946" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">[Consultar o relato e</text>
+<text x="400" y="961" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">a imagem] * fora do</text>
+<text x="400" y="976" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Siscomex [H]</text>
+<rect x="1030" y="660" width="446" height="370" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+<text x="1044" y="682" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="start">Tipos de tarefa</text>
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="1055" cy="709" r="8"/><circle cx="1073" cy="709" r="8"/><circle cx="1064" cy="702" r="10"/><rect x="1055" y="707" width="18" height="10" stroke="none"/></g>
+<text x="1092" y="711" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="start">Abstrata (decomposta em subtarefas)</text>
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5"><circle cx="1064" cy="730" r="7"/><path d="M1052,749 Q1052,737 1064,737 Q1076,737 1076,749 Z"/></g>
+<text x="1092" y="741" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="start">Do usuário (cognitiva, sem o sistema)</text>
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="1053" cy="763" r="5"/><path d="M1045,778 Q1045,769 1053,769 Q1061,769 1061,778 Z"/><rect x="1065" y="756" width="19" height="14" rx="1.5"/><line x1="1074" y1="770" x2="1074" y2="775"/><line x1="1069" y1="776" x2="1079" y2="776"/></g>
+<text x="1092" y="771" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="start">De interação (usuário com o sistema)</text>
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1"><rect x="1052" y="785" width="24" height="17" rx="2"/><line x1="1064" y1="802" x2="1064" y2="807"/><line x1="1057" y1="808" x2="1071" y2="808"/><path d="M1058,794 l3,-3 l3,2 l4,-4" fill="none"/></g>
+<text x="1092" y="801" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="start">Da aplicação (o sistema executa)</text>
+<text x="1044" y="842" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="start">Operadores temporais</text>
+<text x="1064" y="866" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+<text x="1092" y="866" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">habilitação: a da direita começa quando a da esquerda termina</text>
+<text x="1064" y="886" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+<text x="1092" y="886" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">habilitação com passagem de informação</text>
+<text x="1064" y="906" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#6639ba" text-anchor="middle">[]</text>
+<text x="1092" y="906" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">escolha: só uma das tarefas é realizada</text>
+<text x="1064" y="926" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#6639ba" text-anchor="middle">|||</text>
+<text x="1092" y="926" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">entrelaçamento: em qualquer ordem, alternando</text>
+<text x="1064" y="946" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#6639ba" text-anchor="middle">[&gt;</text>
+<text x="1092" y="946" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">desativação: a da direita encerra a da esquerda</text>
+<text x="1064" y="966" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#6639ba" text-anchor="middle">*</text>
+<text x="1092" y="966" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">iteração: a tarefa se repete</text>
+<text x="1064" y="986" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#6639ba" text-anchor="middle">[ ]</text>
+<text x="1092" y="986" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="start">colchetes no nome: tarefa opcional</text>
+<text x="1044" y="1012" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a" text-anchor="start">[H] hipótese · [?] lacuna (ver texto da entrega)</text>
+</svg>

@@ -1,5 +1,298 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+<rect width="1500" height="980" fill="#ffffff"/>
+
+<!-- Título e cabeçalho -->
+<text x="24" y="30" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#24292f" text-anchor="start">CTT — T03 Comunicar e registrar a conclusão do exame da imagem (situação atual)</text>
+<text x="24" y="52" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#57606a" text-anchor="start">Persona P01 (Gustavo Onofre, operador da estação de imagem) · Cenário CP01 · Autor: Kawan Mark Geronimo Da Silva — 22.222.010-5</text>
+
+<!-- ================= NÍVEL 0: RAIZ ================= -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="641" cy="89" r="8"/>
+  <circle cx="659" cy="89" r="8"/>
+  <circle cx="650" cy="82" r="10"/>
+  <rect x="641" y="87" width="18" height="10" stroke="none"/>
+</g>
+<text x="650" y="118" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">Comunicar e registrar a conclusão do exame da imagem</text>
+
+<!-- Linhas tronco de nível 0 para nível 1 -->
+<line x1="650" y1="129" x2="650" y2="163" stroke="#57606a" stroke-width="1.5"/>
+<line x1="190" y1="163" x2="1000" y2="163" stroke="#57606a" stroke-width="1.5"/>
+<line x1="190" y1="163" x2="190" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="540" y1="163" x2="540" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1000" y1="163" x2="1000" y2="183" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador temporal nível 1a: >> -->
+<rect x="352" y="152" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="365" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+
+<!-- Operador temporal nível 1b: []>> -->
+<rect x="749" y="152" width="42" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="770" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+
+<!-- ================= NÍVEL 1: NÓS ================= -->
+<!-- Tarefa do usuário (gatilho humano): Concluir inspeção visual e confronto -->
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5">
+  <circle cx="190" cy="193" r="7"/>
+  <path d="M178,212 Q178,200 190,200 Q202,200 202,212 Z"/>
+</g>
+<text x="190" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Concluir inspeção visual</text>
+<text x="190" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">e confronto (T01-2/3)</text>
+
+<!-- Tarefa do usuário: Avaliar convicção e definir manifestação -->
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5">
+  <circle cx="540" cy="193" r="7"/>
+  <path d="M528,212 Q528,200 540,200 Q552,200 552,212 Z"/>
+</g>
+<text x="540" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Avaliar convicção e</text>
+<text x="540" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">definir manifestação [H]</text>
+
+<!-- Tarefa abstrata: Efetivar manifestação no sistema -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="991" cy="202" r="8"/>
+  <circle cx="1009" cy="202" r="8"/>
+  <circle cx="1000" cy="195" r="10"/>
+  <rect x="991" y="200" width="18" height="10" stroke="none"/>
+</g>
+<text x="1000" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Efetivar manifestação</text>
+<text x="1000" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">no sistema</text>
+
+<!-- Linhas tronco de Efetivar manifestação para nível 2 -->
+<line x1="1000" y1="257" x2="1000" y2="291" stroke="#57606a" stroke-width="1.5"/>
+<line x1="620" y1="291" x2="1280" y2="291" stroke="#57606a" stroke-width="1.5"/>
+<line x1="620" y1="291" x2="620" y2="311" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1280" y1="291" x2="1280" y2="311" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador temporal nível 2: [] (Escolha exclusiva) -->
+<rect x="937" y="280" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="950" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]</text>
+
+<!-- ================= NÍVEL 2: RAMOS DE ESCOLHA ================= -->
+<!-- RAMO A: Liberar trânsito regular -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="611" cy="330" r="8"/>
+  <circle cx="629" cy="330" r="8"/>
+  <circle cx="620" cy="323" r="10"/>
+  <rect x="611" y="328" width="18" height="10" stroke="none"/>
+</g>
+<text x="620" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Liberar trânsito regular</text>
+
+<!-- Linhas tronco sob Liberar trânsito regular -->
+<line x1="620" y1="370" x2="620" y2="404" stroke="#57606a" stroke-width="1.5"/>
+<line x1="490" y1="404" x2="750" y2="404" stroke="#57606a" stroke-width="1.5"/>
+<line x1="490" y1="404" x2="490" y2="424" stroke="#57606a" stroke-width="1.5"/>
+<line x1="750" y1="404" x2="750" y2="424" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador >> sob Liberar trânsito regular -->
+<rect x="607" y="393" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="620" y="409" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+
+<!-- Subtarefa Interação: Confirmar liberação no software -->
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff">
+  <circle cx="479" cy="437" r="5"/>
+  <path d="M471,452 Q471,443 479,443 Q487,443 487,452 Z"/>
+  <rect x="491" y="430" width="19" height="14" rx="1.5"/>
+  <line x1="500" y1="444" x2="500" y2="449"/>
+  <line x1="495" y1="450" x2="505" y2="450"/>
+</g>
+<text x="490" y="472" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Confirmar liberação</text>
+<text x="490" y="487" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">no software do escâner</text>
+
+<!-- Subtarefa Aplicação: Registrar liberação e autorizar saída -->
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1">
+  <rect x="738" y="428" width="24" height="17" rx="2"/>
+  <line x1="750" y1="445" x2="750" y2="450"/>
+  <line x1="743" y1="451" x2="757" y2="451"/>
+  <path d="M744,437 l3,-3 l3,2 l4,-4" fill="none"/>
+</g>
+<text x="750" y="472" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">Registrar liberação e</text>
+<text x="750" y="487" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="normal" fill="#24292f" text-anchor="middle">autorizar saída [F]</text>
+
+<!-- RAMO B: Registrar suspeita fundamentada -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="1271" cy="330" r="8"/>
+  <circle cx="1289" cy="330" r="8"/>
+  <circle cx="1280" cy="323" r="10"/>
+  <rect x="1271" y="328" width="18" height="10" stroke="none"/>
+</g>
+<text x="1280" y="359" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Registrar suspeita</text>
+<text x="1280" y="374" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">fundamentada</text>
+
+<!-- Linhas tronco sob Registrar suspeita fundamentada -->
+<line x1="1280" y1="385" x2="1280" y2="404" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1150" y1="404" x2="1410" y2="404" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1150" y1="404" x2="1150" y2="424" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1410" y1="404" x2="1410" y2="424" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador >> sob Registrar suspeita fundamentada -->
+<rect x="1267" y="393" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="1280" y="409" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+
+<!-- Subtarefa Abstrata: Elaborar apontamento de suspeita -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="1141" cy="443" r="8"/>
+  <circle cx="1159" cy="443" r="8"/>
+  <circle cx="1150" cy="436" r="10"/>
+  <rect x="1141" y="441" width="18" height="10" stroke="none"/>
+</g>
+<text x="1150" y="472" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Elaborar apontamento</text>
+<text x="1150" y="487" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">de suspeita</text>
+<text x="1150" y="502" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">(detalhe abaixo)</text>
+
+<!-- Subtarefa Abstrata: Efetivar retenção e comunicar RFB -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="1401" cy="443" r="8"/>
+  <circle cx="1419" cy="443" r="8"/>
+  <circle cx="1410" cy="436" r="10"/>
+  <rect x="1401" y="441" width="18" height="10" stroke="none"/>
+</g>
+<text x="1410" y="472" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Efetivar retenção e</text>
+<text x="1410" y="487" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">comunicar RFB</text>
+<text x="1410" y="502" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#57606a" text-anchor="middle">(detalhe abaixo)</text>
+
+<!-- ================= DETALHE INFERIOR: PROCESSOS DE SUSPEITA ================= -->
+<rect x="24" y="535" width="1452" height="275" rx="8" fill="none" stroke="#d0d7de" stroke-dasharray="6 4"/>
+<text x="40" y="557" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#57606a" text-anchor="start">Detalhes dos subprocessos de suspeita: Elaboração do apontamento e Efetivação da retenção</text>
+
+<!-- SUBÁRVORE DETALHE ESQUERDA: Elaborar apontamento de suspeita -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="391" cy="585" r="8"/>
+  <circle cx="409" cy="585" r="8"/>
+  <circle cx="400" cy="578" r="10"/>
+  <rect x="391" y="583" width="18" height="10" stroke="none"/>
+</g>
+<text x="400" y="612" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Elaborar apontamento de suspeita</text>
+
+<line x1="400" y1="620" x2="400" y2="648" stroke="#57606a" stroke-width="1.5"/>
+<line x1="170" y1="648" x2="630" y2="648" stroke="#57606a" stroke-width="1.5"/>
+<line x1="170" y1="648" x2="170" y2="670" stroke="#57606a" stroke-width="1.5"/>
+<line x1="400" y1="648" x2="400" y2="670" stroke="#57606a" stroke-width="1.5"/>
+<line x1="630" y1="648" x2="630" y2="670" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operadores temporais detalhe esquerda -->
+<rect x="272" y="637" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="285" y="653" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">|||</text>
+
+<rect x="502" y="637" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="515" y="653" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[&gt;</text>
+
+<!-- 1. Indicar região suspeita (marcar ROI) -->
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff">
+  <circle cx="159" cy="682" r="5"/>
+  <path d="M151,697 Q151,688 159,688 Q167,688 167,697 Z"/>
+  <rect x="171" y="675" width="19" height="14" rx="1.5"/>
+  <line x1="180" y1="689" x2="180" y2="694"/>
+  <line x1="175" y1="695" x2="185" y2="695"/>
+</g>
+<text x="170" y="718" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Indicar região suspeita</text>
+<text x="170" y="734" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">(marcar ROI) [F]</text>
+
+<!-- 2. Descrever inconformidade observada -->
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff">
+  <circle cx="389" cy="682" r="5"/>
+  <path d="M381,697 Q381,688 389,688 Q397,688 397,697 Z"/>
+  <rect x="401" y="675" width="19" height="14" rx="1.5"/>
+  <line x1="410" y1="689" x2="410" y2="694"/>
+  <line x1="405" y1="695" x2="415" y2="695"/>
+</g>
+<text x="400" y="718" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Descrever inconformidade</text>
+<text x="400" y="734" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">observada (texto livre) [H]</text>
+
+<!-- 3. Confirmar envio da ocorrência -->
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff">
+  <circle cx="619" cy="682" r="5"/>
+  <path d="M611,697 Q611,688 619,688 Q627,688 627,697 Z"/>
+  <rect x="631" y="675" width="19" height="14" rx="1.5"/>
+  <line x1="640" y1="689" x2="640" y2="694"/>
+  <line x1="635" y1="695" x2="645" y2="695"/>
+</g>
+<text x="630" y="718" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Confirmar envio da</text>
+<text x="630" y="734" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">ocorrência de suspeita</text>
+
+<!-- SUBÁRVORE DETALHE DIREITA: Efetivar retenção e comunicar autoridades -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="1141" cy="585" r="8"/>
+  <circle cx="1159" cy="585" r="8"/>
+  <circle cx="1150" cy="578" r="10"/>
+  <rect x="1141" y="583" width="18" height="10" stroke="none"/>
+</g>
+<text x="1150" y="612" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Efetivar retenção e comunicar RFB</text>
+
+<line x1="1150" y1="620" x2="1150" y2="648" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1000" y1="648" x2="1300" y2="648" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1000" y1="648" x2="1000" y2="670" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1300" y1="648" x2="1300" y2="670" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador temporal detalhe direita: ||| -->
+<rect x="1137" y="637" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="1150" y="653" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">|||</text>
+
+<!-- 1. Emitir ordem de segregação -->
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1">
+  <rect x="988" y="675" width="24" height="17" rx="2"/>
+  <line x1="1000" y1="692" x2="1000" y2="697"/>
+  <line x1="993" y1="698" x2="1007" y2="698"/>
+  <path d="M994,684 l3,-3 l3,2 l4,-4" fill="none"/>
+</g>
+<text x="1000" y="718" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Emitir ordem de segregação</text>
+<text x="1000" y="734" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">física no pátio [F]</text>
+
+<!-- 2. Transmitir notificação à RFB -->
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1">
+  <rect x="1288" y="675" width="24" height="17" rx="2"/>
+  <line x1="1300" y1="692" x2="1300" y2="697"/>
+  <line x1="1293" y1="698" x2="1307" y2="698"/>
+  <path d="M1294,684 l3,-3 l3,2 l4,-4" fill="none"/>
+</g>
+<text x="1300" y="718" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Transmitir notificação</text>
+<text x="1300" y="734" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">eletrônica à RFB [F]</text>
+
+<!-- ================= SEÇÃO INFERIOR: LEGENDA E RUPTURA ================= -->
+<!-- Legenda -->
+<rect x="24" y="825" width="850" height="140" rx="6" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="36" y="845" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="start">Legenda do CTT (Notação de Paternò)</text>
+
+<!-- Ícones de categoria -->
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5"><circle cx="46" cy="867" r="5"/><path d="M38,879 Q38,871 46,871 Q54,871 54,879 Z"/></g>
+<text x="60" y="874" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#24292f" text-anchor="start">Tarefa do usuário (cognitiva)</text>
+
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff"><circle cx="270" cy="867" r="4"/><path d="M264,879 Q264,872 270,872 Q276,872 276,879 Z"/><rect x="279" y="862" width="14" height="11" rx="1"/><line x1="286" y1="873" x2="286" y2="877"/></g>
+<text x="300" y="874" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#24292f" text-anchor="start">Tarefa de interação</text>
+
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1"><rect x="490" y="862" width="18" height="13" rx="1.5"/><line x1="499" y1="875" x2="499" y2="878"/><path d="M494,868 l2,-2 l2,1.5 l3,-3" fill="none"/></g>
+<text x="516" y="874" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#24292f" text-anchor="start">Tarefa da aplicação / sistema</text>
+
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3"><circle cx="725" cy="871" r="5"/><circle cx="737" cy="871" r="5"/><circle cx="731" cy="866" r="6"/><rect x="725" y="869" width="12" height="7" stroke="none"/></g>
+<text x="748" y="874" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#24292f" text-anchor="start">Tarefa abstrata (composta)</text>
+
+<!-- Operadores temporais -->
+<rect x="36" y="900" width="30" height="18" rx="3" fill="#ffffff" stroke="#8250df" stroke-width="1.2"/>
+<text x="51" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+<text x="74" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#24292f" text-anchor="start">Habilitação sequencial</text>
+
+<rect x="230" y="900" width="38" height="18" rx="3" fill="#ffffff" stroke="#8250df" stroke-width="1.2"/>
+<text x="249" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+<text x="275" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#24292f" text-anchor="start">Habilitação c/ info</text>
+
+<rect x="420" y="900" width="24" height="18" rx="3" fill="#ffffff" stroke="#8250df" stroke-width="1.2"/>
+<text x="432" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#6639ba" text-anchor="middle">[]</text>
+<text x="451" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#24292f" text-anchor="start">Escolha exclusiva</text>
+
+<rect x="585" y="900" width="24" height="18" rx="3" fill="#ffffff" stroke="#8250df" stroke-width="1.2"/>
+<text x="597" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#6639ba" text-anchor="middle">|||</text>
+<text x="616" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#24292f" text-anchor="start">Entrelaçamento</text>
+
+<rect x="735" y="900" width="24" height="18" rx="3" fill="#ffffff" stroke="#8250df" stroke-width="1.2"/>
+<text x="747" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#6639ba" text-anchor="middle">[&gt;</text>
+<text x="766" y="913" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#24292f" text-anchor="start">Desativação</text>
+
+<text x="36" y="945" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#57606a" text-anchor="start">Base de evidência: [F] fato normativo/concorrente (Portaria ALF/FNS 9/24, art. 8º; ADE Coana 19/14) · [H] hipótese de trabalho (CP01).</text>
+
+<!-- Caixa de Ruptura / Alerta -->
+<rect x="895" y="825" width="581" height="140" rx="6" fill="#fff1f0" stroke="#cf222e" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="910" y="847" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#a40e26" text-anchor="start">Ruptura na situação atual [?] (?08, CP01): Ausência de retorno</text>
+<text x="910" y="870" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">Nenhuma tarefa do sistema devolve à estação de Gustavo o desfecho da</text>
+<text x="910" y="888" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">verificação física realizada no pátio (P03) ou da decisão do Auditor-Fiscal (P02).</text>
+<text x="910" y="906" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">A tarefa do operador encerra-se na transmissão da suspeita, sem aprendizado</text>
+<text x="910" y="924" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">ou feedback para os próximos casos (H38).</text>
+<text x="910" y="945" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" fill="#cf222e" text-anchor="start">Fluxo terminal unilateral: não há laço de retorno da RFB para a estação.</text>
 </svg>

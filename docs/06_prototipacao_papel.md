@@ -1,70 +1,122 @@
 # Entrega 6 — Prototipação em papel
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
-**Responsabilidade:** 1 solução integrada por equipe
+**Data:** 25/10/2026 (versão original)
+**Revisão:** 15/11/2026, aplicação do [feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega06_Equipe09.md)
+**Status:** 🟦 revisada após feedback
+**Responsabilidade:** 1 solução integrada por equipe<br>
+**Autores:** Kawan Mark Geronimo Da Silva (22.222.010-5), Gabriel Albertini Pinheiro (22.122.094-8) e Alexandre Domiciano Pierri (22.125.061-6)
 
 ## Objetivo da atividade
 
-Externalizar rapidamente ideias de interação em baixa fidelidade para explorar alternativas antes de investir em detalhes visuais. O valor da atividade está no **ciclo construir → simular → observar → revisar**, não na beleza do desenho.
+Explorar em baixa fidelidade a estrutura da **Mesa de inspeção de raio-X de contêineres**, seguindo o ciclo **construir → simular → observar → revisar** antes de detalhar o visual da interface.
 
 ## 1. Escopo do protótipo
 
-**Personas:** {{...}}  
-**Cenários/tarefas cobertos:** {{C01/T01...}}  
-**Objetivos principais:** {{...}}
+- **Usuário da interface:** P01, Gustavo, examina a imagem e emite o parecer técnico.
+- **Destinatário da saída:** P02, Eduardo, recebe um PDF estático para apoiar seu trabalho no despacho. Não utiliza a Mesa nesta versão. O encaminhamento é externo, por procedimento institucional ainda a investigar (H28, H39, ?08); não há transmissão automática ao Siscomex.
+- **Stakeholder:** P03 permanece fora da interface, sem tela própria (H42).
+- **Cenários/tarefas:** CP01 e T01–T03 da [Entrega 5](05_analise_tarefas.md).
+- **Objetivos principais:** comparar radiografia e destaque do modelo (AC02/R01) e registrar o achado com justificativa (AC03/R03).
 
-## 1.1 Possíveis famílias de interface
+[H31/H37] O score “94%” e o limiar “70%” do esboço testado são valores ilustrativos, sem calibração operacional demonstrada. Investigar o que o valor representa na versão técnica, sua compreensão, utilidade e alternativas qualitativas, inclusive retirar o número. OBS-03 é evidência de ambiguidade com um colega, não validação profissional.
 
-Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, o protótipo pode explorar:
+A interface é um protótipo demonstrativo ligado ao TCC. Os valores e rótulos do desenho são exemplos: o resultado do modelo não comprova ilícito nem autoriza desembaraço.
 
-- **dashboard** para monitoramento e tomada de decisão;
-- **configuração/parametrização** para preparar algoritmo/modelo/processo;
-- **entrada/seleção de dados** com validação;
-- **acompanhamento de execução** com progresso, fila, cancelamento e recuperação;
-- **relatório/resultados** com explicação, gráficos e exportação;
-- **histórico** com busca, filtros, ordenação e detalhes;
-- **comparação** entre execuções, versões, algoritmos ou períodos;
-- **administração** de usuários, papéis, permissões ou entidades do domínio;
-- **auditoria/logs** traduzidos para o perfil;
-- **alertas/ocorrências** com ação de resposta.
+### 1.1 Famílias de interface escolhidas
 
-> Não desenhe todas essas telas por obrigação. O objetivo da baixa fidelidade é experimentar a **estrutura da interação** necessária para as tarefas priorizadas.
+| Família | Aplicação no esboço |
+|---|---|
+| Entrada de dados | Abrir uma radiografia para análise. |
+| Comparação e explicação de resultados | Examinar a imagem original e o destaque do modelo, com ajustes visuais. |
+| Registro e relatório | Marcar regiões, comentar o achado e preparar o parecer para exportação. |
+
+[H43] Exposição, penetração, negativo, super realce, brilho/contraste, nitidez, bordas, densidade/cor e isolamento de faixa são controles candidatos inspirados em C01/C03. Sua necessidade, agrupamento ou remoção devem ser investigados com P01, vinculados a T01/T02; existência no concorrente não valida todos na Mesa. A baixa fidelidade prioriza comparar, registrar e comunicar.
+
+Dashboard, fila priorizada, login, CRUD e administração não entram no esboço: não são necessários para experimentar as tarefas escolhidas.
 
 ## 2. Fluxos escolhidos
 
 | Fluxo | Tarefa/objetivo | Por que foi priorizado |
 |---|---|---|
-| PF01 | {{...}} | {{...}} |
+| PF01 — examinar | Abrir a imagem, consultar a indicação do modelo e comparar com a radiografia (T01/T02, AC02). | É a interação central com a contribuição do TCC. |
+| PF02 — registrar | Marcar região, descrever o achado, revisar a conclusão e exportar o parecer (T03, AC03). | Permite comunicar o que foi observado e sua justificativa. |
 
 ## 3. Telas e estados
 
-- Numere as telas/estados (`P01`, `P02`...).
-- Indique controles que mudam o estado.
-- Mostre pelo menos caminhos principais e estados de erro/retorno relevantes.
+![Esboço da Mesa de inspeção no tldraw](../assets/06_prototipos/mesa_inspecao.png)
 
-![Protótipo](../assets/06_prototipos/prototipo_fluxo_01.svg)
+*Figura 1 — Prancha da equipe em baixa fidelidade: ajustes à esquerda, radiografia no centro e análise/parecer à direita.*
+
+[Arquivo editável do tldraw](../assets/06_prototipos/mesa_inspecao.tldr). A imagem corresponde à página “Layout da tela”; o arquivo original mantém as páginas auxiliares. Uma mesma tela reúne os momentos de uso, identificados abaixo pelo prefixo **PP**, para não confundir com as personas P01/P02.
+
+| Estado | O que representa / tarefa | Controle e próximo estado |
+|---|---|---|
+| PP01 — sem imagem | Início do exame (T01). | “Abrir imagem” leva à análise; arquivo inválido leva a PP06a. |
+| PP02 — resultado disponível | Radiografia e indicação do modelo para exame (T01/T02). | Ajustes ou comparação levam a PP03; “Marcar” leva a PP04. |
+| PP03 — comparação | Exame do original com e sem a camada do modelo (T02). | “Segure para comparar (C)” alterna a camada; soltar retorna a PP02. “Marcar” leva a PP04. |
+| PP04 — região marcada | Registro de área de interesse e comentário (T03). | Criar, editar ou excluir marcação; preencher o parecer leva a PP05. |
+| PP05 — parecer técnico | Conclusão da análise da imagem, responsável e observações (T03). | “Baixar laudo em PDF” conclui a exportação; campos incompletos levam a PP06b. |
+| PP06a/PP06b — erro e retorno | Entrada inválida ou registro incompleto. | Selecionar outro arquivo retorna a PP01; revisar região ou campos retorna a PP04/PP05, preservando os dados. |
+
+**Caminho principal:** PP01 → PP02 → PP03 → PP04 → PP05. Uma análise sem região a registrar pode seguir de PP02/PP03 para PP05. Os caminhos de erro permitem corrigir a entrada ou voltar ao parecer. São comportamentos propostos no protótipo, não uma implementação concluída.
+
+![Estados essenciais PP01 a PP06](../assets/06_prototipos/estados_prototipo_pp01_pp06.svg)
+
+*Figura 2. Estados da interação de P01, incluindo entrada inválida, registro incompleto e retornos.*
 
 ## 4. Simulação / walkthrough
 
-Realize uma simulação com uma pessoa que não participou da elaboração dessas telas. Um colega pode ser usado **para essa iteração formativa**, mas isso não substitui os participantes finais da Entrega 14.
+Esta seção resume a simulação já registrada na versão anterior da entrega. Participou um **colega de curso que não elaborou as telas**, em uma iteração formativa; isso não substitui os participantes finais da Entrega 14.
 
-| Observação | Tela/ação | Evidência | Consequência para o design |
+**Tarefa apresentada:** examinar a imagem de um contêiner declarado como bobinas plásticas e peças automotivas, verificar a região indicada, usar os recursos necessários e concluir o registro para encaminhamento.
+
+O participante indicou onde clicaria, explicou o que entendia e o que esperava acontecer, percorrendo abertura, comparação, marcação e parecer. As observações abaixo mantêm os identificadores do registro original.
+
+| Observação | Tela/ação | Evidência registrada | Consequência para o design |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| OBS-01 — falta de contexto da carga | PP02/PP03, interpretar região densa. | Perguntou onde consultar o que o contêiner declarou transportar. | Incluir dados da carga junto da imagem. |
+| OBS-02 — dificuldade de comparar ao marcar | PP03/PP04, alternar comparação e marcação. | Ao soltar C para marcar, o mapa voltava a cobrir o contorno do objeto. | Acrescentar comparação sem depender de tecla pressionada. |
+| OBS-03 — dúvida sobre o indicador | PP02, ler a porcentagem do modelo. | Perguntou se o número significava chance de ser droga ou arma. | Explicar o significado e os limites do resultado. |
+| OBS-04 — ambiguidade da conclusão | PP05, escolher a ação final. | Interpretou “Liberar carga” e “Inspeção física” como decisões da autoridade aduaneira. | Distinguir parecer técnico de decisão formal. |
+| OBS-05 — comentário pouco evidente | PP04, registrar uma região. | Não identificou onde escrever o comentário da marcação. | Mostrar o campo junto da região registrada. |
+| OBS-06 — parecer incompleto | PP05, tentar exportar. | Foi à exportação antes de preencher responsável e observações. | Indicar campos obrigatórios e permitir revisão. |
+
+As evidências dizem respeito à compreensão do esboço por um colega, sem validar a rotina ou as preferências do profissional de inspeção.
+
+**Proveniência da sessão:** [F] perfil e forma de realização estão descritos acima. [?] A data exata, duração e notas primárias anonimizadas não constam dos registros disponíveis. As linhas OBS-01–OBS-06 são paráfrases preservadas do relato da equipe, sem transcrição verificável. A data da entrega não é tomada como data da sessão. Complementar esses campos somente se os autores recuperarem o registro; não é necessário repetir a sessão.
 
 ## 5. Alterações após a simulação
 
+[H] A prancha abaixo representa a revisão projetada a partir de OBS-01–OBS-06. A Figura 1 preserva o esboço testado. A revisão ainda não foi submetida a novo walkthrough nem validada com profissionais.
+
+![Mesa de inspeção após o walkthrough](../assets/06_prototipos/mesa_inspecao_revisada.svg)
+
+*Figura 3. Versão revisada em baixa fidelidade: contexto, comparação persistente, comentário visível, parecer técnico e validação.*
+
 | Antes | Problema | Depois | Justificativa |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Apenas nome do arquivo no cabeçalho. | Faltava referência sobre a mercadoria. | Apresentar identificação do caso e descrição da carga. | OBS-01; H11, T01/T02. |
+| Comparação dependia de manter C pressionado. | Marcar a região interrompia a comparação. | Manter o atalho e oferecer alternância persistente ou vista lado a lado. | OBS-02; H30, RC09. |
+| Porcentagem sem explicação de seu alcance. | Parecia indicar certeza de um tipo de ilícito. | Investigar H31/H37, incluindo apresentação qualitativa e remoção do score; explicar os limites do resultado quando exibido. | OBS-03; H31/H37, RC03. |
+| Ações chamadas “Liberar carga” e “Inspeção física”. | Confundiam parecer e autoridade de decisão. | Usar “Conclusão da análise da imagem”, com “Sem ressalvas na imagem” e “Suspeita apontada”. O parecer não libera nem retém a carga. | OBS-04; H39, RC07. |
+| Comentário da região apenas implícito. | Não estava claro onde escrever. | Exibir comentário junto de cada região e permitir edição. | OBS-05; R03, T03. |
+| Exportação sem validação visível. | Podia gerar parecer incompleto. | Informar omissões, manter os dados e solicitar correção antes da emissão. | OBS-06; H08, RC04. |
+
+Os diagramas e estados completos continuam guardados como [referência para as entregas 10 e 11](../assets/11_figma/referencia_mesa_inspecao.md), sem ampliar esta entrega de baixa fidelidade.
 
 ## Checklist
 
-- [ ] O protótipo cobre tarefas relevantes da Entrega 5.
-- [ ] Cada tela/estado pode ser justificado por uma tarefa, decisão ou informação necessária.
-- [ ] O projeto não criou dashboard/CRUD/login apenas para parecer “completo”.
-- [ ] Telas/estados estão numerados e navegáveis na documentação.
-- [ ] Há pelo menos uma simulação/walkthrough documentado.
-- [ ] Críticas não foram apenas listadas: geraram decisão de revisão.
-- [ ] O protótipo continua em baixa fidelidade; detalhes visuais não mascaram problemas de fluxo.
+- [x] O protótipo cobre tarefas relevantes da Entrega 5.
+- [x] Cada estado tem relação com uma tarefa, decisão ou informação necessária.
+- [x] Dashboard, CRUD e login não foram criados apenas para completar o sistema.
+- [x] Estados estão numerados, com controles, caminhos principais e retornos descritos.
+- [x] Simulação/walkthrough documentado, com perfil, tarefa e evidências.
+- [x] Observações geraram decisões de revisão justificadas.
+- [x] O protótipo permanece em baixa fidelidade, com a prancha testada, a revisada e os estados essenciais.
+- [x] Material detalhado preservado e rastreabilidade atualizada.
+
+## Histórico de revisões
+
+| Data | Alteração | Origem |
+|---|---|---|
+| 15/11/2026 | Cobertura limitada a T01–T03/P01; P02 como destinatário externo; prancha revisada, estados visuais, terminologia de parecer, score/limiar e filtros como hipóteses e proveniência disponível do walkthrough. | [Feedback do professor](../feedbacks_professor/Feedback_Professor_Entrega06_Equipe09.md). |

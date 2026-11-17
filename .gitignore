@@ -4,3 +4,5 @@ Thumbs.db
 *.bak
 ~$*
 *.swp
+*.claude
+*.github

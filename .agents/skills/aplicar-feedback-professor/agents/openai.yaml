@@ -1,0 +1,6 @@
+interface:
+  display_name: "Aplicar feedback do professor"
+  short_description: "Aplica o parecer de uma entrega, anota cada comentário e gera o HTML de diffs"
+  default_prompt: "Use $aplicar-feedback-professor para aplicar o feedback do professor da Entrega NN."
+policy:
+  allow_implicit_invocation: true

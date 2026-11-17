@@ -1,0 +1,1870 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>Mesa de inspeção — protótipo F01–F12</title>
+<style>/* Barlow e Barlow Semi Condensed (SIL Open Font License), subconjunto latino, servidas localmente
+   para a interface funcionar sem internet. */
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Barlow-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/Barlow-500.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/Barlow-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/BarlowSemiCondensed-500.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/BarlowSemiCondensed-600.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/BarlowSemiCondensed-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Mesa de inspeção: console escuro de sala de leitura em volta de uma mesa de luz clara,
+   onde a radiografia fica. Âmbar de lâmpada de sódio (pátio de porto) é a única cor de destaque;
+   verde e vermelho só aparecem no veredito. */
+:root {
+  --console: #1f2830;
+  --panel: #27323c;
+  --panel-raised: #2f3b46;
+  --line: #3b4855;
+  --text: #e7ecef;
+  --muted: #95a3af;
+  --amber: #f2a93b;
+  --amber-ink: #2a1c05;
+  --clear: #5fb99c;
+  --hold: #e5654f;
+  --light-table: #d9e2e8;
+  --light-table-edge: #b9c6cf;
+  --focus: #ffd38a;
+
+  --font: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --font-cond: "Barlow Semi Condensed", "Barlow", "Arial Narrow", sans-serif;
+
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+
+  --amber-text: var(--amber);
+  --stage-shadow: rgba(255, 255, 255, 0.35);
+
+  color-scheme: dark;
+}
+
+/* Tema claro: mesma estrutura, painéis em papel acinzentado. A mesa de luz fica um tom mais
+   fria para continuar se destacando dos painéis; o âmbar de texto escurece para ter contraste. */
+:root[data-theme="light"] {
+  --console: #e9edf0;
+  --panel: #f6f8f9;
+  --panel-raised: #ffffff;
+  --line: #d2dae0;
+  --text: #1d2730;
+  --muted: #5b6a76;
+  --amber-ink: #2a1c05;
+  --amber-text: #9a5a00;
+  --clear: #3f9c80;
+  --hold: #d4513b;
+  --light-table: #dfe7ec;
+  --light-table-edge: #c3cfd7;
+  --focus: #9a5a00;
+  --stage-shadow: rgba(255, 255, 255, 0.6);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--console);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.45;
+  display: flex;
+  flex-direction: column;
+  font-variant-numeric: tabular-nums;
+}
+
+h1, h2 { font-family: var(--font-cond); margin: 0; }
+
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* Barra superior */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+.brand h1 { font-size: var(--step-2); font-weight: 600; line-height: 1.1; letter-spacing: 0.01em; }
+.brand-mark { width: 34px; height: 34px; flex: none; fill: none; stroke: var(--muted); stroke-width: 1.6; }
+.brand-mark .beam { stroke: var(--amber); stroke-width: 2; }
+.file-name {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--step--1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 48ch;
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--line);
+  background: var(--panel-raised);
+  color: var(--text);
+  font: 600 var(--step-0)/1 var(--font-cond);
+  letter-spacing: 0.02em;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+.btn:hover { border-color: var(--muted); }
+.btn-primary { background: var(--amber); border-color: var(--amber); color: var(--amber-ink); }
+.btn-primary:hover { background: #f6b955; border-color: #f6b955; }
+.btn-primary:disabled { background: var(--panel-raised); border-color: var(--line); color: var(--muted); cursor: not-allowed; }
+.btn-quiet { background: transparent; font-weight: 500; padding: 0.45rem 0.75rem; }
+.btn-quiet.is-pressed { border-color: var(--amber); color: var(--amber-text); }
+.btn-block { width: 100%; }
+
+.theme-toggle { padding: 0.55rem; }
+.theme-toggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; }
+/* O ícone mostra o tema para onde o botão leva: sol no escuro, lua no claro. */
+.theme-toggle .moon { display: none; }
+:root[data-theme="light"] .theme-toggle .moon { display: block; }
+:root[data-theme="light"] .theme-toggle .sun { display: none; }
+.topbar-actions { display: flex; align-items: center; gap: 0.5rem; }
+
+/* Área de trabalho */
+.workspace {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr) 320px;
+}
+.panel {
+  overflow-y: auto;
+  padding: 0.5rem 1.1rem 1.25rem;
+  background: var(--panel);
+}
+.tools { border-right: 1px solid var(--line); }
+.verdict { border-left: 1px solid var(--line); display: flex; flex-direction: column; }
+
+.group { padding: 0.9rem 0 1rem; border-bottom: 1px solid var(--line); }
+.group:last-of-type { border-bottom: 0; }
+.group h2 { font-size: var(--step-1); font-weight: 600; margin-bottom: 0.7rem; }
+
+.workspace[data-state="vazio"] .tools,
+.workspace[data-state="vazio"] .verdict .group:not(:first-child) { opacity: 0.45; pointer-events: none; }
+
+/* Controles */
+.control { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 0.15rem 0.5rem; margin-bottom: 0.8rem; }
+.control label { color: var(--text); }
+.control output { color: var(--muted); font-size: var(--step--1); }
+.control > input[type="range"], .control > select, .control > input[type="text"], .control > textarea,
+.control > .dual-range, .control > .scale-hint { grid-column: 1 / -1; }
+.scale-hint { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.75rem; margin-top: -0.15rem; }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 22px;
+  background: transparent;
+  margin: 0;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: var(--line); }
+input[type="range"]::-moz-range-track { height: 4px; border-radius: 2px; background: var(--line); }
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px; height: 16px; margin-top: -6px;
+  border-radius: 50%;
+  background: var(--text);
+  border: 3px solid var(--console);
+  box-shadow: 0 0 0 1px var(--muted);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--text);
+  border: 3px solid var(--console);
+  box-shadow: 0 0 0 1px var(--muted);
+}
+input[type="range"]:focus-visible { outline-offset: 0; }
+
+.dual-range { position: relative; height: 22px; }
+.dual-range input { position: absolute; inset: 0; pointer-events: none; }
+.dual-range input::-webkit-slider-thumb { pointer-events: auto; }
+.dual-range input::-moz-range-thumb { pointer-events: auto; }
+.dual-range input + input::-webkit-slider-runnable-track { background: transparent; }
+.dual-range input + input::-moz-range-track { background: transparent; }
+
+select, input[type="text"], textarea {
+  width: 100%;
+  background: var(--console);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+}
+textarea { resize: vertical; min-height: 4.5rem; }
+select:hover, input[type="text"]:hover, textarea:hover { border-color: var(--muted); }
+
+.toggle { display: flex; align-items: center; gap: 0.55rem; margin: 0.15rem 0 0.8rem; cursor: pointer; }
+.toggle input { width: 16px; height: 16px; accent-color: var(--amber); margin: 0; }
+
+.presets { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chip {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  font: 500 var(--step--1)/1 var(--font);
+  padding: 0.5rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--muted); }
+.chip.is-active { border-color: var(--amber); color: var(--amber-text); }
+
+.segmented { display: flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; margin-bottom: 0.8rem; }
+.segmented label { flex: 1; }
+.segmented input { position: absolute; opacity: 0; pointer-events: none; }
+.segmented span { display: block; text-align: center; padding: 0.45rem 0.3rem; font-size: var(--step--1); color: var(--muted); cursor: pointer; }
+.segmented input:checked + span { background: var(--panel-raised); color: var(--text); }
+.segmented input:focus-visible + span { outline: 2px solid var(--focus); outline-offset: -2px; }
+
+.note { margin: 0; color: var(--muted); font-size: var(--step--1); }
+
+/* Imagem: mesa de luz */
+.stage-wrap { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.stage-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+.tool-set { display: flex; align-items: center; gap: 0.35rem; }
+.tool, .icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font: 500 var(--step--1)/1 var(--font);
+  cursor: pointer;
+}
+.tool svg, .icon-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.tool:hover, .icon-btn:hover { color: var(--text); }
+.tool.is-active { color: var(--text); border-color: var(--line); background: var(--panel-raised); }
+.icon-btn { padding: 0.4rem; }
+.zoom-level { min-width: 3.5rem; text-align: center; color: var(--muted); font-size: var(--step--1); }
+
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  margin: 0.9rem;
+  border-radius: 10px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 45%, #eef3f6 0%, var(--light-table) 55%, var(--light-table-edge) 100%);
+  box-shadow: inset 0 0 0 1px var(--stage-shadow), 0 0 0 1px var(--line);
+}
+/* Régua da mesa de luz: marcas a cada 10 px de tela, mais longas a cada 50. */
+.stage::before, .stage::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.55;
+}
+.stage::before {
+  top: 0; left: 0; right: 0; height: 9px;
+  background:
+    repeating-linear-gradient(90deg, #7d8b96 0 1px, transparent 1px 50px) top / 100% 9px no-repeat,
+    repeating-linear-gradient(90deg, #7d8b96 0 1px, transparent 1px 10px) top / 100% 4px no-repeat;
+}
+.stage::after {
+  top: 0; left: 0; bottom: 0; width: 9px;
+  background:
+    repeating-linear-gradient(180deg, #7d8b96 0 1px, transparent 1px 50px) left / 9px 100% no-repeat,
+    repeating-linear-gradient(180deg, #7d8b96 0 1px, transparent 1px 10px) left / 4px 100% no-repeat;
+}
+#view { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+.stage[data-tool="mover"] #view { cursor: grab; }
+.stage[data-tool="mover"].is-dragging #view { cursor: grabbing; }
+.stage[data-tool="marcar"] #view { cursor: crosshair; }
+.stage[data-tool="lupa"] #view { cursor: none; }
+
+.loupe {
+  position: absolute;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+  box-shadow: 0 0 0 2px var(--amber), 0 10px 30px rgba(10, 16, 22, 0.45);
+  transform: translate(-50%, -50%);
+}
+.loupe canvas { display: block; }
+
+.dropzone {
+  position: absolute;
+  inset: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 2px dashed #8f9da8;
+  border-radius: 10px;
+  color: #3b4752;
+  text-align: center;
+  cursor: pointer;
+}
+.dropzone svg { width: 64px; height: 64px; fill: none; stroke: #6c7a86; stroke-width: 1.6; margin-bottom: 0.5rem; }
+.dropzone strong { font: 600 var(--step-2)/1.2 var(--font-cond); color: #26313a; }
+.dropzone.is-over { border-color: var(--amber); background: rgba(242, 169, 59, 0.08); }
+.workspace:not([data-state="vazio"]) .dropzone { display: none; }
+
+.busy {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(217, 226, 232, 0.55);
+}
+.busy p {
+  margin: 0 0 1.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  background: var(--console);
+  color: var(--text);
+  font-size: var(--step--1);
+}
+/* A única animação da página: a linha de varredura enquanto o modelo trabalha. */
+.scanline {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 3px;
+  background: var(--amber);
+  box-shadow: 0 0 18px 6px rgba(242, 169, 59, 0.45);
+  animation: scan 1.6s ease-in-out infinite alternate;
+}
+@keyframes scan { from { left: 2%; } to { left: 98%; } }
+@media (prefers-reduced-motion: reduce) {
+  .scanline { animation: none; left: 50%; }
+}
+
+/* Parecer */
+.triage { margin-bottom: 0.9rem; }
+.triage-label { margin: 0 0 0.7rem; font: 600 var(--step-2)/1.15 var(--font-cond); }
+.triage[data-level="none"] .triage-label { font: 400 var(--step-0)/1.45 var(--font); color: var(--muted); }
+.triage[data-level="indicio"] .triage-label { color: var(--amber-text); }
+.meter { position: relative; height: 10px; border-radius: 5px; background: var(--console); box-shadow: inset 0 0 0 1px var(--line); }
+.meter-fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 5px; background: var(--muted); transition: width 0.5s ease; }
+.triage[data-level="indicio"] .meter-fill { background: var(--amber); }
+.triage[data-level="sem"] .meter-fill { background: #8fa4b3; }
+.meter-threshold { position: absolute; top: -4px; bottom: -4px; width: 2px; left: 50%; background: var(--text); border-radius: 1px; }
+.meter-scale { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.75rem; margin-top: 0.35rem; }
+.triage-prob { margin: 0.6rem 0 0; color: var(--muted); font-size: var(--step--1); }
+.triage-prob strong { color: var(--text); font-weight: 600; }
+
+.marks { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.marks li {
+  padding: 0.4rem 0.4rem 0.5rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: var(--step--1);
+}
+.mark-head { display: flex; align-items: center; gap: 0.6rem; }
+.mark-note { margin-top: 0.4rem; min-height: 2.6rem; font-size: var(--step--1); padding: 0.4rem 0.5rem; }
+.mark-id {
+  flex: none;
+  width: 1.4rem; height: 1.4rem;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--hold); color: #fff;
+  font: 600 0.75rem/1 var(--font-cond);
+}
+.mark-head span:nth-child(2) { flex: 1; color: var(--muted); }
+.marks button { background: transparent; border: 0; color: var(--muted); cursor: pointer; padding: 0.2rem 0.35rem; border-radius: 4px; font: inherit; }
+.marks button:hover { color: var(--text); }
+
+.decision { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.9rem; }
+.decision-opt input { position: absolute; opacity: 0; pointer-events: none; }
+.decision-opt span {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 3.1rem;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: 600 var(--step-0)/1.15 var(--font-cond);
+  cursor: pointer;
+}
+.decision-opt span:hover { border-color: var(--muted); }
+.decision-opt input:focus-visible + span { outline: 2px solid var(--focus); outline-offset: 2px; }
+.decision-opt.is-clear input:checked + span { background: var(--clear); border-color: var(--clear); color: #0d2a21; }
+.decision-opt.is-hold input:checked + span { background: var(--hold); border-color: var(--hold); color: #fff; }
+.final .note { margin-top: 0.5rem; }
+
+.model-info { margin: auto 0 0; padding-top: 1rem; color: var(--muted); font-size: 0.75rem; }
+
+.toast {
+  position: fixed;
+  left: 50%; bottom: 1.5rem;
+  transform: translate(-50%, 1rem);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  background: var(--text);
+  color: var(--console);
+  font-size: var(--step--1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+.toast.is-error { background: var(--hold); color: #fff; }
+
+/* Entrega 11 — estende o visual da interface do TCC (base_tcc.css) com os signos revisados
+   nas Entregas 6, 9 e 10. Cada .screen é uma tela/estado F do protótipo, em 1440 × 900. */
+
+html, body { height: auto; }
+body { display: block; background: #121a20; }
+a { color: inherit; text-decoration: none; }
+a.btn, a.chip, a.tool, a.icon-btn { cursor: pointer; }
+
+.screen {
+  display: none;
+  position: relative;
+  width: 1440px;
+  height: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--console);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.45;
+  flex-direction: column;
+}
+.screen:target, .screen.is-default { display: flex; }
+body.todas .screen { display: flex; margin: 0 auto 48px; }
+
+/* Barra superior com identificação do caso (S01/S13) */
+.topbar { flex: none; height: 68px; padding: 0 1.25rem; }
+.case {
+  display: flex; align-items: center; gap: 1.1rem;
+  margin-left: 1.5rem; padding-left: 1.25rem;
+  border-left: 1px solid var(--line);
+  min-width: 0; flex: 1;
+}
+.case dl { margin: 0; display: flex; gap: 1.25rem; }
+.case dt { color: var(--muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.case dd { margin: 0; font-size: var(--step--1); font-weight: 500; white-space: nowrap; }
+.case .src { color: var(--muted); font-size: 0.72rem; }
+.case-empty { color: var(--muted); font-size: var(--step--1); }
+
+.workspace { flex: 1; min-height: 0; display: grid; grid-template-columns: 290px minmax(0, 1fr) 320px; }
+.panel { overflow: hidden; padding: 0.25rem 1.1rem 1rem; }
+.group { padding: 0.6rem 0 0.65rem; }
+.group h2 { margin-bottom: 0.55rem; font-size: 1.05rem; }
+.control { margin-bottom: 0.55rem; }
+.is-disabled { opacity: 0.42; }
+.tag-cand { font: 500 0.68rem/1 var(--font); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 0.15rem 0.4rem; margin-left: 0.35rem; vertical-align: 2px; }
+
+/* Mesa de luz */
+.stage { margin: 0.75rem; }
+.stage::before, .stage::after { opacity: 0.4; }
+.rx { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.rx img { display: block; width: 100%; height: 100%; }
+.rx svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.rx-label {
+  position: absolute; left: 0; top: -26px;
+  font: 600 0.8rem/1 var(--font-cond); color: #26313a; letter-spacing: 0.02em;
+}
+.dim img { filter: brightness(0.92) saturate(0.6); opacity: 0.55; }
+.scanline { animation: none; left: 58%; }
+
+.vista { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; margin-left: 0.25rem; }
+.vista a { padding: 0.38rem 0.65rem; font: 500 var(--step--1)/1 var(--font); color: var(--muted); }
+.vista a + a { border-left: 1px solid var(--line); }
+.vista a.is-on { background: var(--panel-raised); color: var(--text); }
+.vista-label { color: var(--muted); font-size: 0.75rem; margin-right: 0.1rem; }
+
+/* Indicação do modelo (S04/S05), sem índice numérico (S14/S15 candidatos) */
+.result {
+  border: 1px solid var(--line); border-radius: 8px; padding: 0.7rem 0.8rem; margin-bottom: 0.7rem;
+  background: var(--console);
+}
+.result .state { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.result .cat { font: 600 1.3rem/1.15 var(--font-cond); color: var(--amber-text); margin: 0.2rem 0 0.35rem; }
+.result .cat.neutral { color: var(--muted); font: 400 var(--step-0)/1.4 var(--font); }
+.result p { margin: 0; font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+.legend-map { display: flex; align-items: center; gap: 0.4rem; font-size: 0.75rem; color: var(--muted); margin: -0.25rem 0 0.6rem; }
+.legend-map i { display: inline-block; width: 44px; height: 7px; border-radius: 4px; background: linear-gradient(90deg, #f7c766, #f2a93b, #e5654f, #b8324a); }
+.legend-map b { display: inline-block; width: 14px; height: 10px; border: 1.5px dashed var(--amber); border-radius: 2px; margin-left: 0.4rem; }
+
+.switch { display: flex; align-items: center; gap: 0.55rem; margin: 0 0 0.55rem; font-size: var(--step--1); }
+.switch .box {
+  width: 15px; height: 15px; border-radius: 3px; border: 1px solid var(--muted); flex: none;
+  display: grid; place-items: center; background: transparent;
+}
+.switch.on .box { background: var(--amber); border-color: var(--amber); }
+.switch.on .box::after { content: ""; width: 7px; height: 4px; border: solid var(--amber-ink); border-width: 0 0 2px 2px; transform: translateY(-1px) rotate(-45deg); }
+
+/* Regiões marcadas (S07/S08) */
+.marks li { background: var(--console); }
+.mark-note { display: block; width: 100%; background: var(--panel); border: 1px solid var(--line); border-radius: 5px; color: var(--text); line-height: 1.35; min-height: 3.4rem; }
+.mark-note.ph { color: var(--muted); }
+.mark-meta { font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; }
+
+/* Parecer (S09/S10/S11) */
+.decision { margin-bottom: 0.6rem; }
+.decision-opt span { min-height: 2.7rem; font-size: 0.92rem; }
+.decision-opt.sel.is-clear span { background: var(--clear); border-color: var(--clear); color: #0d2a21; }
+.decision-opt.sel.is-hold span { background: var(--hold); border-color: var(--hold); color: #2b0b05; }
+.field { display: block; width: 100%; background: var(--console); border: 1px solid var(--line); border-radius: 6px; padding: 0.42rem 0.55rem; font-size: var(--step--1); line-height: 1.35; color: var(--text); }
+.field.ph { color: var(--muted); }
+.field.err { border-color: var(--hold); box-shadow: 0 0 0 1px var(--hold); }
+.req { color: var(--muted); font-size: 0.72rem; }
+.err-msg { color: #ff9b87; font-size: 0.75rem; margin-top: 0.2rem; }
+:root[data-theme="light"] .err-msg { color: #b23a26; }
+.label-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem; font-size: var(--step--1); }
+
+/* Avisos */
+.banner {
+  display: flex; gap: 0.7rem; align-items: flex-start;
+  border-radius: 8px; padding: 0.7rem 0.85rem; font-size: var(--step--1); line-height: 1.4;
+  border: 1px solid; margin-bottom: 0.7rem;
+}
+.banner strong { display: block; font: 600 0.98rem/1.25 var(--font-cond); margin-bottom: 0.15rem; }
+.banner.error { background: #3a2422; border-color: #8e3b2e; color: #ffd9d1; }
+.banner.ok { background: #1f3a32; border-color: #3f9c80; color: #d5f2e8; }
+.banner.info { background: #2b2a20; border-color: #8a6a2c; color: #f8e3bd; }
+.banner .ico { flex: none; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font: 700 0.8rem/1 var(--font); }
+.banner.error .ico { background: var(--hold); color: #fff; }
+.banner.ok .ico { background: var(--clear); color: #0d2a21; }
+.banner.info .ico { background: var(--amber); color: var(--amber-ink); }
+.banner .acts { display: flex; gap: 0.5rem; margin-top: 0.55rem; }
+.btn-sm { padding: 0.45rem 0.7rem; font-size: 0.85rem; }
+
+.stage-msg {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 5;
+  width: 470px; background: var(--console); color: var(--text); border-radius: 10px;
+  padding: 1.1rem 1.2rem; box-shadow: 0 18px 50px rgba(10, 16, 22, 0.45); border: 1px solid var(--line);
+}
+.stage-msg h3 { margin: 0 0 0.35rem; font: 600 1.2rem/1.2 var(--font-cond); }
+.stage-msg p { margin: 0 0 0.5rem; font-size: var(--step--1); color: var(--muted); }
+.stage-msg .acts { display: flex; gap: 0.5rem; margin-top: 0.8rem; }
+.stage-msg.error h3 { color: #ff9b87; }
+
+/* Diálogos (F08, F10d, F11a, F11b) */
+.backdrop { position: absolute; inset: 0; background: rgba(8, 12, 16, 0.62); z-index: 20; display: grid; place-items: center; }
+.dialog {
+  width: 560px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5); padding: 1.3rem 1.4rem 1.2rem;
+}
+.dialog.wide { width: 860px; }
+.dialog h3 { margin: 0 0 0.4rem; font: 600 1.45rem/1.2 var(--font-cond); }
+.dialog > p { margin: 0 0 0.6rem; color: var(--muted); font-size: var(--step--1); }
+.dialog .acts { display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 1rem; }
+.dialog ul { margin: 0.3rem 0 0.4rem 1.1rem; padding: 0; font-size: var(--step--1); }
+.btn-danger { background: var(--hold); border-color: var(--hold); color: #2b0b05; }
+
+.preview { display: grid; grid-template-columns: 300px 1fr; gap: 1.1rem; background: var(--console); border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem; }
+.preview .thumb { position: relative; width: 300px; height: 300px; border-radius: 6px; overflow: hidden; }
+.preview dl { margin: 0; display: grid; grid-template-columns: 118px 1fr; gap: 0.32rem 0.7rem; font-size: 0.82rem; align-content: start; }
+.preview dt { color: var(--muted); }
+.preview dd { margin: 0; }
+.preview .sep { grid-column: 1 / -1; border-top: 1px solid var(--line); margin: 0.2rem 0; }
+
+/* Faixa de simulação: não é parte da interface; liga os caminhos alternativos do protótipo */
+.sim {
+  flex: none; height: 38px; display: flex; align-items: center; gap: 0.6rem;
+  padding: 0 1rem; background: #2a2340; border-top: 1px dashed #8d7fd1; color: #d8d0ff;
+  font-size: 0.78rem;
+}
+.sim .tag { font: 700 0.7rem/1 var(--font-cond); letter-spacing: 0.08em; text-transform: uppercase; color: #b6a8ff; }
+.sim a { border: 1px dashed #8d7fd1; border-radius: 999px; padding: 0.22rem 0.6rem; color: #eae5ff; }
+.sim .id { margin-left: auto; color: #b6a8ff; font-weight: 600; }
+
+/* Leitor de PDF externo (F12) */
+.reader { flex: 1; min-height: 0; background: #3b3f44; display: flex; flex-direction: column; }
+.reader-bar { height: 44px; flex: none; display: flex; align-items: center; gap: 1rem; padding: 0 1rem; background: #2b2e32; color: #d7dbe0; font-size: 0.85rem; border-bottom: 1px solid #1d1f22; }
+.reader-bar .muted { color: #9aa2ab; }
+.page {
+  width: 640px; margin: 18px auto 0; background: #fff; color: #1d2730; box-shadow: 0 6px 24px rgba(0,0,0,0.4);
+  padding: 30px 38px; font-size: 11.5px; line-height: 1.45; height: 760px; overflow: hidden;
+}
+.page h1 { font: 700 18px/1.2 var(--font-cond); margin: 0 0 2px; }
+.page .sub { color: #5b6a76; margin: 0 0 12px; }
+.page h4 { font: 700 12.5px/1.2 var(--font-cond); margin: 12px 0 5px; text-transform: uppercase; letter-spacing: 0.05em; color: #3c4954; border-bottom: 1px solid #d2dae0; padding-bottom: 3px; }
+.page table { border-collapse: collapse; width: 100%; }
+.page td { padding: 2px 6px 2px 0; vertical-align: top; }
+.page td:first-child { color: #5b6a76; width: 150px; }
+.page .two { display: grid; grid-template-columns: 210px 1fr; gap: 14px; }
+.page .limit { margin-top: 12px; background: #f3f5f6; border-left: 3px solid #9a5a00; padding: 7px 9px; color: #3c4954; }
+
+/* Página de navegação do protótipo (fora das telas) */
+.proto-nav { width: 1440px; margin: 14px auto 40px; color: #c7d0d6; font: 400 13px/1.5 var(--font); }
+.proto-nav a { display: inline-block; margin: 0 0.35rem 0.35rem 0; padding: 0.2rem 0.55rem; border: 1px solid #3b4855; border-radius: 999px; }
+body.todas .proto-nav { display: none; }
+
+.screen .workspace .dropzone { display: flex; }
+.stage-top { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); z-index: 6; width: 560px; }
+.stage-top .banner { margin: 0; box-shadow: 0 12px 34px rgba(10, 16, 22, 0.4); }
+.mark-note { min-height: 2.6rem; }
+.verdict .group h2 { margin-bottom: 0.45rem; }
+.is-disabled, .is-disabled * { pointer-events: none; }
+.backdrop ~ * { pointer-events: none; }
+/* Contraste ≥ 4,5:1 sobre o vermelho do achado (o texto branco do TCC dava 3,3:1). */
+.mark-id { color: #2b0b05; }
+</style>
+</head>
+<body class="">
+<section class="screen" id="F01" data-nome="F01 — Abrir caso (sem imagem)">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">Abra a radiografia de um caso</p></div>
+      </div>
+      <div class="case"><span class="case-empty">Nenhum caso aberto</span></div>
+      <div class="topbar-actions"><a class="btn btn-primary" href="#F02">Abrir caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools is-disabled" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar is-disabled">
+        <div class="tool-set">
+          <a class="tool is-active" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><a href="#F02" style="position:absolute;inset:0"><label class="dropzone" style="cursor:pointer">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="24" rx="2"/><path d="M14 12v24M22 12v24M30 12v24M38 12v24"/></svg>
+        <strong>Arraste a radiografia do caso para cá</strong>
+        <span>ou clique para escolher um arquivo PNG ou JPEG (S02)</span>
+        <span style="font-size:.8rem;color:#5b6a76;margin-top:.4rem">A identificação e a descrição da carga acompanham o caso demonstrativo.</span>
+      </label></a></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Análise (S03)</div><div class="cat neutral">Aguardando imagem do caso.</div></div><div class="is-disabled">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <div class="is-disabled"><section class="group"><h2>Regiões marcadas</h2><p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p></section></div>
+      
+      <section class="group final is-disabled">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph">Seu nome</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F02">Escolher anomalia.png → F02</a><a href="#F10a">Escolher arquivo inválido → F10a</a><span class="id">F01</span></div></section>
+<section class="screen" id="F02" data-nome="F02 — Analisando imagem">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F01">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar is-disabled">
+        <div class="tool-set">
+          <a class="tool is-active" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="dim"><div class="rx" style="width:640px;height:640px"><img src="img/rx_original.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"></svg></div></div>
+        <div class="busy"><div class="scanline"></div><p>Analisando imagem do caso… <a href="#F01" style="text-decoration:underline;margin-left:.6rem">Cancelar análise</a></p></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Análise (S03)</div><div class="cat neutral">Analisando imagem…</div><p>O resultado aparece aqui ao terminar. Os ajustes já podem ser usados.</p></div><div class="is-disabled">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <div class="is-disabled"><section class="group"><h2>Regiões marcadas</h2><p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p></section></div>
+      
+      <section class="group final is-disabled">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph">Seu nome</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F03">Análise concluída → F03</a><a href="#F10b">Falha na análise → F10b</a><a href="#F01">Cancelar → F01</a><span class="id">F02</span></div></section>
+<section class="screen" id="F03" data-nome="F03 — Resultado — vista sobreposta">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F01">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool is-active" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph">Seu nome</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F04">Sem mapa → F04</a><a href="#F05">Lado a lado → F05</a><a href="#F06">Marcar região → F06</a><a href="#F11b">Concluir “Sem ressalvas” → F11b</a><span class="id">F03</span></div></section>
+<section class="screen" id="F04" data-nome="F04 — Comparar sem o mapa">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F01">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool is-active" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="" href="#F03">Sobreposta</a><a class="is-on" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_original.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph">Seu nome</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F03">Sobreposta → F03</a><a href="#F05">Lado a lado → F05</a><a href="#F06">Marcar região → F06</a><span class="id">F04</span></div></section>
+<section class="screen" id="F05" data-nome="F05 — Comparar lado a lado">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F01">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool is-active" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="is-on" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:380px;height:380px;left:calc(25% + 6px)"><span class="rx-label">Radiografia com os ajustes atuais</span><img src="img/rx_original.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 380 380"></svg></div><div class="rx" style="width:380px;height:380px;left:calc(75% - 6px)"><span class="rx-label">Mapa de atenção do modelo</span><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 380 380"><rect x="177.53125" y="181.09375" width="46.3125" height="45.71875" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph">Seu nome</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F03">Sobreposta → F03</a><a href="#F04">Sem mapa → F04</a><a href="#F06">Marcar região → F06</a><span class="id">F05</span></div></section>
+<section class="screen" id="F06" data-nome="F06 — Região marcada e comentada">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F11a">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool is-active" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/><rect x="290.0" y="296.0" width="96.0" height="94.0" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="290.0" y="277.0" width="21" height="19" fill="#e5654f"/><text x="300.5" y="291.0" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><ol class="marks"><li><div class="mark-head"><span class="mark-id">1</span><span>Região 1 · 96 × 94 px</span>
+          <a href="#F03" title="Excluir região 1">Excluir</a></div><div style="margin-top:.35rem"><span class="mark-note">Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor.</span></div>
+          <div class="mark-meta">Marcação humana (S07) · comentário (S08)</div></li></ol></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph">Seu nome</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F07">Preencher conclusão → F07</a><a href="#F11a">Trocar caso com registros → F11a</a><a href="#F03">Excluir região → F03</a><span class="id">F06</span></div></section>
+<section class="screen" id="F07" data-nome="F07 — Conclusão, justificativa e responsável">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F11a">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool is-active" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/><rect x="290.0" y="296.0" width="96.0" height="94.0" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="290.0" y="277.0" width="21" height="19" fill="#e5654f"/><text x="300.5" y="291.0" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><ol class="marks"><li><div class="mark-head"><span class="mark-id">1</span><span>Região 1 · 96 × 94 px</span>
+          <a href="#F03" title="Excluir região 1">Excluir</a></div><div style="margin-top:.35rem"><span class="mark-note">Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor.</span></div>
+          <div class="mark-meta">Marcação humana (S07) · comentário (S08)</div></li></ol></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold sel" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field">A região 1 é mais densa que o restante e não acompanha o empilhamento declarado de madeira.</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field">Gustavo Onofre</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F08">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F08">Revisar e emitir → F08</a><a href="#F10c">Emitir com campos vazios → F10c</a><a href="#F11b">Escolher “Sem ressalvas” → F11b</a><span class="id">F07</span></div></section>
+<section class="screen" id="F08" data-nome="F08 — Revisar o parecer antes de exportar">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F11a">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool is-active" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/><rect x="290.0" y="296.0" width="96.0" height="94.0" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="290.0" y="277.0" width="21" height="19" fill="#e5654f"/><text x="300.5" y="291.0" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><ol class="marks"><li><div class="mark-head"><span class="mark-id">1</span><span>Região 1 · 96 × 94 px</span>
+          <a href="#F03" title="Excluir região 1">Excluir</a></div><div style="margin-top:.35rem"><span class="mark-note">Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor.</span></div>
+          <div class="mark-meta">Marcação humana (S07) · comentário (S08)</div></li></ol></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold sel" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field">A região 1 é mais densa que o restante e não acompanha o empilhamento declarado de madeira.</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field">Gustavo Onofre</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F08">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="backdrop"><div class="dialog wide" role="dialog" aria-modal="true">
+      <h3>Revisar parecer (S12)</h3><p>Confira o caso e o conteúdo. O PDF é salvo neste computador; o encaminhamento a quem decide segue o procedimento institucional, fora da Mesa.</p><div class="preview">
+      <div class="thumb"><div class="rx" style="width:300px;height:300px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 300 300"><rect x="135.9375" y="138.75" width="45.0" height="44.0625" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="135.9375" y="119.75" width="21" height="19" fill="#e5654f"/><text x="146.4375" y="133.75" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div></div>
+      <dl>
+        <dt>Caso (S01)</dt><dd>CASO-DEMO-0417 · MSKU 000000-0</dd>
+        <dt>Carga declarada</dt><dd>Paletes de madeira · 18.400 kg (S13)</dd>
+        <span class="sep"></span>
+        <dt>Região 1 (S07)</dt><dd>Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor. (S08)</dd>
+        <dt>Conclusão (S09)</dt><dd><b style="color:#ff9b87">Suspeita apontada</b></dd>
+        <dt>Justificativa (S10)</dt><dd>A região 1 é mais densa que o restante e não acompanha o empilhamento declarado de madeira.</dd>
+        <dt>Responsável (S11)</dt><dd>Gustavo Onofre · autoria declarada</dd>
+        <dt>Data e hora (S18)</dt><dd>preenchidas na emissão (UTC−03:00)</dd>
+        <span class="sep"></span>
+        <dt>Modelo (S04/S05)</dt><dd>Indício de atipicidade; mapa de atenção aproximado. Separado da conclusão humana.</dd>
+      </dl></div><div class="acts"><a class="btn" href="#F07">Voltar e corrigir</a><a class="btn btn-primary" href="#F09">Exportar PDF</a></div></div></div><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F09">Exportação concluída → F09</a><a href="#F10d">Falha ao exportar → F10d</a><a href="#F07">Voltar → F07</a><span class="id">F08</span></div></section>
+<section class="screen" id="F09" data-nome="F09 — Parecer exportado">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F01">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool is-active" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/><rect x="290.0" y="296.0" width="96.0" height="94.0" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="290.0" y="277.0" width="21" height="19" fill="#e5654f"/><text x="300.5" y="291.0" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div><div class="stage-top"><div class="banner ok"><span class="ico">✓</span><div><strong>Parecer exportado localmente</strong>
+      parecer_CASO-DEMO-0417.pdf · emitido em 17/11/2026 03:12 (UTC−03:00).<br>O envio a quem decide não é feito pela Mesa.
+      <div class="acts"><a class="btn btn-sm" href="#F12">Ver documento</a><a class="btn btn-sm" href="#F01">Abrir outro caso</a></div></div></div></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><ol class="marks"><li><div class="mark-head"><span class="mark-id">1</span><span>Região 1 · 96 × 94 px</span>
+          <a href="#F03" title="Excluir região 1">Excluir</a></div><div style="margin-top:.35rem"><span class="mark-note">Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor.</span></div>
+          <div class="mark-meta">Marcação humana (S07) · comentário (S08)</div></li></ol></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold sel" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field">A região 1 é mais densa que o restante e não acompanha o empilhamento declarado de madeira.</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field">Gustavo Onofre</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F08">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F12">Ver o PDF → F12</a><a href="#F01">Abrir outro caso → F01</a><span class="id">F09</span></div></section>
+<section class="screen" id="F10a" data-nome="F10a — Erro: arquivo inválido">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">Abra a radiografia de um caso</p></div>
+      </div>
+      <div class="case"><span class="case-empty">Nenhum caso aberto</span></div>
+      <div class="topbar-actions"><a class="btn btn-primary" href="#F02">Abrir caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools is-disabled" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar is-disabled">
+        <div class="tool-set">
+          <a class="tool is-active" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><label class="dropzone" style="cursor:pointer">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="24" rx="2"/><path d="M14 12v24M22 12v24M30 12v24M38 12v24"/></svg>
+        <strong>Arraste a radiografia do caso para cá</strong>
+        <span>ou clique para escolher um arquivo PNG ou JPEG (S02)</span>
+        <span style="font-size:.8rem;color:#5b6a76;margin-top:.4rem">A identificação e a descrição da carga acompanham o caso demonstrativo.</span>
+      </label><div class="stage-msg error"><h3>Não foi possível abrir “manifesto.pdf”</h3>
+      <p>A Mesa aceita radiografias PNG ou JPEG. Nada foi analisado e nenhum dado do caso foi alterado.</p>
+      <p>Se a radiografia estiver corrompida, obtenha uma nova cópia no sistema de origem.</p>
+      <div class="acts"><a class="btn btn-primary btn-sm" href="#F01">Escolher outro arquivo</a></div></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Análise (S03)</div><div class="cat neutral">Aguardando imagem do caso.</div></div><div class="is-disabled">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <div class="is-disabled"><section class="group"><h2>Regiões marcadas</h2><p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p></section></div>
+      
+      <section class="group final is-disabled">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph">Seu nome</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F01">Escolher outro arquivo → F01</a><span class="id">F10a</span></div></section>
+<section class="screen" id="F10b" data-nome="F10b — Erro: falha na análise">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F01">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar is-disabled">
+        <div class="tool-set">
+          <a class="tool is-active" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_original.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"></svg></div><div class="stage-msg error"><h3>Não foi possível analisar a imagem</h3>
+      <p>O serviço de análise local não respondeu. Não há resultado do modelo para este caso: isso não equivale a “sem indício”.</p>
+      <p>A radiografia continua aberta; você pode examiná-la com os ajustes enquanto decide.</p>
+      <div class="acts"><a class="btn btn-primary btn-sm" href="#F02">Tentar novamente</a><a class="btn btn-sm" href="#F01">Cancelar e voltar</a></div></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Análise (S03)</div><div class="cat neutral" style="color:#ff9b87">Sem resultado: a análise falhou.</div><p>Falha não significa “sem indício”.</p></div><div class="is-disabled">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <div class="is-disabled"><section class="group"><h2>Regiões marcadas</h2><p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p></section></div>
+      
+      <section class="group final is-disabled">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph">Seu nome</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F02">Tentar novamente → F02</a><a href="#F01">Cancelar → F01</a><span class="id">F10b</span></div></section>
+<section class="screen" id="F10c" data-nome="F10c — Erro: parecer incompleto">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F11a">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool is-active" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/><rect x="290.0" y="296.0" width="96.0" height="94.0" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="290.0" y="277.0" width="21" height="19" fill="#e5654f"/><text x="300.5" y="291.0" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div><div class="stage-top"><div class="banner error"><span class="ico">!</span><div><strong>Faltam 3 itens para emitir</strong>
+      Comentário da região 1 · Justificativa · Responsável. Os demais dados foram mantidos.</div></div></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><ol class="marks"><li><div class="mark-head"><span class="mark-id">1</span><span>Região 1 · 96 × 94 px</span>
+          <a href="#F03" title="Excluir região 1">Excluir</a></div><div style="margin-top:.35rem"><span class="mark-note ph">Descreva o que você viu nesta região…</span></div><div class="err-msg">Comentário obrigatório para exportar a região.</div>
+          <div class="mark-meta">Marcação humana (S07) · comentário (S08)</div></li></ol></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold sel" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph err">Por que esta conclusão?</span><div class="err-msg">Informe a justificativa.</div>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field ph err">Seu nome</span><div class="err-msg">Informe o responsável.</div>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F07">Completar os campos → F07</a><span class="id">F10c</span></div></section>
+<section class="screen" id="F10d" data-nome="F10d — Erro: falha na exportação">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F11a">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool is-active" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/><rect x="290.0" y="296.0" width="96.0" height="94.0" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="290.0" y="277.0" width="21" height="19" fill="#e5654f"/><text x="300.5" y="291.0" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><ol class="marks"><li><div class="mark-head"><span class="mark-id">1</span><span>Região 1 · 96 × 94 px</span>
+          <a href="#F03" title="Excluir região 1">Excluir</a></div><div style="margin-top:.35rem"><span class="mark-note">Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor.</span></div>
+          <div class="mark-meta">Marcação humana (S07) · comentário (S08)</div></li></ol></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold sel" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field">A região 1 é mais densa que o restante e não acompanha o empilhamento declarado de madeira.</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field">Gustavo Onofre</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F08">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="backdrop"><div class="dialog wide" role="dialog" aria-modal="true">
+      <h3>Revisar parecer (S12)</h3><div class="banner error" style="margin:.2rem 0 .6rem"><span class="ico">!</span><div><strong>Falha ao exportar</strong>
+      Não foi possível salvar o PDF na pasta escolhida (sem permissão ou sem espaço). Seus registros foram mantidos.</div></div><div class="preview">
+      <div class="thumb"><div class="rx" style="width:300px;height:300px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 300 300"><rect x="135.9375" y="138.75" width="45.0" height="44.0625" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="135.9375" y="119.75" width="21" height="19" fill="#e5654f"/><text x="146.4375" y="133.75" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div></div>
+      <dl>
+        <dt>Caso (S01)</dt><dd>CASO-DEMO-0417 · MSKU 000000-0</dd>
+        <dt>Carga declarada</dt><dd>Paletes de madeira · 18.400 kg (S13)</dd>
+        <span class="sep"></span>
+        <dt>Região 1 (S07)</dt><dd>Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor. (S08)</dd>
+        <dt>Conclusão (S09)</dt><dd><b style="color:#ff9b87">Suspeita apontada</b></dd>
+        <dt>Justificativa (S10)</dt><dd>A região 1 é mais densa que o restante e não acompanha o empilhamento declarado de madeira.</dd>
+        <dt>Responsável (S11)</dt><dd>Gustavo Onofre · autoria declarada</dd>
+        <dt>Data e hora (S18)</dt><dd>preenchidas na emissão (UTC−03:00)</dd>
+        <span class="sep"></span>
+        <dt>Modelo (S04/S05)</dt><dd>Indício de atipicidade; mapa de atenção aproximado. Separado da conclusão humana.</dd>
+      </dl></div><div class="acts"><a class="btn" href="#F07">Voltar ao parecer</a><a class="btn btn-primary" href="#F09">Tentar novamente</a></div></div></div><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F09">Tentar novamente → F09</a><a href="#F07">Voltar → F07</a><span class="id">F10d</span></div></section>
+<section class="screen" id="F11a" data-nome="F11a — Confirmar troca de caso">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F11a">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool is-active" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/><rect x="290.0" y="296.0" width="96.0" height="94.0" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="290.0" y="277.0" width="21" height="19" fill="#e5654f"/><text x="300.5" y="291.0" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><ol class="marks"><li><div class="mark-head"><span class="mark-id">1</span><span>Região 1 · 96 × 94 px</span>
+          <a href="#F03" title="Excluir região 1">Excluir</a></div><div style="margin-top:.35rem"><span class="mark-note">Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor.</span></div>
+          <div class="mark-meta">Marcação humana (S07) · comentário (S08)</div></li></ol></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold sel" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field">A região 1 é mais densa que o restante e não acompanha o empilhamento declarado de madeira.</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field">Gustavo Onofre</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F08">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="backdrop"><div class="dialog" role="dialog" aria-modal="true">
+      <h3>Trocar de caso?</h3><p>Este caso tem registros que ainda não foram exportados:</p><ul><li>1 região marcada com comentário</li><li>Conclusão e justificativa</li></ul><p>Ao trocar, esses registros serão descartados. A radiografia original não é alterada.</p><div class="acts"><a class="btn btn-primary" href="#F06">Manter caso</a><a class="btn btn-danger" href="#F01">Descartar e trocar</a></div></div></div><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F06">Manter caso → F06</a><a href="#F01">Descartar → F01</a><span class="id">F11a</span></div></section>
+<section class="screen" id="F11b" data-nome="F11b — Confirmar conclusão divergente">
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="1.5"/><path d="M9 7v18M15 7v18M21 7v18"/><path class="beam" d="M1 16h30"/></svg>
+        <div><h1>Mesa de inspeção</h1><p class="file-name">anomalia.png · 640 × 640</p></div>
+      </div>
+      
+      <div class="case">
+        <dl>
+          <div><dt>Caso (S01)</dt><dd>CASO-DEMO-0417</dd></div>
+          <div><dt>Unidade de carga</dt><dd>MSKU 000000-0</dd></div>
+          <div><dt>Carga declarada (S13)</dt><dd>Paletes de madeira · 18.400 kg</dd></div>
+        </dl>
+        <span class="src">Dados do caso demonstrativo · fictícios</span>
+      </div>
+      <div class="topbar-actions"><a class="btn" href="#F11a">Trocar caso</a></div>
+    </header>
+    <main class="workspace">
+      
+    <aside class="panel tools" aria-label="Ajustes da imagem">
+      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets"><span class="chip is-active">Original</span><span class="chip">Penetração alta</span><span class="chip">Penetração baixa</span><span class="chip">Negativo</span><span class="chip">Super realce</span></div></section>
+      <section class="group"><h2>Exposição</h2><div class="control"><label>Brilho</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Contraste</label><output>0</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Penetração</label><output>normal</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(50% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Realce</h2><div class="control"><label>Realce local</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Nitidez</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div><div class="control"><label>Bordas</label><output>0%</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div></section>
+      <section class="group"><h2>Densidade e cor</h2><div class="control"><label>Faixa de densidade</label><output>tudo</output>
+          <div style="grid-column:1/-1;position:relative;height:16px"><div style="position:absolute;top:6px;left:0;right:0;height:4px;border-radius:2px;background:var(--line)"></div>
+          <div style="position:absolute;top:0;left:calc(0% - 8px);width:16px;height:16px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1px var(--muted)"></div></div></div>
+        <div class="control"><label>Paleta</label><span class="field" style="grid-column:1/-1">Tons de cinza</span></div>
+        <p class="note">Os ajustes mudam só a exibição; o original é preservado.</p></section>
+    </aside>
+      <section class="stage-wrap">
+      <div class="stage-toolbar">
+        <div class="tool-set">
+          <a class="tool is-active" href="#F03"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l-3 3M12 3l3 3M12 21l-3-3M12 21l3-3M3 12l3-3M3 12l3 3M21 12l-3-3M21 12l-3 3"/></svg><span>Mover</span></a>
+          <a class="tool" href="#F03"><svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12M14.5 14.5L20 20"/></svg><span>Lupa</span></a>
+          <a class="tool" href="#F06"><svg viewBox="0 0 24 24"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/></svg><span>Marcar</span></a>
+        </div>
+        <div class="tool-set">
+          <span class="vista-label">Vista (S06)</span>
+          <span class="vista"><a class="is-on" href="#F03">Sobreposta</a><a class="" href="#F04">Sem mapa</a><a class="" href="#F05">Lado a lado</a></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
+          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
+        </div>
+      </div><div class="stage"><div class="rx" style="width:640px;height:640px"><img src="img/rx_mapa.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 640 640"><rect x="299.0" y="305.0" width="78.0" height="77.0" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/></svg></div></div></section>
+      
+    <aside class="panel verdict" aria-label="Análise e parecer">
+      <section class="group"><h2>Análise do modelo</h2><div class="result"><div class="state">Indicação do modelo (S04) · análise concluída</div><div class="cat">Indício de atipicidade</div><p>Apoio à triagem: aponta onde a imagem diverge do esperado. Não identifica ilícito nem substitui o seu exame.</p></div><div class="">
+      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="switch on"><span class="box"></span>Mostrar onde o modelo olhou</div>
+      <div class="switch on"><span class="box"></span>Destacar a região de maior atenção</div></div></section>
+      <section class="group"><h2>Regiões marcadas</h2><p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p></section>
+      
+      <section class="group final">
+        <h2>Conclusão da análise (S09)</h2>
+        <div class="decision"><a class="decision-opt is-clear sel" href="#F11b"><span>Sem ressalvas na imagem</span></a><a class="decision-opt is-hold" href="#F07"><span>Suspeita apontada</span></a></div>
+        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div><span class="field ph">Por que esta conclusão?</span>
+        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div><span class="field">Gustavo Onofre</span>
+        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#F10c">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+      </section>
+    </aside>
+    </main><div class="backdrop"><div class="dialog" role="dialog" aria-modal="true">
+      <h3>Sua conclusão difere da indicação do modelo</h3><p>Você escolheu <b>Sem ressalvas na imagem</b>, e o modelo indicou <b>indício de atipicidade</b> na região destacada.</p><p>Discordar é permitido: a conclusão é sua. Confirme que revisou a região e explique o motivo na justificativa.</p><div class="acts"><a class="btn" href="#F03">Rever a imagem</a><a class="btn btn-primary" href="#F07">Confirmar e justificar</a></div></div></div><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F03">Rever a imagem → F03</a><a href="#F07">Confirmar → F07</a><span class="id">F11b</span></div></section>
+<section class="screen" id="F12" data-nome="F12 — Parecer em PDF lido pelo destinatário (P02)">
+    <header class="reader-bar"><b>parecer_CASO-DEMO-0417.pdf</b><span class="muted">Leitor de PDF do destinatário · externo à Mesa</span>
+      <span class="muted" style="margin-left:auto">Página 1 de 2 · 100%</span></header>
+    <div class="reader"><div class="page">
+      <h1>Parecer técnico de apoio — análise de imagem de raio-X</h1>
+      <p class="sub">Mesa de inspeção · protótipo demonstrativo do TCC · dados fictícios</p>
+      <h4>Identificação</h4>
+      <table><tr><td>Caso (S01)</td><td>CASO-DEMO-0417</td></tr><tr><td>Unidade de carga</td><td>MSKU 000000-0</td></tr>
+        <tr><td>Carga declarada (S13)</td><td>Paletes de madeira · 18.400 kg</td></tr>
+        <tr><td>Responsável (S11)</td><td>Gustavo Onofre (autoria declarada, sem assinatura institucional)</td></tr>
+        <tr><td>Emitido em (S18)</td><td>17/11/2026 03:12 (UTC−03:00), relógio da estação</td></tr></table>
+      <h4>Achado registrado</h4>
+      <div class="two"><div style="position:relative;width:210px;height:210px"><div class="rx" style="width:210px;height:210px"><img src="img/rx_original.jpg" alt="Radiografia do contêiner do caso demonstrativo"><svg viewBox="0 0 210 210"><rect x="95.15625" y="97.125" width="31.5" height="30.84375" fill="none" stroke="#e5654f" stroke-width="2.4"/><rect x="95.15625" y="78.125" width="21" height="19" fill="#e5654f"/><text x="105.65625" y="92.125" fill="#2b0b05" font-family="Barlow Semi Condensed" font-weight="600" font-size="13" text-anchor="middle">1</text></svg></div></div>
+        <div><b>Região 1 (S07)</b><br>Mancha mais densa no centro da carga, sem a forma regular dos paletes ao redor. (S08)<br><br><b>Conclusão da análise (S09):</b> Suspeita apontada<br>
+        <b>Justificativa (S10):</b> A região 1 é mais densa que o restante e não acompanha o empilhamento declarado de madeira.</div></div>
+      <h4>Apoio automático</h4>
+      <p style="margin:0">Indicação do modelo (S04): indício de atipicidade. O mapa de atenção (S05) aparece na página 2 e é aproximado. O modelo não identifica o tipo de ilícito; a conclusão acima é do responsável.</p>
+      <div class="limit"><b>Limites deste documento (S12).</b> Parecer de apoio: não é ato de despacho e não libera nem retém a carga. Dúvidas sobre o conteúdo devem ser tratadas com o emissor pelo canal institucional.</div>
+    </div></div><div class="sim"><span class="tag">Simulação do protótipo</span><a href="#F09">Voltar à Mesa (P01) → F09</a><span class="id">F12</span></div></section>
+<nav class="proto-nav"><b>Protótipo da Entrega 11.</b> Clique nos controles da tela ou na faixa “Simulação do protótipo”. Ir para: <a href="#F01">F01</a><a href="#F02">F02</a><a href="#F03">F03</a><a href="#F04">F04</a><a href="#F05">F05</a><a href="#F06">F06</a><a href="#F07">F07</a><a href="#F08">F08</a><a href="#F09">F09</a><a href="#F10a">F10a</a><a href="#F10b">F10b</a><a href="#F10c">F10c</a><a href="#F10d">F10d</a><a href="#F11a">F11a</a><a href="#F11b">F11b</a><a href="#F12">F12</a></nav>
+<script>
+  // Sem âncora, abre F01. Cada tela é uma âncora (#F03 etc.); os controles são links entre elas.
+  if (!document.body.classList.contains("todas") && !location.hash) document.getElementById("F01").classList.add("is-default");
+  addEventListener("hashchange", () => document.querySelectorAll(".is-default").forEach(e => e.classList.remove("is-default")));
+</script>
+</body>
+</html>
