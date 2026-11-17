@@ -58,6 +58,8 @@ Guardar consentimentos e registros brutos em pasta privada da equipe, acessível
 | UT02 | Registrar a região/observação e preparar parecer para outra pessoa com conclusão e autoria fictícia. | Caso correto, região comentada, conclusão, justificativa e responsável; mediana ≤ 180 s sem ajuda. | T03; consulta de T05/T06; O04–O07/O09; M01/M03; F06–F09/F12. |
 | UT03 | Resolver a falta do responsável e eventual falha, preservando o registro ao emitir o parecer. | Bloqueia emissão incompleta; recupera omissão e falha de exportação sem perder dados. | O05/O08; M01/M03; F07/F10C/D/F08/F09. |
 
+Antes do piloto, conferir o identificador do caso usado em UT01. O roteiro da Entrega 12 menciona `DEMO-001` e a interface HTML mostra `CASO-DEMO-0417`. Na sessão, ler a instrução com o identificador exibido na versão congelada, usando a mesma formulação para todos os participantes.
+
 Limite de 5 minutos por tarefa. Estados iniciais são independentes: caso pronto em UT01/UT02; registro sem responsável e primeira exportação válida com falha simulada em UT03. Não depender do sucesso anterior para aplicar a próxima tarefa. O [roteiro](../instrumentos/12_avaliacao/roteiro.md) traz instruções neutras e condições iguais para todos.
 
 ### 6. Protocolo do moderador
