@@ -10,7 +10,7 @@
 <text x="250" y="172" class="speech small" text-anchor="start">u: iniciar; gco: M03</text>
 <rect x="35" y="190" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,225 H425" stroke="#263445"/>
 <text x="53" y="214" class="" text-anchor="start">C1 · Conferir caso na origem</text>
-<text x="53" y="250" class="small" text-anchor="start">d: identificação e carga (S01)</text>
+<text x="53" y="250" class="small" text-anchor="start">d: identificação e carga (S01/S13)</text>
 <text x="53" y="273" class="small" text-anchor="start">u: comparar com a solicitação</text>
 <rect x="35" y="395" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,430 H425" stroke="#263445"/>
 <text x="53" y="419" class="" text-anchor="start">C2 · Revisar referência espacial</text>

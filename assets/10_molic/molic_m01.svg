@@ -10,7 +10,7 @@
 <text x="250" y="172" class="speech small" text-anchor="start">u: iniciar; gco: M01</text>
 <rect x="35" y="190" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,225 H425" stroke="#263445"/>
 <text x="53" y="214" class="" text-anchor="start">C1 · Escolher o caso</text>
-<text x="53" y="250" class="small" text-anchor="start">d: formatos PNG/JPEG; caso (S01/S02)</text>
+<text x="53" y="250" class="small" text-anchor="start">d: formatos PNG/JPEG; caso (S01/S02/S13)</text>
 <text x="53" y="273" class="small" text-anchor="start">u: imagem e identificação</text>
 <rect x="216" y="430" width="28" height="28" fill="#182536"/>
 <text x="270" y="438" class="small" text-anchor="start">Validar entrada (S02)</text>
@@ -29,7 +29,7 @@
 <rect x="35" y="1010" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,1045 H425" stroke="#263445"/>
 <text x="53" y="1034" class="" text-anchor="start">C3 · Confrontar evidências</text>
 <text x="53" y="1070" class="small" text-anchor="start">d: resultado e limites (S04/S05)</text>
-<text x="53" y="1093" class="small" text-anchor="start">d+u: original/mapa, ajustes (S06)</text>
+<text x="53" y="1093" class="small" text-anchor="start">d+u: original/mapa, ajustes (S06/S16/S17)</text>
 <path class="edge" d="M230,868 V1010"/>
 <text x="250" y="896" class="speech small" text-anchor="start">d: resultado disponível</text>
 <rect x="35" y="1215" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,1250 H425" stroke="#263445"/>
@@ -50,7 +50,7 @@
 <text x="250" y="1560" class="speech small" text-anchor="start">u: revisar e exportar</text>
 <rect x="35" y="1830" width="390" height="112" rx="18" fill="#f7f9fc" stroke="#263445" stroke-width="1.7"/><path d="M35,1865 H425" stroke="#263445"/>
 <text x="53" y="1854" class="" text-anchor="start">C6 · Revisar documento</text>
-<text x="53" y="1890" class="small" text-anchor="start">d: caso, imagem, registros (S12)</text>
+<text x="53" y="1890" class="small" text-anchor="start">d: caso, imagem, registros (S12/S18)</text>
 <text x="53" y="1913" class="small" text-anchor="start">u: corrigir ou confirmar conteúdo</text>
 <path class="edge" d="M230,1688 V1830"/>
 <text x="250" y="1716" class="speech small" text-anchor="start">d: parecer completo e coerente</text>

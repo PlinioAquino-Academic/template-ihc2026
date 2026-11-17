@@ -4,14 +4,14 @@
 **Status:** 🟩 concluída<br>
 **Responsabilidade:** uma solução por integrante, consolidada na Mesa de inspeção.
 
-Os modelos derivam de [CI01–CI03, O01–O09 e S01–S12](09_modelo_conceitual.md). Modelam a conversa necessária para usar o apoio visual do TCC, sem detalhar o algoritmo nem representar autorização de desembaraço.
+Os modelos derivam de [CI01–CI03, O01–O09 e S01–S18](09_modelo_conceitual.md). Modelam a conversa necessária para usar o apoio visual do TCC, sem detalhar o algoritmo nem representar autorização de desembaraço.
 
 **Notação da aula 10:** círculo preenchido = abertura; círculo duplo = encerramento; retângulo arredondado = cena, com tópico e diálogos; quadrado preenchido = processo do sistema. `u:` identifica fala do usuário; `d:`, do preposto; `d+u:`, diálogo sobre um signo. `[SP]` indica prevenção de ruptura e `[SR]`, recuperação. Setas tracejadas destacam caminhos de ruptura. `gco/gcc` marcam abertura/fechamento de conversa sobre uma meta. Não há menu ubíquo: o recorte trabalha um caso por vez.
 
 ## M01 — Examinar e registrar
 
 **Responsável:** Kawan Mark Geronimo Da Silva — 22.222.010-5.<br>
-**Origem:** CI01, P01, T01–T03; **objetivos:** O01–O05/O08; **signos:** S01–S12.
+**Origem:** CI01, P01, T01–T03; **objetivos:** O01–O05/O08; **signos:** S01–S13 e S16–S18; S14/S15 apenas como candidatos (H31/H37).
 
 ![M01 — examinar e registrar](../assets/10_molic/molic_m01.svg)
 
@@ -31,7 +31,7 @@ Os modelos derivam de [CI01–CI03, O01–O09 e S01–S12](09_modelo_conceitual.
 ## M02 — Compreender o fundamento do parecer
 
 **Responsável:** Gabriel Albertini Pinheiro — 22.122.094-8.<br>
-**Origem:** CI02, P02, T04–T06 na parte de consulta; **objetivos:** O06/O02/O07/O08; **signos:** S01/S04/S07–S12.
+**Origem:** CI02, P02, T04–T06 na parte de consulta; **objetivos:** O06/O02/O07/O08; **signos:** S01/S04/S07–S12/S18.
 
 ![M02 — compreender o fundamento](../assets/10_molic/molic_m02.svg)
 
@@ -50,7 +50,7 @@ A decisão formal e a comunicação institucional ficam fora desta conversa. Um 
 ## M03 — Preparar informação para conferência
 
 **Responsável:** Alexandre Domiciano Pierri — 22.125.061-6.<br>
-**Origem:** CI03, P01/P02; CP03 e T07–T09 apenas como contexto exploratório; **objetivos:** O09/O02/O07/O08; **signos:** S01/S04/S07–S12.
+**Origem:** CI03, P01/P02; CP03 e T07–T09 apenas como contexto exploratório; **objetivos:** O09/O02/O07/O08; **signos:** S01/S04/S07–S13/S18.
 
 ![M03 — preparar informação](../assets/10_molic/molic_m03.svg)
 

@@ -1,8 +1,11 @@
-# Materiais para a Entrega 11
+# Materiais da Entrega 11
 
-- [Estados da Mesa de inspeção](estados_prototipo_pp01_pp06.svg): telas e estados completos preservados da versão extensa da Entrega 6.
-- [Referência detalhada](referencia_mesa_inspecao.md): descrição original, simulação e propostas de revisão.
-- [Fonte do tldraw](../06_prototipos/mesa_inspecao.tldr): arquivo original editável.
-- [Fluxograma de apoio](../10_molic/prototipo_fluxo_01.svg): material guardado para a Entrega 10.
+- [`telas/`](telas/): capturas 1440 × 900 das telas e estados F01–F12, usadas no [catálogo da Entrega 11](../../docs/11_figma.md).
+- [`prototipo/index.html`](prototipo/index.html): protótipo navegável em HTML (abre localmente no navegador). É a fonte das telas importadas no Figma.
+- [`prototipo/gerar_prototipo.py`](prototipo/gerar_prototipo.py): gera `index.html` (`python3 assets/11_figma/prototipo/gerar_prototipo.py`) e a versão autocontida para importação (`--figma arquivo.html`).
+- [`prototipo/base_tcc.css`](prototipo/base_tcc.css) e [`prototipo/fonts/`](prototipo/fonts/): CSS e fontes (Barlow, SIL OFL) copiados da interface de demonstração do TCC (`codigo/interface/static/`); [`prototipo/prototipo.css`](prototipo/prototipo.css) contém as revisões das Entregas 6, 9 e 10.
+- [`prototipo/img/`](prototipo/img/): radiografia de teste do TCC e a mesma imagem com o mapa de atenção real do modelo de referência.
 
-Esses arquivos são referências para construir o protótipo navegável; ainda não são uma entrega de Figma concluída. Rótulos, indicadores e estados devem acompanhar o modelo conceitual e o MoLIC. Os códigos PP não substituem os futuros identificadores F das telas do Figma.
+Material histórico, sem status de entrega atual:
+
+- [Estados da Mesa de inspeção](estados_prototipo_pp01_pp06.svg) e [referência detalhada](referencia_mesa_inspecao.md), preservados da Entrega 6. Os códigos PP não substituem os identificadores F.
