@@ -107,16 +107,18 @@ Não há AU registrado. Recomendações dependem de evidência; as decisões pr�
 
 ## F. Comparação com a heurística
 
-| Problema | ID da heurística | Evidência dos usuários | Aprendizado / decisão |
-|---|---|---|---|
+| Achado técnico | O que observar na sessão | Evidência dos usuários |
+|---|---|---|
+| V01 · conclusão trocada após confirmação | Em UT02, se a opção escolhida aparece na prévia e se a pessoa percebe eventual troca. | Pendente de coleta. |
+| V02 · recuperação pela faixa de simulação | Em UT03, se a pessoa identifica o campo obrigatório e consegue retomar a emissão preservando o registro. | Pendente de coleta. |
 
-Comparação pendente das duas coletas. Preservar problemas exclusivos de cada método, sem inferir que uma ausência de relato prova que não há problema.
+Registrar também dificuldades que aparecerem apenas nas sessões. Se uma correção for incorporada antes do piloto, anotar a versão e apontar no relatório que a sessão ocorreu com a correção aplicada.
 
 ## G. Conclusão e pendências reais
 
 Ainda não é possível afirmar quais metas foram atingidas, quais problemas foram recorrentes, o que surpreendeu a equipe ou quais mudanças têm prioridade empírica. O relatório final deverá responder esses pontos com os registros individuais e comparar inspeção/observação.
 
-Para concluir: conferir acesso e corrigir no Figma os bloqueios confirmados; realizar as três inspeções; recrutar e justificar os participantes; obter consentimentos; executar piloto e sessões; produzir vídeo autorizado; consolidar métricas, achados e revisões. Participantes proxy, amostra pequena, contexto simulado e ausência de integração limitam qualquer conclusão à versão e às condições testadas.
+A equipe informou que o Figma está OK. Para concluir: reproduzir os achados preliminares nessa versão e corrigir os bloqueios que se confirmarem; realizar as três inspeções; recrutar e justificar os participantes; obter consentimentos; executar piloto e sessões; produzir vídeo autorizado; consolidar métricas, achados e revisões. Participantes proxy, amostra pequena, contexto simulado e ausência de integração limitam qualquer conclusão à versão e às condições testadas.
 
 ## Checklist
 

@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação heurística
 
 **Data:** 17/11/2026<br>
-**Status:** 🟨 inspeção preliminar do HTML registrada. Inspeções individuais e consolidação pendentes.<br>
+**Status:** 🟨 inspeção preliminar do HTML registrada. Achados preliminares consolidados. Fichas individuais da equipe pendentes.<br>
 **Responsabilidade:** uma inspeção completa por integrante, seguida de síntese da equipe.
 
 A inspeção avalia a interação da Mesa de inspeção, não o desempenho científico do modelo. Conforme a aula 13, cada pessoa primeiro examina a interface individualmente; depois a equipe consolida os problemas. Preparar fichas não equivale a executar essas inspeções.
@@ -82,12 +82,12 @@ Os slides de fechamento da aula 14 pedem **dez exemplos**, um para cada heuríst
 
 ## 6. Consolidação e plano de melhoria
 
-Após as três inspeções, agrupar problemas pela mesma causa/tela, preservando todos os IDs e avaliadores. Resolver diferenças de severidade com justificativa, sem calcular uma média automática. Só então preencher:
+| Achado | Onde | Severidade preliminar | O que precisa ser conferido no Figma |
+|---|---|---:|---|
+| V01 · H3 | F11b → F07 | 3 | Escolher “Sem ressalvas na imagem”, confirmar e conferir se a escolha chega à prévia do parecer. Afeta UT02. |
+| V02 · H9 | F10c → F07 | 3 | Começar com a autoria vazia e corrigir o campo pela própria interface, preservando o restante. Afeta UT03. |
 
-| ID consolidado | IDs individuais / avaliadores | Heurística / tela | Problema e evidência | Severidade final / motivo | Prioridade / responsável / situação |
-|---|---|---|---|---|---|
-
-**Síntese atual:** a inspeção preliminar identificou dois problemas de severidade 3. A contagem consolidada da equipe depende das fichas individuais. A tabela vazia indica coleta pendente. Depois da coleta, registrar totais, padrões recorrentes e os bloqueios encontrados. Severidade 4 deve ser corrigida e verificada antes dos testes; problemas 3 que comprometam UT01–UT03 também bloqueiam a respectiva tarefa. Demais ajustes seguem impacto/recorrência. Cada correção precisa citar achado, versão e tela na rastreabilidade.
+A revisão do HTML encontrou dois problemas distintos. Primeiro, verificar se a conclusão escolhida é preservada, porque a troca pode mudar o sentido do parecer. Em seguida, conferir a recuperação do campo obrigatório, já que o atalho da simulação interfere na medição de UT03. Se os problemas aparecerem no Figma, corrigir o fluxo afetado e repetir a checagem antes do piloto. Ao reunir as fichas individuais, agrupar relatos da mesma causa e manter a referência de quem observou cada um.
 
 ## Checklist
 
