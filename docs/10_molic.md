@@ -1,73 +1,92 @@
 # Entrega 10 — MoLIC
 
 **Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
-**Responsabilidade:** 1 solução completa por integrante
+**Status:** 🟨 em andamento  
+**Responsabilidade:** 1 solução completa por integrante.
 
 ## Objetivo da atividade
 
-Modelar a interação como uma **conversa entre usuário e preposto do designer**, oferecendo visão global dos caminhos que permitem ao usuário atingir seus objetivos — incluindo alternativas e rupturas relevantes. MoLIC não deve ser reduzida a um fluxograma de telas.
+Modelar a interação com a interface de simulação semafórica como uma conversa entre o usuário e o preposto do designer. O modelo descreve o que o usuário precisa saber, quais decisões pode tomar e como a interface comunica os resultados dessas decisões, incluindo situações em que é preciso voltar, corrigir uma condição ou encerrar a interação.
 
-> Use a **notação MoLIC ensinada na disciplina**. Este template foca critérios de qualidade e não substitui a legenda/notação apresentada em aula.
+A interface desktop documentada na Entrega 6 serve de base para o modelo. As mensagens de recuperação e o destaque do estado da execução seguem as propostas de evolução registradas nas Entregas 8 e 9.
 
-## Atenção a TCCs sem interface original
+## M01 — Preparar e executar experimentos sob condições comparáveis
 
-O MoLIC não modela o algoritmo por dentro. Ele modela a **conversa de interação necessária para que uma pessoa use a contribuição**.
+**Autor:** Gabriel Koiama de Rocha Lira — 22.125.067-3  
+**Cenário de interação de origem:** CI01 — Preparar e executar experimentos sob condições comparáveis.  
+**Persona:** P01 — Marina Ribeiro.  
+**Objetivos:** OBJ01 — produzir execuções sob condições comparáveis. OBJ02 — preparar as condições da simulação. OBJ03 — validar e iniciar a simulação. OBJ04 — acompanhar e identificar a execução.  
+**Tarefas relacionadas:** T01 — selecionar a malha viária. T02 — configurar os parâmetros do experimento. T03 — selecionar a estratégia de controle. T04 — iniciar uma simulação. T05 — verificar o estado da execução.  
+**Signos relevantes:** cenário, controlador, seed, modo de execução, parâmetros avançados, mensagem de validação, resumo da configuração, estado da execução e registro da execução.
 
-Exemplos de conversas:
+### Diagrama
 
-- usuário escolhe dados/parâmetros → sistema valida → usuário inicia análise → sistema comunica processamento → usuário interpreta resultado;
-- usuário consulta histórico → refina filtros → abre execução → compara com outra;
-- administrador seleciona perfil → altera permissão → sistema comunica consequências → administrador confirma/cancela;
-- analista recebe alerta → examina evidências → classifica ocorrência → registra decisão.
+![MoLIC M01 — Preparação, validação, execução e acompanhamento do experimento](../assets/10_molic/molic_m01.svg)
 
-Modele também rupturas plausíveis: entrada inválida, falha de processamento, ausência de resultado, permissão insuficiente, filtro sem resultados, conflito de alteração, cancelamento ou necessidade de recuperação.
+**Fonte editável:** [molic_m01.svg](../assets/10_molic/molic_m01.svg).
 
-## M01 — {{nome do cenário/objetivo}}
+No diagrama, `u` identifica a fala da usuária, `d` identifica a fala do preposto do designer e `d+u` indica um tópico de diálogo entre ambos. Os retângulos pretos representam o processamento do sistema. As setas tracejadas representam transições de recuperação de ruptura. `[SR]` identifica a recuperação apoiada, em que a mensagem indica o que a usuária precisa revisar para prosseguir.
+
+### Leitura do diagrama
+
+#### Caminho principal
+
+1. **Escolher o cenário de tráfego.** A conversa começa com a escolha do cenário. Marina consulta o catálogo, identifica a interseção do estudo e confirma qual cenário será usado.
+2. **Definir as condições da simulação.** Marina configura os parâmetros, escolhe o controlador e informa a seed e o modo de execução. Quando necessário, consulta os parâmetros avançados antes de solicitar a validação.
+3. **Validar e revisar a configuração.** O sistema verifica as condições informadas. Quando a configuração é aceita, a interface apresenta o resumo com cenário, controlador, seed e modo de execução. Marina confere as escolhas e confirma o início.
+4. **Acompanhar a execução.** Durante o processamento, a interface informa se a simulação está inicializando ou executando. Se Marina tiver escolhido o modo Visual, ela também pode acompanhar a simulação pelo SUMO-GUI.
+5. **Identificar a execução concluída.** Ao concluir, a interface informa o resultado do processamento e associa o registro ao cenário, ao controlador e à seed. Marina pode encerrar a interação ou voltar à escolha do cenário para preparar outra execução. Nesse segundo caso, ela confere as condições que devem permanecer equivalentes antes de confirmar o próximo experimento.
+
+#### Alternativas e rupturas
+
+| Situação | Onde ocorre | Como a usuária percebe | Caminho de recuperação/saída |
+|---|---|---|---|
+| Marina precisa conferir um parâmetro avançado. | Condições da simulação. | A interface oferece acesso à configuração avançada. | Marina consulta ou ajusta o parâmetro e continua a configuração antes de validar. |
+| Uma condição é inválida. | Validação da configuração. | A mensagem identifica o campo relacionado e orienta a revisão. | A conversa retorna às condições da simulação. Marina corrige o valor e solicita nova validação. |
+| Marina percebe uma escolha diferente da planejada. | Revisão antes de iniciar. | O resumo permite conferir cenário, controlador, seed e modo de execução. | Marina volta à configuração, ajusta a escolha e revisa novamente o resumo antes de confirmar. |
+| A simulação falha após a confirmação. | Processamento da simulação. | A interface comunica a falha e apresenta os detalhes disponíveis. | Marina pode voltar à configuração para revisar as condições antes de uma nova tentativa ou encerrar a interação após a falha. |
+| Marina precisa executar outro controlador sob condições equivalentes. | Identificação da execução concluída. | O registro identifica as condições da execução anterior. | Marina volta à escolha do cenário, prepara outra execução e confere no resumo quais condições devem ser preservadas. |
+
+### Checklist específico de modelagem
+
+- [x] O ponto de abertura conduz à escolha do cenário.
+- [x] As cenas representam tópicos da conversa entre a usuária e a interface.
+- [x] As transições identificam as falas da usuária e do preposto do designer.
+- [x] Há pontos de encerramento após conclusão ou após falha, conforme a decisão da usuária.
+- [ ] Conferir a representação dos processos e das transições com a notação adotada em aula.
+- [x] As rupturas relevantes têm feedback e caminho de recuperação ou saída.
+- [x] O diagrama cobre alternativas ao caminho principal.
+- [x] Os objetivos, tópicos e signos retomam o CI01 da Entrega 9.
+- [ ] Conferir a legibilidade do SVG no GitHub depois de publicar.
+- [x] O modelo descreve a comunicação da interface durante a validação e a execução.
+
+## M02 — {{nome do cenário/objetivo}}
 
 **Autor(a):** {{nome — matrícula}}  
-**Cenário de interação de origem:** {{CI01}}  
-**Objetivo(s):** {{O01}}  
-**Tarefa(s) relacionada(s):** {{T01}}  
+**Cenário de interação de origem:** {{CI02}}  
+**Objetivos:** {{...}}  
+**Tarefas relacionadas:** {{...}}  
 **Signos relevantes:** {{...}}
 
 ### Diagrama
 
-![MoLIC M01](../assets/10_molic/molic_m01.svg)
-
-**Fonte editável:** {{adicione aqui o link para o arquivo `.drawio`, `.svg` editável ou outro formato utilizado pela equipe}}
+{{diagrama e fonte editável}}
 
 ### Leitura do diagrama
 
-Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupturas mais importantes.
-
 #### Caminho principal
 
-1. {{ponto de abertura → cena...}}
-2. {{...}}
+{{...}}
 
 #### Alternativas e rupturas
 
 | Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
 |---|---|---|---|
-| {{dado inválido}} | {{...}} | {{fala/feedback}} | {{...}} |
+| {{...}} | {{...}} | {{...}} | {{...}} |
 
 ### Checklist específico de modelagem
 
-- [ ] Existe **ponto de abertura** coerente com o início do objetivo.
-- [ ] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
-- [ ] As transições/falas deixam claro o que o usuário ou o sistema comunica.
-- [ ] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
-- [ ] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário.
-- [ ] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
-- [ ] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
-- [ ] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
-- [ ] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
-- [ ] O diagrama é legível em tamanho normal no GitHub.
-- [ ] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
-- [ ] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
-
-> Repita M02, M03... para todos os integrantes.
+{{preencher após a elaboração de M02}}
 
 ## Consolidação da equipe
 
@@ -75,16 +94,12 @@ Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupt
 
 | Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
 |---|---|---|---|
-| O01 | M01 | {{...}} | {{...}} |
+| {{...}} | {{...}} | {{...}} | {{...}} |
 
 ### Preparação para o Figma
 
-Liste os estados/telas que serão necessários **a partir das conversas modeladas**, incluindo feedback, confirmação, erro e recuperação.
+{{consolidar os estados e as telas necessários após a revisão de M01 e M02, incluindo confirmação, feedback, erro e recuperação}}
 
-## Erros frequentes a evitar
+## Referência
 
-- desenhar apenas caixas com nomes de telas e setas de navegação;
-- não modelar falhas, cancelamento, volta ou recuperação;
-- usar rótulos genéricos (“Tela 1”, “Processo 2”) sem tópico de conversa;
-- criar no Figma fluxos que não existem no MoLIC;
-- diagrama sem legenda/fonte editável e com texto ilegível.
+- SILVA, Bruno Santana da. BARBOSA, Simone Diniz Junqueira. [*Designing Human-Computer Interaction With MoLIC Diagrams — A Practical Guide*](https://www-di.inf.puc-rio.br/~simone/publications/07_12_silva.pdf). PUC-Rio, 2007.
