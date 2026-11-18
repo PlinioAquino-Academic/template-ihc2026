@@ -78,7 +78,18 @@ Limite de 5 minutos por tarefa. Estados iniciais são independentes: caso pronto
 
 Para a atividade remota pedida pelo professor, abrir uma sala virtual por sessão e testar conexão, compartilhamento, zoom e áudio antes; mostrar apenas a janela do protótipo, silenciar notificações e combinar como interromper. Guardar interrupções técnicas separadamente do desempenho. O vídeo deve ilustrar instrução, uso e resultados, com IDs anônimos e acesso autorizado ao professor.
 
-A aula também solicita assistir à palestra de Felipe Melo no [Moodle](https://moodle.fei.edu.br/course/section.php?id=843). A cópia local indica a palestra, sem transcrição. As recomendações acima vêm dos slides de planejamento/observação, não foram atribuídas ao palestrante. **Pendente:** assistir à palestra e complementar as recomendações específicas antes da sessão remota.
+#### Recomendações da palestra e aplicação no projeto
+
+| Tema e trecho indicado | Como vamos aplicar na Mesa de inspeção |
+|---|---|
+| Objetivos e formato do teste (7:42–8:42) | Usar UT01–UT03 para ver se a pessoa compara a imagem, prepara o parecer e se recupera de um erro. Fazer sessões moderadas para perguntar o que ela entendeu depois de cada tarefa. |
+| Recrutamento (10:01; 34:32) | Priorizar pessoas externas com experiência relacionada às tarefas. Se for necessário usar um perfil aproximado, registrar a experiência que justifica a escolha e a limitação. |
+| Preparação e plano B (15:34; 26:25) | Testar o link, a gravação e o compartilhamento no piloto. Ter uma segunda opção de chamada e registrar qualquer interrupção à parte. |
+| Chamada, protótipo e anotações (18:51–25:06) | Abrir o Figma em uma chamada com compartilhamento de tela. Usar a ficha para anotar ação, dificuldade e tempo. Gravar somente com autorização. |
+
+Fonte: [palestra de Felipe Melo indicada no Moodle](https://www.youtube.com/watch?v=zjKaHb6erzQ). Síntese baseada no resumo com marcações de tempo fornecido à equipe.
+
+**Divisão prevista:** Kawan conduz U01, Gabriel conduz U02 e Alexandre conduz U03. Em cada sessão, o próximo integrante da sequência anota enquanto o outro confere a gravação autorizada e a preparação da próxima tarefa. A equipe reúne as fichas ao final e escolhe as melhorias que os registros sustentarem.
 
 **Link do vídeo do teste:** ainda não existe; depende da aplicação e das autorizações.
 
@@ -131,7 +142,8 @@ A equipe informou que o Figma está OK. Para concluir: reproduzir os achados pre
 - [ ] Três participantes externos recrutados, adequados e consentidos.
 - [ ] Piloto realizado e alterações registradas.
 - [ ] Sessões observadas sem ensino do caminho, com métricas por pessoa/tarefa.
-- [ ] Palestra conferida e vídeo autorizado do teste disponível ao professor.
+- [x] Recomendações da palestra incorporadas ao protocolo a partir do resumo fornecido.
+- [ ] Vídeo autorizado do teste disponível ao professor.
 - [ ] Consolidação, comparação com heurística e conclusão sustentadas por dados.
 - [ ] Achados geraram recomendações e atualização da rastreabilidade.
 
