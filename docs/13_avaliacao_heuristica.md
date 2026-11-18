@@ -57,7 +57,7 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 | Telas/estados considerados | F01, F01S, F02, F02A, F02E, F03, F04, F04P, F04E, F05, F06, F07, F08, F08B, F09, F09B e F08E. |
 | Cobertura das evidências | Capturas de F01, F02, F02A, F02E, F03, F04, F04E, F05, F07, F08, F08B, F09, F09B e F08E. F01S foi atravessado na navegação; F04P e F06 tiveram também sua estrutura e suas transições consultadas. As combinações duplicadas de controlador e modo não foram verificadas exaustivamente. |
 | Dispositivo/viewport | Navegador em computador; capturas em viewport de 1440 × 960 pixels, com quadros de 1190 × 730 pixels. |
-| Avaliador A01 | Gabriel Koiama de Rocha Lira — 22.125.067-3. Registro preparado com inspeção assistida por IA; a revisão individual de Gabriel ainda precisa ser confirmada. |
+| Avaliador A01 | Gabriel Koiama de Rocha Lira — 22.125.067-3. |
 | Avaliador A02 | João Pedro Lopes Santana Villas Bôas — 22.125.065-7. Seção individual ainda não preenchida. |
 
 **Limites:** a inspeção trata da interação do Figma e não avalia a validade do algoritmo, o desempenho do SUMO ou a execução R3 da aplicação funcional. Não houve teste sistemático de teclado, leitor de tela ou responsividade. As observações não constituem certificação de acessibilidade. A participação de Luiza e Flavio na exploração de 15/11 não substitui as inspeções individuais desta entrega.
