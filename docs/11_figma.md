@@ -1,7 +1,7 @@
 # Entrega 11 — Protótipo no Figma
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 17/11/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 protótipo integrado por equipe cobrindo os fluxos MoLIC. Se a turma exigir divisão individual, identifique o responsável por cada fluxo/tela.
 
 ## Objetivo da atividade
@@ -34,8 +34,8 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 
 ## Link do Figma
 
-**Protótipo:** {{URL}}  
-**Arquivo editável:** {{URL}}  
+**Protótipo:** [Entrega 11 — Protótipo navegável do M01](https://www.figma.com/proto/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=4-12&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A12&show-proto-sidebar=1)  
+**Arquivo editável:** [Entrega 11 — Arquivo de design do M01](https://www.figma.com/design/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=4-12)  
 **Última verificação de permissão:** {{dd/mm/aaaa}}
 
 > Teste o link em janela anônima. O avaliador deve conseguir abrir o protótipo sem solicitar permissão.
@@ -44,17 +44,19 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 
 | MoLIC | Objetivo | Fluxo/telas no Figma | Estados de erro/recuperação | Responsável |
 |---|---|---|---|---|
-| M01 | O01 | `F01 → F02 → F03` | `F02E, F03R` | {{...}} |
+| M01 | OBJ01 — Produzir execuções sob condições comparáveis, cobrindo a preparação (OBJ02), a validação e o início (OBJ03) e o acompanhamento da execução (OBJ04). | `F01 → F01S → F02 → F03 → F04 → F04P → F05`. A configuração avançada fica em `F02A`. A partir de `F05`, é possível preparar outra execução ou encerrar em `F06`. | Em `F02`, limpar a seed e validar leva a `F02E`, de onde é possível corrigir o valor. Em `F03`, é possível voltar à configuração. O fluxo **M01 · Falha e recuperação** passa por `F04T → F04E` e permite revisar a configuração ou encerrar. | Gabriel Koiama de Rocha Lira — 22.125.067-3 |
+
+No M01, o processamento é simulado no Figma. A integração com o SUMO pertence à interface funcional do TCC.
 
 ## Catálogo de telas/estados
 
-### F01 — {{nome da tela/estado}}
+### F01 — Escolha do cenário de tráfego
 
 ![F01](../assets/11_figma/f01.svg)
 
-**Objetivo do usuário:** {{...}}  
-**Signos principais:** {{...}}  
-**Origem no MoLIC:** {{M01/cena ...}}
+**Objetivo do usuário:** localizar e selecionar o cenário correspondente à malha viária que será simulada.  
+**Signos principais:** catálogo, cenário **R2 · Regional São Paulo**, esquema da malha e ação **Selecionar cenário**.  
+**Origem no MoLIC:** M01, cena «Escolha do cenário de tráfego».
 
 > Documente também estados que muitas equipes esquecem: carregamento, vazio, confirmação, sucesso, erro, permissão negada, cancelamento, desfazer/voltar quando aplicável.
 
@@ -62,10 +64,10 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 
 | Elemento | Regra adotada | Justificativa |
 |---|---|---|
-| Tipografia | {{...}} | {{legibilidade/contexto}} |
-| Cores | {{...}} | {{hierarquia/contraste/semântica}} |
-| Componentes | {{...}} | {{consistência}} |
-| Feedback | {{...}} | {{status}} |
+| Tipografia | No M01, usar Inter para títulos, rótulos, valores e textos de ajuda, com tamanhos e pesos distintos. | Facilita a identificação da etapa e a leitura das condições do experimento. |
+| Cores | No M01, usar fundo escuro, ciano para ações principais e seleção, e rótulos de texto para identificar falha e conclusão. | A cor reforça os estados, e os rótulos explicitam o que aconteceu. |
+| Componentes | No M01, reutilizar os botões principal e secundário e manter a identificação da etapa na barra lateral. | Ajuda a reconhecer ações equivalentes entre configuração, revisão e encerramento. |
+| Feedback | No M01, mostrar a mensagem de validação junto aos controles da seed e destacar o estado durante a execução. | Permite localizar o erro e distinguir inicialização, processamento, conclusão e falha. |
 
 ## Verificação de acessibilidade básica
 
