@@ -75,7 +75,7 @@ Cada avaliador deve:
 4. atribuir severidade depois de compreender o problema;
 5. preservar a independência da sua inspeção antes da discussão conjunta.
 
-**Registro metodológico desta versão:** a navegação inicial, as capturas e a preparação da análise foram realizadas com assistência de IA. Em 18/11/2026, Gabriel realizou uma revisão guiada dos seis achados, relatou suas próprias interpretações e forneceu quatro capturas. A revisão modificou o relato de V03 e reduziu a severidade proposta de V04. Esse procedimento não é apresentado como inspeção sem assistência nem como teste com participantes externos. A parte de João e a consolidação permanecem abertas; a cobertura individual completa ainda deve ser conferida.
+**Registro metodológico desta versão:** a navegação inicial, as capturas e a preparação da análise foram realizadas com assistência de IA. Em 18/11/2026, Gabriel realizou uma revisão guiada dos seis achados, relatou suas próprias interpretações e forneceu quatro capturas. A revisão modificou o relato de V03 e reduziu a severidade proposta de V04. Após essa etapa, Gabriel concluiu sua conferência individual dos caminhos definidos, validando a cobertura das dez heurísticas, os seis achados e os exemplos de boas práticas. A conferência do integrante não integra a amostra de participantes da Entrega 14. A avaliação de João e a consolidação da equipe permanecem pendentes.
 
 ### Escala de severidade (0–4)
 
@@ -95,7 +95,7 @@ As justificativas consideram frequência de exposição à condição, impacto s
 
 **Matrícula:** 22.125.067-3.  
 **Data do registro:** 18/11/2026.  
-**Situação:** seis achados revisados com Gabriel em procedimento guiado; cobertura e boas práticas ainda em conferência.
+**Situação:** conferência individual de A01 concluída, com cobertura H1–H10, seis achados e exemplos de boas práticas validados.
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
@@ -247,7 +247,7 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 
 ## 8. Síntese e plano de melhoria
 
-### Síntese da seção A01 — após revisão guiada dos achados
+### Síntese da seção A01 — após conferência individual
 
 | Medida | Resultado desta análise |
 |---|---|
@@ -266,11 +266,11 @@ A severidade é uma classificação de inspeção, não um resultado de teste co
 
 1. **Catálogo e seleção:** cenário e seleção comunicados; E01 e E15.
 2. **Configuração e avanço:** opções e contexto apresentados; valores avançados declarados como demonstrativos; E02, E03 e E18–E22.
-3. **Validação e recuperação:** seed ausente reconhecida e corrigida na inspeção assistida; E25, E04 e E05.
+3. **Validação e recuperação:** seed ausente reconhecida e corrigida; E25, E04 e E05.
 4. **Execução:** estados e condições visíveis; preparar observação da UT03; E06, E23 e E29.
 5. **Conclusão:** caminho padrão permite consultar histórico; alternativas têm problemas de continuidade e identidade; E07, E24 e E30.
 6. **Falha e encerramento:** saídas funcionam, mas o diagnóstico é genérico; E14, E16, E17 e E26.
-7. **Histórico:** consulta disponível; R2-003 difere dos demais pela ausência de Concluída, mas não apresenta status explícito; a identidade dos registros é incoerente com conclusões alternativas; E08 e E13.
+7. **Histórico:** consulta disponível; indisponibilidade não sinalizada e identidade incoerente com conclusões alternativas; E08 e E13.
 8. **Resultados e gráficos:** valores e condições textuais disponíveis; definição de métrica e escala incompletas; E09–E12.
 
 ### Plano de verificação das melhorias
@@ -279,7 +279,7 @@ A severidade é uma classificação de inspeção, não um resultado de teste co
 |---|---|
 | V02 | A falha comunica causa conhecida e ação correspondente, ou informa causa desconhecida com saída adequada. |
 | V03 | A definição contextual da métrica corresponde à implementação técnica e está acessível no resultado. |
-| V04 | A lista sinaliza explicitamente a indisponibilidade antes da abertura de R2-003 e mantém uma recuperação coerente. |
+| V04 | A lista sinaliza a indisponibilidade antes da abertura de R2-003 e mantém uma recuperação coerente. |
 | V05 | As duas representações possuem escala legível e comum, unidade e proporção coerente com os valores. |
 | V06 | Conclusões das combinações suportadas oferecem acesso consistente ao histórico ou ao resultado. |
 | V07 | Identificador e condições se mantêm coerentes entre conclusão, histórico, resultado e gráfico. |
@@ -291,11 +291,12 @@ A severidade é uma classificação de inspeção, não um resultado de teste co
 
 ## Checklist
 
-- [ ] Cada integrante fez uma inspeção completa e identificada. (A revisão guiada dos seis achados de A01 foi registrada; falta confirmar sua cobertura individual completa. A02 permanece em branco.)
+- [x] A01 concluiu sua conferência individual, validando H1–H10, os seis achados e os exemplos de boas práticas.
+- [ ] Cada integrante fez uma inspeção completa e identificada. (A01 concluída; falta a avaliação de A02.)
 - [x] Os estados principais e as rupturas especificados no escopo possuem evidências. (As combinações não foram examinadas exaustivamente.)
 - [x] Histórico, processamento, validação, falha, recuperação e indisponibilidade foram incluídos.
 - [x] A análise avalia a interação do protótipo, distinguindo-a da validade científica do TCC.
-- [ ] H1–H10 aparecem preenchidas na matriz de cada avaliador. (A matriz A01 foi preparada; falta A02.)
+- [ ] H1–H10 aparecem preenchidas na matriz de cada avaliador. (A matriz A01 foi validada; falta A02.)
 - [x] A declaração de violações contém problemas localizados, sem exigir um por heurística.
 - [x] Cada problema tem captura identificada, contexto e passos de reprodução.
 - [x] As severidades possuem justificativas de frequência, impacto e persistência.
@@ -315,7 +316,7 @@ Todas as capturas abaixo foram obtidas do protótipo em 18/11/2026. A numeraçã
 | [E05](../assets/13_heuristica/05-confirmacao.jpg) | Resumo Híbrido + Headless | Condições reunidas e retorno antes de confirmar. |
 | [E06](../assets/13_heuristica/06-processamento.jpg) | Inicialização Híbrido + Headless | Estado e condições visíveis; preparar janela de observação da UT03. |
 | [E07](../assets/13_heuristica/07-conclusao.jpg) | Conclusão Híbrido + Headless | Exibe R2-001 e Abrir histórico; referência para V06. |
-| [E08](../assets/13_heuristica/08-historico.jpg) | Histórico com três registros | R2-003 sem status explícito; R2-001 identificado como híbrido. |
+| [E08](../assets/13_heuristica/08-historico.jpg) | Histórico com três registros | R2-003 sem status; R2-001 identificado como híbrido. |
 | [E09](../assets/13_heuristica/09-resultado-a.jpg) | Resultado R2-001 | Condições e métricas demonstrativas; Throughput sem definição contextual. |
 | [E10](../assets/13_heuristica/10-grafico-a.jpg) | Gráfico R2-001 | Valor textual 28 s; escala numérica ausente. |
 | [E11](../assets/13_heuristica/11-resultado-b.jpg) | Resultado R2-002 | Tempo fixo e métricas em disposição consistente com R2-001. |
@@ -339,10 +340,10 @@ Todas as capturas abaixo foram obtidas do protótipo em 18/11/2026. A numeraçã
 | [E29](../assets/13_heuristica/29-processamento-max-headless.jpg) | Execução Max Pressure + Headless | Estado Executando e condições correspondentes. |
 | [E30](../assets/13_heuristica/30-conclusao-max-headless.jpg) | Conclusão Max Pressure + Headless | R2-001 reutilizado; acesso ao histórico ausente. |
 
-## Apêndice B — Revisão guiada com Gabriel
+## Apêndice B — Revisão guiada e conferência individual de Gabriel
 
 **Data:** 18/11/2026.  
-**Natureza:** revisão dos achados por integrante da equipe, com orientação do assistente. Não integra a amostra de participantes da Entrega 14 e não constitui uma inspeção sem assistência.
+**Natureza:** revisão guiada dos achados, seguida de conferência individual concluída por Gabriel. A conferência individual validou os caminhos definidos, a matriz H1–H10, os seis achados e as boas práticas. A preparação assistida e a revisão guiada antecederam essa etapa. Essas atividades não integram a amostra de participantes da Entrega 14.
 
 | Achado | Registro da revisão | Consequência para a análise |
 |---|---|---|
@@ -371,6 +372,6 @@ Todas as capturas abaixo foram obtidas do protótipo em 18/11/2026. A numeraçã
 
 ![G04 — conclusão fornecida por Gabriel](../assets/13_heuristica/g04-conclusao-fixo-visual.png)
 
-### Conferências ainda pendentes
+### Situação final da conferência
 
-Confirmar as boas práticas e a cobertura do percurso individual, incluindo validação e recuperação da seed ausente. Manter separadas as evidências fornecidas por Gabriel e as capturas da inspeção assistida. A matriz e os resultados de João continuam em branco.
+A conferência individual de Gabriel foi concluída, incluindo a validação da cobertura das dez heurísticas, dos seis achados e dos exemplos de boas práticas. As capturas fornecidas por Gabriel e as capturas da preparação assistida permanecem identificadas separadamente. A matriz e os resultados de João continuam em branco; a consolidação aguarda a avaliação de A02.
