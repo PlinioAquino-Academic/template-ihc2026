@@ -128,8 +128,8 @@ A comparação e a síntese são atividades externas apoiadas pela consulta indi
 - [x] O resultado indisponível tem mensagem e caminho de recuperação.
 - [x] Há retorno ao histórico, retorno do gráfico às métricas e ponto de encerramento.
 - [x] Os objetivos, tópicos e signos retomam o CI02 da Entrega 9.
-- [ ] Conferir a representação dos processos e das transições com a notação adotada em aula.
-- [ ] Conferir a renderização e a legibilidade do Mermaid no GitHub.
+- [x] Conferir a representação dos processos e das transições com a notação adotada em aula.
+- [x] Conferir a renderização e a legibilidade do Mermaid no GitHub.
 
 ## Consolidação da equipe
 
