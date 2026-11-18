@@ -121,8 +121,6 @@ Quando aplicável, considere: vazio/sem dados; carregamento/processamento; suces
 | Componentes | Cabeçalho, identidade do produto, blocos de evidência e botões em posições recorrentes. | O mesmo padrão acompanha análise, revisão e confirmação. |
 | Feedback | Cada clique muda para um quadro identificável. A revisão antecede a gravação. Pausa, erro e pendência mostram a situação e a próxima ação. | Ajuda a retomar uma tarefa e evita confundir tentativa de salvar com confirmação. |
 
-A organização em quadros, a repetição dos controles e as transições curtas por clique seguem as demonstrações de design e prototipação dos materiais da atividade. [Visão geral](https://youtu.be/Cx2dkpBxst8) · [Exploração](https://youtu.be/dXQ7IHkTiMM) · [Criação de telas](https://youtu.be/wvFd-z7jSaA) · [Prototipação](https://youtu.be/lTIeZ2ahEkQ) · [Introdução ao editor](https://youtu.be/oGD4ixajvs8) · [Interações](https://youtu.be/CNU7miqEYXg)
-
 ## Verificação de acessibilidade básica
 
 Os botões têm 48 px de altura no quadro original e usam rótulos com verbos. A disponibilidade, os erros e a confirmação aparecem em texto. As capturas acima têm descrição alternativa. A navegação completa por teclado, a ordem de foco e a leitura por tecnologia assistiva precisam de verificação específica. As sessões com participantes estão previstas no planejamento da Entrega 12.
