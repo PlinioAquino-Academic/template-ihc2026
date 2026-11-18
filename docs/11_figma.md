@@ -1,7 +1,7 @@
 # Entrega 11 — Protótipo no Figma
 
 **Data:** 18/11/2026  
-**Status:** 🟨 protótipo concluído, publicação das capturas pendente  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 protótipo integrado por equipe cobrindo os fluxos MoLIC.
 
 ## Objetivo da atividade
@@ -55,7 +55,7 @@ A ação **Abrir histórico** em `F05` conecta o percurso principal do M01 ao M0
 
 ### F01 — Escolha do cenário de tráfego
 
-![F01 — Catálogo com o cenário R2 · Regional São Paulo](../assets/11_figma/f01.svg)
+![F01 — Catálogo com o cenário R2 · Regional São Paulo](https://raw.githubusercontent.com/koiamagabriel/IHCsemaforo/7f8fe1b20a78b04ab3e1c6631e5511ebc207834c/assets/11_figma/f01.svg)
 
 **Objetivo do usuário:** localizar e selecionar a malha viária que será usada na simulação.  
 **Signos principais:** catálogo, cenário **R2 · Regional São Paulo**, esquema da malha e ação **Selecionar cenário**.  
@@ -63,7 +63,7 @@ A ação **Abrir histórico** em `F05` conecta o percurso principal do M01 ao M0
 
 ### F07 — Histórico de execuções
 
-![F07 — Histórico com registros de simulações](../assets/11_figma/f07.svg)
+![F07 — Histórico com registros de simulações](https://raw.githubusercontent.com/koiamagabriel/IHCsemaforo/7f8fe1b20a78b04ab3e1c6631e5511ebc207834c/assets/11_figma/f07.svg)
 
 **Objetivo do usuário:** localizar e escolher uma execução para consultar.  
 **Signos principais:** identificação do registro, cenário, controlador, seed e estado da execução.  
@@ -71,7 +71,7 @@ A ação **Abrir histórico** em `F05` conecta o percurso principal do M01 ao M0
 
 ### F08 — Resultado individual
 
-![F08 — Condições experimentais e métricas da execução selecionada](../assets/11_figma/f08.svg)
+![F08 — Condições experimentais e métricas da execução selecionada](https://raw.githubusercontent.com/koiamagabriel/IHCsemaforo/7f8fe1b20a78b04ab3e1c6631e5511ebc207834c/assets/11_figma/f08.svg)
 
 **Objetivo do usuário:** conferir as condições da execução e interpretar as métricas.  
 **Signos principais:** registro, cenário, controlador, seed, condição de demanda, métricas e unidades.  
@@ -80,7 +80,7 @@ A ação **Abrir histórico** em `F05` conecta o percurso principal do M01 ao M0
 
 ### F09 — Gráfico da execução
 
-![F09 — Gráfico demonstrativo de tempo médio de espera](../assets/11_figma/f09.svg)
+![F09 — Gráfico demonstrativo de tempo médio de espera](https://raw.githubusercontent.com/koiamagabriel/IHCsemaforo/7f8fe1b20a78b04ab3e1c6631e5511ebc207834c/assets/11_figma/f09.svg)
 
 **Objetivo do usuário:** examinar a representação gráfica do tempo médio de espera.  
 **Signos principais:** identificação do registro, indicador, valor, unidade e gráfico.  
@@ -89,7 +89,7 @@ A ação **Abrir histórico** em `F05` conecta o percurso principal do M01 ao M0
 
 ### F08E — Resultado indisponível
 
-![F08E — Aviso de resultado indisponível e retorno ao histórico](../assets/11_figma/f08e.svg)
+![F08E — Aviso de resultado indisponível e retorno ao histórico](https://raw.githubusercontent.com/koiamagabriel/IHCsemaforo/7f8fe1b20a78b04ab3e1c6631e5511ebc207834c/assets/11_figma/f08e.svg)
 
 **Objetivo do usuário:** entender por que a consulta foi interrompida e selecionar outra execução.  
 **Signos principais:** registro R2-003, aviso de indisponibilidade e ação **Voltar ao histórico**.  
@@ -113,7 +113,7 @@ A verificação formal de contraste e a avaliação da navegação por teclado f
 ## Checklist
 
 - [x] Link do Figma está acessível.
-- [ ] Há capturas representativas dos dois fluxos no repositório.
+- [x] Há capturas representativas dos dois fluxos no repositório.
 - [x] Os fluxos M01 e M02 estão cobertos.
 - [x] Estados de erro, feedback e recuperação foram prototipados.
 - [x] A terminologia de cenário, controlador, seed e registro da execução segue a Entrega 9.
