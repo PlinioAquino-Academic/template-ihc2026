@@ -28,6 +28,8 @@ Verificar comparação (MU01), entendimento dos limites da IA (MU02), parecer co
 
 V01 e V02 estão na [Entrega 13](13_avaliacao_heuristica.md). Reproduzir no Figma antes do piloto. Se uma limitação impedir o critério do DECIDE, registrar o bloqueio e suspender a medição dessa tarefa até resolver o fluxo. O moderador prepara os estados fora da medição para que a faixa de simulação não indique a solução ao participante.
 
+**Verificação técnica adicional no Chromium:** a análise em andamento permite cancelar e voltar à entrada (F02 → F01), e a falha de análise permite tentar novamente (F10b → F02). A exportação simulada chega à confirmação e o documento abre (F08 → F09 → F12). Ao cancelar a troca de caso durante a conclusão, o HTML volta para um estado anterior sem a conclusão selecionada (F07 → F11a → F06, V03). Esta checagem registra transições da interface. O piloto e a observação de participantes continuam pendentes.
+
 ### 2. Participantes e recrutamento
 
 São necessários **três participantes externos**, pois a equipe tem três integrantes. As linhas abaixo são vagas planejadas, não pessoas já recrutadas.
@@ -121,6 +123,7 @@ Não há AU registrado. Recomendações dependem de evidência; as decisões pr�
 | Achado técnico | O que observar na sessão | Evidência dos usuários |
 |---|---|---|
 | V01 · conclusão trocada após confirmação | Em UT02, se a opção escolhida aparece na prévia e se a pessoa percebe eventual troca. | Pendente de coleta. |
+| V03 · perda da conclusão ao manter o caso | Se surgir uma tentativa de troca de caso em UT02, registrar se a pessoa recupera a conclusão anterior. | Pendente de coleta. |
 | V02 · recuperação pela faixa de simulação | Em UT03, se a pessoa identifica o campo obrigatório e consegue retomar a emissão preservando o registro. | Pendente de coleta. |
 
 Registrar também dificuldades que aparecerem apenas nas sessões. Se uma correção for incorporada antes do piloto, anotar a versão e apontar no relatório que a sessão ocorreu com a correção aplicada.

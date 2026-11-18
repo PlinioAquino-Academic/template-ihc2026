@@ -53,6 +53,8 @@ Registro técnico preliminar, com prints e destaque em ciano conforme o formato 
 | V01 | H3 — Controle e liberdade | Em F11b, depois de escolher “Sem ressalvas na imagem”, clicar em “Confirmar e justificar” abre F07 com “Suspeita apontada” selecionada. A confirmação perde a conclusão humana que acabou de ser escolhida. | 3. Repete-se nesse caminho e a seleção pode chegar ao parecer com o sentido invertido se passar despercebida. | Conectar a confirmação a um estado F07 que mantenha “Sem ressalvas na imagem” e permita seguir à prévia com essa conclusão. |
 | V02 | H9 — Recuperação de erros | Em F10c, o painel pede comentário, justificativa e responsável. Os campos visíveis são estáticos e “Revisar e emitir parecer” retorna ao próprio erro. A recuperação disponível passa pela faixa roxa “Completar os campos”, que abre um estado já preenchido. | 3. O bloqueio é persistente nesse estado e impede observar a correção espontânea de UT03. É uma limitação do protótipo HTML avaliado. | Antes da coleta, permitir acionar a recuperação pelos elementos da própria interface. Preparar uma variante que isole a autoria ausente quando a tarefa começar com os demais dados preenchidos. |
 
+| V03 | H3 — Controle e liberdade | Em F07, clicar em “Trocar caso” e depois em “Manter caso” leva a F06. A região continua visível, mas a conclusão que estava selecionada desaparece. | 2. Ocorre nesse caminho e pode obrigar a refazer parte do parecer. | Voltar ao estado de origem quando a troca for cancelada e preservar a conclusão já escolhida. |
+
 **V01 — ação e resultado.** O destaque no primeiro print indica a ação. No segundo, indica a conclusão que aparece selecionada após o clique.
 
 ![F11b — ação Confirmar e justificar destacada](../assets/13_heuristica/evidencias/f11b.png)
@@ -62,6 +64,10 @@ Registro técnico preliminar, com prints e destaque em ciano conforme o formato 
 **V02 — campos com omissão e saída pela faixa de simulação.**
 
 ![F10c — campos estáticos com erro e atalho de simulação destacados](../assets/13_heuristica/evidencias/f10c.png)
+
+**V03 — manter o caso.** A ação destacada abre F06 mesmo quando o diálogo foi aberto de F07.
+
+![F11a — ação Manter caso destacada](../assets/13_heuristica/evidencias/f11a.png)
 
 ## 5. Uso das heurísticas — exercício didático
 
@@ -86,8 +92,9 @@ Os slides de fechamento da aula 14 pedem **dez exemplos**, um para cada heuríst
 |---|---|---:|---|
 | V01 · H3 | F11b → F07 | 3 | Escolher “Sem ressalvas na imagem”, confirmar e conferir se a escolha chega à prévia do parecer. Afeta UT02. |
 | V02 · H9 | F10c → F07 | 3 | Começar com a autoria vazia e corrigir o campo pela própria interface, preservando o restante. Afeta UT03. |
+| V03 · H3 | F07 → F11a → F06 | 2 | Cancelar a troca de caso e conferir se a conclusão em andamento é mantida. |
 
-A revisão do HTML encontrou dois problemas distintos. Primeiro, verificar se a conclusão escolhida é preservada, porque a troca pode mudar o sentido do parecer. Em seguida, conferir a recuperação do campo obrigatório, já que o atalho da simulação interfere na medição de UT03. Se os problemas aparecerem no Figma, corrigir o fluxo afetado e repetir a checagem antes do piloto. Ao reunir as fichas individuais, agrupar relatos da mesma causa e manter a referência de quem observou cada um.
+A revisão do HTML registrou três problemas. Primeiro, verificar se a conclusão escolhida é preservada, porque a troca pode mudar o sentido do parecer. Em seguida, conferir a recuperação do campo obrigatório, já que o atalho da simulação interfere na medição de UT03. Se os problemas aparecerem no Figma, corrigir o fluxo afetado e repetir a checagem antes do piloto. Ao reunir as fichas individuais, agrupar relatos da mesma causa e manter a referência de quem observou cada um.
 
 ## Checklist
 
