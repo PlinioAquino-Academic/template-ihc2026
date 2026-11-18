@@ -1,7 +1,7 @@
 # Entrega 10 — MoLIC
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** 🟨 em andamento  
+**Data:** 17/11/2026  
+**Status:** 🟩 conteúdo concluído  
 **Responsabilidade:** 1 solução completa por integrante.
 
 ## Objetivo da atividade
@@ -60,33 +60,76 @@ No diagrama, `u` identifica a fala da usuária, `d` identifica a fala do prepost
 - [ ] Conferir a legibilidade do SVG no GitHub depois de publicar.
 - [x] O modelo descreve a comunicação da interface durante a validação e a execução.
 
-## M02 — {{nome do cenário/objetivo}}
+## M02 — Interpretar e comparar resultados experimentais
 
-**Autor(a):** {{nome — matrícula}}  
-**Cenário de interação de origem:** {{CI02}}  
-**Objetivos:** {{...}}  
-**Tarefas relacionadas:** {{...}}  
-**Signos relevantes:** {{...}}
+**Responsável pelo cenário:** João Pedro Lopes Santana Villas Bôas — 22.125.065-7  
+**Cenário de interação de origem:** CI02 — Interpretar e comparar resultados experimentais.  
+**Persona:** P02 — Carlos Mendes.  
+**Objetivos:** OBJ05 — interpretar e comparar resultados experimentais. OBJ06 — localizar e identificar uma execução. OBJ07 — interpretar as métricas de uma execução. OBJ08 — comparar condições e resultados. OBJ09 — elaborar uma síntese da análise.  
+**Tarefas relacionadas:** T06 — consultar as métricas obtidas. T07 — comparar resultados. T08 — consultar ou gerar uma síntese dos resultados.  
+**Signos relevantes:** histórico, registro da execução, cenário, condição de demanda, controlador, seed, condições experimentais, métricas, unidades e gráfico/diagnóstico.
 
 ### Diagrama
 
-{{diagrama e fonte editável}}
+```mermaid
+flowchart TD
+    abertura(("Início")):::terminal
+    historico("Localizar execução no histórico — d+u: registros, cenário, controlador e seed"):::cena
+    carregar["Recuperar resultado"]:::processo
+    resultado("Interpretar o resultado individual — d+u: contexto, métricas, valores e unidades"):::cena
+    grafico("Consultar o gráfico da execução — d+u: indicador e gráfico associado"):::cena
+    encerramento((("Fim"))):::terminal
+
+    abertura -->|"d: consulte as execuções disponíveis"| historico
+    historico -->|"u: consultar esta execução"| carregar
+    carregar -->|"d: resultado da execução selecionada"| resultado
+    carregar -.->|"d: [SR] resultado indisponível. Selecione outra execução"| historico
+    resultado -->|"u: consultar o gráfico"| grafico
+    grafico -->|"u: voltar às métricas"| resultado
+    resultado -->|"u: voltar ao histórico para consultar outra execução"| historico
+    resultado -->|"u: encerrar a consulta"| encerramento
+
+    classDef cena fill:#ffffff,stroke:#24292f,color:#24292f
+    classDef processo fill:#24292f,stroke:#24292f,color:#ffffff
+    classDef terminal fill:#24292f,stroke:#24292f,color:#ffffff
+```
+
+**Fonte editável:** bloco Mermaid acima.
+
+A legenda segue a convenção do M01. As cenas aparecem em caixas de cantos arredondados e o processo de recuperação do resultado aparece em uma caixa escura. A seta tracejada comunica a ruptura e indica o retorno ao histórico. `[SR]` significa recuperação apoiada. A abertura e o encerramento são identificados pelos nós **Início** e **Fim**.
+
+A comparação e a síntese são atividades externas apoiadas pela consulta individual das execuções.
 
 ### Leitura do diagrama
 
 #### Caminho principal
 
-{{...}}
+1. **Localizar a execução no histórico.** Carlos abre a listagem, identifica o registro de interesse e solicita a consulta daquela execução.
+2. **Recuperar e identificar o resultado.** O sistema abre o resultado individual. Carlos confere o registro, o cenário, o controlador, a seed e as demais condições experimentais disponíveis.
+3. **Interpretar as métricas.** Carlos lê os valores e suas unidades quando aplicáveis. Se precisar investigar um indicador, consulta o gráfico associado à execução e depois retorna às métricas.
+4. **Consultar outra execução.** Quando precisa comparar estratégias, Carlos registra as informações da primeira execução, volta ao histórico e repete a consulta para o segundo registro. Ele verifica se as condições são compatíveis com o protocolo experimental.
+5. **Encerrar a consulta e elaborar a síntese.** Carlos encerra a interação quando reúne as informações de que precisa. Ele compara as métricas e registra as conclusões e limitações fora da interface, identificando as execuções usadas.
 
 #### Alternativas e rupturas
 
 | Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| O resultado do registro selecionado está indisponível. | Recuperação do resultado. | A interface comunica que o resultado não está disponível e orienta a escolha de outro registro. | Retornar ao histórico e selecionar outra execução. |
+| Um indicador precisa de mais contexto. | Interpretação do resultado individual. | O resultado oferece o gráfico ou diagnóstico associado ao indicador, quando disponível. | Consultar o gráfico e voltar às métricas da mesma execução. |
+| O contexto da execução é insuficiente para comparar. | Interpretação do resultado individual. | Ao conferir o registro, Carlos percebe que falta uma condição relevante para a análise. | Voltar ao histórico para consultar outra execução ou buscar a informação na documentação experimental. |
+| As duas execuções têm condições incompatíveis com o protocolo. | Conferência dos registros, antes da comparação externa. | Carlos identifica uma diferença de cenário, demanda, seed ou outro parâmetro que deveria permanecer equivalente. | Consultar outra execução ou registrar a limitação e encerrar a comparação. A decisão cabe ao usuário. |
 
 ### Checklist específico de modelagem
 
-{{preencher após a elaboração de M02}}
+- [x] O ponto de abertura conduz à consulta do histórico.
+- [x] As cenas representam a localização da execução, a interpretação do resultado e a consulta ao gráfico.
+- [x] As transições identificam as falas do usuário e do preposto do designer.
+- [x] O processamento de recuperação do resultado está representado.
+- [x] O resultado indisponível tem mensagem e caminho de recuperação.
+- [x] Há retorno ao histórico, retorno do gráfico às métricas e ponto de encerramento.
+- [x] Os objetivos, tópicos e signos retomam o CI02 da Entrega 9.
+- [ ] Conferir a representação dos processos e das transições com a notação adotada em aula.
+- [ ] Conferir a renderização e a legibilidade do Mermaid no GitHub.
 
 ## Consolidação da equipe
 
@@ -94,11 +137,24 @@ No diagrama, `u` identifica a fala da usuária, `d` identifica a fala do prepost
 
 | Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| OBJ01 — Produzir execuções sob condições comparáveis. | M01 | A revisão de condições antecede cada execução. A comparabilidade entre registros depende do protocolo. | Permitir preparar outra execução após a conclusão e conferir as condições no resumo. |
+| OBJ02 — Preparar as condições da simulação. | M01 | A preparação reúne parâmetros principais e avançados. | Manter cenário, controlador, seed e modo reconhecíveis ao longo da configuração. |
+| OBJ03 — Validar e iniciar a simulação. | M01 | Uma condição inválida pode interromper a preparação. | Apresentar o campo relacionado à validação e manter o retorno à configuração antes de iniciar. |
+| OBJ04 — Acompanhar e identificar a execução. | M01 | O registro também aparece no M02 como referência da análise. | Preservar cenário, controlador e seed no registro após a execução. |
+| OBJ05 — Interpretar e comparar resultados experimentais. | M02 | A interface apresenta resultados individuais. | Apoiar a consulta sucessiva. O usuário reúne os valores para a comparação externa. |
+| OBJ06 — Localizar e identificar uma execução. | M02 | O mesmo registro que encerra o M01 serve de entrada para a consulta no M02. | Usar a mesma identificação e o mesmo vocabulário nos dois fluxos. |
+| OBJ07 — Interpretar as métricas de uma execução. | M02 | Algumas medidas exigem gráfico ou contexto adicional. | Apresentar métricas e unidades quando aplicáveis e permitir retornar do gráfico ao resultado individual. |
+| OBJ08 — Comparar condições e resultados. | M02 | A equivalência das condições depende do protocolo experimental. | Permitir consultar outra execução quando os registros forem incompatíveis ou insuficientes. |
+| OBJ09 — Elaborar uma síntese da análise. | M02 | A síntese é elaborada fora da interface. | Manter a relação entre registro, condições e métricas para que a síntese cite as evidências. |
 
 ### Preparação para o Figma
 
-{{consolidar os estados e as telas necessários após a revisão de M01 e M02, incluindo confirmação, feedback, erro e recuperação}}
+| MoLIC | Telas e estados necessários | Interações a representar |
+|---|---|---|
+| M01 | Catálogo de cenários, configuração principal e avançada, erro de validação, resumo de confirmação, inicialização, execução, conclusão e falha. | Avançar após a validação, corrigir parâmetro, voltar antes de iniciar, revisar a configuração após falha e preparar outra execução. |
+| M02 | Histórico, resultado individual com contexto e métricas, gráfico/diagnóstico e estado de resultado indisponível. | Selecionar uma execução, conferir as condições, abrir e fechar o gráfico, voltar ao histórico para consultar outro registro e recuperar a consulta quando o resultado estiver indisponível. |
+
+O ponto de ligação entre os fluxos é o **registro da execução**. A identificação, o cenário, o controlador e a seed devem aparecer com os mesmos rótulos no encerramento do M01 e na consulta do M02. O Figma deve permitir consultar duas execuções sucessivamente para apoiar a comparação externa descrita no CI02.
 
 ## Referência
 
