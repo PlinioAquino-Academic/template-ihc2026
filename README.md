@@ -223,7 +223,11 @@ A E6 documentou a sequência real da V0 e corrigiu a interpretação da compara�
 
 **As 14 entregas possuem conteúdo acadêmico concluído no repositório.** A E9 elaborou CI01/CI02 e OBJ01–OBJ09; a E10 construiu M01/M02; a E11 materializou os fluxos no Figma; a E12 planejou a avaliação; a E13 consolidou HC01–HC07; e a E14 documentou U01/U02, avaliou as metas e produziu AU01–AU06 e recomendações. A conclusão documental **não equivale** à implementação de todas as melhorias nem à validação de H01–H03.
 
-Para o encerramento administrativo do repositório, resta verificar e atualizar o [Checklist final](CHECKLIST_FINAL.md), conferir os dois itens de verificação ainda abertos no checklist M01 da E10 e preservar privadamente eventuais comprovantes de consentimento exigidos para E14. A dispensa de gravação foi informada pela equipe após consulta ao docente; ela não equivale, por si só, à dispensa de consentimento.
+As 14 entregas possuem seus conteúdos acadêmicos documentados, incluindo a avaliação heurística e a consolidação da observação de usuários. O [Checklist final](CHECKLIST_FINAL.md) foi revisado para distinguir os requisitos já documentados, os elementos não aplicáveis e as verificações operacionais ou administrativas que ainda dependem de confirmação da equipe.
+
+O encerramento definitivo exige conferir a notação e a legibilidade do MoLIC M01, o acesso aos fluxos do Figma sem autenticação privilegiada e a preservação privada dos registros de consentimento aplicáveis. A equipe informou que o professor dispensou a gravação das sessões da Entrega 14. Essa autorização não elimina a necessidade de consentimento voluntário dos participantes.
+
+As oportunidades de melhoria identificadas nas avaliações permanecem documentadas como recomendações, sem serem apresentadas como funcionalidades já implementadas.
 
 ## Documentos de apoio
 
