@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
 **Data:** 18/11/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída — avaliações individuais e consolidação documental finalizadas  
 **Responsabilidade:** 1 avaliação completa por integrante, sobre todas as telas/estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -25,26 +25,19 @@ Encontrar problemas de usabilidade por inspeção sistemática da interface com 
 
 **Referência:** [10 Usability Heuristics for User Interface Design — Nielsen Norman Group](https://www.nngroup.com/articles/ten-usability-heuristics/).
 
-## Cobertura especial para interfaces administrativas e analíticas
+## Cobertura da interface avaliada
 
-Quando existirem, não limite a avaliação às “telas principais”. Inspecione também:
+A inspeção contempla as telas e os estados relevantes dos fluxos M01 e M02, incluindo:
 
-- dashboard em estados normal, vazio e erro;
-- filtros sem resultado e filtros combinados;
-- relatórios e exportação;
-- histórico/listas longas;
-- formulários CRUD (criação, edição, exclusão, validação);
-- alteração de perfil/permissão;
-- confirmações de ações destrutivas;
-- processamento/loading/progresso;
-- falha e recuperação;
-- comparação de resultados;
-- mensagens de termos técnicos, métricas e recomendações;
-- ajuda/documentação contextual.
+- seleção do cenário e configuração principal/avançada;
+- validação de dados incompletos, revisão e confirmação;
+- inicialização, processamento, conclusão e falha;
+- recuperação, encerramento e retorno à configuração;
+- histórico de execuções, resultados individuais e gráficos;
+- resultado indisponível, terminologia técnica e ajuda contextual;
+- continuidade entre a execução e a consulta posterior de resultados.
 
-Em TCCs técnicos, observe especialmente se a interface comunica o estado do processamento e traduz informações técnicas para o vocabulário do usuário escolhido.
-
-**Aplicação no projeto:** foram considerados configuração, validação, confirmação, processamento, falha, conclusão, histórico, resultados e gráficos. A comparação consiste na consulta individual dos registros e na reunião externa dos valores, conforme o planejamento da Entrega 12. Não foi exigida uma tela de comparação integrada. Administração, permissões, CRUD, exportação e filtros de histórico não fazem parte dos quadros examinados.
+A comparação de execuções ocorre por consulta individual dos registros e reunião externa dos valores, conforme a Entrega 12. O protótipo não possui comparação automática lado a lado. Administração de usuários, permissões, operações CRUD, exportação e filtros avançados de histórico não integram seu escopo documentado.
 
 ## 2. Escopo da inspeção
 
@@ -61,7 +54,7 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 | Dispositivo/viewport | Navegador em computador; configuração de viewport solicitada de 1440 × 960 pixels. Os arquivos retornados pela captura possuem 1404 × 960 pixels e os quadros do projeto possuem 1190 × 730 pixels. |
 | Evidências | Trinta capturas da inspeção assistida, identificadas no Apêndice A, e quatro capturas fornecidas por Gabriel durante a revisão guiada, identificadas no Apêndice B. Os estados de carregamento do próprio Figma foram descartados. |
 | Responsável pela seção A01 | Gabriel Koiama de Rocha Lira — 22.125.067-3. |
-| Responsável pela seção A02 | João Pedro Lopes Santana Villas Bôas — 22.125.065-7. Seção ainda não preenchida. |
+| Responsável pela seção A02 | João Pedro Lopes Santana Villas Bôas — 22.125.065-7. Conferência individual concluída em 18/11/2026. |
 
 **Limites:** esta avaliação examina a interação do protótipo. Não mede o desempenho do algoritmo ou do SUMO, não reproduz a execução R3 e não comprova o comportamento da aplicação funcional. Navegação por teclado, leitor de tela, contraste calculado e responsividade não foram avaliados sistematicamente. A ausência de uma violação registrada não certifica conformidade de acessibilidade.
 
@@ -75,7 +68,7 @@ Cada avaliador deve:
 4. atribuir severidade depois de compreender o problema;
 5. preservar a independência da sua inspeção antes da discussão conjunta.
 
-**Registro metodológico desta versão:** a navegação inicial, as capturas e a preparação da análise foram realizadas com assistência de IA. Em 18/11/2026, Gabriel realizou uma revisão guiada dos seis achados, relatou suas próprias interpretações e forneceu quatro capturas. A revisão modificou o relato de V03 e reduziu a severidade proposta de V04. Após essa etapa, Gabriel concluiu sua conferência individual dos caminhos definidos, validando a cobertura das dez heurísticas, os seis achados e os exemplos de boas práticas. A conferência do integrante não integra a amostra de participantes da Entrega 14. A avaliação de João e a consolidação da equipe permanecem pendentes.
+**Registro metodológico desta versão:** a navegação inicial, as capturas e a preparação da análise foram realizadas com assistência de IA. Em 18/11/2026, Gabriel realizou uma revisão guiada dos seis achados, relatou suas próprias interpretações e forneceu quatro capturas. A revisão modificou o relato de V03 e reduziu a severidade proposta de V04. Após essa etapa, Gabriel concluiu sua conferência individual dos caminhos definidos, validando a cobertura das dez heurísticas, os seis achados e os exemplos de boas práticas. A conferência do integrante não integra a amostra de participantes da Entrega 14. João também concluiu a conferência individual de A02 em 18/11/2026, validando os seis achados, a matriz H1–H10 e os exemplos de boas práticas. Os dois registros foram reunidos na consolidação documental, preservando suas identificações e as diferenças entre os achados.
 
 ### Escala de severidade (0–4)
 
@@ -208,42 +201,172 @@ As capturas E06, E23 e E29 documentam inicialização e execução. Antes do tes
 ## Avaliador A02 — João Pedro Lopes Santana Villas Bôas
 
 **Matrícula:** 22.125.065-7.  
-**Data:** {{dd/mm/aaaa}}
+**Data da inspeção individual:** 18/11/2026.  
+**Situação:** conferência individual concluída; matriz H1–H10, seis achados e exemplos de boas práticas validados.
+
+### Procedimento de verificação
+
+João realizou a conferência individual dos fluxos M01 e M02 do protótipo Figma da Entrega 11, utilizando a pré-análise documental e as capturas como apoio à verificação dos caminhos.
+
+O procedimento contemplou:
+
+1. Percorrer o fluxo M01, da seleção do cenário à conclusão ou à análise do estado demonstrativo de falha.
+2. Examinar configuração, parâmetros avançados, validação, confirmação e recuperação.
+3. Percorrer o fluxo M02, consultando histórico, resultados individuais, gráficos e indisponibilidade.
+4. Aplicar sistematicamente as dez heurísticas de Nielsen.
+5. Confirmar os seis problemas registrados e revisar suas severidades, considerando frequência, impacto e persistência.
+6. Confirmar os exemplos de boas práticas antes da consolidação documental com A01.
+
+As capturas compartilhadas são referências dos estados observados. A utilização de uma pré-análise não é apresentada como uma avaliação cega ou sem preparação prévia. Esta atividade é uma inspeção da interface, distinta dos testes com participantes da Entrega 14.
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
-| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
+A matriz registra a aplicação das dez heurísticas aos caminhos examinados por João. Os problemas confirmados receberam identificadores definitivos A02-V01 a A02-V06.
+
+| Heurística | Telas/fluxos examinados | Resultado da inspeção | Achados confirmados | Boa prática quando não houve violação identificada |
 |---|---|---|---|---|
-| H1 | | | | |
-| H2 | | | | |
-| H3 | | | | |
-| H4 | | | | |
-| H5 | | | | |
-| H6 | | | | |
-| H7 | | | | |
-| H8 | | | | |
-| H9 | | | | |
-| H10 | | | | |
+| H1 — Visibilidade do status do sistema | Processamento, conclusão, histórico e resultado indisponível; M01/M02 | Violação identificada | A02-V01 | — |
+| H2 — Compatibilidade com o mundo real | Configuração, parâmetros avançados, métricas e gráficos; M01/M02 | Violação identificada | A02-V04 | — |
+| H3 — Controle e liberdade do usuário | Confirmação, configuração avançada, falha e retorno ao histórico; M01/M02 | Sem violação identificada nos caminhos examinados | — | F03 permite voltar à configuração; F04E apresenta revisão ou encerramento; F08E oferece retorno ao histórico. |
+| H4 — Consistência e padrões | Conclusões alternativas, histórico e resultados; M01/M02 | Violações identificadas | A02-V02, A02-V06 | — |
+| H5 — Prevenção de erros | Seed ausente, validação e confirmação; M01 | Sem violação identificada nos caminhos examinados | — | F02E comunica a ausência da seed e permite corrigir o caso demonstrativo antes da confirmação. |
+| H6 — Reconhecimento em vez de memorização | Configuração, resumo e resultado individual; M01/M02 | Sem violação identificada nos caminhos examinados | — | Cenário, controlador e seed aparecem nos quadros de revisão e consulta. |
+| H7 — Flexibilidade e eficiência de uso | Configuração, conclusões alternativas e histórico; M01/M02 | Violação associada a H4 | A02-V06 | — |
+| H8 — Estética e design minimalista | Configuração, confirmação, histórico e resultados; M01/M02 | Sem violação identificada nos caminhos examinados | — | As informações são organizadas em grupos, com títulos, valores e ações destacados. |
+| H9 — Reconhecimento, diagnóstico e recuperação de erros | Validação, falha e resultado indisponível; M01/M02 | Violação identificada | A02-V03 | — |
+| H10 — Ajuda e documentação | Parâmetros avançados, métricas e resultados; M01/M02 | Violação identificada | A02-V05 | — |
+
+A matriz contempla as dez heurísticas, sem pressupor que todas apresentem violações. A ausência de problema nas evidências disponíveis não garante ausência de problemas em outros caminhos do protótipo.
 
 ### 5. Declaração de violações
 
-| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
+Os seis problemas abaixo foram confirmados na conferência individual de João. As consequências previstas são riscos de interação e não resultados medidos com participantes.
+
+| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa | Recomendação |
 |---|---|---|---|---|---:|---|---|
-| | | | | | | | |
+| A02-V01 | H1 | F07 — histórico | O registro R2-003 não informa explicitamente que seu resultado está indisponível. As outras execuções apresentam o estado Concluída, mas a ausência desse rótulo não identifica qual é a condição de R2-003. | E08 e E13 | 1 | Frequência: no terceiro registro. Impacto: o estado precisa ser inferido, embora a diferença em relação aos registros concluídos seja perceptível e não impeça a recuperação. Persistência: a lista não nomeia a condição ao retornar. | Apresentar o status Resultado indisponível diretamente na linha do registro. |
+| A02-V02 | H4 | Conclusões alternativas e histórico | O identificador R2-001 aparece em conclusões de diferentes controladores, embora o histórico associe esse registro ao controlador híbrido. As condições experimentais apresentadas deixam de corresponder à mesma identidade. | E07, E08, E24 e E30 | 3 | Frequência: nas duas conclusões alternativas examinadas. Impacto: compromete a correspondência entre identificador, condições e resultado. Persistência: o histórico associa o mesmo identificador a outro controlador, podendo induzir uma associação incorreta. | Manter identificadores únicos e coerentes com controlador, seed e demais condições demonstradas. |
+| A02-V03 | H9 | F04E — falha | A mensagem comunica que a execução foi interrompida, mas não esclarece a causa nem apresenta uma verificação específica. A ação Revisar configuração permite voltar, mas não orienta qual condição precisa ser investigada. | E14 e E26 | 2 | Frequência: ao acessar a falha demonstrativa. Impacto: o retorno funciona, mas não orienta uma alteração concreta. Persistência: a mensagem e a configuração não apresentam diagnóstico específico. | Informar a causa quando conhecida e indicar a ação correspondente. Se a causa for desconhecida, comunicar essa limitação e oferecer detalhes ou uma tentativa adequada. |
+| A02-V04 | H2 | F09/F09B — gráficos | Os gráficos exibem barras e linhas de grade sem valores numéricos na escala. Embora o valor em segundos apareça no texto, a representação gráfica não oferece referência quantitativa suficiente para interpretar sua magnitude. | E10 e E12 | 2 | Frequência: nos dois gráficos examinados. Impacto: reduz a interpretação quantitativa e a comparação visual; os valores textuais continuam acessíveis. Persistência: as linhas permanecem sem escala. | Incluir escala numérica, unidade e referência comum entre os gráficos das diferentes execuções. |
+| A02-V05 | H10 | F02A — configuração avançada | O campo Projeção regional apresenta o valor Off, mas o quadro não explica seu significado nem as consequências dessa opção para a configuração demonstrativa. | E03 e E20 | 1 | Frequência: ao consultar a configuração avançada. Impacto: risco de dúvida para perfis menos familiarizados, sem bloqueio de tarefa demonstrado. Persistência: o quadro não apresenta explicação do parâmetro. | Apresentar uma descrição curta do parâmetro, explicando o significado da opção e sua relação com o cenário, conforme a implementação efetiva do sistema. |
+| A02-V06 | H4; associada a H7 | F05 — conclusões alternativas | O comando Abrir histórico está disponível na conclusão Híbrido + Headless, mas não aparece nas conclusões Tempo fixo + Visual e Max Pressure + Headless. | E07, E24 e E30 | 3 | Frequência: nas conclusões Tempo fixo + Visual e Max Pressure + Headless. Impacto: interrompe o acesso direto à consulta posterior. Persistência: os comandos oferecidos não disponibilizam o mesmo acesso ao histórico nesses quadros. | Disponibilizar acesso consistente ao histórico ou ao resultado nas conclusões bem-sucedidas das combinações suportadas. |
 
-### 6. Boas práticas — heurísticas não violadas (atividade didática)
+As severidades foram mantidas após a conferência individual. São classificações de inspeção, não medidas obtidas com participantes, e consideram frequência de exposição à condição, impacto na tarefa e persistência do problema.
 
-| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
+#### Passos de reprodução e verificação
+
+**A02-V01 — Comunicação do estado indisponível**
+
+1. Abrir F07 — Histórico.
+2. Localizar R2-003 e observar as informações apresentadas.
+3. Abrir o registro e conferir a mensagem de indisponibilidade.
+4. Retornar ao histórico e verificar se a condição está indicada na listagem.
+
+**A02-V02 — Consistência da identificação**
+
+1. Consultar a conclusão padrão Híbrido + Headless.
+2. Examinar as conclusões Tempo fixo + Visual e Max Pressure + Headless.
+3. Comparar os identificadores exibidos com os controladores selecionados.
+4. Consultar o histórico e verificar a correspondência das condições de R2-001.
+
+**A02-V03 — Diagnóstico de falha**
+
+1. Abrir F04E — Falha.
+2. Ler a mensagem e identificar quais informações explicam a interrupção.
+3. Acionar Revisar configuração.
+4. Conferir se existe indicação concreta sobre a condição que precisa ser investigada.
+
+**A02-V04 — Representação gráfica**
+
+1. Consultar R2-001 e abrir seu gráfico.
+2. Conferir se as linhas de grade possuem valores numéricos.
+3. Repetir a consulta para R2-002.
+4. Verificar se as duas representações permitem comparar magnitudes utilizando uma escala comum.
+
+**A02-V05 — Ajuda contextual**
+
+1. Abrir a configuração avançada.
+2. Localizar Projeção regional e seu valor Off.
+3. Verificar se existe uma explicação sobre a função do parâmetro.
+4. Conferir se o usuário encontra informação suficiente para compreender a opção sem recorrer à documentação externa.
+
+**A02-V06 — Acesso ao histórico**
+
+1. Concluir a demonstração Híbrido + Headless.
+2. Identificar os comandos apresentados na conclusão.
+3. Repetir com Tempo fixo + Visual.
+4. Repetir com Max Pressure + Headless.
+5. Comparar a disponibilidade de Abrir histórico nos caminhos examinados.
+
+### 6. Boas práticas — heurísticas sem violação identificada
+
+Os exemplos abaixo foram conferidos por João nos estados examinados e estão apoiados nas capturas identificadas.
+
+| Heurística | Exemplo no protótipo | Evidência | Justificativa |
 |---|---|---|---|
-| | | | |
+| H3 — Controle e liberdade do usuário | A confirmação permite voltar à configuração, enquanto o resultado indisponível oferece retorno ao histórico. | E05 e E13 | O usuário dispõe de caminhos para rever escolhas ou continuar a consulta sem permanecer bloqueado no estado atual. |
+| H5 — Prevenção de erros | A configuração com seed ausente apresenta uma mensagem específica e oferece recuperação antes da execução. | E25, E04 e E05 | O sistema demonstrativo ajuda a identificar uma configuração incompleta antes de confirmar o experimento. |
+| H6 — Reconhecimento em vez de memorização | O resumo reúne cenário, controlador, seed e modo de execução. O resultado individual reapresenta as condições experimentais. | E05, E09 e E11 | As informações necessárias para conferir a tarefa permanecem visíveis no contexto correspondente, reduzindo a necessidade de memorização. |
+| H8 — Estética e design minimalista | Os resultados organizam condições experimentais e métricas em grupos visuais distintos. | E09 e E11 | A separação favorece a identificação do contexto e a leitura dos indicadores, sem misturá-los com as ações de navegação. |
+
+Os exemplos representam condições positivas nos estados examinados. Não demonstram conformidade integral das heurísticas em todas as combinações possíveis.
+
+### Síntese da A02
+
+A conferência individual confirmou os seis problemas registrados:
+
+| Critério | Resultado da inspeção |
+|---|---|
+| Problemas confirmados | 6 |
+| Heurísticas principais envolvidas | H1, H2, H4, H9 e H10 |
+| Heurística associada | H7, relacionada a A02-V06 |
+| Severidade 1 | 2 problemas |
+| Severidade 2 | 2 problemas |
+| Severidade 3 | 2 problemas |
+| Severidade 4 | Nenhum problema identificado |
+| Boas práticas documentadas | H3, H5, H6 e H8 |
+| Situação | Conferência individual concluída |
+
+Os achados de maior prioridade são A02-V02 e A02-V06, pois tratam da consistência entre a execução, sua identificação e a consulta posterior dos resultados.
+
+A02-V05 foi mantido com severidade 1. A explicação contextual pode apoiar perfis menos familiarizados com os parâmetros avançados; seu efeito com o público-alvo deverá ser observado na Entrega 14.
+
+A coincidência com A01 foi tratada na consolidação, preservando os identificadores dos dois avaliadores. A confirmação individual de João está registrada sem atribuir ao procedimento um caráter cego.
+
+### Registro final da inspeção individual
+
+**Data da conferência:** 18/11/2026.  
+**Caminhos examinados:** M01 e M02, incluindo configuração, revisão, estados demonstrativos de execução/falha, recuperação, histórico, resultados, gráficos e indisponibilidade.  
+**Achados confirmados:** A02-V01, A02-V02, A02-V03, A02-V04, A02-V05 e A02-V06.  
+**Severidades finais:** 1, 3, 2, 2, 1 e 3, respectivamente.  
+**Boas práticas conferidas:** H3, H5, H6 e H8.  
+**Situação:** conferência individual concluída.
+
+Os seis registros foram encaminhados à consolidação documental. Cinco correspondem a problemas também registrados em A01; A02-V05 acrescenta a falta de explicação de Projeção regional.
 
 ## 7. Consolidação da equipe
 
-Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes devem ser consolidados, preservando quem os encontrou.
+A consolidação documental compara os seis achados de A01 e os seis de A02. Cinco problemas coincidem entre os registros; agrupados sem duplicidade, resultam em sete problemas distintos. Os identificadores individuais são preservados para rastreabilidade.
 
-| ID consolidado | Achados individuais | Heurística | Problema | Severidade final | Prioridade | Responsável pela correção |
+As severidades das cinco duplicidades coincidem nos dois registros. Os responsáveis pelas correções abaixo são propostas de divisão de trabalho, considerando os fluxos do projeto; a execução das correções ainda não foi registrada.
+
+| ID consolidado | Achados individuais | Heurística | Problema | Severidade final | Prioridade | Responsável pela correção — proposta |
 |---|---|---|---|---:|---|---|
-| | | | | | | |
+| HC01 | V04 (A01); A02-V01 | H1 | R2-003 não apresenta status explícito na lista; sua condição é inferida pela ausência de Concluída. | 1 | Baixa; melhoria de clareza | João |
+| HC02 | V07 (A01); A02-V02 | H4 | R2-001 identifica controladores diferentes nas conclusões alternativas e no histórico. | 3 | Alta | Gabriel e João |
+| HC03 | V02 (A01); A02-V03 | H9 | A falha oferece retorno, mas não informa causa ou verificação concreta. | 2 | Baixa, após os problemas maiores | Gabriel |
+| HC04 | V05 (A01); A02-V04 | H2 | Os dois gráficos apresentam barras e linhas de grade sem escala numérica. | 2 | Baixa, após os problemas maiores | João |
+| HC05 | A02-V05 | H10 | Projeção regional / Off não possui explicação contextual na configuração avançada. | 1 | Baixa; melhoria de clareza | Gabriel |
+| HC06 | V06 (A01); A02-V06 | H4; H7 associada | Abrir histórico desaparece nas conclusões Tempo fixo + Visual e Max Pressure + Headless. | 3 | Alta | Gabriel |
+| HC07 | V03 (A01) | H10 | Throughput apresenta unidade, mas não esclarece a definição contextual da medida. | 2 | Baixa, após os problemas maiores | João |
+
+### Decisões de agrupamento
+
+- HC01 preserva a severidade 1: a diferença de R2-003 é perceptível, mas o estado não é nomeado.
+- HC02 e HC06 permanecem separados: um trata da identidade do registro e o outro da disponibilidade de navegação.
+- HC05 e HC07 permanecem separados: ambos envolvem ajuda contextual, mas estão em estados distintos e exigem explicações de conceitos diferentes.
+- H7 é associada a HC06 e não aumenta a contagem de problemas.
+- L01 continua como condição de preparação da UT03, fora da contagem de violações.
 
 ## 8. Síntese e plano de melhoria
 
@@ -266,7 +389,7 @@ A severidade é uma classificação de inspeção, não um resultado de teste co
 
 1. **Catálogo e seleção:** cenário e seleção comunicados; E01 e E15.
 2. **Configuração e avanço:** opções e contexto apresentados; valores avançados declarados como demonstrativos; E02, E03 e E18–E22.
-3. **Validação e recuperação:** seed ausente reconhecida e corrigida; E25, E04 e E05.
+3. **Validação e recuperação:** seed ausente reconhecida e corrigida nos caminhos examinados; E25, E04 e E05.
 4. **Execução:** estados e condições visíveis; preparar observação da UT03; E06, E23 e E29.
 5. **Conclusão:** caminho padrão permite consultar histórico; alternativas têm problemas de continuidade e identidade; E07, E24 e E30.
 6. **Falha e encerramento:** saídas funcionam, mas o diagnóstico é genérico; E14, E16, E17 e E26.
@@ -275,33 +398,53 @@ A severidade é uma classificação de inspeção, não um resultado de teste co
 
 ### Plano de verificação das melhorias
 
-| Problema | Critério para considerar a recomendação verificada |
+| Problema consolidado | Critério para considerar a recomendação verificada |
 |---|---|
-| V02 | A falha comunica causa conhecida e ação correspondente, ou informa causa desconhecida com saída adequada. |
-| V03 | A definição contextual da métrica corresponde à implementação técnica e está acessível no resultado. |
-| V04 | A lista sinaliza a indisponibilidade antes da abertura de R2-003 e mantém uma recuperação coerente. |
-| V05 | As duas representações possuem escala legível e comum, unidade e proporção coerente com os valores. |
-| V06 | Conclusões das combinações suportadas oferecem acesso consistente ao histórico ou ao resultado. |
-| V07 | Identificador e condições se mantêm coerentes entre conclusão, histórico, resultado e gráfico. |
-| L01 | O piloto confirma que a pergunta da UT03 pode ser aplicada e respondida durante o estado observado. |
+| HC01 | A lista sinaliza explicitamente a indisponibilidade de R2-003 antes da abertura do registro e mantém uma recuperação coerente. |
+| HC02 | Identificador, controlador, seed e demais condições se mantêm coerentes entre conclusão, histórico, resultado individual e gráfico. |
+| HC03 | A falha comunica a causa conhecida e a ação correspondente, ou informa que a causa é desconhecida e apresenta uma saída adequada. |
+| HC04 | As duas representações gráficas possuem escala numérica legível e comum, unidade e proporção coerente com os valores. |
+| HC05 | A explicação de Projeção regional corresponde ao comportamento efetivo do parâmetro no TCC e está acessível na configuração avançada. |
+| HC06 | Todas as conclusões bem-sucedidas das combinações suportadas oferecem acesso consistente ao histórico ou ao resultado correspondente. |
+| HC07 | A definição contextual de Throughput corresponde à implementação técnica e está acessível nos resultados. |
+| L01 — condição de avaliação | O piloto confirma que a pergunta UT03 pode ser apresentada e respondida durante um estado de execução observável em condições equivalentes para os participantes. |
 
 ### Síntese consolidada da equipe
 
-{{preencher após as inspeções individuais}}
+| Medida | Resultado consolidado |
+|---|---|
+| Avaliações individuais | A01 e A02 concluídas, conforme confirmações dos integrantes. |
+| Registros individuais | 12: seis de A01 e seis de A02. |
+| Duplicidades agrupadas | Cinco pares de achados equivalentes. |
+| Problemas distintos | 7: HC01–HC07. |
+| Severidade 1 | 2: HC01 e HC05. |
+| Severidade 2 | 3: HC03, HC04 e HC07. |
+| Severidade 3 | 2: HC02 e HC06. |
+| Severidade 4 | Nenhum problema registrado. |
+| Por heurística principal | H1: 1; H2: 1; H4: 2; H9: 1; H10: 2. |
+| Heurística associada | H7, associada a HC06 e sem duplicar a contagem. |
+| Condição de preparação | L01 permanece fora da contagem de violações. |
+| Padrão recorrente | Continuidade e identidade entre execução e consulta; ausência de explicações contextuais e referências de interpretação. |
+| Correções prioritárias | HC02 e HC06, que afetam a associação e o acesso ao resultado da execução. |
+| Situação das correções | Propostas documentadas; implementação e verificação posterior ainda não registradas. |
+
+As avaliações examinam o protótipo e não demonstram desempenho do algoritmo ou dificuldades medidas com usuários externos. A avaliação da Entrega 14 deverá utilizar uma versão identificada, com registro das correções realizadas e dos problemas mantidos.
+
+Antes da UT03, conferir L01 no piloto. Para HC05, a explicação de Projeção regional deve corresponder à implementação efetiva do TCC; sua compreensão poderá ser observada com o público-alvo.
 
 ## Checklist
 
 - [x] A01 concluiu sua conferência individual, validando H1–H10, os seis achados e os exemplos de boas práticas.
-- [ ] Cada integrante fez uma inspeção completa e identificada. (A01 concluída; falta a avaliação de A02.)
+- [x] Cada integrante concluiu sua conferência individual identificada, conforme os registros A01 e A02.
 - [x] Os estados principais e as rupturas especificados no escopo possuem evidências. (As combinações não foram examinadas exaustivamente.)
 - [x] Histórico, processamento, validação, falha, recuperação e indisponibilidade foram incluídos.
 - [x] A análise avalia a interação do protótipo, distinguindo-a da validade científica do TCC.
-- [ ] H1–H10 aparecem preenchidas na matriz de cada avaliador. (A matriz A01 foi validada; falta A02.)
+- [x] H1–H10 aparecem preenchidas e validadas nas matrizes A01 e A02.
 - [x] A declaração de violações contém problemas localizados, sem exigir um por heurística.
 - [x] Cada problema tem captura identificada, contexto e passos de reprodução.
 - [x] As severidades possuem justificativas de frequência, impacto e persistência.
 - [x] As recomendações incluem critérios de verificação.
-- [ ] Achados individuais duplicados foram consolidados. (Aguarda conclusão das avaliações individuais.)
+- [x] Os achados duplicados foram consolidados, preservando os registros de origem e sem duplicar as contagens.
 
 ## Apêndice A — Registro das capturas
 
@@ -340,7 +483,6 @@ Todas as capturas abaixo foram obtidas do protótipo em 18/11/2026. A numeraçã
 | [E29](../assets/13_heuristica/29-processamento-max-headless.jpg) | Execução Max Pressure + Headless | Estado Executando e condições correspondentes. |
 | [E30](../assets/13_heuristica/30-conclusao-max-headless.jpg) | Conclusão Max Pressure + Headless | R2-001 reutilizado; acesso ao histórico ausente. |
 
-
 ## Apêndice B — Evidências complementares da inspeção A01
 
 **Data:** 18/11/2026.  
@@ -348,25 +490,23 @@ Todas as capturas abaixo foram obtidas do protótipo em 18/11/2026. A numeraçã
 
 ### Procedimento de revisão
 
-A preparação inicial da inspeção contou com assistência de IA para navegação pelo protótipo, registro de capturas e organização preliminar dos achados.
+A preparação inicial da inspeção contou com assistência de IA para navegação pelo protótipo, registro de capturas e organização preliminar dos achados. Posteriormente, Gabriel realizou uma revisão guiada, examinou as evidências e apresentou suas interpretações. Em seguida, concluiu a conferência individual dos caminhos definidos, validando as dez heurísticas, os seis achados e os exemplos de boas práticas.
 
-Posteriormente, Gabriel realizou uma revisão guiada, examinou as evidências e apresentou suas interpretações sobre os problemas identificados. Em seguida, concluiu sua conferência individual dos caminhos definidos, validando a cobertura das dez heurísticas de Nielsen, os seis achados e os exemplos de boas práticas.
-
-Essa revisão permitiu refinar a descrição de alguns problemas e ajustar suas severidades. As quatro capturas complementares fornecidas por Gabriel foram preservadas separadamente das evidências da preparação assistida, apresentadas no Apêndice A.
+As quatro capturas complementares fornecidas por Gabriel permanecem identificadas separadamente das evidências da preparação assistida no Apêndice A. Essas atividades não fazem parte da amostra de usuários da Entrega 14.
 
 ### Síntese dos ajustes realizados
 
 | Achado | Verificação complementar | Decisão adotada |
 |---|---|---|
 | V02 — Diagnóstico da falha | O retorno à configuração funciona, mas a mensagem não identifica a causa da interrupção nem orienta uma correção específica. | Mantida a violação de H9, com severidade 2. |
-| V03 — Explicação da métrica | A unidade de Throughput é apresentada, mas não há definição contextual suficiente sobre a contagem e sua referência temporal. | Refinada a descrição para avaliar a ausência de ajuda contextual, sem presumir dificuldade de compreensão do termo. Mantida severidade 2. |
-| V04 — Estado indisponível | A ausência do rótulo Concluída permite distinguir R2-003 dos demais registros, mas não comunica explicitamente sua indisponibilidade. | Reformulada a justificativa e reduzida a severidade de 2 para 1, considerando o impacto observado na revisão. |
-| V06 — Acesso ao histórico | O comando Abrir histórico está disponível na conclusão padrão, mas não na conclusão Tempo fixo + Visual examinada. | Confirmada a inconsistência de navegação. Mantida severidade 3, considerando também a alternativa Max Pressure + Headless documentada na inspeção assistida. |
-| V07 — Identificação da execução | A conclusão Tempo fixo + Visual utiliza R2-001, enquanto o histórico associa esse identificador ao controlador híbrido. | Confirmada a inconsistência entre identificador e condições experimentais. Mantida severidade 3. |
+| V03 — Explicação da métrica | A unidade de Throughput está presente, mas não há definição contextual suficiente sobre contagem e referência temporal. | Refinada a descrição para avaliar a ausência de ajuda contextual, sem presumir dificuldade de compreensão do termo. Mantida a severidade 2. |
+| V04 — Estado indisponível | A ausência do rótulo Concluída permite distinguir R2-003 dos demais, mas não comunica explicitamente a indisponibilidade. | Reformulada a justificativa e reduzida a severidade de 2 para 1, considerando a revisão realizada. |
+| V06 — Acesso ao histórico | Abrir histórico está disponível na conclusão padrão, mas não na conclusão Tempo fixo + Visual examinada. | Mantida a severidade 3; a alternativa Max Pressure + Headless segue documentada na inspeção assistida. |
+| V07 — Identificação da execução | A conclusão Tempo fixo + Visual utiliza R2-001, enquanto o histórico associa esse identificador ao controlador híbrido. | Confirmada a inconsistência entre registro e condições experimentais. Mantida a severidade 3. |
 
-O achado V05 permanece sustentado pelas evidências E10 e E12 do Apêndice A, que demonstram a ausência de escala numérica nos gráficos. Sua classificação e recomendação não foram alteradas.
+O achado V05 permanece sustentado pelas evidências E10 e E12 do Apêndice A, que mostram a ausência de escala numérica nos gráficos. Sua classificação e recomendação não foram alteradas.
 
-As decisões acima complementam a matriz de heurísticas e a declaração de violações da seção A01, sem substituir suas justificativas e recomendações.
+As decisões acima complementam a matriz de heurísticas e a declaração de violações da A01, sem substituir suas justificativas.
 
 ### Capturas complementares
 
@@ -388,8 +528,6 @@ As decisões acima complementam a matriz de heurísticas e a declaração de vio
 
 ### Situação final da inspeção A01
 
-A conferência individual de Gabriel foi concluída, contemplando as dez heurísticas, os seis problemas registrados e os exemplos de boas práticas. Os achados possuem evidências, justificativas de severidade e recomendações específicas.
+A conferência individual de Gabriel foi concluída, contemplando as dez heurísticas, os seis problemas registrados e os exemplos de boas práticas. Os achados possuem evidências, justificativas de severidade e recomendações específicas. Os resultados não representam observações de participantes externos nem medições de usabilidade.
 
-As limitações da inspeção e a distinção entre preparação assistida, revisão guiada e conferência individual permanecem documentadas. Os resultados não representam observações de participantes externos nem medições de usabilidade.
-
-A inspeção individual de João Pedro (A02) e a consolidação dos resultados da equipe permanecem pendentes.
+A conferência individual de João está documentada na seção A02. A consolidação dos resultados das duas avaliações consta nas seções 7 e 8.
