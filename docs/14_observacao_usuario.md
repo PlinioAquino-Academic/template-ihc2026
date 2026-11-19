@@ -551,6 +551,7 @@ As recomendações de projeto são: **(1)** vincular melhor mensagens de valida�
 - [x] Evidências observacionais comparadas com HC01–HC07, sem presumir confirmação ou correção de problemas não exercitados.
 - [x] Conclusão de equipe, recomendações e limitações redigidas a partir dos dois registros.
 - [x] A equipe confirmou com o professor que a gravação não é necessária; as sessões foram documentadas por anotações.
-- [ ] Conferir e preservar privadamente os comprovantes de consentimento exigidos, caso sejam aplicáveis.
-- [ ] Atualizar `README.md`, `RASTREABILIDADE.md` e `CHECKLIST_FINAL.md` para refletir o encerramento documental da E14.
+- [x] O consentimento voluntário prévio de U01 e U02 foi informado pelos respectivos moderadores, sem presumir a existência de termos assinados.
+- [x] Conferir e preservar privadamente os registros ou comprovantes de consentimento efetivamente disponíveis e exigíveis.
+- [x] `README.md` e `RASTREABILIDADE.md` foram atualizados com os resultados consolidados da E14, e o `CHECKLIST_FINAL.md` foi revisado para a conferência de encerramento.
 
