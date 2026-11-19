@@ -25,10 +25,10 @@ Leia também o [Guia para definir o escopo de IHC a partir do tema do TCC](GUIA_
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| Gabriel Koiama de Rocha Lira | 22.125.067-3 | @koiamagabriel | Desenvolvimento do projeto de IHC; I01 na E7 e contribuições à E8. |
-| João Pedro Lopes Santana Villas Bôas | 22.125.065-7 | @JPLopes05 | Desenvolvimento do projeto de IHC; I02 na E7 e contribuições à E8. |
+| Gabriel Koiama de Rocha Lira | 22.125.067-3 | [@koiamagabriel](https://github.com/koiamagabriel) | I01 na E7; CI01 e mapa individual na E9; MoLIC M01 na E10; inspeção A01 na E13; moderação e análise de U01 na E14; participação nas soluções de equipe. |
+| João Pedro Lopes Santana Villas Bôas | 22.125.065-7 | [@JPLopes05](https://github.com/JPLopes05) | I02 na E7; CI02 e mapa individual na E9; MoLIC M02 na E10; inspeção A02 na E13; moderação e análise de U02 na E14; participação nas soluções de equipe. |
 
-A E8 constitui uma **entrega consolidada por equipe**. A divisão de commits entre integrantes não corresponde a documentos acadêmicos separados.
+As entregas consolidadas foram produzidas em equipe, com autoria individual registrada onde o enunciado exigiu. A divisão de commits entre integrantes não representa documentos acadêmicos independentes nem altera a responsabilidade conjunta pelo relatório final.
 
 ## Relação entre TCC e projeto de IHC
 
@@ -107,7 +107,49 @@ A E8 foi concluída documentalmente como **solução consolidada pela equipe**, 
 - definiu metas qualitativas **MQ01–MQ07** e quantitativas **MU01–MU08** para avaliações futuras;
 - registrou o ciclo de aperfeiçoamento de E9 a E14, incluindo planejamento, inspeção e observação.
 
-As metas de E8 são **alvos planejados, não resultados medidos**. Em particular, não se confundem tempo de tarefa humana e tempo de processamento do simulador; não significam que recursos de V1 já tenham sido implementados e não validam H01–H03.
+Na E8, essas metas foram **definidas como alvos**, não como medições. A E14 posteriormente as confrontou com resultados de dois participantes. Tempo de interação não é tempo de processamento do SUMO, e uma meta observacional atingida na pequena amostra não valida automaticamente H01–H03 ou implementa recursos de V1.
+
+### Entrega 9 — Cenários de interação e modelo conceitual
+
+A E9 transformou os cenários de problema C01/C02 nos cenários de interação **CI01** (preparar e executar experimentos) e **CI02** (interpretar e comparar resultados). Foram documentados mapas individuais de objetivos — Gabriel/CI01 e João/CI02 —, mapa consolidado **OBJ01–OBJ09** e esquema conceitual de signos: cenário, controlador, seed, modo, validação, estado, registro, métricas e gráficos. O vínculo entre configuração e consulta é o **registro da execução**.
+
+### Entrega 10 — Diagramas MoLIC
+
+Foram documentados dois modelos completos: **M01**, de Gabriel, representa preparação, validação, processamento, conclusão, alternativas e recuperação; **M02**, de João, representa histórico, resultado individual, gráfico e recuperação diante de indisponibilidade. Os diagramas derivam de CI01/CI02 e preservam a comparação de execuções como tarefa **manual e externa**, sem apresentar um comparador inexistente como funcionalidade implementada.
+
+### Entrega 11 — Protótipo navegável no Figma
+
+A E11 integrou os fluxos M01 e M02 em um protótipo navegável com seleção de cenário, configuração, validação da seed, processamento, conclusão, falha, histórico, resultados individuais e gráficos. O Figma representa estados e números **demonstrativos**; não executa SUMO nem produz evidências do desempenho do algoritmo.
+
+- [Figma — fluxo M01, preparação e execução](https://www.figma.com/proto/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=4-12&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A12).
+- [Figma — fluxo M02, histórico e resultados](https://www.figma.com/proto/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=16-206&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=16%3A206).
+- [Arquivo editável da equipe](https://www.figma.com/design/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=4-12).
+
+### Entrega 12 — Planejamento DECIDE
+
+O planejamento de avaliação estabeleceu objetivos, questões QA01–QA10, critérios e metas **MU01–MU08**, tarefas padronizadas **UT01–UT06**, instrumentos de consentimento, pré e pós-teste, planilha de observação e procedimento piloto. A exploração da GUI funcional em **15/11/2026**, no cenário R3, foi registrada separadamente e não substituiu as sessões padronizadas do Figma da E14.
+
+### Entrega 13 — Avaliação heurística
+
+Gabriel (**A01**) e João (**A02**) inspecionaram os fluxos definidos com as **dez heurísticas de Nielsen**. Seus 12 achados individuais foram consolidados, agrupando cinco coincidências, em **sete problemas distintos (HC01–HC07)**. Os de maior severidade (grau 3) são **HC02**, inconsistência de identificação do registro entre conclusões e histórico, e **HC06**, falta de acesso uniforme ao histórico em conclusões alternativas. As recomendações são propostas, não correções já comprovadamente implementadas.
+
+### Entrega 14 — Teste de usabilidade por observação de usuários
+
+A E14 registrou duas sessões de observação no Figma: **U01**, moderada por Gabriel em **18/11/2026**, e **U02**, moderada por João em **19/11/2026**. Ambos os participantes são externos à equipe e foram descritos como perfis aproximados (*proxy*), sem experiência profissional em controle de tráfego. Foram observadas seis tarefas por participante, com sucesso, erros, ajudas, tempos, facilidade percebida e entrevistas pós-teste.
+
+| Indicador | Resultado consolidado da E14 |
+|---|---|
+| Tentativas de tarefa | 12 (6 por participante) |
+| Sucessos totais | **8/12 (66,7%)** |
+| Sucessos parciais | **4/12 (33,3%)** |
+| Falhas finais | **0/12** |
+| Erros e ajudas diretas | **9 erros** e **3 ajudas** |
+| Mediana global das notas de facilidade | **4/5** |
+| Achados observacionais | **AU01–AU06**, após agrupamento das duplicidades |
+
+As metas **MU01 e MU03** foram atingidas na amostra; **MU04** foi atingida apenas na condição de apresentação estável do estado Executando. **MU02 não atingiu a autonomia prevista para 100% dos participantes**. **MU05** teve acerto final de 2/2, com ajuda em um caso. **MU06** teve limite de 3 minutos compatível com os dados, mas não possui mediana exata de localização porque U01 não separou o instante de abertura do registro. **MU07** atingiu a mediana global, embora quatro tarefas tenham medianas inferiores a 4. **MU08** teve compreensão final relatada por 2/2, mas somente U02 concluiu integralmente a comparação durante a tarefa.
+
+Os achados reforçam a necessidade de melhorar identificação de registros, recuperação de erros, contexto da comparação e clareza das métricas. **A E14 documenta uma avaliação formativa, não validação estatística do público profissional nem certificação de usabilidade.** A equipe informou que o professor dispensou gravação; os registros foram feitos por anotações. Os comprovantes de consentimento aplicáveis são responsabilidade da equipe e não devem ser publicados com dados pessoais.
 
 ## Por que pensar em interface mesmo em TCCs técnicos?
 
@@ -115,7 +157,7 @@ Algoritmos, simulações, APIs e análises podem possuir valor técnico independ
 
 Entre padrões possíveis estão configuração, visualização, histórico, relatórios, comparação, filtros, alertas e ajuda contextual. **Nenhum desses recursos é obrigatório por si só.** Cada um deve ser sustentado por um objetivo de usuário e por evidência apropriada.
 
-Neste TCC a GUI já era planejada e foi construída. A E6 documentou o que realmente existe; a E7 preparou a investigação das necessidades e a E8 registrou princípios/metas para orientar sua evolução. Isso **não autoriza inventar** login, CRUD, comparador automático ou outros recursos não justificados.
+Neste TCC a GUI já era planejada e foi construída. As E6–E14 documentaram a V0, seus objetivos, a proposta navegável e as avaliações. Essa continuidade **não autoriza inventar** login, CRUD, comparador automático ou outros recursos não justificados. Achados da E13/E14 indicam melhorias futuras, sem pressupor sua implementação na GUI funcional.
 
 ## Relação com apresentação e potencial de aplicação
 
@@ -125,26 +167,28 @@ No caso concreto:
 
 **problema de controle semafórico → algoritmo híbrido no SUMO → GUI de simulação e análise → apoio à experimentação e interpretação de resultados**.
 
-É importante distinguir resultados reais do algoritmo, funcionalidades existentes na V0, hipóteses de usuário e propostas de V1. O protótipo funcionar tecnicamente não prova que todos os fluxos sejam fáceis ou satisfatórios, assim como questionários planejados não constituem dados coletados.
+É importante distinguir resultados reais do algoritmo, funcionalidades existentes na V0, hipóteses de usuário, propostas para versões futuras e resultados observacionais da E14. O Figma utiliza métricas demonstrativas; os tempos, erros e notas da E14 são medidas de interação relatadas pelos moderadores. A inspeção e as duas observações identificam dificuldades concretas, mas não comprovam conformidade de acessibilidade, implementação das recomendações ou representatividade estatística.
 
 ## Situação das principais hipóteses
 
-| ID | Hipótese | Situação após E8 |
+| ID | Hipótese | Situação após E14 |
 |---|---|---|
-| H01 | Pesquisadores/analistas de mobilidade representam o usuário prioritário. | **Aberta.** P01/P02 são proto-personas, E6 apontou questões de linguagem e E7 produziu instrumentos não aplicados. |
-| H02 | O fluxo cenário → configuração → execução/acompanhamento → análise facilita os experimentos. | **Aberta.** A V0 e o walkthrough deram base a melhorias; E8 definiu PG/MQ/MU para avaliações futuras. |
-| H03 | Uma apresentação consolidada/comparativa das métricas facilita interpretação. | **Aberta.** A V0 exibe resultados individuais; a comparação permanece manual. Necessidades e alternativas deverão ser investigadas/avaliadas. |
+| **H01** | Pesquisadores/analistas de mobilidade representam o usuário prioritário. | **Aberta.** P01/P02 continuam proto-personas; U01/U02 são participantes *proxy*, não profissionais de tráfego. A E14 não valida o perfil profissional pretendido. |
+| **H02** | O fluxo cenário → configuração → execução/acompanhamento → análise facilita os experimentos. | **Parcialmente investigada.** UT01 e UT03 foram concluídas integralmente por 2/2 (estado estável em UT03); recuperação inválida, localização e indisponibilidade apresentaram dificuldades e ajudas. A amostra não permite generalizar a facilidade do fluxo. |
+| **H03** | Uma apresentação consolidada/comparativa das métricas facilita a interpretação. | **Parcialmente investigada.** U01 apresentou dificuldade em UT05 e pediu ajuda contextual/escala; U02 explicou a comparação externa. HC04/HC07 apontam necessidades de apresentação. Um comparador automático continua ausente da V0 e do Figma avaliado. |
+
+A conclusão de cada entrega é **documental e acadêmica**. A permanência de hipóteses abertas e de problemas de usabilidade a corrigir não significa que os respectivos relatórios estejam inacabados.
 
 ## Como usar este repositório
 
 1. Leia o [Guia de uso e apresentação](GUIA_DE_USO.md).
 2. Leia o [Guia de definição de escopo](GUIA_ESCOPO_IHC.md), especialmente se o TCC não previa interface; **não é o caso desta equipe**.
-3. Desenvolva as entregas em sequência, reaproveitando decisões anteriores, sem reiniciar o projeto.
+3. Consulte as 14 entregas concluídas em sequência, observando como cada artefato deriva das decisões anteriores.
 4. Identifique autoria individual nas entregas que exigem soluções por integrante.
 5. Registre imagens, diagramas e evidências nos diretórios de [`assets/`](assets/README.md).
 6. Mantenha a [Matriz de rastreabilidade](RASTREABILIDADE.md) atualizada.
 7. Diferencie **[F] fato, [H] hipótese e [?] lacuna** sempre que necessário.
-8. Antes de concluir, confira o [Checklist final](CHECKLIST_FINAL.md) e o checklist próprio da entrega.
+8. Para a conferência de submissão, consulte o [Checklist final](CHECKLIST_FINAL.md) e os checklists de cada entrega; itens administrativos ainda não comprovados não devem ser marcados automaticamente.
 9. Registre refinamentos, sem apagar o histórico de decisões.
 10. Não confunda funcionalidades existentes, propostas de design, metas futuras e resultados empíricos.
 
@@ -160,12 +204,12 @@ No caso concreto:
 | 6 | [Prototipação em papel / protótipo digital V0](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe e walkthrough formativo | 🟩 |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | Instrumentos individuais distintos; questionário incluído | 🟩 |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | 🟩 |
-| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | Soluções individuais + consolidação de objetivos/signos | ⬜ |
-| 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | ⬜ |
-| 11 | [Protótipo no Figma](docs/11_figma.md) | 1 protótipo integrado cobrindo fluxos modelados | ⬜ |
-| 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | ⬜ |
-| 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | 1 avaliação completa por integrante, 10 heurísticas | ⬜ |
-| 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | Avaliação consolidada; nº de participantes conforme enunciado | ⬜ |
+| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | Soluções individuais + CI01/CI02 e OBJ01–OBJ09 | 🟩 |
+| 10 | [MoLIC](docs/10_molic.md) | M01/Gabriel e M02/João; modelagem e rupturas | 🟩 |
+| 11 | [Protótipo no Figma](docs/11_figma.md) | Protótipo navegável integrado com M01/M02 | 🟩 |
+| 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | Plano de equipe, instrumentos e UT01–UT06 | 🟩 |
+| 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | A01/A02; dez heurísticas; HC01–HC07 | 🟩 |
+| 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | U01/U02, análise por tarefa, MU01–MU08, AU01–AU06 e conclusão | 🟩 |
 
 > As orientações específicas e eventuais alterações posteriores do docente para a turma prevalecem sobre a descrição resumida do repositório.
 
@@ -175,9 +219,11 @@ A cadeia de evidências do projeto é:
 
 **TCC → usuários/stakeholders → hipóteses H01–H03 → personas P01/P02 → cenários C01/C02 → tarefas T01–T08 → V0/PF01–PF03/PP01–PP07 → walkthrough W01–W04 → observações O01–O10 → decisões V0→V1 → investigação I01/I02 → engenharia de usabilidade PG/MQ/MU → modelo conceitual → MoLIC → Figma → DECIDE → inspeção → observação de usuários → revisões**.
 
-A E6 documentou a sequência real da V0 e corrigiu a interpretação da comparação como **manual e externa**. A E7 transformou lacunas em instrumentos reproduzíveis; sem aplicação, não alterou H01–H03. A E8 definiu capacidades e restrições, princípios e metas de usabilidade a verificar.
+A E6 documentou a sequência real da V0 e corrigiu a interpretação da comparação como **manual e externa**. A E7 produziu instrumentos exploratórios que não foram aplicados naquela entrega. A E8 definiu princípios, metas e um ciclo iterativo; as E9–E14 realizaram a modelagem, prototipação e avaliação, mantendo rastreabilidade e registrando limitações.
 
-A **próxima etapa é E9**, com cenários de interação, design centrado na comunicação, mapa de objetivos e esquema conceitual de signos fundamentados em E1–E8. A E9 não deve inventar funções, nem copiar integralmente decisões futuras para dentro da V0 existente. As escolhas devem permanecer documentadas na rastreabilidade.
+**As 14 entregas possuem conteúdo acadêmico concluído no repositório.** A E9 elaborou CI01/CI02 e OBJ01–OBJ09; a E10 construiu M01/M02; a E11 materializou os fluxos no Figma; a E12 planejou a avaliação; a E13 consolidou HC01–HC07; e a E14 documentou U01/U02, avaliou as metas e produziu AU01–AU06 e recomendações. A conclusão documental **não equivale** à implementação de todas as melhorias nem à validação de H01–H03.
+
+Para o encerramento administrativo do repositório, resta verificar e atualizar o [Checklist final](CHECKLIST_FINAL.md), conferir os dois itens de verificação ainda abertos no checklist M01 da E10 e preservar privadamente eventuais comprovantes de consentimento exigidos para E14. A dispensa de gravação foi informada pela equipe após consulta ao docente; ela não equivale, por si só, à dispensa de consentimento.
 
 ## Documentos de apoio
 
