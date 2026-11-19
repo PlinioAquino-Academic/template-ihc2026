@@ -340,38 +340,56 @@ Todas as capturas abaixo foram obtidas do protótipo em 18/11/2026. A numeraçã
 | [E29](../assets/13_heuristica/29-processamento-max-headless.jpg) | Execução Max Pressure + Headless | Estado Executando e condições correspondentes. |
 | [E30](../assets/13_heuristica/30-conclusao-max-headless.jpg) | Conclusão Max Pressure + Headless | R2-001 reutilizado; acesso ao histórico ausente. |
 
-## Apêndice B — Revisão guiada e conferência individual de Gabriel
+
+## Apêndice B — Evidências complementares da inspeção A01
 
 **Data:** 18/11/2026.  
-**Natureza:** revisão guiada dos achados, seguida de conferência individual concluída por Gabriel. A conferência individual validou os caminhos definidos, a matriz H1–H10, os seis achados e as boas práticas. A preparação assistida e a revisão guiada antecederam essa etapa. Essas atividades não integram a amostra de participantes da Entrega 14.
+**Responsável:** Gabriel Koiama de Rocha Lira — 22.125.067-3.
 
-| Achado | Registro da revisão | Consequência para a análise |
+### Procedimento de revisão
+
+A preparação inicial da inspeção contou com assistência de IA para navegação pelo protótipo, registro de capturas e organização preliminar dos achados.
+
+Posteriormente, Gabriel realizou uma revisão guiada, examinou as evidências e apresentou suas interpretações sobre os problemas identificados. Em seguida, concluiu sua conferência individual dos caminhos definidos, validando a cobertura das dez heurísticas de Nielsen, os seis achados e os exemplos de boas práticas.
+
+Essa revisão permitiu refinar a descrição de alguns problemas e ajustar suas severidades. As quatro capturas complementares fornecidas por Gabriel foram preservadas separadamente das evidências da preparação assistida, apresentadas no Apêndice A.
+
+### Síntese dos ajustes realizados
+
+| Achado | Verificação complementar | Decisão adotada |
 |---|---|---|
-| V02 | Gabriel acionou o retorno à configuração e informou que não identificou a causa da falha. Sua captura não mostra campo destacado como responsável pelo erro. | Mantida a observação de diagnóstico insuficiente. O retorno funciona, mas não orienta uma correção específica. |
-| V03 | Gabriel informou que já conhecia Throughput e interpretou a unidade como quantidade de veículos por hora. | Não atribuir a Gabriel dificuldade para reconhecer o termo. A recomendação permanece restrita à definição contextual da medida, a conferir com a implementação do TCC. |
-| V04 | Gabriel reconheceu antecipadamente que R2-003 diferia das demais porque não apresentava Concluída. Depois da abertura, viu o aviso de indisponibilidade. | Reformulado como falta de status explícito, sem alegar surpresa ou bloqueio na revisão. Severidade proposta reduzida para 1. |
-| V05 | Gabriel informou que não existem números nas linhas do gráfico; o valor em segundos por veículo aparece no texto superior. | Confirmada a ausência de escala numérica. Não foi afirmado que Gabriel deixou de compreender o valor textual. |
-| V06 | Gabriel informou que Abrir histórico não está disponível em Tempo fixo + Visual, enquanto as outras ações permanecem iguais. | Confirmada a diferença nesse caminho. A evidência adicional de Max Pressure + Headless continua identificada como parte da inspeção assistida. |
-| V07 | A captura da conclusão enviada por Gabriel mostra R2-001, Tempo fixo e Visual; sua captura do histórico associa R2-001 ao Híbrido. | Confirmada a inconsistência do identificador entre esses dois estados. |
+| V02 — Diagnóstico da falha | O retorno à configuração funciona, mas a mensagem não identifica a causa da interrupção nem orienta uma correção específica. | Mantida a violação de H9, com severidade 2. |
+| V03 — Explicação da métrica | A unidade de Throughput é apresentada, mas não há definição contextual suficiente sobre a contagem e sua referência temporal. | Refinada a descrição para avaliar a ausência de ajuda contextual, sem presumir dificuldade de compreensão do termo. Mantida severidade 2. |
+| V04 — Estado indisponível | A ausência do rótulo Concluída permite distinguir R2-003 dos demais registros, mas não comunica explicitamente sua indisponibilidade. | Reformulada a justificativa e reduzida a severidade de 2 para 1, considerando o impacto observado na revisão. |
+| V06 — Acesso ao histórico | O comando Abrir histórico está disponível na conclusão padrão, mas não na conclusão Tempo fixo + Visual examinada. | Confirmada a inconsistência de navegação. Mantida severidade 3, considerando também a alternativa Max Pressure + Headless documentada na inspeção assistida. |
+| V07 — Identificação da execução | A conclusão Tempo fixo + Visual utiliza R2-001, enquanto o histórico associa esse identificador ao controlador híbrido. | Confirmada a inconsistência entre identificador e condições experimentais. Mantida severidade 3. |
 
-### Capturas fornecidas durante a revisão
+O achado V05 permanece sustentado pelas evidências E10 e E12 do Apêndice A, que demonstram a ausência de escala numérica nos gráficos. Sua classificação e recomendação não foram alteradas.
 
-**G01 — retorno à configuração após o aviso de falha.**
+As decisões acima complementam a matriz de heurísticas e a declaração de violações da seção A01, sem substituir suas justificativas e recomendações.
 
-![G01 — retorno à configuração fornecido por Gabriel](../assets/13_heuristica/g01-retorno-configuracao.png)
+### Capturas complementares
 
-**G02 — resultado individual e indicador Throughput.**
+**G01 — Retorno à configuração após o aviso de falha**
 
-![G02 — métricas fornecidas por Gabriel](../assets/13_heuristica/g02-metricas-throughput.png)
+![G01 — Retorno à configuração](../assets/13_heuristica/g01-retorno-configuracao.png)
 
-**G03 — histórico: R2-001 é Híbrido e R2-003 não apresenta o rótulo Concluída.**
+**G02 — Resultado individual e indicador Throughput**
 
-![G03 — histórico fornecido por Gabriel](../assets/13_heuristica/g03-historico.png)
+![G02 — Métricas e indicador Throughput](../assets/13_heuristica/g02-metricas-throughput.png)
 
-**G04 — conclusão Tempo fixo + Visual identificada como R2-001.**
+**G03 — Histórico com identificação das execuções**
 
-![G04 — conclusão fornecida por Gabriel](../assets/13_heuristica/g04-conclusao-fixo-visual.png)
+![G03 — Histórico de execuções](../assets/13_heuristica/g03-historico.png)
 
-### Situação final da conferência
+**G04 — Conclusão da execução Tempo fixo + Visual**
 
-A conferência individual de Gabriel foi concluída, incluindo a validação da cobertura das dez heurísticas, dos seis achados e dos exemplos de boas práticas. As capturas fornecidas por Gabriel e as capturas da preparação assistida permanecem identificadas separadamente. A matriz e os resultados de João continuam em branco; a consolidação aguarda a avaliação de A02.
+![G04 — Conclusão Tempo fixo + Visual](../assets/13_heuristica/g04-conclusao-fixo-visual.png)
+
+### Situação final da inspeção A01
+
+A conferência individual de Gabriel foi concluída, contemplando as dez heurísticas, os seis problemas registrados e os exemplos de boas práticas. Os achados possuem evidências, justificativas de severidade e recomendações específicas.
+
+As limitações da inspeção e a distinção entre preparação assistida, revisão guiada e conferência individual permanecem documentadas. Os resultados não representam observações de participantes externos nem medições de usabilidade.
+
+A inspeção individual de João Pedro (A02) e a consolidação dos resultados da equipe permanecem pendentes.
