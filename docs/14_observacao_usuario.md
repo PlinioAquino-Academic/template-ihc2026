@@ -51,7 +51,9 @@ As metas são avaliadas na amostra efetivamente documentada (**N = 2**), mantend
 
 R2-001 mostra 28 s e R2-002 mostra 36 s de espera média. Esses valores pertencem à demonstração do Figma e não são resultados reais de desempenho do algoritmo.
 
-A exploração da aplicação funcional R3 em 15/11 permanece separada: não foi utilizada para preencher tempos, erros ou satisfação desta sessão padronizada. Os identificadores U01/U02 deste relatório designam as sessões padronizadas do Figma e não devem ser automaticamente equiparados às pessoas identificadas na exploração anterior somente porque os mesmos códigos aparecem em documentos históricos.
+A exploração da aplicação funcional R3 em 15/11 permanece separada e é identificada nas documentações da Entrega 12 pelos códigos EX01 e EX02. Essa exploração não foi utilizada para preencher tempos, erros ou satisfação da avaliação padronizada.
+
+Neste relatório, U01 e U02 identificam exclusivamente os participantes das sessões padronizadas do Figma, realizadas em 18 e 19/11/2026. Não se presume qualquer identidade entre os participantes das duas atividades, preservando a distinção metodológica e a privacidade dos envolvidos.
 
 ### Passo 2 — Participantes
 
@@ -415,7 +417,7 @@ A preparação do experimento, o reconhecimento do estado de execução e a comp
 
 Os resultados indicam a necessidade de priorizar melhorias na diferenciação dos registros do histórico e na visibilidade das ações de recuperação.
 
-As conclusões estão limitadas a um participante proxy e não podem ser generalizadas para profissionais de mobilidade urbana. Também é necessário compará-las aos resultados de U01 para identificar problemas recorrentes e avaliar as metas MU01–MU08.
+As conclusões individuais de U02 estão limitadas a um participante proxy e não podem ser generalizadas para profissionais de mobilidade urbana. Os resultados foram confrontados com os de U01 na consolidação da equipe apresentada nas seções D, E e F, permitindo identificar dificuldades recorrentes, avaliar as metas MU01–MU08 e relacionar os achados observacionais aos problemas heurísticos da Entrega 13.
 
 ## D. Consolidação por tarefa — equipe
 
