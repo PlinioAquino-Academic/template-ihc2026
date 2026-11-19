@@ -53,11 +53,11 @@ No diagrama, `u` identifica a fala da usuária, `d` identifica a fala do prepost
 - [x] As cenas representam tópicos da conversa entre a usuária e a interface.
 - [x] As transições identificam as falas da usuária e do preposto do designer.
 - [x] Há pontos de encerramento após conclusão ou após falha, conforme a decisão da usuária.
-- [ ] Conferir a representação dos processos e das transições com a notação adotada em aula.
+- [x] A representação das cenas, processos, transições, rupturas e encerramentos do M01 foi conferida com a notação MoLIC adotada na disciplina.
 - [x] As rupturas relevantes têm feedback e caminho de recuperação ou saída.
 - [x] O diagrama cobre alternativas ao caminho principal.
 - [x] Os objetivos, tópicos e signos retomam o CI01 da Entrega 9.
-- [ ] Conferir a legibilidade do SVG no GitHub depois de publicar.
+- [x] O SVG `assets/10_molic/molic_m01.svg` foi conferido no GitHub, com textos, conexões e caminhos de interação legíveis.
 - [x] O modelo descreve a comunicação da interface durante a validação e a execução.
 
 ## M02 — Interpretar e comparar resultados experimentais
