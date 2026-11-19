@@ -28,7 +28,9 @@ A avaliação técnica do algoritmo e de seu desempenho é documentada pelos exp
 
 ### Contexto da atividade exploratória
 
-Em 15/11/2026, domingo, Luiza Agatão e Flavio Agatão participaram de uma exploração presencial da aplicação funcional do TCC, conduzida por Gabriel em seu computador.
+Em 15/11/2026, domingo, dois participantes externos à equipe, identificados neste registro como EX01 e EX02, participaram de uma exploração presencial da aplicação funcional do TCC, conduzida por Gabriel em seu computador.
+
+Os identificadores EX01 e EX02 são exclusivos dessa atividade exploratória e não devem ser confundidos com U01 e U02, utilizados nas sessões padronizadas do Figma documentadas na Entrega 14.
 
 Os participantes exploraram a interface e executaram um teste no cenário R3, que representa uma réplica da região da Vila Mariana. Ambos concordaram em participar. A atividade ocorreu sem gravação e sem ensaio prévio.
 
@@ -66,7 +68,7 @@ Este documento foi consolidado em 18/11/2026 e apresenta também o roteiro para 
 
 | Item | Planejamento e contexto |
 |---|---|
-| Participantes | U01 — Luiza Agatão e U02 — Flavio Agatão. |
+| Participantes | Na exploração de 15/11/2026, EX01 e EX02. Nas sessões padronizadas do Figma documentadas na E14, U01 e U02, identificados separadamente e sem publicação de seus nomes. |
 | Perfis | Registrar no pré-teste a experiência com simulação, mobilidade urbana e interpretação de resultados. A experiência prévia dos participantes ficou sem registro na atividade exploratória. |
 | Critérios de inclusão/exclusão | Participantes externos à equipe, com concordância para participar. Quando o perfil for aproximado ao público-alvo, registrar essa condição como limitação. |
 | Nº de participantes | Dois participantes, conforme a quantidade prevista na Entrega 14. |
@@ -85,10 +87,10 @@ Este documento foi consolidado em 18/11/2026 e apresenta também o roteiro para 
 
 ### Registro da concordância na atividade exploratória
 
-| Participante | Identificador | Data da participação | Registro |
-|---|---|---|---|
-| Luiza Agatão | U01 | 15/11/2026 | Concordou em participar da exploração presencial da interface. A atividade ocorreu sem gravação. |
-| Flavio Agatão | U02 | 15/11/2026 | Concordou em participar da exploração presencial da interface. A atividade ocorreu sem gravação. |
+| Identificador da exploração | Data da participação | Registro |
+|---|---|---|
+| EX01 | 15/11/2026 | Concordância voluntária informada pelo moderador para a exploração presencial, sem gravação. |
+| EX02 | 15/11/2026 | Concordância voluntária informada pelo moderador para a exploração presencial, sem gravação. |
 
 Gabriel conduziu a atividade e informou a concordância dos participantes. O registro acima foi consolidado pela equipe em 18/11/2026. A sessão ficou sem termo escrito de aceite.
 
