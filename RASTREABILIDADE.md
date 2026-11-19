@@ -220,7 +220,7 @@ Referências usadas em E8: ISO 9241-11, ISO 9241-210, Nielsen, Barbosa e Silva e
 | 21/10/2026 | E8 relacionou plataforma, princípios PG01–PG08 e metas MQ01–MQ07/MU01–MU08 aos artefatos anteriores. | Slides Processos — Partes 1 e 2; E8. | Critérios de projeto/avaliação futura para E9–E14. |
 | 21/10/2026 | Reconciliação documental das versões do repositório: final da E7 e matriz recuperados/revisados; E8 concluída. | Histórico de commits, conteúdo do repositório e materiais de aula. | Documentação consolidada, **sem afirmar testes ou alterações da GUI**. |
 | 17/11/2026 | E9 registrou CI01/CI02, mapas de objetivos OBJ01–OBJ09 e esquema conceitual de signos. | `docs/09_modelo_conceitual.md`. | Base para os modelos de diálogo e a coerência dos signos. |
-| 17/11/2026 | E10 documentou M01 de Gabriel e M02 de João, com alternativas e rupturas. | `docs/10_molic.md`. | Modelos que orientam a prototipação; dois itens de conferência visual do M01 permanecem desmarcados no checklist específico. |
+| 17/11/2026 | E10 documentou M01 de Gabriel e M02 de João, com alternativas e rupturas. | `docs/10_molic.md`. | Modelos que orientaram a prototipação no Figma; verificação final da notação e legibilidade do M01 registrada no checklist da entrega. |
 | 18/11/2026 | E11 documentou o protótipo Figma de M01/M02 com estados demonstrativos. | `docs/11_figma.md`. | Objeto das avaliações E13/E14; não equivale à execução SUMO. |
 | 18/11/2026 | E12 concluiu o plano DECIDE, com QA01–QA10, MU01–MU08, UT01–UT06, instrumentos e ética. | `docs/12_planejamento_avaliacao.md`. | Protocolo e metas utilizados nas avaliações. |
 | 18/11/2026 | E13 consolidou 12 achados individuais em sete problemas distintos HC01–HC07. | `docs/13_avaliacao_heuristica.md`. | Plano de recomendações heurísticas, com HC02/HC06 em grau 3; sem implementação de correções comprovada. |
@@ -233,11 +233,11 @@ Referências usadas em E8: ISO 9241-11, ISO 9241-210, Nielsen, Barbosa e Silva e
 | Entrega | Artefatos e evidências no repositório | Situação |
 |---|---|---|
 | **E9** — Modelo conceitual | CI01/CI02, objetivos OBJ01–OBJ09, mapas individuais e consolidado, esquema de signos. | **Concluída.** |
-| **E10** — MoLIC | M01/Gabriel e M02/João, com caminhos, alternativas, rupturas e recuperação. | **Conteúdo concluído.** Duas verificações de checklist do M01 exigem conferência manual antes de serem marcadas. |
+| **E10** — MoLIC | M01/Gabriel e M02/João, com caminhos, alternativas, rupturas e recuperação. | **Concluída.** Modelos documentados e verificações finais de notação e legibilidade registradas. |
 | **E11** — Figma | Protótipo navegável dos fluxos M01/M02 e seus estados de erro, sucesso e consulta. | **Concluída.** Resultados são demonstrativos e os achados da E13 não foram declarados como corrigidos. |
 | **E12** — DECIDE | Planejamento, participantes, critérios, protocolos e tarefas UT01–UT06. | **Concluída.** |
 | **E13** — Heurística | Inspeções A01/A02, dez heurísticas, 12 achados individuais consolidados em HC01–HC07. | **Concluída.** Correções recomendadas permanecem como propostas. |
-| **E14** — Observação de usuários | Sessões U01 e U02, pré/pós-testes, 12 tentativas, comparação MU01–MU08, AU01–AU06, relação com HC01–HC07 e conclusão da equipe. | **Relatório concluído.** Comprovantes privados de consentimento aplicáveis e checklist geral exigem conferência administrativa. |
+| **E14** — Observação de usuários | Sessões U01 e U02, pré/pós-testes, 12 tentativas, comparação MU01–MU08, AU01–AU06, relação com HC01–HC07 e conclusão da equipe. | **Relatório concluído.** Resultados e recomendações consolidados; conferência e guarda privada dos registros de consentimento aplicáveis permanecem sob responsabilidade da equipe. |
 
 **Situação geral:** o conjunto de 14 entregas foi produzido. Permanecem diferenças entre **relatório concluído**, **meta de usabilidade atingida** e **melhoria implementada**; nenhuma das últimas duas decorre automaticamente da primeira. Não há decisão de incorporar comparação automática, login, CRUD ou filtros avançados como requisitos obrigatórios. Novas funcionalidades dependerão de objetivo e evidência rastreáveis.
 
