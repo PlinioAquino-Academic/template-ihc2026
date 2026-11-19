@@ -59,13 +59,15 @@ O aceite será registrado somente após a resposta do participante.
 
 ## Registro da atividade exploratória de 15/11/2026
 
-Gabriel conduziu presencialmente, em seu computador, uma exploração da aplicação funcional do TCC com Luiza Agatão e Flavio Agatão.
+Gabriel conduziu presencialmente, em seu computador, uma exploração da aplicação funcional do TCC com dois participantes externos à equipe, identificados como EX01 e EX02.
 
-Os dois concordaram em participar, exploraram a interface e executaram um teste no cenário R3 — Vila Mariana. A atividade ocorreu sem gravação.
+Ambos concordaram voluntariamente com a participação, exploraram a interface e executaram um teste no cenário R3 — Vila Mariana. A atividade ocorreu sem gravação.
 
-| Participante | Identificador | Data | Concordância informada |
-|---|---|---|---|
-| Luiza Agatão | U01 | 15/11/2026 | Concordou em participar da exploração presencial, conforme registro de Gabriel. |
-| Flavio Agatão | U02 | 15/11/2026 | Concordou em participar da exploração presencial, conforme registro de Gabriel. |
+Os identificadores EX01 e EX02 pertencem exclusivamente à exploração de 15/11/2026. As sessões padronizadas do Figma, documentadas posteriormente na Entrega 14, utilizam os identificadores U01 e U02.
+
+| Identificador | Data | Concordância informada |
+|---|---|---|
+| EX01 | 15/11/2026 | Concordância voluntária para a exploração presencial, conforme registro de Gabriel. |
+| EX02 | 15/11/2026 | Concordância voluntária para a exploração presencial, conforme registro de Gabriel. |
 
 A concordância foi manifestada na atividade. Este registro foi documentado pela equipe em 18/11/2026. Não houve termo assinado na ocasião.
