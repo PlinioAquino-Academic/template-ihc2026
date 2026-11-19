@@ -1,197 +1,283 @@
 # Entrega 14 — Avaliação de usabilidade por observação de usuários
 
-**Data:** 18/11/2026  
-**Status:** 🟨 em andamento  
-**Responsabilidade:** solução consolidada por equipe. O número de participantes finais observados deve ser igual ao número de integrantes, conforme o modelo da disciplina; recomenda-se que cada integrante seja responsável por conduzir/analisar ao menos um participante.
-
+**Data do relatório:** 18/11/2026.  
+**Status:** 🟨 em andamento — resultados de U01 informados por Gabriel e analisados; U02 e consolidação final pendentes.  
+**Responsabilidade:** solução consolidada por equipe, com dois participantes finais externos à equipe.
 
 ## Objetivo da atividade
 
-Observar usuários representativos realizando tarefas reais ou realisticamente simuladas para identificar problemas de eficácia, eficiência, compreensão e satisfação que não podem ser inferidos apenas por inspeção.
+Observar participantes realizando tarefas representativas para avaliar eficácia, eficiência, compreensão e satisfação. O objeto é a interação com o protótipo Figma da Entrega 11, e não o desempenho científico do algoritmo ou do SUMO.
 
-> **Participantes finais não devem ser membros da equipe.** Um integrante pode participar do teste piloto apenas para validar roteiro/equipamentos, sem contar na amostra final.
+**Origem dos registros:** os resultados, o perfil, a concordância, o piloto e as respostas de U01 foram fornecidos por Gabriel e declarados por ele como correspondentes a uma sessão real. Este relatório organiza esse relato; não constitui verificação independente da coleta. Os valores demonstrativos do próprio Figma continuam fictícios e são distintos das medidas de interação informadas pelo moderador.
 
-### Quando o usuário é um perfil profissional especializado
-
-Em TCCs técnicos, o público pode ser DBA, analista, pesquisador, administrador, técnico ou outro especialista. Priorize participantes que possuam relação real com as tarefas. Se não for possível recrutar o perfil ideal, qualquer participante aproximado/proxy deve ser **justificado previamente e tratado como limitação**; não apresente o resultado como equivalente ao de especialistas reais.
-
-O teste avalia a **interação com o protótipo**. Não é necessário que o participante valide o desempenho científico do algoritmo. Resultados simulados podem ser usados quando declarados e coerentes com a tarefa.
-
-Tarefas podem envolver, por exemplo, interpretar um dashboard, configurar uma análise, encontrar uma execução no histórico usando filtros, comparar resultados, gerar relatório, revisar alerta ou administrar permissões.
+U01 é um participante aproximado (*proxy*), sem experiência profissional em controle de tráfego. Essa condição limita as conclusões sobre as personas profissionais do projeto. Integrantes da equipe não integram a amostra final.
 
 ## A. Fluxograma do processo — equipe
 
-![Fluxograma](../assets/14_testes/fluxograma_avaliacao.svg)
+![Fluxograma da avaliação observacional](../assets/14_testes/fluxograma_avaliacao.svg)
 
-O fluxograma deve representar, no mínimo: planejamento → recrutamento → consentimento → preparação → execução das tarefas/observação → pós-teste → consolidação/análise → recomendações.
+O processo compreende: planejamento e definição da versão → recrutamento → consentimento → preparação e piloto → tarefas e observação → pós-teste → análise → recomendações.
 
-**Arquivo:** `assets/14_testes/fluxograma_avaliacao.svg`, a ser adicionado manualmente.
+A sessão de U01 e o piloto foram informados como realizados. A etapa de U02 e a consolidação final permanecem pendentes. O arquivo SVG deve ser adicionado ou substituído manualmente pelo fluxograma real; este relatório não comprova que o artefato gráfico foi finalizado.
 
 ## B. Procedimento de preparação e execução — equipe
 
 ### Passo 1 — Objetivos e versão avaliada
 
-**Versão/commit/Figma:** protótipo da Entrega 11. Registrar a data da sessão e qualquer alteração realizada antes da aplicação.
+**Interface:** Figma da Entrega 11, fluxos M01 e M02.  
+**Data informada para a sessão de U01:** 18/11/2026.
 
 - [Arquivo editável](https://www.figma.com/design/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=4-12).
-- [M01 — preparação e execução](https://www.figma.com/proto/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=4-12&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A12).
+- [M01 — configuração e execução](https://www.figma.com/proto/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=4-12&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A12).
 - [M02 — histórico e resultados](https://www.figma.com/proto/YJJhBTujdrsjDY113Iefj4/Sem-t%C3%ADtulo?node-id=16-206&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=16%3A206).
 
-**Metas de usabilidade relacionadas:** MU01–MU08, conforme a Entrega 8 e o plano DECIDE da Entrega 12.
+Na UT03, o estado Executando foi apresentado de forma estável, conforme o ajuste de preparação informado pelo moderador. O resultado dessa tarefa avalia o reconhecimento do estado nessa condição e não demonstra que as transições automáticas originais tenham duração adequada.
 
-| Meta | Medida prevista |
-|---|---|
-| MU01 | 100% dos participantes concluem a preparação sem ajuda. |
-| MU02 | 100% identificam a ação correta para recuperar a configuração inválida. |
-| MU03 | Mediana de preparação de até 5 minutos. |
-| MU04 | 100% reconhecem o estado da execução e o controlador utilizado. |
-| MU05 | 100% identificam o registro e suas condições solicitadas. |
-| MU06 | Mediana de localização de uma execução de até 3 minutos. |
-| MU07 | Mediana de facilidade percebida de pelo menos 4 em 5. |
-| MU08 | 100% compreendem a consulta individual e a reunião externa dos dados para comparação. |
+Não foi fornecido identificador de revisão histórica do Figma nem um registro de correções HC01–HC07. Não se presume que esses problemas tenham sido corrigidos.
 
-O Figma simula processamento e apresenta resultados fictícios: R2-001 possui espera média de 28 s e R2-002 de 36 s. Esses valores servem à avaliação da interação e não demonstram superioridade científica de um controlador.
+| Meta | Critério previsto | Fonte |
+|---|---|---|
+| MU01 | 100% preparam a configuração sem ajuda direta. | UT01 |
+| MU02 | 100% identificam a ação correta de recuperação. | UT02 |
+| MU03 | Mediana de preparação de até 5 minutos. | UT01 |
+| MU04 | 100% reconhecem estado e controlador. | UT03 |
+| MU05 | 100% identificam registro e condições solicitadas. | UT04 |
+| MU06 | Mediana de localização de até 3 minutos. | UT04 |
+| MU07 | Mediana de facilidade de pelo menos 4/5. | Pós-tarefa |
+| MU08 | 100% compreendem consulta individual e comparação externa. | UT05 e pós-teste |
 
-**Distinção da exploração anterior:** em 15/11/2026, U01 e U02 exploraram presencialmente a aplicação funcional do TCC e executaram o cenário R3 — Vila Mariana, no computador de Gabriel. Houve concordância para participar, sem gravação ou ensaio prévio. O resultado técnico foi preservado, mas não foram fornecidos registros sistemáticos de sucesso por tarefa, erros, ajudas, tempo ou satisfação. Essa exploração não é apresentada como aplicação das tarefas padronizadas do Figma.
+As metas são referentes à amostra prevista. Resultados de U01 serão apresentados individualmente, sem considerar U02 como sucesso, falha ou zero antes de receber sua sessão.
+
+R2-001 mostra 28 s e R2-002 mostra 36 s de espera média. Esses valores pertencem à demonstração do Figma e não são resultados reais de desempenho do algoritmo.
+
+A exploração da aplicação funcional R3 em 15/11 permanece separada: não foi utilizada para preencher tempos, erros ou satisfação desta sessão padronizada.
 
 ### Passo 2 — Participantes
 
-| ID | Perfil | Critérios que justificam participação | Integrante responsável |
+| ID | Perfil e adequação | Responsável | Situação |
 |---|---|---|---|
-| U01 | Participante externo à equipe, previsto na Entrega 12. Experiência com simulação, mobilidade e leitura de gráficos a registrar no pré-teste. | Concordância e disponibilidade devem ser confirmadas para a nova sessão. A adequação ao público-alvo precisa ser verificada antes da aplicação; eventual participação como proxy deverá ser justificada e tratada como limitação. | Gabriel Koiama de Rocha Lira — 22.125.067-3. |
-| U02 | | | |
+| U01 | Conhecimento básico do conceito de simulação, sem prática com SUMO; familiaridade com tabelas, gráficos de barras e indicadores; conhecimento básico de mobilidade urbana. Proxy com familiaridade parcial com análise, sem experiência profissional em controle de tráfego. | Gabriel Koiama de Rocha Lira — 22.125.067-3. | Sessão e resultados informados como reais pelo moderador. |
+| U02 | Perfil a registrar por João. | João Pedro Lopes Santana Villas Bôas — 22.125.065-7. | Pendente. |
 
-O relatório público utilizará os identificadores U01 e U02. A previsão de dois participantes não equivale a duas sessões padronizadas já realizadas.
+A familiaridade de U01 com gráficos fundamenta sua participação como perfil aproximado, sem torná-lo equivalente a um especialista. O relato não detalha seu uso anterior da aplicação ou do Figma; esse fator não será presumido ao interpretar os tempos.
 
-### Passo 3 — Consentimento e privacidade
+### Passo 3 — Consentimento, ambiente e privacidade
 
-- Termo/registro de consentimento: [instrumento de consentimento](../instrumentos/termo_consentimento_modelo.md).
-- Para a sessão padronizada, registrar concordância, data, versão utilizada e responsável antes de iniciar.
-- Gravação de tela/áudio/vídeo: não prevista. O registro será feito por anotações.
-- Forma de anonimização: IDs `U01` e `U02` nas tabelas e nos comentários publicados.
-- Local de armazenamento: computador de Gabriel para os registros da sessão sob sua responsabilidade, com consentimento separado das tabelas de observação.
-- Preservação dos resultados técnicos: arquivos salvos automaticamente pela aplicação do TCC, sem exclusão programada, conforme a Entrega 12. Essa regra não torna público o consentimento nem os dados identificáveis dos participantes.
-- O participante poderá interromper a sessão e deixar de responder às perguntas.
+- **Instrumento:** [termo e procedimento de consentimento](../instrumentos/termo_consentimento_modelo.md).
+- **Aceite de U01:** concordância voluntária antes da sessão, conforme informação do moderador. A forma documental do aceite não foi especificada no material recebido.
+- **Registros utilizados:** tabela de tarefas, descrições das ocorrências e respostas pós-teste fornecidas por Gabriel. Nenhuma gravação foi disponibilizada para esta análise.
+- **Identificação pública:** U01 e U02.
+- **Ambiente e dispositivo:** o relato identifica a interface Figma, mas não especifica local, equipamento, resolução, escala ou horário da sessão. Esses dados não foram deduzidos da exploração de 15/11.
+- **Guarda prevista:** registros sob responsabilidade de Gabriel, separados de dados identificáveis e de eventuais termos de consentimento. A preservação dos arquivos técnicos do TCC não equivale à divulgação dos dados pessoais da avaliação.
 
 ### Passo 4 — Teste piloto
 
-**Data:** não informado como realizado.  
-**O que será validado:** abertura dos links, instruções, estados iniciais, funcionamento dos caminhos, anotação das medidas e duração das transições.  
-**Mudanças após piloto:** ainda não registradas.
+**Situação informada:** realizado antes da sessão de U01.  
+**Responsável pelo relato:** Gabriel.  
+**Data, executor e ambiente específicos do piloto:** não discriminados no registro fornecido.
 
-Antes da UT02, preparar a configuração com a seed vazia. Antes da UT03, conferir a permanência do estado Executando. A inspeção da Entrega 13 identificou transições rápidas; qualquer ajuste deve ser documentado antes da coleta e mantido equivalente entre os participantes.
+| Verificação informada | Registro |
+|---|---|
+| Links M01 e M02 | Abertura correta. |
+| UT02 | Configuração com seed ausente preparada. |
+| UT03 | Estado Executando apresentado de forma estável para permitir a pergunta. |
+| Instrumentação | Cronômetro e planilha conferidos. |
+| Instruções | Mantidas padronizadas. |
 
-O piloto não será contado como participante final. A exploração de 15/11 ocorreu sem ensaio prévio e não será renomeada como piloto.
+**Ajuste informado:** apresentar diretamente o quadro Executando durante UT03 para evitar que a transição automática impedisse a observação. Esse procedimento deve ser identificado também na sessão de U02, para permitir comparação entre condições equivalentes.
 
-### Passo 5 — Tarefas
+O piloto não é contado na amostra final. A exploração de 15/11 não foi reclassificada como piloto.
 
-Gabriel utilizará as tarefas previstas na Entrega 12 com U01, incluindo M01 e M02.
+### Passo 5 — Tarefas padronizadas
 
-| ID | Cenário/instrução apresentada | Critério de sucesso | Métricas | Ligação com modelo |
+As instruções abaixo são as da Entrega 12 e do instrumento `roteiro_teste_usabilidade.md`. **O participante recebe apenas o enunciado**, não o critério de sucesso nem os caminhos esperados.
+
+| ID | Instrução apresentada | Critério de sucesso do observador | Métricas | Rastreabilidade |
 |---|---|---|---|---|
-| UT01 | Prepare um experimento para Regional São Paulo, usando o controlador híbrido, seed 42 e execução sem abrir a janela gráfica do simulador. Confira as condições antes de iniciar. | Chegar ao resumo com R2, controlador híbrido, seed 42 e modo Headless. | Sucesso, tempo até a revisão, erros, ajudas e facilidade. | T01–T03; OBJ02–OBJ03; M01; F01–F03. |
-| UT02 | Um colega preparou uma configuração. Ao tentar deixá-la pronta para execução, você encontra um problema. Descubra o que precisa corrigir. | Identificar a seed ausente, recuperar o valor 42 e validar novamente. | Sucesso, tempo, erros, ajudas e facilidade. | T02/T04; OBJ03; M01; F02/F02E/F03. |
-| UT03 | O experimento já foi confirmado. Diga em que estado se encontra e qual estratégia está sendo usada. | Identificar corretamente o estado mostrado e o controlador. | Acerto, tempo de resposta, ajudas e facilidade; registrar interferências das transições. | T05; OBJ04; M01; F04/F04P/F05. |
-| UT04 | Encontre R2-001 e identifique seu cenário, sua estratégia e sua seed. | Abrir R2-001 e identificar Regional São Paulo, híbrido e seed 42. | Sucesso, tempo de localização, erros, ajudas e facilidade. | T06; OBJ06; M02; F07/F08. |
-| UT05 | Compare o tempo médio de espera de R2-001 e R2-002. Explique quais condições precisam ser conferidas antes de interpretar a diferença. | Identificar 28 s e 36 s nos registros corretos e explicar a verificação das condições e a reunião externa dos dados. | Sucesso, valores identificados, explicação, erros, ajudas, tempo e facilidade. | T06–T08; OBJ07–OBJ09; M02; F07/F08/F08B/F09/F09B. |
-| UT06 | Consulte R2-003. Se encontrar um impedimento, explique o que aconteceu e continue com outro registro. | Reconhecer a indisponibilidade, voltar ao histórico e abrir outro resultado. | Sucesso, erros, ajudas, tempo e facilidade. | T06; OBJ06; M02; F07/F08E/F08. |
+| UT01 | Prepare um experimento para Regional São Paulo, usando o controlador híbrido, seed 42 e execução sem abrir a janela gráfica do simulador. Confira as condições antes de iniciar. | Chegar ao resumo com cenário R2, controlador híbrido, seed 42 e modo Headless. | Sucesso, tempo até o resumo, erros, ajudas e facilidade. | T01–T03; OBJ02–OBJ03; M01; F01–F03. |
+| UT02 | Um colega preparou uma configuração. Ao tentar deixá-la pronta para execução, você encontra um problema. Descubra o que precisa corrigir. | Identificar a seed ausente, recuperar 42 e validar novamente. | Sucesso, tempo, erros, ajudas e facilidade. | T02/T04; OBJ03; M01; F02/F02E/F03. |
+| UT03 | O experimento já foi confirmado. Diga em que estado se encontra e qual estratégia está sendo usada. | Identificar o estado mostrado e o controlador. | Acerto, tempo de resposta, ajudas, facilidade e eventual interferência de transição. | T05; OBJ04; M01; F04/F04P/F05. |
+| UT04 | Encontre R2-001 e identifique seu cenário, sua estratégia e sua seed. | Abrir R2-001 e informar Regional São Paulo, híbrido e seed 42. | Sucesso, tempo de localização, erros, ajudas e facilidade. | T06; OBJ06; M02; F07/F08. |
+| UT05 | Compare o tempo médio de espera de R2-001 e R2-002. Explique quais condições precisam ser conferidas antes de interpretar a diferença. | Identificar 28 s e 36 s nos registros corretos, conferir condições e explicar a reunião externa dos valores. | Sucesso, valores e explicação, tempo, erros, ajudas e facilidade. | T06–T08; OBJ07–OBJ09; M02; F07/F08/F08B/F09/F09B. |
+| UT06 | Consulte R2-003. Se encontrar um impedimento, explique o que aconteceu e continue com outro registro. | Reconhecer a indisponibilidade, retornar ao histórico e abrir outro resultado. | Sucesso, tempo, erros, ajudas e facilidade. | T06; OBJ06; M02; F07/F08E/F08. |
 
-**Regras de registro:**
+**Critérios de classificação e registro:**
 
-- Sucesso total: critério atendido sem orientação sobre a solução.
-- Sucesso parcial: critério parcialmente atendido ou conclusão após ajuda direta.
-- Falha: critério não atendido, resposta incorreta ou abandono.
-- Erro: ação que desvia do objetivo ou exige correção.
-- Ajuda: intervenção do moderador que orienta a solução; repetição do enunciado será registrada separadamente.
-- Tempo: medir após a instrução até o critério ou encerramento. Na UT01, parar no resumo correto; na UT04, medir também o tempo até abrir o registro correto.
-- Facilidade pós-tarefa: 1 = muito difícil; 2 = difícil; 3 = nem fácil nem difícil; 4 = fácil; 5 = muito fácil.
-- Sem tempo-limite; as metas de tempo serão utilizadas na análise.
+- **Sucesso total:** critério cumprido sem orientação sobre a solução.
+- **Sucesso parcial:** critério parcialmente cumprido ou conclusão após ajuda direta.
+- **Falha:** critério não atingido, resposta incorreta ou abandono.
+- **Erro:** ação que afasta o participante do objetivo ou exige correção; registrar o tipo e o contexto.
+- **Ajuda direta:** intervenção do moderador indicando como resolver. A simples repetição do enunciado será registrada separadamente.
+- **Tempo:** iniciar após a leitura da instrução e encerrar ao atingir o critério ou terminar a tentativa. Em UT01, parar na revisão do resumo; em UT04, medir o tempo de localização até abrir o registro, registrando separadamente o acerto das condições.
+- **Facilidade percebida:** 1 = muito difícil; 2 = difícil; 3 = nem fácil nem difícil; 4 = fácil; 5 = muito fácil.
+- **Limites:** não impor tempo-limite; comparar os registros com as metas apenas na análise posterior.
 
-### Passo 6 — Protocolo do moderador
+### Passo 6 — Condução de U01 — Gabriel
 
-1. Receber participante e explicar que **o produto está sendo avaliado, não a pessoa**.
-2. Obter consentimento e registrar data, responsável e versão.
-3. Perguntar sobre experiência com simulação, mobilidade e leitura de gráficos.
-4. Ler as instruções padronizadas, sem indicar controles ou caminhos.
-5. Observar sem ensinar; registrar ações, dificuldades e pedidos de ajuda.
-6. Solicitar comentários espontâneos, sem exigir verbalização contínua que altere a medição do tempo.
-7. Registrar o resultado e perguntar a facilidade de 1 a 5 após cada tarefa, seguida de justificativa.
-8. Perguntar qual momento foi mais difícil, qual informação faltou e como reuniria os dados para comparar execuções.
-9. Encerrar, explicar o uso dos registros e salvar as anotações pelo identificador do participante.
+O registro fornecido identifica Gabriel como moderador. Foram informados resultados por tarefa e respostas pós-teste. O procedimento de referência utiliza os [enunciados padronizados](../instrumentos/roteiro_teste_usabilidade.md) e a [planilha de observação](../instrumentos/planilha_observacao_modelo.md).
+
+A classificação distingue erros corrigidos espontaneamente de ajuda direta. Em UT02, houve uma intervenção orientando o participante a examinar os campos obrigatórios; por isso, a conclusão foi classificada como parcial.
+
+Não foram fornecidos horários de início e fim nem fichas originais separadas. Os tempos abaixo são as durações informadas. Em UT04, o tempo exclusivo até abrir o registro não foi separado do restante da tarefa no material recebido.
 
 ## C. Resultados — por participante
 
-### U01 — Participante sob responsabilidade de Gabriel
+### U01 — Participante proxy sob responsabilidade de Gabriel
 
-**Data da sessão padronizada:** a registrar.  
-**Perfil confirmado no pré-teste:** a registrar.  
-**Moderador previsto:** Gabriel Koiama de Rocha Lira — 22.125.067-3.
+**Data informada:** 18/11/2026.  
+**Moderador:** Gabriel Koiama de Rocha Lira — 22.125.067-3.  
+**Interface:** Figma da Entrega 11; M01 e M02.  
+**Consentimento:** concordância voluntária prévia, conforme relato do moderador.  
+**Situação:** seis resultados e respostas pós-teste registrados a partir dos dados fornecidos.
 
-| Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
+| Tarefa | Grau de sucesso | Erros | Dificuldade ou ocorrência | Ajudas | Tempo | Facilidade | Evidência/observação |
+|---|---|---:|---|---:|---|---:|---|
+| UT01 | Total | 1 | Escolheu Visual inicialmente e corrigiu para Headless sem ajuda. | 0 | 02:42 | 4/5 | Resumo com R2, híbrido, seed 42 e Headless. |
+| UT02 | Parcial | 1 | Procurou o problema nas opções do controlador antes de identificar a seed ausente. | 1 | 01:42 | 3/5 | Após orientação para examinar os campos obrigatórios, recuperou 42 e validou novamente. |
+| UT03 | Total | 0 | Nenhuma dificuldade relatada na condição de apresentação estável. | 0 | 00:12 | 5/5 | Identificou Executando e o controlador híbrido. |
+| UT04 | Total | 1 | Abriu R2-002 e corrigiu a seleção espontaneamente. | 0 | 01:34 | 4/5 | Abriu R2-001 e identificou cenário, controlador e seed. |
+| UT05 | Parcial | 1 | Interpretou inicialmente o menor tempo como melhor desempenho antes de conferir as condições; não completou a explicação da reunião externa durante a tarefa. | 0 | 02:36 | 3/5 | Identificou corretamente 28 s e 36 s; a explicação mais completa surgiu no pós-teste. |
+| UT06 | Total | 0 | Nenhuma dificuldade relatada na recuperação. | 0 | 01:15 | 4/5 | Reconheceu o aviso de indisponibilidade, voltou ao histórico e abriu outro resultado. |
+
+#### Detalhamento das ocorrências
+
+- **UT01:** o erro foi corrigido espontaneamente antes da confirmação. A existência de um erro corrigido não impede sucesso total, pois o critério foi atingido sem ajuda direta.
+- **UT02:** a configuração inválida foi o estado inicial previsto. O erro contabilizado corresponde à investigação inicial do controlador; a necessidade de ajuda explica a classificação parcial.
+- **UT03:** a condição estável permite avaliar identificação, mas limita conclusões sobre percepção de estados durante a execução temporizada original.
+- **UT04:** a seleção incorreta foi recuperada sem ajuda. O registro de 01:34 não discrimina separadamente o momento de abertura de R2-001.
+- **UT05:** sucesso parcial foi preservado para a execução da tarefa. A resposta posterior mais completa foi registrada separadamente e não altera retroativamente o desempenho observado.
+- **UT06:** a recuperação foi concluída. Não foi informada a percepção do participante sobre o status de R2-003 antes da abertura.
+
+#### Pós-teste
+
+**Em qual momento foi mais difícil decidir como prosseguir?**
+
+> Na parte de comparar os resultados. Eu conseguia encontrar os valores, mas fiquei em dúvida sobre quais informações precisava conferir para comparar as simulações corretamente.
+
+**Que informação teria ajudado?**
+
+> Uma explicação mais clara das métricas e uma escala numérica nos gráficos ajudariam a entender melhor os resultados.
+
+**Como reuniria as informações para comparar duas execuções?**
+
+> Eu consultaria cada execução no histórico, anotaria os valores e as condições do experimento e organizaria tudo em uma tabela para comparar depois.
+
+As falas foram transcritas conforme o texto fornecido pelo moderador; não foram confrontadas com gravação.
+
+#### Síntese individual
+
+| Indicador | U01 |
+|---|---|
+| Sucesso total | 4/6 tarefas — 66,7%. |
+| Sucesso parcial | 2/6 tarefas — 33,3%. |
+| Falhas | 0/6 tarefas. |
+| Erros | 4 ocorrências informadas. |
+| Ajudas diretas | 1, em UT02. |
+| Facilidade por tarefa | 4, 3, 5, 4, 3 e 4. |
+| Mediana das seis notas de U01 | 4/5. |
+| Menor facilidade | UT02 e UT05, ambas com 3/5. |
+
+Essas proporções descrevem tarefas de um participante. Não equivalem à proporção de participantes que atende a cada meta na amostra completa. A mediana das seis notas de U01 também não substitui a análise por tarefa com os dois participantes.
+
+### U02 — Participante sob responsabilidade de João Pedro
+
+**Situação:** perfil, consentimento, sessão e resultados ainda não registrados nesta versão.
+
+| Tarefa | Grau de sucesso | Erros | Dificuldades | Ajudas | Tempo | Facilidade | Observação |
 |---|---|---:|---|---:|---|---|---|
-| UT01 | N/D | N/D | N/D | N/D | N/D | N/D | Registro da sessão ainda não fornecido. |
-| UT02 | N/D | N/D | N/D | N/D | N/D | N/D | Registro da sessão ainda não fornecido. |
-| UT03 | N/D | N/D | N/D | N/D | N/D | N/D | Registrar se a duração do estado interferiu na resposta. |
-| UT04 | N/D | N/D | N/D | N/D | N/D | N/D | Registro da sessão ainda não fornecido. |
-| UT05 | N/D | N/D | N/D | N/D | N/D | N/D | Registrar os valores identificados e a explicação sobre as condições. |
-| UT06 | N/D | N/D | N/D | N/D | N/D | N/D | Registro da sessão ainda não fornecido. |
+| UT01 | N/D | N/D | N/D | N/D | N/D | N/D | Pendente. |
+| UT02 | N/D | N/D | N/D | N/D | N/D | N/D | Pendente. |
+| UT03 | N/D | N/D | N/D | N/D | N/D | N/D | Pendente. |
+| UT04 | N/D | N/D | N/D | N/D | N/D | N/D | Pendente. |
+| UT05 | N/D | N/D | N/D | N/D | N/D | N/D | Pendente. |
+| UT06 | N/D | N/D | N/D | N/D | N/D | N/D | Pendente. |
 
-**N/D:** dado não disponível; não significa zero, falha nem sucesso.
+N/D significa não disponível; não é tratado como zero ou falha.
 
-**Link da gravação:** não se aplica ao protocolo sem gravação.  
-**Resposta pós-teste:** ainda não fornecida.
+## D. Consolidação por tarefa — equipe
 
-### U02 — {{perfil resumido}}
+### Parcial disponível: apenas U01
 
-| Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
-|---|---|---:|---|---:|---|---|---|
-| | | | | | | | |
+| Tarefa | Sucesso total observado | Tempo informado de U01 | Erros | Facilidade | Leitura individual |
+|---|---|---|---:|---:|---|
+| UT01 | 1/1 | 02:42 | 1 | 4/5 | Concluiu sem ajuda, em tempo inferior a 5 minutos. |
+| UT02 | 0/1; 1 parcial | 01:42 | 1 | 3/5 | Recuperação concluída com uma ajuda direta. |
+| UT03 | 1/1 | 00:12 | 0 | 5/5 | Reconhecimento correto em estado apresentado de forma estável. |
+| UT04 | 1/1 | 01:34 | 1 | 4/5 | Registro e condições corretos; tempo exclusivo de localização não discriminado. |
+| UT05 | 0/1; 1 parcial | 02:36 | 1 | 3/5 | Valores corretos; explicação incompleta durante a tarefa e mais completa no pós-teste. |
+| UT06 | 1/1 | 01:15 | 0 | 4/5 | Recuperação da consulta concluída sem ajuda. |
 
-**Link da gravação (se autorizado):** {{...}}  
-**Resposta pós-teste:** {{...}}
+O denominador 1 representa somente os dados disponíveis de U01. A consolidação final com N = 2 aguarda U02.
 
-## D. Consolidação por tarefa
+### Comparação preliminar com as metas
 
-| Tarefa | Taxa de sucesso | Tempo típico | Erros recorrentes | Satisfação | Meta atendida? | Problemas prioritários |
-|---|---:|---|---|---|---|---|
-| | | | | | | |
+| Meta | Evidência de U01 | Situação da análise |
+|---|---|---|
+| MU01 | UT01 total, sem ajuda. | Critério individual demonstrado; amostra completa pendente. |
+| MU02 | UT02 parcial, com ajuda direta. | Recuperação realizada, sem demonstração de identificação autônoma. |
+| MU03 | UT01 em 02:42. | Tempo individual inferior a 5 min; mediana final depende de U02. |
+| MU04 | Estado e controlador corretos. | Demonstrado apenas na condição estável da UT03. |
+| MU05 | Registro, cenário, controlador e seed corretos. | Critério individual demonstrado; amostra completa pendente. |
+| MU06 | UT04 em 01:34; marco exclusivo de localização não separado. | Precisão da medida de localização limitada; mediana final pendente. |
+| MU07 | Mediana individual 4/5; UT02 e UT05 com 3/5. | Apresentar notas por tarefa; análise conjunta depende de U02. |
+| MU08 | Explicação incompleta durante UT05; resposta pós-teste descreve consulta, anotações e tabela externa. | Evidências distintas por momento; manter sucesso parcial da tarefa e explicitar a resposta posterior. |
 
-## E. Achados e recomendações
+Não se declara atendimento global de MU01–MU08 com a amostra incompleta.
 
-| ID | Achado | Evidência (quant. + qual.) | Impacto | Recomendação | Artefatos a revisar |
+## E. Achados e recomendações — contribuição de U01
+
+| ID | Achado | Evidência informada | Impacto | Recomendação | Artefatos |
 |---|---|---|---|---|---|
-| | | | | | |
+| AU01 | Escolha inicial de modo incompatível com a tarefa. | UT01: 1 erro, 0 ajudas; correção espontânea antes do resumo. | Exige revisão da escolha, sem impedir a conclusão. | Conferir a clareza da distinção Visual/Headless e preservar a revisão antes de iniciar. | F02/F03; signos de modo; M01. |
+| AU02 | Dificuldade para localizar a causa da configuração inválida. | UT02: 1 erro, 1 ajuda, sucesso parcial e facilidade 3/5. | Recuperação dependeu de intervenção. | Reforçar a associação entre a mensagem e o campo seed; verificar o comportamento com outro participante. | F02E; signo de validação; M01. |
+| AU03 | Seleção inicial do registro incorreto. | UT04: abriu R2-002 antes de R2-001; corrigiu sem ajuda. | Acrescenta navegação, sem impedir a consulta. | Verificar a diferenciação visual dos identificadores e das condições na lista. Não concluir que um único erro prove uma causa de interface. | F07; M02. |
+| AU04 | Comparação exigiu maior compreensão do protocolo experimental. | UT05: sucesso parcial, 1 erro, facilidade 3/5; pós-teste apontou dúvida sobre condições de comparação. | A leitura dos números não garantiu interpretação completa durante a tarefa. | Oferecer orientação contextual sobre condições relevantes e sobre a reunião externa dos dados, preservando os limites do protótipo. | F08/F08B; M02; CI02. |
+| AU05 | Participante solicitou explicações de métricas e escala numérica. | Comentário de pós-teste; sem medida isolada do efeito da escala durante a tarefa. | Oportunidade de melhorar interpretação, sem estimar impacto causal com este relato. | Explicar indicadores e completar a escala dos gráficos; verificar o efeito em nova observação. | F08/F08B/F09/F09B; signos de métricas. |
 
-## F. Comparação com a avaliação heurística
+Os achados descrevem um único participante. A recorrência entre pessoas só poderá ser examinada após U02.
 
-| Problema | Detectado na heurística? | Detectado por usuários? | O que aprendemos |
-|---|---|---|---|
-| | | | |
+## F. Comparação com a avaliação heurística — parcial U01
 
-## G. Conclusão
+| Heurística consolidada | Evidência disponível de U01 | Conclusão permitida |
+|---|---|---|
+| HC01 — status de R2-003 | Reconheceu indisponibilidade depois de abrir e recuperou a consulta. | Recuperação bem-sucedida; não há registro suficiente sobre percepção do status na lista. |
+| HC02 — identidade inconsistente | Não foram informadas conclusões alternativas de controlador/modo. | Não exercitado no caminho relatado. |
+| HC03 — diagnóstico de falha de processamento | UT02 utilizou validação da seed, não F04E. | Não exercitado; a dificuldade de UT02 não confirma HC03. |
+| HC04 — gráficos sem escala | Escala numérica mencionada no pós-teste como ajuda desejada. | Comentário relacionado ao problema, sem demonstração isolada de seu efeito na execução. |
+| HC05 — Projeção regional | Nenhuma passagem pela configuração avançada foi descrita. | Não exercitado no relato. |
+| HC06 — acesso ao histórico nas alternativas | As alternativas de conclusão correspondentes não foram informadas. | Não exercitado no caminho relatado. |
+| HC07 — definição de Throughput | Houve pedido geral por explicação de métricas, sem menção específica ao indicador. | Não confirma especificamente HC07; requer investigação. |
 
-A conclusão consolidada será preenchida após a análise das sessões, respondendo:
+Uma tarefa bem-sucedida não comprova ausência de violação. Ausência de comentário não significa correção do problema.
 
-1. Quais metas de usabilidade foram atingidas?
-2. Quais problemas foram recorrentes e com quais perfis/tarefas?
-3. O que surpreendeu a equipe?
-4. Quais mudanças são prioritárias?
-5. Que limitações do teste impedem generalizações amplas?
+## G. Conclusão — contribuição de Gabriel
 
-**Situação da parte de Gabriel:** o procedimento, as tarefas e os critérios estão preparados. Os registros disponíveis da exploração de 15/11 não permitem calcular as medidas previstas para as tarefas do Figma. Até o preenchimento dos resultados de U01, não há base para declarar metas atingidas ou problemas observados com esse participante na aplicação padronizada.
+Segundo os resultados informados pelo moderador, U01 concluiu quatro tarefas integralmente e duas parcialmente, sem falhas. Houve quatro erros, uma ajuda direta e mediana individual de facilidade de 4/5.
+
+UT02 e UT05 receberam as menores notas, 3/5. Em UT02, a recuperação exigiu orientação do moderador. Na UT05, o participante identificou os valores, mas apresentou explicação incompleta durante a tarefa; no pós-teste, descreveu uma forma de reunir os dados externamente. Os dois momentos foram mantidos separados na análise.
+
+As prioridades sustentadas por esse relato são melhorar a associação da validação ao campo correspondente, apoiar a interpretação das condições experimentais e avaliar explicações de métricas e escala gráfica.
+
+A análise é limitada a um participante proxy, à apresentação estável da UT03, à falta de separação do tempo de localização em UT04 e ao registro fornecido pelo moderador. A familiaridade prévia, o equipamento e a revisão histórica exata do Figma não foram detalhados. Não são feitas generalizações sobre profissionais de mobilidade nem sobre o desempenho científico do TCC.
+
+**Consolidação final da equipe:** aguarda os dados de U02, a comparação dos resultados por tarefa, a atualização da rastreabilidade e o registro das decisões finais de melhoria.
 
 ## Checklist
 
-- [ ] Número de participantes finais atende ao enunciado. (Dois previstos; sessões padronizadas ainda sem registros fornecidos.)
-- [ ] Participantes são representativos do público e não são membros da equipe. (São previstos participantes externos; a adequação dos perfis precisa ser registrada.)
-- [ ] Se foram usados participantes proxy, a justificativa e a limitação estão explícitas. (Condição a verificar no recrutamento.)
-- [x] O procedimento avalia a interação, distinguindo-a do desempenho técnico do TCC.
-- [x] As tarefas propostas são rastreáveis a objetivos, tarefas e fluxos.
-- [ ] Há consentimento e anonimização. (IDs definidos; falta registrar o aceite da sessão padronizada.)
-- [ ] Foi realizado teste piloto. (Ainda não informado como realizado.)
-- [x] Tarefas têm critérios de sucesso definidos antes do teste.
-- [ ] Moderadores não ensinaram o caminho durante a tarefa. (Conduta prevista; falta o registro da aplicação.)
-- [ ] Resultados estão separados por usuário e por tarefa. (Estrutura preparada, sem dados fornecidos.)
-- [ ] Foram registrados sucesso, erros, ajudas, tempo e satisfação quando aplicáveis. (A coletar ou fornecer.)
-- [ ] Conclusão combina evidência quantitativa e qualitativa. (Aguarda resultados.)
-- [ ] Achados geram recomendações e atualização da rastreabilidade. (Aguarda análise e consolidação.)
+- [x] Fluxos, objetivos, tarefas e critérios estão documentados.
+- [x] A avaliação da interação foi distinguida da avaliação científica do TCC.
+- [x] U01 foi identificado como proxy e sua limitação foi registrada.
+- [x] Piloto e ajuste da UT03 foram registrados conforme relato do moderador.
+- [x] A concordância de U01 foi relatada como obtida antes da sessão.
+- [x] Os seis resultados de U01 possuem sucesso, erros, ajudas, tempo e facilidade informados.
+- [x] As respostas pós-teste de U01 foram registradas.
+- [x] A análise de U01 diferencia desempenho durante a tarefa e resposta posterior.
+- [x] Os achados foram relacionados à avaliação heurística sem presumir confirmações.
+- [ ] Detalhes documentais do aceite, do piloto, do dispositivo e da revisão do Figma foram completados.
+- [ ] O fluxograma SVG real foi conferido no repositório.
+- [ ] João registrou perfil, consentimento, sessão e resultados de U02.
+- [ ] Os dois participantes finais e a consolidação por tarefa atendem ao enunciado.
+- [ ] A conclusão da equipe e a comparação final com MU01–MU08 foram concluídas.
+- [ ] A rastreabilidade e os documentos de controle foram atualizados.
+
+
