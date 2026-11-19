@@ -108,7 +108,11 @@ A ação **Abrir histórico** em `F05` conecta o percurso principal do M01 ao M0
 
 Os estados de validação, falha, conclusão e indisponibilidade estão identificados por texto. As capturas do catálogo têm textos alternativos que descrevem seu conteúdo. As métricas apresentam nomes e unidades visíveis, como segundos para espera média e veículos por hora para throughput.
 
-A verificação formal de contraste e a avaliação da navegação por teclado ficam para a inspeção de usabilidade. O protótipo desta entrega foi preparado para apresentação em desktop.
+O protótipo desta entrega foi preparado para apresentação em desktop. A inspeção heurística da Entrega 13 avaliou os fluxos M01 e M02, suas alternativas e os principais estados de erro e recuperação, consolidando sete problemas de usabilidade identificados como HC01–HC07.
+
+A verificação formal de contraste, a navegação por teclado, a compatibilidade com leitores de tela e a responsividade não foram avaliadas sistematicamente na Entrega 13. Esses aspectos permanecem como possibilidades de avaliação futura e não são apresentados como requisitos de acessibilidade já validados.
+
+A observação de usuários realizada na Entrega 14 complementou a inspeção heurística, mas não substitui uma avaliação específica de acessibilidade.
 
 ## Checklist
 
