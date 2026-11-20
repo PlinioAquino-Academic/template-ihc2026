@@ -227,7 +227,9 @@ As 14 entregas possuem seus conteúdos acadêmicos documentados, incluindo a ava
 
 A conferência da notação e da legibilidade do MoLIC M01 já consta como realizada no checklist específico da E10. Também foi confirmada na branch `main` a exclusão dos três arquivos residuais anteriormente identificados (`assets/09_modelo_conceitual/mapa_objetivos.svg`, `assets/13_heuristica/v01.svg` e `assets/11_figma/f08.sgb`), sem prejuízo das evidências efetivamente utilizadas nas entregas.
 
-Para o encerramento administrativo, o [Checklist final](CHECKLIST_FINAL.md) ainda prevê a conferência geral das imagens e diagramas no GitHub, a abertura dos dois fluxos do Figma em janela anônima, a verificação das fontes editáveis quando aplicável, a confirmação da quantidade de participantes exigida e dos procedimentos de submissão do docente, além da conferência e guarda privada dos registros de consentimento e dos cuidados com a exposição histórica de dados pessoais. Essas verificações não são tratadas como resultados já comprovados apenas por constarem neste README. A equipe informou que o professor dispensou a gravação das sessões da E14; isso não elimina o consentimento voluntário dos participantes.
+A equipe registrou a conclusão das verificações finais de apresentação dos diagramas, navegação dos fluxos M01/M02 no Figma, disponibilidade dos materiais necessários e requisitos de submissão da disciplina. A Entrega 14 documenta o consentimento voluntário relatado pelos moderadores e a dispensa de gravação confirmada com o professor. Os registros pessoais da avaliação permanecem sob responsabilidade da equipe, sem necessidade de publicação no repositório.
+
+O encerramento documental não representa a implementação das melhorias de usabilidade propostas, nem a validação integral das hipóteses H01–H03 para o público profissional.
 
 As oportunidades de melhoria identificadas nas avaliações permanecem documentadas como recomendações, sem serem apresentadas como funcionalidades já implementadas.
 
