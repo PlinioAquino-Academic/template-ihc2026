@@ -8,7 +8,6 @@
 ## Como interpretar este checklist
 
 - `[x]` — requisito atendido ou documentado nos artefatos do repositório.
-- `[x]` — verificação que ainda precisa ser realizada ou confirmada pela equipe; não representa, por si só, ausência do artefato acadêmico.
 - **Não se aplica** — requisito condicional que não faz parte do escopo definido; não exige implementação.
 
 A conclusão documental de uma entrega não comprova que todas as metas de usabilidade foram atingidas, que todas as recomendações foram implementadas ou que as hipóteses H01–H03 foram validadas para especialistas de mobilidade.
@@ -45,8 +44,7 @@ A conclusão documental de uma entrega não comprova que todas as metas de usabi
 - [x] A E8 distingue princípios PG, metas MQ/MU e capacidades existentes de propostas futuras.
 - [x] A E9 registra CI01/CI02, OBJ01–OBJ09 e o esquema conceitual de signos.
 - [x] A E10 contém M01 e M02 com caminhos, alternativas, rupturas e recuperação.
-- [x] Conferir especificamente a notação MoLIC do diagrama M01 em relação ao material da disciplina antes de marcar os dois itens remanescentes da E10.
-- [x] A E11 contém o protótipo navegável e a cobertura dos fluxos M01/M02, sem alegar processamento real no Figma.
+- [x] A notação MoLIC do diagrama M01 foi conferida com o material da disciplina, e os dois itens de verificação da E10 foram concluídos.- [x] A E11 contém o protótipo navegável e a cobertura dos fluxos M01/M02, sem alegar processamento real no Figma.
 - [x] A terminologia de cenário, controlador, seed, histórico, registro, resultado e métrica é rastreável entre E9–E14.
 - [x] Metas MU01–MU08 são mensuráveis ou possuem ressalvas explícitas quando a medida não foi obtida exatamente.
 
