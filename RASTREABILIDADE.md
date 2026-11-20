@@ -242,7 +242,11 @@ Referências usadas em E8: ISO 9241-11, ISO 9241-210, Nielsen, Barbosa e Silva e
 
 **Situação geral:** o conjunto de 14 entregas foi produzido. Permanecem diferenças entre **relatório concluído**, **meta de usabilidade atingida** e **melhoria implementada**; nenhuma das últimas duas decorre automaticamente da primeira. Não há decisão de incorporar comparação automática, login, CRUD ou filtros avançados como requisitos obrigatórios. Novas funcionalidades dependerão de objetivo e evidência rastreáveis.
 
-**Fechamento documental:** a E10 registra a verificação de notação e legibilidade do M01, as tabelas de E12 e o termo de consentimento passaram a usar EX01/EX02 exclusivamente para a exploração anterior, e os três arquivos gráficos residuais foram removidos. A E14 permanece identificada apenas por U01/U02. O [Checklist final](CHECKLIST_FINAL.md) segue como referência para confirmar acessibilidade pública dos protótipos, apresentação visual, registros de consentimento, quantidade exigida de participantes e procedimentos de submissão; não presumir confirmação de itens ainda desmarcados nele.
+**Fechamento documental:** as Entregas 1–14 foram concluídas e consolidadas no repositório. A E10 registra a conferência da notação e legibilidade dos diagramas MoLIC; a E11 documenta os limites da avaliação de acessibilidade; a E12 e o instrumento de consentimento distinguem EX01/EX02 da exploração preliminar e U01/U02 das sessões padronizadas; e a E14 apresenta os resultados individuais e consolidados das observações.
+
+Os três arquivos gráficos provisórios anteriormente identificados foram excluídos, preservando as evidências reais utilizadas nas entregas. O [Checklist final](CHECKLIST_FINAL.md) registra as verificações de organização, apresentação visual, acesso aos protótipos e requisitos acadêmicos de submissão assinaladas como concluídas pela equipe.
+
+**Situação final:** o conjunto documental da disciplina está concluído. Os problemas HC01–HC07 e AU01–AU06 permanecem como recomendações de melhoria, enquanto H01–H03 mantêm os estados de investigação registrados nesta matriz. A conclusão das entregas não pressupõe implementação de todas as recomendações nem validação estatística das hipóteses.
 
 ## 12. Rastreabilidade consolidada dos problemas de usabilidade
 
