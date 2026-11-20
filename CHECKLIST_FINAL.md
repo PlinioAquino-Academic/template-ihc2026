@@ -44,7 +44,8 @@ A conclusão documental de uma entrega não comprova que todas as metas de usabi
 - [x] A E8 distingue princípios PG, metas MQ/MU e capacidades existentes de propostas futuras.
 - [x] A E9 registra CI01/CI02, OBJ01–OBJ09 e o esquema conceitual de signos.
 - [x] A E10 contém M01 e M02 com caminhos, alternativas, rupturas e recuperação.
-- [x] A notação MoLIC do diagrama M01 foi conferida com o material da disciplina, e os dois itens de verificação da E10 foram concluídos.- [x] A E11 contém o protótipo navegável e a cobertura dos fluxos M01/M02, sem alegar processamento real no Figma.
+- [x] A notação MoLIC do diagrama M01 foi conferida com o material da disciplina, e os dois itens de verificação da E10 foram concluídos.
+- [x] A E11 contém o protótipo navegável e a cobertura dos fluxos M01/M02, sem alegar processamento real no Figma.
 - [x] A terminologia de cenário, controlador, seed, histórico, registro, resultado e métrica é rastreável entre E9–E14.
 - [x] Metas MU01–MU08 são mensuráveis ou possuem ressalvas explícitas quando a medida não foi obtida exatamente.
 
@@ -101,7 +102,10 @@ A conclusão documental de uma entrega não comprova que todas as metas de usabi
 
 ## Situação consolidada
 
-**Conteúdo acadêmico:** as Entregas 1–14 estão produzidas e a E14 está consolidada em relatório.  
-**Correções de conteúdo previstas para encerramento:** anonimização/identificação separada da exploração anterior, atualização da ressalva de acessibilidade na E11, ajuste de conclusão individual da E14 e atualização das descrições dos assets.  
-**Verificações externas remanescentes:** legibilidade/notação M01, acesso ao Figma sem privilégios, comprovantes de consentimento aplicáveis e requisitos específicos de submissão/quantidade de participantes.  
-**Melhorias de produto:** HC01–HC07 e AU01–AU06 constituem recomendações documentadas; sua implementação não é requisito presumido para considerar os relatórios acadêmicos concluídos.
+**Conteúdo acadêmico:** as Entregas 1–14 estão concluídas e documentadas, incluindo a avaliação heurística da E13 e a observação de usuários da E14.
+
+**Conferências finais:** a equipe registrou a conclusão das verificações de apresentação dos diagramas, notação MoLIC, navegabilidade dos fluxos do Figma, organização das evidências e requisitos acadêmicos de submissão.
+
+**Consistência documental:** README, rastreabilidade, instrumentos e entregas estão alinhados com o escopo do projeto. A exploração preliminar utiliza EX01/EX02, enquanto as sessões padronizadas da E14 utilizam U01/U02. Os arquivos gráficos provisórios foram removidos.
+
+**Limitações e continuidade:** a conclusão documental não significa que todas as metas de usabilidade foram atingidas, que as hipóteses H01–H03 foram integralmente validadas ou que os problemas HC01–HC07 e AU01–AU06 foram corrigidos. Esses resultados e recomendações permanecem registrados para possíveis iterações futuras.
