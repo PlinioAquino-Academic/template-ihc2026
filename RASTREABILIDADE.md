@@ -225,6 +225,7 @@ Referências usadas em E8: ISO 9241-11, ISO 9241-210, Nielsen, Barbosa e Silva e
 | 18/11/2026 | E12 concluiu o plano DECIDE, com QA01–QA10, MU01–MU08, UT01–UT06, instrumentos e ética. | `docs/12_planejamento_avaliacao.md`. | Protocolo e metas utilizados nas avaliações. |
 | 18/11/2026 | E13 consolidou 12 achados individuais em sete problemas distintos HC01–HC07. | `docs/13_avaliacao_heuristica.md`. | Plano de recomendações heurísticas, com HC02/HC06 em grau 3; sem implementação de correções comprovada. |
 | 18–19/11/2026 | E14 documentou duas observações padronizadas no Figma, com U01/Gabriel e U02/João. | `docs/14_observacao_usuario.md`. | 8/12 sucessos totais, 9 erros, 3 ajudas, mediana 4/5, seis achados AU01–AU06 e análise MU01–MU08. |
+| 19/11/2026 | Revisão final de consistência: E10 registra a conferência do M01; E11 explicita limites da avaliação de acessibilidade; E12 e o instrumento de consentimento distinguem EX01/EX02 da exploração preliminar e U01/U02 da observação padronizada; E14 tem a conclusão individual harmonizada com a consolidação. | `docs/10_molic.md`, `docs/11_figma.md`, `docs/12_planejamento_avaliacao.md`, `docs/14_observacao_usuario.md` e `instrumentos/termo_consentimento_modelo.md`. | Os três assets provisórios foram excluídos da branch `main`; as verificações administrativas e externas continuam discriminadas no checklist final. |
 
 ---
 
@@ -240,6 +241,8 @@ Referências usadas em E8: ISO 9241-11, ISO 9241-210, Nielsen, Barbosa e Silva e
 | **E14** — Observação de usuários | Sessões U01 e U02, pré/pós-testes, 12 tentativas, comparação MU01–MU08, AU01–AU06, relação com HC01–HC07 e conclusão da equipe. | **Relatório concluído.** Resultados e recomendações consolidados; conferência e guarda privada dos registros de consentimento aplicáveis permanecem sob responsabilidade da equipe. |
 
 **Situação geral:** o conjunto de 14 entregas foi produzido. Permanecem diferenças entre **relatório concluído**, **meta de usabilidade atingida** e **melhoria implementada**; nenhuma das últimas duas decorre automaticamente da primeira. Não há decisão de incorporar comparação automática, login, CRUD ou filtros avançados como requisitos obrigatórios. Novas funcionalidades dependerão de objetivo e evidência rastreáveis.
+
+**Fechamento documental:** a E10 registra a verificação de notação e legibilidade do M01, as tabelas de E12 e o termo de consentimento passaram a usar EX01/EX02 exclusivamente para a exploração anterior, e os três arquivos gráficos residuais foram removidos. A E14 permanece identificada apenas por U01/U02. O [Checklist final](CHECKLIST_FINAL.md) segue como referência para confirmar acessibilidade pública dos protótipos, apresentação visual, registros de consentimento, quantidade exigida de participantes e procedimentos de submissão; não presumir confirmação de itens ainda desmarcados nele.
 
 ## 12. Rastreabilidade consolidada dos problemas de usabilidade
 
@@ -317,7 +320,8 @@ O trabalho de IHC documentado **não comprova** que as correções propostas já
 | A01 / A02 | Avaliadores Gabriel / João na inspeção heurística, E13 |
 | V / A02-V | Achados individuais de Gabriel / João na E13 |
 | HC | Problema heurístico consolidado, E13 |
-| U01 / U02 | Participantes anonimizados das sessões padronizadas do Figma na E14; não presumir identidade com exploração anterior |
+| EX01 / EX02 | Participantes anonimizados da exploração preliminar da aplicação funcional R3, em 15/11/2026 (E12); não compõem a amostra padronizada da E14 |
+| U01 / U02 | Participantes anonimizados das sessões padronizadas do Figma na E14, em 18–19/11/2026; identificadores distintos dos da exploração EX01/EX02 |
 | AU | Achado da observação de usuários, E14; AU07 provisório agrupado em AU02 |
 | L | Condição/limitação de preparação ou observação, quando identificada |
 | R | Linha da matriz de rastreabilidade |
