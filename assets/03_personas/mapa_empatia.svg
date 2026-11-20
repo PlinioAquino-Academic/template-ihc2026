@@ -1,5 +1,390 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="900"
+     viewBox="0 0 1200 900">
+
+  <!-- Fundo -->
+  <rect width="1200" height="900" fill="#f6f8fa"/>
+
+  <!-- Cartão principal -->
+  <rect x="30" y="30"
+        width="1140"
+        height="840"
+        rx="18"
+        fill="#ffffff"
+        stroke="#d0d7de"
+        stroke-width="2"/>
+
+  <!-- Cabeçalho -->
+  <path d="
+    M48 30
+    H1152
+    A18 18 0 0 1 1170 48
+    V155
+    H30
+    V48
+    A18 18 0 0 1 48 30
+    Z"
+    fill="#24292f"/>
+
+  <text x="70" y="82"
+        font-family="Arial, sans-serif"
+        font-size="32"
+        font-weight="bold"
+        fill="#ffffff">
+    Mapa de Empatia — P01
+  </text>
+
+  <text x="70" y="118"
+        font-family="Arial, sans-serif"
+        font-size="21"
+        fill="#d0d7de">
+    Marina Ribeiro · Pesquisadora / Analista de Mobilidade Urbana
+  </text>
+
+  <text x="930" y="115"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#d0d7de">
+    Proto-persona a validar
+  </text>
+
+  <!-- ======================== -->
+  <!-- BLOCO 1 - O QUE VÊ -->
+  <!-- ======================== -->
+
+  <rect x="60" y="185"
+        width="340"
+        height="195"
+        rx="12"
+        fill="#f6f8fa"
+        stroke="#d8dee4"/>
+
+  <text x="85" y="220"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        font-weight="bold"
+        fill="#24292f">
+    O que vê
+  </text>
+
+  <text x="85" y="255"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Cenários e redes de tráfego
+  </text>
+
+  <text x="85" y="283"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    que precisam ser configurados.
+  </text>
+
+  <text x="85" y="318"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Parâmetros, métricas, tabelas
+  </text>
+
+  <text x="85" y="346"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    e gráficos dos experimentos.
+  </text>
+
+  <!-- ======================== -->
+  <!-- BLOCO 2 - O QUE OUVE -->
+  <!-- ======================== -->
+
+  <rect x="430" y="185"
+        width="340"
+        height="195"
+        rx="12"
+        fill="#f6f8fa"
+        stroke="#d8dee4"/>
+
+  <text x="455" y="220"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        font-weight="bold"
+        fill="#24292f">
+    O que ouve
+  </text>
+
+  <text x="455" y="255"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Orientações sobre quais
+  </text>
+
+  <text x="455" y="283"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    condições devem ser avaliadas.
+  </text>
+
+  <text x="455" y="318"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Necessidade de manter
+  </text>
+
+  <text x="455" y="346"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    resultados comparáveis e reproduzíveis.
+  </text>
+
+  <!-- ======================== -->
+  <!-- BLOCO 3 - DIZ E FAZ -->
+  <!-- ======================== -->
+
+  <rect x="800" y="185"
+        width="340"
+        height="195"
+        rx="12"
+        fill="#f6f8fa"
+        stroke="#d8dee4"/>
+
+  <text x="825" y="220"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        font-weight="bold"
+        fill="#24292f">
+    O que diz e faz
+  </text>
+
+  <text x="825" y="255"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Define cenário e parâmetros.
+  </text>
+
+  <text x="825" y="285"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Seleciona a estratégia.
+  </text>
+
+  <text x="825" y="315"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Executa e acompanha simulações.
+  </text>
+
+  <text x="825" y="345"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Compara métricas e resultados.
+  </text>
+
+  <!-- ======================== -->
+  <!-- BLOCO 4 - PENSA E SENTE -->
+  <!-- ======================== -->
+
+  <rect x="60" y="410"
+        width="340"
+        height="195"
+        rx="12"
+        fill="#f6f8fa"
+        stroke="#d8dee4"/>
+
+  <text x="85" y="445"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        font-weight="bold"
+        fill="#24292f">
+    O que pensa e sente
+  </text>
+
+  <text x="85" y="480"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Precisa confiar que as execuções
+  </text>
+
+  <text x="85" y="508"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    usam condições corretas.
+  </text>
+
+  <text x="85" y="543"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Busca compreender rapidamente
+  </text>
+
+  <text x="85" y="571"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    o que ocorreu em cada experimento.
+  </text>
+
+  <!-- ======================== -->
+  <!-- BLOCO 5 - DORES -->
+  <!-- ======================== -->
+
+  <rect x="430" y="410"
+        width="340"
+        height="195"
+        rx="12"
+        fill="#f6f8fa"
+        stroke="#d8dee4"/>
+
+  <text x="455" y="445"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        font-weight="bold"
+        fill="#24292f">
+    Dores
+  </text>
+
+  <text x="455" y="480"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Excesso de parâmetros técnicos.
+  </text>
+
+  <text x="455" y="510"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Configurações inconsistentes.
+  </text>
+
+  <text x="455" y="540"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Perda da relação entre
+  </text>
+
+  <text x="455" y="568"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    configuração e resultado.
+  </text>
+
+  <!-- ======================== -->
+  <!-- BLOCO 6 - GANHOS -->
+  <!-- ======================== -->
+
+  <rect x="800" y="410"
+        width="340"
+        height="195"
+        rx="12"
+        fill="#f6f8fa"
+        stroke="#d8dee4"/>
+
+  <text x="825" y="445"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        font-weight="bold"
+        fill="#24292f">
+    Ganhos
+  </text>
+
+  <text x="825" y="480"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Configuração organizada.
+  </text>
+
+  <text x="825" y="510"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Estado da execução visível.
+  </text>
+
+  <text x="825" y="540"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    [H] Resultados vinculados
+  </text>
+
+  <text x="825" y="568"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    às condições do experimento.
+  </text>
+
+  <!-- ======================== -->
+  <!-- IMPLICAÇÕES -->
+  <!-- ======================== -->
+
+  <rect x="60" y="640"
+        width="1080"
+        height="150"
+        rx="12"
+        fill="#f6f8fa"
+        stroke="#d8dee4"
+        stroke-width="1.5"/>
+
+  <text x="85" y="678"
+        font-family="Arial, sans-serif"
+        font-size="22"
+        font-weight="bold"
+        fill="#24292f">
+    Implicações para o design
+  </text>
+
+  <text x="85" y="714"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    Organizar parâmetros por contexto, validar configurações antes da execução,
+  </text>
+
+  <text x="85" y="742"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    manter feedback claro de estado e preservar a relação entre cenário,
+  </text>
+
+  <text x="85" y="770"
+        font-family="Arial, sans-serif"
+        font-size="16"
+        fill="#57606a">
+    estratégia, execução e resultados para facilitar comparação e reprodução.
+  </text>
+
+  <!-- Rodapé -->
+  <text x="70" y="835"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#6e7781">
+    Conteúdo baseado em hipóteses da Entrega 1 e evidências documentais da Entrega 2.
+  </text>
+
+  <text x="990" y="835"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        fill="#6e7781">
+    H01 · H02 · H03
+  </text>
+
 </svg>

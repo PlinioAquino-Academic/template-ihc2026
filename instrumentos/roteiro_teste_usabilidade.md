@@ -1,68 +1,96 @@
 # Roteiro de teste de usabilidade
 
-## 1. Antes da sessão
+**Projeto:** Interface para Configuração, Execução e Análise de Simulações de Controle Semafórico Inteligente.  
+**Equipe:** Gabriel Koiama de Rocha Lira e João Pedro Lopes Santana Villas Bôas.  
+**Referência:** Entrega 12 — Planejamento DECIDE.  
+**Interface deste roteiro:** Figma da Entrega 11.
 
-- verificar protótipo/versão;
-- testar gravação e áudio;
-- abrir formulários/planilhas;
-- limpar dados de sessão/conta de teste;
-- separar instruções das tarefas;
-- confirmar consentimento e duração;
-- quando o protótipo usar resultados/processamentos simulados, preparar dados realistas e manter a simulação consistente entre participantes.
+## 1. Preparação
+
+1. Identificar o participante como U01 ou U02.
+2. Registrar data, moderador, dispositivo e versão utilizada.
+3. Conferir os links e os estados iniciais das tarefas.
+4. Preparar cronômetro e planilha.
+5. Apresentar o termo e registrar a concordância.
+6. Informar a duração estimada de até 40 minutos.
+7. Confirmar que o registro será por anotações, sem gravação.
+
+A aplicação funcional utilizada na exploração de 15/11/2026 deve ser identificada separadamente dos quadros do Figma deste roteiro.
 
 ## 2. Abertura padronizada
 
-- agradecer participação;
-- explicar objetivo geral sem revelar hipóteses específicas;
-- reforçar que o produto, não a pessoa, está sendo avaliado;
-- explicar possibilidade de interrupção;
-- obter consentimento;
-- explicar *think aloud* apenas se essa técnica for usada.
+“Vamos observar como você utiliza a interface para preparar uma simulação e consultar resultados. Queremos identificar dificuldades e oportunidades de melhoria.
 
-### Quando a interface é um protótipo de aplicação do tema do TCC
+Você pode comentar suas dúvidas, pedir uma pausa ou encerrar a participação.
 
-Explique de forma simples que a sessão avalia **como a pessoa interage com o protótipo**, e não a precisão/desempenho científico do algoritmo, modelo ou estudo do TCC.
+Nesta sessão, o Figma representa o funcionamento da interface. O processamento e os valores apresentados são demonstrativos.
 
-Se algum resultado técnico estiver simulado, não engane o participante sobre o nível de implementação. Use uma explicação compatível com o objetivo do teste, sem antecipar o caminho da tarefa.
+Apresentarei uma tarefa por vez. Tente realizá-la como faria normalmente.”
 
 ## 3. Perfil pré-teste
 
-Colete somente informações relevantes à interpretação dos resultados: experiência com domínio, frequência de uso de soluções similares, familiaridade com ferramentas profissionais, necessidades de acessibilidade pertinentes etc.
+- Você já configurou ou acompanhou uma simulação?
+- Você já utilizou tabelas ou gráficos para comparar resultados?
+- Você tem familiaridade com mobilidade urbana ou controle de tráfego?
 
-Para perfis especializados (DBA, analista, pesquisador, administrador, técnico), registre os critérios usados para considerar o participante representativo. Se for participante proxy, registre essa condição e a limitação.
+Registrar as respostas na planilha. Quando o perfil for aproximado ao público-alvo, considerar essa condição na análise.
 
 ## 4. Tarefas
 
-| ID | Instrução ao participante | O moderador pode esclarecer | O moderador não deve dizer |
-|---|---|---|---|
-| UT01 | {{...}} | {{termos do cenário}} | {{nome/local do botão}} |
+| ID | Instrução ao participante | Preparação do moderador |
+|---|---|---|
+| UT01 | Prepare um experimento para Regional São Paulo, usando o controlador híbrido, seed 42 e execução sem abrir a janela gráfica do simulador. Confira as condições antes de iniciar. | Começar no catálogo. Parar o tempo na conferência do resumo. |
+| UT02 | Um colega preparou uma configuração. Ao tentar deixá-la pronta para execução, você encontra um problema. Descubra o que precisa corrigir. | Começar na configuração com seed vazia. |
+| UT03 | O experimento já foi confirmado. Diga em que estado se encontra e qual estratégia está sendo usada. | Apresentar o quadro Executando. |
+| UT04 | Encontre R2-001 e identifique seu cenário, sua estratégia e sua seed. | Começar no histórico e medir a localização até abrir o registro correto. |
+| UT05 | Compare o tempo médio de espera de R2-001 e R2-002. Explique quais condições precisam ser conferidas antes de interpretar a diferença. | Começar no histórico. |
+| UT06 | Consulte R2-003. Se encontrar um impedimento, explique o que aconteceu e continue com outro registro. | Começar no histórico. |
 
-Tarefas podem envolver, conforme o escopo: localizar informação em dashboard; filtrar histórico; configurar análise; comparar resultados; gerar relatório; revisar alerta; editar permissão; recuperar-se de falha.
+## 5. Critérios do observador
 
-A tarefa deve expressar **objetivo do usuário**, e não “clique no filtro”, “abra o CRUD” ou “vá ao dashboard”.
+| Tarefa | Resultado esperado |
+|---|---|
+| UT01 | Resumo com cenário R2, controlador híbrido, seed 42 e modo Headless. |
+| UT02 | Reconhecimento da seed ausente, recuperação do valor 42 e nova validação. |
+| UT03 | Identificação correta do estado e do controlador. |
+| UT04 | Abertura de R2-001 e identificação de Regional São Paulo, controlador híbrido e seed 42. |
+| UT05 | Identificação de 28 s em R2-001 e 36 s em R2-002, consideração do contexto experimental e compreensão da comparação externa. |
+| UT06 | Reconhecimento da indisponibilidade e abertura de outro resultado após retornar ao histórico. |
 
-## 5. Durante a tarefa
+Na UT03, os estados automáticos podem passar rapidamente. Apresentar o quadro Executando diretamente e mantê-lo disponível durante a pergunta, usando o mesmo procedimento para todos. Registrar esse procedimento.
 
-Registrar início/fim, sucesso, erros, hesitações, comentários, pedidos de ajuda e intervenções do moderador. Não transformar silêncio do participante em “problema” sem evidência adicional.
+## 6. Durante a tarefa
 
-Observe também, quando pertinente:
+- Ler o mesmo enunciado para todos.
+- Iniciar o cronômetro depois da leitura.
+- Observar a tentativa antes de intervir.
+- Registrar erros, dúvidas, ajudas e comentários.
+- Registrar separadamente a repetição do enunciado.
+- Se uma limitação técnica impedir a tarefa, anotar a causa e seu efeito sobre a medição.
+- Respeitar pausas e pedidos de encerramento.
 
-- compreensão de métricas/termos técnicos;
-- percepção de status de processamento;
-- escolha e remoção de filtros;
-- interpretação de estados vazios/erro;
-- prevenção de ações destrutivas;
-- entendimento de papéis/permissões;
-- confiança ao interpretar resultados/recomendações.
+## 7. Pós-tarefa
 
-## 6. Pós-tarefa
+Perguntar “Quão fácil ou difícil foi realizar esta tarefa?”.
 
-Aplicar a escala definida no plano (por exemplo 1–7) e registrar comentário curto: “O que tornou essa tarefa fácil ou difícil?”
+| Nota | Resposta |
+|---|---|
+| 1 | Muito difícil |
+| 2 | Difícil |
+| 3 | Nem fácil nem difícil |
+| 4 | Fácil |
+| 5 | Muito fácil |
 
-## 7. Encerramento
+Depois perguntar “O que mais influenciou sua resposta?”.
 
-- perguntas gerais;
-- agradecer;
-- confirmar como os dados serão usados;
-- salvar registros com ID anônimo;
-- registrar limitações de perfil, ambiente ou simulação que afetem a interpretação.
+## 8. Encerramento
+
+- Em qual momento foi mais difícil decidir como prosseguir?
+- Que informação teria ajudado?
+- Como você reuniria as informações para comparar duas execuções?
+
+Agradecer a participação e salvar as anotações com o identificador correspondente.
+
+## 9. Limitação da atividade anterior
+
+A exploração de 15/11/2026 ocorreu sem roteiro padronizado, cronômetro ou planilha de observação. Este instrumento foi preparado posteriormente e será utilizado nas sessões padronizadas.

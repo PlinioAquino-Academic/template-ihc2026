@@ -1,5 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1040" viewBox="0 0 900 1040" role="img" aria-labelledby="title description">
+<title id="title">M01 — Preparar e executar experimentos sob condições comparáveis</title>
+<desc id="description">Marina seleciona o cenário, configura e valida a simulação, revisa e confirma as condições e acompanha o processamento. A validação inválida retorna à configuração. Uma falha na simulação leva à consulta dos detalhes e à revisão ou ao encerramento. Após sucesso, Marina pode preparar outro experimento ou encerrar.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#24292f"/>
+  </marker>
+</defs>
+<style>
+  text { font: 15px Arial, sans-serif; fill: #24292f; }
+  .heading { font-size: 22px; font-weight: bold; }
+  .subtitle { font-size: 16px; }
+  .topic { font-weight: bold; }
+  .box { fill: white; stroke: #24292f; stroke-width: 1.6; }
+  .flow { fill: none; stroke: #24292f; stroke-width: 1.65; marker-end: url(#arrow); }
+  .recovery { stroke-dasharray: 7 5; }
+  .label { paint-order: stroke fill; stroke: #f6f8fa; stroke-width: 4px; stroke-linejoin: round; }
+</style>
+<rect width="900" height="1040" fill="#fff"/>
+<rect x="15" y="70" width="870" height="880" rx="14" fill="#f6f8fa"/>
+
+<text x="25" y="32" class="heading" text-anchor="start">M01 — Preparar e executar experimentos sob condições comparáveis</text>
+<text x="25" y="56" class="subtitle" text-anchor="start">CI01 · Marina Ribeiro (P01) · OBJ01–OBJ04 · T01–T05</text>
+<circle cx="450" cy="91" r="7" fill="#24292f"/>
+<path class="flow" d="M450 98 V135"/>
+<text x="465" y="119" class="label" text-anchor="start">d: escolha o cenário</text>
+<rect class="box" x="285" y="135" width="330" height="60" rx="12"/>
+<path d="M 285 166 H 615" stroke="#c1c8cf"/>
+<text x="297" y="156" class="topic" text-anchor="start">Escolha do cenário de tráfego</text>
+<text x="297" y="184" class="" text-anchor="start">d+u: catálogo e cenário selecionado</text>
+<path class="flow" d="M450 195 V248"/>
+<text x="465" y="225" class="label" text-anchor="start">u: usar este cenário</text>
+<rect class="box" x="285" y="248" width="330" height="79" rx="12"/>
+<path d="M 285 279 H 615" stroke="#c1c8cf"/>
+<text x="297" y="269" class="topic" text-anchor="start">Condições da simulação</text>
+<text x="297" y="297" class="" text-anchor="start">d+u: parâmetros, controlador, seed e modo</text>
+<text x="297" y="316" class="" text-anchor="start">d+u: configuração avançada, se necessário</text>
+<path class="flow" d="M450 327 V384"/>
+<text x="465" y="355" class="label" text-anchor="start">u: validar configuração</text>
+<rect x="434" y="384" width="32" height="22" fill="#24292f"/>
+<text x="475" y="400" class="topic" text-anchor="start">Validação</text>
+<path class="flow recovery" d="M434 395 H173 V300 H285"/>
+<text x="183" y="415" class="label" text-anchor="start">d: [SR] parâmetro inválido</text>
+<text x="183" y="434" class="label" text-anchor="start">Confira o campo indicado.</text>
+<path class="flow" d="M450 406 V465"/>
+<text x="465" y="442" class="label" text-anchor="start">d: configuração válida</text>
+<rect class="box" x="285" y="465" width="330" height="79" rx="12"/>
+<path d="M 285 496 H 615" stroke="#c1c8cf"/>
+<text x="297" y="486" class="topic" text-anchor="start">Revisão antes de iniciar</text>
+<text x="297" y="514" class="" text-anchor="start">d+u: resumo de cenário, controlador,</text>
+<text x="297" y="533" class="" text-anchor="start">seed e modo de execução</text>
+<path class="flow" d="M615 499 H708 V285 H615"/>
+<text x="718" y="463" class="label" text-anchor="start">u: voltar para</text>
+<text x="718" y="482" class="label" text-anchor="start">ajustar condições</text>
+<path class="flow" d="M450 544 V610"/>
+<text x="465" y="580" class="label" text-anchor="start">u: confirmar início</text>
+<rect x="434" y="610" width="32" height="22" fill="#24292f"/>
+<text x="475" y="626" class="topic" text-anchor="start"></text>
+<path d="M466 621 H479" fill="none" stroke="#24292f" stroke-width="1.6"/>
+<rect class="box" x="479" y="595" width="346" height="79" rx="0"/>
+<path d="M 479 626 H 825" stroke="#c1c8cf"/>
+<text x="491" y="616" class="topic" text-anchor="start">Feedback durante o processamento</text>
+<text x="491" y="644" class="" text-anchor="start">d: inicializando ou executando</text>
+<text x="491" y="663" class="" text-anchor="start">d: SUMO-GUI disponível no modo Visual</text>
+<path class="flow recovery" d="M434 621 H177 V693"/>
+<text x="183" y="648" class="label" text-anchor="start">d: a simulação falhou</text>
+<rect class="box" x="35" y="693" width="250" height="79" rx="12"/>
+<path d="M 35 724 H 285" stroke="#c1c8cf"/>
+<text x="47" y="714" class="topic" text-anchor="start">Falha na simulação</text>
+<text x="47" y="742" class="" text-anchor="start">d: estado de falha e detalhes</text>
+<text x="47" y="761" class="" text-anchor="start">d+u: próxima ação</text>
+<path class="flow" d="M35 728 H28 V277 H285"/>
+<text x="43" y="263" class="label" text-anchor="start">u: revisar configuração</text>
+<path class="flow" d="M177 772 V871"/>
+<text x="190" y="809" class="label" text-anchor="start">u: encerrar</text>
+<circle cx="177" cy="882" r="11" fill="#fff" stroke="#24292f" stroke-width="1.6"/>
+<circle cx="177" cy="882" r="7" fill="#24292f"/>
+<text x="177" y="915" class="" text-anchor="middle">Encerrada após falha</text>
+<path class="flow" d="M450 632 V735"/>
+<text x="464" y="702" class="label" text-anchor="start">d: simulação concluída</text>
+<rect class="box" x="310" y="735" width="310" height="60" rx="12"/>
+<path d="M 310 766 H 620" stroke="#c1c8cf"/>
+<text x="322" y="756" class="topic" text-anchor="start">Identificação da execução concluída</text>
+<text x="322" y="784" class="" text-anchor="start">d+u: registro, cenário, controlador e seed</text>
+<path class="flow" d="M620 760 H856 V165 H615"/>
+<text x="641" y="747" class="label" text-anchor="start">u: preparar outra execução</text>
+<path class="flow" d="M465 795 V871"/>
+<text x="479" y="835" class="label" text-anchor="start">u: encerrar</text>
+<circle cx="465" cy="882" r="11" fill="#fff" stroke="#24292f" stroke-width="1.6"/>
+<circle cx="465" cy="882" r="7" fill="#24292f"/>
+<text x="465" y="915" class="" text-anchor="middle">Execução concluída</text>
+<text x="26" y="977" class="topic" text-anchor="start">Legenda</text>
+<circle cx="37" cy="998" r="5" fill="#24292f"/>
+<text x="49" y="1003" class="" text-anchor="start">Abertura</text>
+<circle cx="144" cy="998" r="8" fill="#fff" stroke="#24292f" stroke-width="1.6"/>
+<circle cx="144" cy="998" r="4" fill="#24292f"/>
+<text x="157" y="1003" class="" text-anchor="start">Encerramento</text>
+<rect x="277" y="991" width="22" height="15" rx="5" class="box"/><rect x="396" y="991" width="19" height="15" fill="#24292f"/>
+<text x="307" y="1003" class="" text-anchor="start">Cena</text>
+<text x="423" y="1003" class="" text-anchor="start">Processo do sistema</text>
+<path class="flow recovery" d="M589 998 H622"/>
+<text x="631" y="1003" class="label" text-anchor="start">Recuperação de ruptura</text>
+<text x="26" y="1028" class="" text-anchor="start">u = usuária · d = preposto do designer · d+u = diálogo · [SR] = recuperação apoiada</text>
 </svg>
