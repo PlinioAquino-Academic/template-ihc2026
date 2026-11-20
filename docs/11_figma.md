@@ -30,7 +30,7 @@ Materializar a conversa modelada no MoLIC em um protótipo navegável da **Mesa 
 
 **Protótipo navegável:** https://www.figma.com/proto/9cKfwkCvyasTplQlf90RTC?node-id=1-2&starting-point-node-id=1%3A2<br>
 **Arquivo editável:** https://www.figma.com/design/9cKfwkCvyasTplQlf90RTC<br>
-**Última verificação de permissão:** pendente. O compartilhamento “qualquer pessoa com o link pode ver” precisa ser ativado no Figma e testado em janela anônima.
+**Última verificação de permissão:** 20/11/2026 — teste sem login (`HTTP 404`). O compartilhamento “qualquer pessoa com o link pode ver” ainda precisa ser ativado no Figma e retestado em janela anônima.
 
 O arquivo tem uma página, **Protótipo F01–F12**, com as 16 telas e estados organizados em grade, e o fluxo inicial **Mesa de inspeção — P01 (F01)**. As 122 interações são de clique (*On click → Navigate to*).
 

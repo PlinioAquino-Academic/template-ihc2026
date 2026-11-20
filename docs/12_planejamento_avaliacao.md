@@ -47,7 +47,7 @@ As instruções entregues aos participantes não mencionam controles ou caminhos
 
 | ID | Cenário neutro | Objetivo da avaliação | Sucesso | Limite |
 |---|---|---|---|---|
-| UT01 | “Você recebeu o caso DEMO-001. Examine a área indicada e compare essa informação com a imagem sem o destaque. Ao terminar, explique o que o resultado permite concluir.” | T01/T02, O02/O03/O08, M01; MU01/MU02. | Localiza a área, consulta original e retorna à comparação; explica limites sem ajuda. | 5 min. |
+| UT01 | “Você recebeu o caso CASO-DEMO-0417. Examine a área indicada e compare essa informação com a imagem sem o destaque. Ao terminar, explique o que o resultado permite concluir.” | T01/T02, O02/O03/O08, M01; MU01/MU02. | Localiza a área, consulta original e retorna à comparação; explica limites sem ajuda. | 5 min. |
 | UT02 | “A dúvida sobre a região permanece. Registre a área e sua observação e prepare um parecer de apoio para outra pessoa, com sua conclusão e um responsável fictício.” | T03 e consulta de T05/T06, O04–O07/O09, M01/M03; MU03/MU04. | Parecer corresponde ao caso e contém região comentada, conclusão, justificativa e responsável; consegue relacionar o conteúdo à imagem. | 5 min; meta 3 min. |
 | UT03 | “Neste registro preparado falta a identificação do responsável. Tente emitir o parecer e resolva o que impedir sua emissão. Se houver falha, procure concluir preservando o registro.” | O05/O08, M01/M03; MU05. | Emissão incompleta impedida; preenche autoria e recupera uma falha de exportação, sem perder comentário/conclusão. | 5 min. |
 

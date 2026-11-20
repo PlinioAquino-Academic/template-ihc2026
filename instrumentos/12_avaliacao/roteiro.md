@@ -17,7 +17,7 @@ Aplicar o [perfil mínimo](questionarios.md). Permitir um minuto de exploração
 
 ## Tarefas — ler literalmente, uma por vez
 
-**UT01:** “Você recebeu o caso DEMO-001. Examine a área indicada e compare essa informação com a imagem sem o destaque. Ao terminar, explique o que o resultado permite concluir.”
+**UT01:** “Você recebeu o caso CASO-DEMO-0417. Examine a área indicada e compare essa informação com a imagem sem o destaque. Ao terminar, explique o que o resultado permite concluir.”
 
 **UT02:** “A dúvida sobre a região permanece. Registre a área e sua observação e prepare um parecer de apoio para outra pessoa, com sua conclusão e um responsável fictício.”
 

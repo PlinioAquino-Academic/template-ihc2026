@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação heurística
 
-**Data:** 17/11/2026<br>
-**Status:** 🟨 inspeção preliminar do HTML registrada. Achados preliminares consolidados. Fichas individuais da equipe pendentes.<br>
+**Data:** 20/11/2026<br>
+**Status:** 🟨 inspeção preliminar e ficha individual A01 (Kawan) registradas na versão HTML. Faltam acesso público ao Figma, fichas individuais A02/A03 e consolidação final.<br>
 **Responsabilidade:** uma inspeção completa por integrante, seguida de síntese da equipe.
 
 A inspeção avalia a interação da Mesa de inspeção, não o desempenho científico do modelo. Conforme a aula 13, cada pessoa primeiro examina a interface individualmente; depois a equipe consolida os problemas. Preparar fichas não equivale a executar essas inspeções.
@@ -38,7 +38,7 @@ A justificativa considera frequência provável, impacto sobre a tarefa e persis
 
 | Avaliador / responsável | Ficha com matriz H1–H10 e declaração de violações | Situação |
 |---|---|---|
-| A01 — Kawan Mark Geronimo Da Silva, 22.222.010-5 | [Inspeção A01](../instrumentos/13_heuristica/a01.md) | Não realizada. |
+| A01 — Kawan Mark Geronimo Da Silva, 22.222.010-5 | [Inspeção A01](../instrumentos/13_heuristica/a01.md) | Realizada na versão HTML (20/11/2026; 6 achados A01-01 a A01-06). Falta confirmar no Figma. |
 | A02 — Gabriel Albertini Pinheiro, 22.122.094-8 | [Inspeção A02](../instrumentos/13_heuristica/a02.md) | Não realizada. |
 | A03 — Alexandre Domiciano Pierri, 22.125.061-6 | [Inspeção A03](../instrumentos/13_heuristica/a03.md) | Não realizada. |
 
