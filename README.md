@@ -225,7 +225,9 @@ A E6 documentou a sequência real da V0 e corrigiu a interpretação da compara�
 
 As 14 entregas possuem seus conteúdos acadêmicos documentados, incluindo a avaliação heurística e a consolidação da observação de usuários. O [Checklist final](CHECKLIST_FINAL.md) foi revisado para distinguir os requisitos já documentados, os elementos não aplicáveis e as verificações operacionais ou administrativas que ainda dependem de confirmação da equipe.
 
-O encerramento definitivo exige conferir a notação e a legibilidade do MoLIC M01, o acesso aos fluxos do Figma sem autenticação privilegiada e a preservação privada dos registros de consentimento aplicáveis. A equipe informou que o professor dispensou a gravação das sessões da Entrega 14. Essa autorização não elimina a necessidade de consentimento voluntário dos participantes.
+A conferência da notação e da legibilidade do MoLIC M01 já consta como realizada no checklist específico da E10. Também foi confirmada na branch `main` a exclusão dos três arquivos residuais anteriormente identificados (`assets/09_modelo_conceitual/mapa_objetivos.svg`, `assets/13_heuristica/v01.svg` e `assets/11_figma/f08.sgb`), sem prejuízo das evidências efetivamente utilizadas nas entregas.
+
+Para o encerramento administrativo, o [Checklist final](CHECKLIST_FINAL.md) ainda prevê a conferência geral das imagens e diagramas no GitHub, a abertura dos dois fluxos do Figma em janela anônima, a verificação das fontes editáveis quando aplicável, a confirmação da quantidade de participantes exigida e dos procedimentos de submissão do docente, além da conferência e guarda privada dos registros de consentimento e dos cuidados com a exposição histórica de dados pessoais. Essas verificações não são tratadas como resultados já comprovados apenas por constarem neste README. A equipe informou que o professor dispensou a gravação das sessões da E14; isso não elimina o consentimento voluntário dos participantes.
 
 As oportunidades de melhoria identificadas nas avaliações permanecem documentadas como recomendações, sem serem apresentadas como funcionalidades já implementadas.
 
