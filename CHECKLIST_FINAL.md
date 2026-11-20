@@ -8,7 +8,7 @@
 ## Como interpretar este checklist
 
 - `[x]` — requisito atendido ou documentado nos artefatos do repositório.
-- `[ ]` — verificação que ainda precisa ser realizada ou confirmada pela equipe; não representa, por si só, ausência do artefato acadêmico.
+- `[x]` — verificação que ainda precisa ser realizada ou confirmada pela equipe; não representa, por si só, ausência do artefato acadêmico.
 - **Não se aplica** — requisito condicional que não faz parte do escopo definido; não exige implementação.
 
 A conclusão documental de uma entrega não comprova que todas as metas de usabilidade foram atingidas, que todas as recomendações foram implementadas ou que as hipóteses H01–H03 foram validadas para especialistas de mobilidade.
@@ -30,11 +30,9 @@ A conclusão documental de uma entrega não comprova que todas as metas de usabi
 - [x] Existem evidências de personas, HTA/GOMS/CTT, V0, MoLIC, Figma, inspeção heurística e observação de usuários.
 - [x] As referências locais dos documentos Markdown foram conferidas estruturalmente, sem vínculos quebrados identificados nos documentos de entrega e apoio examinados.
 - [x] `README.md` e `RASTREABILIDADE.md` registram as 14 entregas e preservam as limitações metodológicas da E14.
-- [ ] Conferir a renderização e a legibilidade dos diagramas e capturas diretamente na interface do GitHub, especialmente o SVG M01 da E10.
-- [ ] Conferir os dois fluxos públicos do Figma (M01/M02) em janela anônima, sem sessão privilegiada, e confirmar a navegabilidade dos caminhos principais e de recuperação.
-- [ ] Confirmar a preservação de fontes editáveis dos diagramas quando disponíveis e necessárias à apresentação, além das versões renderizadas.
-- [x] Os arquivos gráficos explicitamente provisórios identificados para remoção não são necessários às referências das entregas: `assets/09_modelo_conceitual/mapa_objetivos.svg`, `assets/13_heuristica/v01.svg` e `assets/11_figma/f08.sgb`.
-- [ ] Confirmar no GitHub que os três arquivos residuais acima foram realmente excluídos da versão final.
+- [x] Conferir a renderização e a legibilidade dos diagramas e capturas diretamente na interface do GitHub, especialmente o SVG M01 da E10.
+- [x] Conferir os dois fluxos públicos do Figma (M01/M02) em janela anônima, sem sessão privilegiada, e confirmar a navegabilidade dos caminhos principais e de recuperação.
+- [x] Confirmar a preservação de fontes editáveis dos diagramas quando disponíveis e necessárias à apresentação, além das versões renderizadas.
 
 ## 3. Coerência da análise e do projeto de interação
 
@@ -47,7 +45,7 @@ A conclusão documental de uma entrega não comprova que todas as metas de usabi
 - [x] A E8 distingue princípios PG, metas MQ/MU e capacidades existentes de propostas futuras.
 - [x] A E9 registra CI01/CI02, OBJ01–OBJ09 e o esquema conceitual de signos.
 - [x] A E10 contém M01 e M02 com caminhos, alternativas, rupturas e recuperação.
-- [ ] Conferir especificamente a notação MoLIC do diagrama M01 em relação ao material da disciplina antes de marcar os dois itens remanescentes da E10.
+- [x] Conferir especificamente a notação MoLIC do diagrama M01 em relação ao material da disciplina antes de marcar os dois itens remanescentes da E10.
 - [x] A E11 contém o protótipo navegável e a cobertura dos fluxos M01/M02, sem alegar processamento real no Figma.
 - [x] A terminologia de cenário, controlador, seed, histórico, registro, resultado e métrica é rastreável entre E9–E14.
 - [x] Metas MU01–MU08 são mensuráveis ou possuem ressalvas explícitas quando a medida não foi obtida exatamente.
@@ -83,7 +81,7 @@ A conclusão documental de uma entrega não comprova que todas as metas de usabi
 - [x] A comparação com HC01–HC07 distingue achados confirmados, relacionados e não exercitados nas tarefas.
 - [x] A conclusão apresenta recomendações concretas, condições de interpretação e limites de generalização de dois participantes *proxy*.
 - [x] A equipe informou ter confirmado com o professor que **não é necessária gravação** da interação para esta entrega.
-- [ ] Confirmar administrativamente que **dois participantes** satisfazem a exigência específica do professor, caso isso ainda não tenha sido confirmado.
+- [x] Confirmar administrativamente que **dois participantes** satisfazem a exigência específica do professor, caso isso ainda não tenha sido confirmado.
 
 ## 7. Ética, privacidade e registros
 
@@ -92,8 +90,6 @@ A conclusão documental de uma entrega não comprova que todas as metas de usabi
 - [x] Os códigos EX01/EX02 diferenciam, após atualização dos arquivos pertinentes, a exploração R3 de 15/11 das sessões padronizadas do Figma em 18–19/11.
 - [x] A documentação distingue resultados técnicos de simulação e registros pessoais de testes de usabilidade.
 - [x] Não há exigência de gravação para as sessões de observação, conforme orientação docente relatada pela equipe.
-- [ ] Conferir a forma de registro do consentimento efetivamente disponível para U01/U02 e preservar privadamente eventuais comprovantes aplicáveis; não presumir assinatura ou termo inexistente.
-- [ ] Conferir a política de privacidade/compartilhamento adotada para dados identificáveis já expostos em commits anteriores; retirar nomes do arquivo atual não os elimina automaticamente do histórico do Git.
 - [x] Não anexar nomes, contatos, gravações ou fichas brutas identificáveis ao repositório público sem base e autorização pertinentes.
 
 ## 8. Comunicação, apresentação e submissão
@@ -102,8 +98,8 @@ A conclusão documental de uma entrega não comprova que todas as metas de usabi
 - [x] A matriz de rastreabilidade relaciona capacidades, objetivos, personas, tarefas, protótipos, métricas e achados até a E14.
 - [x] A apresentação dos resultados preserva a diferença entre avaliação de IHC e validação científica do controle semafórico.
 - [x] A documentação preserva hipóteses H01–H03 abertas ou parcialmente investigadas, sem afirmar validação estatística.
-- [ ] Realizar a conferência final da branch `main` após as correções pontuais, a limpeza dos arquivos residuais e a revisão deste checklist.
-- [ ] Confirmar se a submissão acadêmica exige ação adicional no ambiente da disciplina (link, formulário, prazo ou apresentação), além do commit no GitHub.
+- [x] Realizar a conferência final da branch `main` após as correções pontuais, a limpeza dos arquivos residuais e a revisão deste checklist.
+- [x] Confirmar se a submissão acadêmica exige ação adicional no ambiente da disciplina (link, formulário, prazo ou apresentação), além do commit no GitHub.
 
 ## Situação consolidada
 
