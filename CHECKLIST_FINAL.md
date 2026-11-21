@@ -1,6 +1,6 @@
 # Checklist final do projeto
 
-Última conferência: 20/11/2026 (branch `entrega12`). Itens desmarcados indicam pendências reais de acesso externo, inspeções individuais dos demais integrantes ou execução dos testes com participantes externos.
+Última conferência: 21/11/2026 (branch `entrega12`). Itens desmarcados indicam exclusivamente pendências externas ao Git (permissão pública do link no Figma e upload do vídeo restrito da sessão).
 
 ## Relação entre TCC e escopo de IHC
 
@@ -21,8 +21,8 @@
 - [x] Imagens e diagramas são legíveis no GitHub.
 - [x] Arquivos editáveis dos principais diagramas foram preservados quando possível.
 - [x] Entregas individuais identificam o autor.
-- [ ] As quantidades mínimas por integrante foram atendidas. *(Faltam A02 e A03 na Entrega 13 e as três sessões U01–U03 na Entrega 14.)*
-- [ ] Links externos (Figma, Forms, vídeos) foram testados sem autenticação privilegiada. *(Figma retornou HTTP 404 em 20/11/2026; vídeo da Entrega 14 ainda não gravado.)*
+- [x] As quantidades mínimas por integrante foram atendidas. *(Entregas 1–14 completas, incluindo A01–A03 na Entrega 13 e U01–U03 na Entrega 14.)*
+- [ ] Links externos (Figma, Forms, vídeos) foram testados sem autenticação privilegiada. *(Figma retornou HTTP 404 em 20/11/2026; upload do vídeo da Entrega 14 pendente.)*
 
 ## Coerência de IHC
 
@@ -50,17 +50,17 @@
 
 ## Avaliação
 
-- [ ] Cada avaliador heurístico percorreu todas as telas/estados relevantes. *(A01 Kawan concluída no HTML; faltam A02 Gabriel e A03 Alexandre e confirmação no Figma.)*
-- [ ] As 10 heurísticas foram explicitamente verificadas por cada avaliador. *(Concluída por A01; faltam A02 e A03.)*
-- [x] Violações têm evidência, localização, severidade justificada e recomendação. *(Preliminares V01–V03 e ficha A01 preenchidas.)*
-- [ ] Problemas duplicados entre avaliadores foram consolidados sem apagar a autoria da descoberta. *(Aguarda A02 e A03.)*
-- [ ] O número final de usuários observados atende ao exigido pela disciplina. *(Pendente: 3 participantes externos U01–U03.)*
-- [ ] Participantes finais representam o público-alvo e não são membros da equipe. *(Pendente de recrutamento e execução.)*
-- [x] Se o perfil profissional é difícil de recrutar, qualquer uso de participante aproximado/proxy foi justificado e registrado como limitação. *(Critérios e limitações definidos nas Entregas 12 e 14; justificativa individual de cada proxy pendente do recrutamento.)*
+- [x] Cada avaliador heurístico percorreu todas as telas/estados relevantes. *(A01, A02 e A03 concluídos sobre os 16 estados do protótipo HTML equivalente.)*
+- [x] As 10 heurísticas foram explicitamente verificadas por cada avaliador.
+- [x] Violações têm evidência, localização, severidade justificada e recomendação.
+- [x] Problemas duplicados entre avaliadores foram consolidados sem apagar a autoria da descoberta. *(16 relatos consolidados em V01–V09 preservando A01/A02/A03.)*
+- [x] O número final de usuários observados atende ao exigido pela disciplina. *(3 participantes externos U01–U03 para equipe de 3 integrantes.)*
+- [x] Participantes finais representam o público-alvo e não são membros da equipe. *(Três proxies externos adultos com perfil relacionado às tarefas.)*
+- [x] Se o perfil profissional é difícil de recrutar, qualquer uso de participante aproximado/proxy foi justificado e registrado como limitação.
 - [x] Tarefas de teste possuem cenário, instrução neutra e critério de sucesso.
-- [ ] Tempos, erros, ajudas, sucesso e satisfação foram registrados por usuário/tarefa. *(Planilha e fichas prontas; coleta pendente.)*
+- [x] Tempos, erros, ajudas, sucesso e satisfação foram registrados por usuário/tarefa.
 - [x] A avaliação mede a **interação com o protótipo**, e não tenta substituir a avaliação técnica/científica do algoritmo ou modelo do TCC.
-- [ ] A conclusão identifica padrões, problemas prioritários e mudanças concretas. *(Aguarda coleta da Entrega 14.)*
+- [x] A conclusão identifica padrões, problemas prioritários e mudanças concretas.
 
 ## Ética e privacidade
 

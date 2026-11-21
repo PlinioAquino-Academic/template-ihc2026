@@ -39,9 +39,9 @@ def topbar(com_caso=True, trocar="F11a"):
         caso = f"""
       <div class="case">
         <dl>
-          <div><dt>Caso (S01)</dt><dd>{CASO['id']}</dd></div>
+          <div><dt>Caso</dt><dd>{CASO['id']}</dd></div>
           <div><dt>Unidade de carga</dt><dd>{CASO['unidade']}</dd></div>
-          <div><dt>Carga declarada (S13)</dt><dd>{CASO['carga']} · {CASO['peso']}</dd></div>
+          <div><dt>Carga declarada</dt><dd>{CASO['carga']} · {CASO['peso']}</dd></div>
         </dl>
         <span class="src">Dados do caso demonstrativo · fictícios</span>
       </div>"""
@@ -72,7 +72,7 @@ def tools(ativo=True, preset="Original"):
 
     return f"""
     <aside class="panel tools{'' if ativo else ' is-disabled'}" aria-label="Ajustes da imagem">
-      <section class="group"><h2>Funções rápidas <span class="tag-cand">S17 · H43</span></h2><div class="presets">{chips}</div></section>
+      <section class="group"><div style="display:flex;align-items:center;justify-content:space-between;gap:.4rem"><h2>Funções rápidas</h2><a class="btn btn-sm" href="#F03" style="padding:.15rem .45rem;font-size:.75rem">Restaurar ajustes</a></div><div class="presets">{chips}</div></section>
       <section class="group"><h2>Exposição</h2>{slider('Brilho','0')}{slider('Contraste','0')}{slider('Penetração','normal')}</section>
       <section class="group"><h2>Realce</h2>{slider('Realce local','0%',0)}{slider('Nitidez','0%',0)}{slider('Bordas','0%',0)}</section>
       <section class="group"><h2>Densidade e cor</h2>{slider('Faixa de densidade','tudo',0)}
@@ -86,7 +86,8 @@ def rx(img="rx_mapa.jpg", tam=640, regiao=True, marca=False, rascunho=False, rot
     svg = ""
     if regiao:
         rx_, ry, rw, rh = REGIAO_MODELO
-        svg += f'<rect x="{rx_*s}" y="{ry*s}" width="{rw*s}" height="{rh*s}" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/>'
+        svg += (f'<rect x="{rx_*s}" y="{ry*s}" width="{rw*s}" height="{rh*s}" fill="none" stroke="#11161c" stroke-width="4" stroke-dasharray="6 4"/>'
+                f'<rect x="{rx_*s}" y="{ry*s}" width="{rw*s}" height="{rh*s}" fill="none" stroke="#f2a93b" stroke-width="2" stroke-dasharray="6 4"/>')
     if marca:
         mx, my, mw, mh = MARCA
         dash = ' stroke-dasharray="6 4"' if rascunho else ""
@@ -115,10 +116,10 @@ def toolbar(vista="sobreposta", ferramenta="mover", ativo=True):
           {tool('Marcar', 'F06', 'M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4')}
         </div>
         <div class="tool-set">
-          <span class="vista-label">Vista (S06)</span>
+          <span class="vista-label">Vista</span>
           <span class="vista">{v('Sobreposta', 'F03')}{v('Sem mapa', 'F04')}{v('Lado a lado', 'F05')}</span>
           <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></span>
-          <span class="zoom-level">100% <small style="opacity:.7">(S16)</small></span>
+          <span class="zoom-level">100%</span>
           <span class="icon-btn"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></svg></span>
         </div>
       </div>"""
@@ -126,13 +127,13 @@ def toolbar(vista="sobreposta", ferramenta="mover", ativo=True):
 
 def resultado(estado="pronto"):
     if estado == "aguardando":
-        corpo = '<div class="state">Análise (S03)</div><div class="cat neutral">Aguardando imagem do caso.</div>'
+        corpo = '<div class="state">Análise</div><div class="cat neutral">Aguardando imagem do caso.</div>'
     elif estado == "analisando":
-        corpo = '<div class="state">Análise (S03)</div><div class="cat neutral">Analisando imagem…</div><p>O resultado aparece aqui ao terminar. Os ajustes já podem ser usados.</p>'
+        corpo = '<div class="state">Análise</div><div class="cat neutral">Analisando imagem…</div><p>O resultado aparece aqui ao terminar. Os ajustes já podem ser usados.</p>'
     elif estado == "falha":
-        corpo = '<div class="state">Análise (S03)</div><div class="cat neutral" style="color:#ff9b87">Sem resultado: a análise falhou.</div><p>Falha não significa “sem indício”.</p>'
+        corpo = '<div class="state">Análise</div><div class="cat neutral" style="color:#ff9b87">Sem resultado: a análise falhou.</div><p>Falha não significa “sem indício”.</p>'
     else:
-        corpo = ('<div class="state">Indicação do modelo (S04) · análise concluída</div>'
+        corpo = ('<div class="state">Indicação do modelo · análise concluída</div>'
                  '<div class="cat">Indício de atipicidade</div>'
                  '<p>Apoio à triagem: aponta onde a imagem diverge do esperado. '
                  'Não identifica ilícito nem substitui o seu exame.</p>')
@@ -142,25 +143,25 @@ def resultado(estado="pronto"):
 def mapa_ctrl(mostrar=True, ativo=True):
     on = " on" if mostrar else ""
     return f"""<div class="{'' if ativo else 'is-disabled'}">
-      <div class="legend-map"><i></i> mapa aproximado (S05) <b></b> maior atenção</div>
+      <div class="legend-map"><i></i> mapa aproximado <b></b> maior atenção</div>
       <div class="switch{on}"><span class="box"></span>Mostrar onde o modelo olhou</div>
       <div class="switch{on}"><span class="box"></span>Destacar a região de maior atenção</div></div>"""
 
 
-def regioes(estado="vazia"):
+def regioes(estado="vazia", recuperar="F07"):
     if estado == "vazia":
         corpo = '<p class="note">Nenhuma região marcada. Use <b>Marcar</b> para registrar o que chamou sua atenção.</p>'
     else:
-        txt = (f'<span class="mark-note ph">Descreva o que você viu nesta região…</span>' if estado == "sem_comentario"
+        txt = (f'<a class="mark-note ph" href="#{recuperar}" style="display:block;text-decoration:none;color:inherit">Descreva o que você viu nesta região…</a>' if estado == "sem_comentario"
                else f'<span class="mark-note">{COMENT}</span>')
         err = '<div class="err-msg">Comentário obrigatório para exportar a região.</div>' if estado == "sem_comentario" else ""
         corpo = f"""<ol class="marks"><li><div class="mark-head"><span class="mark-id">1</span><span>Região 1 · 96 × 94 px</span>
-          <a href="#F03" title="Excluir região 1">Excluir</a></div><div style="margin-top:.35rem">{txt}</div>{err}
-          <div class="mark-meta">Marcação humana (S07) · comentário (S08)</div></li></ol>"""
+          <span style="display:flex;gap:.5rem"><a href="#{recuperar}" title="Editar comentário da região 1">Editar</a><a href="#F03" title="Excluir região 1">Excluir</a></span></div><div style="margin-top:.25rem">{txt}</div>{err}
+          <div class="mark-meta">Marcação humana · comentário</div></li></ol>"""
     return f'<section class="group"><h2>Regiões marcadas</h2>{corpo}</section>'
 
 
-def parecer(conclusao=None, justif=None, resp=None, erros=False, ativo=True, botao=None):
+def parecer(conclusao=None, justif=None, resp=None, erros=False, ativo=True, botao=None, recuperar="F07", justif_txt=None):
     justif = bool(conclusao) if justif is None else justif
     resp = bool(conclusao) if resp is None else resp
     botao = botao or ("F08" if conclusao and justif and resp else "F10c")
@@ -168,20 +169,22 @@ def parecer(conclusao=None, justif=None, resp=None, erros=False, ativo=True, bot
         sel = " sel" if conclusao == valor else ""
         return f'<a class="decision-opt {cls}{sel}" href="#{"F11b" if valor == "Sem ressalvas na imagem" else "F07"}"><span>{valor}</span></a>'
 
-    j = (f'<span class="field">{JUSTIF}</span>' if justif else
-         f'<span class="field ph{" err" if erros else ""}">Por que esta conclusão?</span>')
+    j_val = justif_txt if justif_txt is not None else JUSTIF
+    j = (f'<span class="field">{j_val}</span>' if justif else
+         f'<a class="field ph{" err" if erros else ""}" href="#{recuperar}" style="display:block;text-decoration:none">Por que esta conclusão?</a>')
     r = (f'<span class="field">{RESP}</span>' if resp else
-         f'<span class="field ph{" err" if erros else ""}">Seu nome</span>')
+         f'<a class="field ph{" err" if erros else ""}" href="#{recuperar}" style="display:block;text-decoration:none">Seu nome</a>')
     ej = '<div class="err-msg">Informe a justificativa.</div>' if erros and not justif else ""
     er = '<div class="err-msg">Informe o responsável.</div>' if erros and not resp else ""
+    compact = ' style="padding-top:.45rem"' if erros else ""
     return f"""
-      <section class="group final{'' if ativo else ' is-disabled'}">
-        <h2>Conclusão da análise (S09)</h2>
+      <section class="group final{'' if ativo else ' is-disabled'}"{compact}>
+        <h2>Conclusão da análise</h2>
         <div class="decision">{opt('Sem ressalvas na imagem', 'is-clear')}{opt('Suspeita apontada', 'is-hold')}</div>
-        <div class="label-row"><span>Justificativa (S10)</span><span class="req">obrigatória</span></div>{j}{ej}
-        <div class="label-row" style="margin-top:.5rem"><span>Responsável (S11)</span><span class="req">obrigatório</span></div>{r}{er}
-        <a class="btn btn-primary btn-block" style="margin-top:.7rem" href="#{botao}">Revisar e emitir parecer</a>
-        <p class="note" style="margin-top:.4rem">O parecer não libera nem retém a carga.</p>
+        <div class="label-row"><span>Justificativa</span><span class="req">obrigatória</span></div>{j}{ej}
+        <div class="label-row" style="margin-top:.35rem"><span>Responsável</span><span class="req">obrigatório</span></div>{r}{er}
+        <a class="btn btn-primary btn-block" style="margin-top:.5rem" href="#{botao}">Revisar e emitir parecer</a>
+        <p class="note" style="margin-top:.3rem">O parecer não libera nem retém a carga.</p>
       </section>"""
 
 
@@ -218,20 +221,23 @@ def dialogo(titulo, texto, acoes, wide=False, extra=""):
       <h3>{titulo}</h3>{texto}{extra}<div class="acts">{acoes}</div></div></div>"""
 
 
-def previa():
+def previa(conclusao="Suspeita apontada", justif_txt=None, com_marca=True):
+    cor = "#ff9b87" if conclusao == "Suspeita apontada" else "#6ee7b7"
+    j_txt = justif_txt if justif_txt is not None else JUSTIF
+    reg_html = f"<dt>Região 1</dt><dd>{COMENT}</dd>" if com_marca else "<dt>Regiões marcadas</dt><dd>Nenhuma região marcada.</dd>"
     return f"""<div class="preview">
-      <div class="thumb">{rx('rx_mapa.jpg', 300, regiao=False, marca=True)}</div>
+      <div class="thumb">{rx('rx_mapa.jpg', 300, regiao=not com_marca, marca=com_marca)}</div>
       <dl>
-        <dt>Caso (S01)</dt><dd>{CASO['id']} · {CASO['unidade']}</dd>
-        <dt>Carga declarada</dt><dd>{CASO['carga']} · {CASO['peso']} (S13)</dd>
+        <dt>Caso</dt><dd>{CASO['id']} · {CASO['unidade']}</dd>
+        <dt>Carga declarada</dt><dd>{CASO['carga']} · {CASO['peso']}</dd>
         <span class="sep"></span>
-        <dt>Região 1 (S07)</dt><dd>{COMENT} (S08)</dd>
-        <dt>Conclusão (S09)</dt><dd><b style="color:#ff9b87">Suspeita apontada</b></dd>
-        <dt>Justificativa (S10)</dt><dd>{JUSTIF}</dd>
-        <dt>Responsável (S11)</dt><dd>{RESP} · autoria declarada</dd>
-        <dt>Data e hora (S18)</dt><dd>preenchidas na emissão (UTC−03:00)</dd>
+        {reg_html}
+        <dt>Conclusão</dt><dd><b style="color:{cor}">{conclusao}</b></dd>
+        <dt>Justificativa</dt><dd>{j_txt}</dd>
+        <dt>Responsável</dt><dd>{RESP} · autoria declarada</dd>
+        <dt>Data e hora</dt><dd>preenchidas na emissão (UTC−03:00)</dd>
         <span class="sep"></span>
-        <dt>Modelo (S04/S05)</dt><dd>Indício de atipicidade; mapa de atenção aproximado. Separado da conclusão humana.</dd>
+        <dt>Modelo</dt><dd>Indício de atipicidade; mapa de atenção aproximado. Separado da conclusão humana.</dd>
       </dl></div>"""
 
 
@@ -242,7 +248,7 @@ def telas():
     vazio_stage = """<label class="dropzone" style="cursor:pointer">
         <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="24" rx="2"/><path d="M14 12v24M22 12v24M30 12v24M38 12v24"/></svg>
         <strong>Arraste a radiografia do caso para cá</strong>
-        <span>ou clique para escolher um arquivo PNG ou JPEG (S02)</span>
+        <span>ou clique para escolher um arquivo PNG ou JPEG</span>
         <span style="font-size:.8rem;color:#5b6a76;margin-top:.4rem">A identificação e a descrição da carga acompanham o caso demonstrativo.</span>
       </label>"""
     t.append(tela("F01", "Abrir caso (sem imagem)", mesa(
@@ -280,12 +286,24 @@ def telas():
         rx(marca=True), verdict(reg="ok", par=parecer("Suspeita apontada")), toolbar_html=toolbar(ferramenta="marcar"), trocar="F11a"),
         [("F08", "Revisar e emitir → F08"), ("F10c", "Emitir com campos vazios → F10c"), ("F11b", "Escolher “Sem ressalvas” → F11b")]))
 
+    justif_sem = "A densidade central corresponde ao reforço estrutural dos paletes declarados, sem indício de corpo estranho."
+    t.append(tela("F07b", "Conclusão divergente preservada (Sem ressalvas)", mesa(
+        rx(), verdict(par=parecer("Sem ressalvas na imagem", justif=True, resp=True, botao="F08b", justif_txt=justif_sem)), trocar="F11a"),
+        [("F08b", "Revisar e emitir → F08b"), ("F03", "Voltar à análise → F03")]))
+
     acoes = go("F07", "Voltar e corrigir") + go("F09", "Exportar PDF", "btn btn-primary")
     t.append(tela("F08", "Revisar o parecer antes de exportar", mesa(
         rx(marca=True), verdict(reg="ok", par=parecer("Suspeita apontada")), toolbar_html=toolbar(ferramenta="marcar"),
-        overlay=dialogo("Revisar parecer (S12)", "<p>Confira o caso e o conteúdo. O PDF é salvo neste computador; o encaminhamento a quem decide segue o procedimento institucional, fora da Mesa.</p>",
+        overlay=dialogo("Revisar parecer", "<p>Confira o caso e o conteúdo. O PDF é salvo neste computador; o encaminhamento a quem decide segue o procedimento institucional, fora da Mesa.</p>",
                         acoes, wide=True, extra=previa()), trocar="F11a"),
         [("F09", "Exportação concluída → F09"), ("F10d", "Falha ao exportar → F10d"), ("F07", "Voltar → F07")]))
+
+    acoes_b = go("F07b", "Voltar e corrigir") + go("F09", "Exportar PDF", "btn btn-primary")
+    t.append(tela("F08b", "Revisar parecer (Sem ressalvas)", mesa(
+        rx(), verdict(par=parecer("Sem ressalvas na imagem", justif=True, resp=True, botao="F08b", justif_txt=justif_sem)),
+        overlay=dialogo("Revisar parecer", "<p>Confira o caso e o conteúdo. O PDF é salvo neste computador; o encaminhamento a quem decide segue o procedimento institucional, fora da Mesa.</p>",
+                        acoes_b, wide=True, extra=previa("Sem ressalvas na imagem", justif_sem, com_marca=False)), trocar="F11a"),
+        [("F09", "Exportação concluída → F09"), ("F07b", "Voltar → F07b")]))
 
     ok = f"""<div class="banner ok"><span class="ico">✓</span><div><strong>Parecer exportado localmente</strong>
       parecer_{CASO['id']}.pdf · emitido em 17/11/2026 03:12 (UTC−03:00).<br>O envio a quem decide não é feito pela Mesa.
@@ -317,29 +335,36 @@ def telas():
     t.append(tela("F10c", "Erro: parecer incompleto", mesa(
         rx(marca=True) + f'<div class="stage-top">{aviso}</div>', verdict(reg="sem_comentario", par=parecer("Suspeita apontada", justif=False, resp=False, erros=True, botao="F10c")),
         toolbar_html=toolbar(ferramenta="marcar"), trocar="F11a"),
-        [("F07", "Completar os campos → F07")]))
+        [("F07", "Completar os campos → F07"), ("F10c_ut03", "Variante UT03 (só sem responsável) → F10c_ut03")]))
+
+    aviso_ut03 = """<div class="banner error"><span class="ico">!</span><div><strong>Falta 1 item para emitir</strong>
+      Informe o responsável pelo parecer. Região, comentário, conclusão e justificativa foram mantidos.</div></div>"""
+    t.append(tela("F10c_ut03", "Erro: responsável ausente (UT03)", mesa(
+        rx(marca=True) + f'<div class="stage-top">{aviso_ut03}</div>', verdict(reg="ok", par=parecer("Suspeita apontada", justif=True, resp=False, erros=True, botao="F10c_ut03", recuperar="F07")),
+        toolbar_html=toolbar(ferramenta="marcar"), trocar="F11a"),
+        [("F07", "Preencher responsável → F07")]))
 
     erro_exp = """<div class="banner error" style="margin:.2rem 0 .6rem"><span class="ico">!</span><div><strong>Falha ao exportar</strong>
       Não foi possível salvar o PDF na pasta escolhida (sem permissão ou sem espaço). Seus registros foram mantidos.</div></div>"""
     acoes_err = go("F07", "Voltar ao parecer") + go("F09", "Tentar novamente", "btn btn-primary")
     t.append(tela("F10d", "Erro: falha na exportação", mesa(
         rx(marca=True), verdict(reg="ok", par=parecer("Suspeita apontada")), toolbar_html=toolbar(ferramenta="marcar"),
-        overlay=dialogo("Revisar parecer (S12)", erro_exp, acoes_err, wide=True, extra=previa()), trocar="F11a"),
+        overlay=dialogo("Revisar parecer", erro_exp, acoes_err, wide=True, extra=previa()), trocar="F11a"),
         [("F09", "Tentar novamente → F09"), ("F07", "Voltar → F07")]))
 
     troca = dialogo("Trocar de caso?",
                     "<p>Este caso tem registros que ainda não foram exportados:</p><ul><li>1 região marcada com comentário</li><li>Conclusão e justificativa</li></ul><p>Ao trocar, esses registros serão descartados. A radiografia original não é alterada.</p>",
-                    go("F06", "Manter caso", "btn btn-primary") + go("F01", "Descartar e trocar", "btn btn-danger"))
+                    go("F07", "Manter caso", "btn btn-primary") + go("F01", "Descartar e trocar", "btn btn-danger"))
     t.append(tela("F11a", "Confirmar troca de caso", mesa(
         rx(marca=True), verdict(reg="ok", par=parecer("Suspeita apontada")), toolbar_html=toolbar(ferramenta="marcar"), overlay=troca, trocar="F11a"),
-        [("F06", "Manter caso → F06"), ("F01", "Descartar → F01")]))
+        [("F07", "Manter caso → F07"), ("F01", "Descartar → F01")]))
 
     div = dialogo("Sua conclusão difere da indicação do modelo",
                   "<p>Você escolheu <b>Sem ressalvas na imagem</b>, e o modelo indicou <b>indício de atipicidade</b> na região destacada.</p><p>Discordar é permitido: a conclusão é sua. Confirme que revisou a região e explique o motivo na justificativa.</p>",
-                  go("F03", "Rever a imagem") + go("F07", "Confirmar e justificar", "btn btn-primary"))
+                  go("F03", "Rever a imagem") + go("F07b", "Confirmar e justificar", "btn btn-primary"))
     t.append(tela("F11b", "Confirmar conclusão divergente", mesa(
         rx(), verdict(par=parecer("Sem ressalvas na imagem", justif=False)), overlay=div, trocar="F11a"),
-        [("F03", "Rever a imagem → F03"), ("F07", "Confirmar → F07")]))
+        [("F03", "Rever a imagem → F03"), ("F07b", "Confirmar → F07b")]))
 
     pdf = f"""
     <header class="reader-bar"><b>parecer_{CASO['id']}.pdf</b><span class="muted">Leitor de PDF do destinatário · externo à Mesa</span>
@@ -348,17 +373,17 @@ def telas():
       <h1>Parecer técnico de apoio — análise de imagem de raio-X</h1>
       <p class="sub">Mesa de inspeção · protótipo demonstrativo do TCC · dados fictícios</p>
       <h4>Identificação</h4>
-      <table><tr><td>Caso (S01)</td><td>{CASO['id']}</td></tr><tr><td>Unidade de carga</td><td>{CASO['unidade']}</td></tr>
-        <tr><td>Carga declarada (S13)</td><td>{CASO['carga']} · {CASO['peso']}</td></tr>
-        <tr><td>Responsável (S11)</td><td>{RESP} (autoria declarada, sem assinatura institucional)</td></tr>
-        <tr><td>Emitido em (S18)</td><td>17/11/2026 03:12 (UTC−03:00), relógio da estação</td></tr></table>
+      <table><tr><td>Caso</td><td>{CASO['id']}</td></tr><tr><td>Unidade de carga</td><td>{CASO['unidade']}</td></tr>
+        <tr><td>Carga declarada</td><td>{CASO['carga']} · {CASO['peso']}</td></tr>
+        <tr><td>Responsável</td><td>{RESP} (autoria declarada, sem assinatura institucional)</td></tr>
+        <tr><td>Emitido em</td><td>17/11/2026 03:12 (UTC−03:00), relógio da estação</td></tr></table>
       <h4>Achado registrado</h4>
       <div class="two"><div style="position:relative;width:210px;height:210px">{rx('rx_original.jpg', 210, regiao=False, marca=True)}</div>
-        <div><b>Região 1 (S07)</b><br>{COMENT} (S08)<br><br><b>Conclusão da análise (S09):</b> Suspeita apontada<br>
-        <b>Justificativa (S10):</b> {JUSTIF}</div></div>
+        <div><b>Região 1</b><br>{COMENT}<br><br><b>Conclusão da análise:</b> Suspeita apontada<br>
+        <b>Justificativa:</b> {JUSTIF}</div></div>
       <h4>Apoio automático</h4>
-      <p style="margin:0">Indicação do modelo (S04): indício de atipicidade. O mapa de atenção (S05) aparece na página 2 e é aproximado. O modelo não identifica o tipo de ilícito; a conclusão acima é do responsável.</p>
-      <div class="limit"><b>Limites deste documento (S12).</b> Parecer de apoio: não é ato de despacho e não libera nem retém a carga. Dúvidas sobre o conteúdo devem ser tratadas com o emissor pelo canal institucional.</div>
+      <p style="margin:0">Indicação do modelo: indício de atipicidade. O mapa de atenção aparece na página 2 e é aproximado. O modelo não identifica o tipo de ilícito; a conclusão acima é do responsável.</p>
+      <div class="limit"><b>Limites deste documento.</b> Parecer de apoio: não é ato de despacho e não libera nem retém a carga. Dúvidas sobre o conteúdo devem ser tratadas com o emissor pelo canal institucional.</div>
     </div></div>"""
     t.append(tela("F12", "Parecer em PDF lido pelo destinatário (P02)", pdf,
                   [("F09", "Voltar à Mesa (P01) → F09")]))
@@ -374,7 +399,8 @@ def pagina(todas=False, embutir=False):
             html = html.replace(f'src="img/{nome}"', f'src="data:image/jpeg;base64,{dado}"')
         css = css.replace('url("fonts/', 'url("' + (DIR / "fonts").as_uri() + "/")
     ids = [("F01", "F01"), ("F02", "F02"), ("F03", "F03"), ("F04", "F04"), ("F05", "F05"), ("F06", "F06"),
-           ("F07", "F07"), ("F08", "F08"), ("F09", "F09"), ("F10a", "F10a"), ("F10b", "F10b"), ("F10c", "F10c"),
+           ("F07", "F07"), ("F07b", "F07b"), ("F08", "F08"), ("F08b", "F08b"), ("F09", "F09"),
+           ("F10a", "F10a"), ("F10b", "F10b"), ("F10c", "F10c"), ("F10c_ut03", "F10c (UT03)"),
            ("F10d", "F10d"), ("F11a", "F11a"), ("F11b", "F11b"), ("F12", "F12")]
     nav = "".join(f'<a href="#{i}">{n}</a>' for i, n in ids)
     return f"""<!doctype html>

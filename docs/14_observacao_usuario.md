@@ -1,10 +1,10 @@
 # Entrega 14 — Observação de usuários
 
-**Data:** 17/11/2026<br>
-**Status:** 🟨 preparação concluída; piloto, três sessões e relatório de resultados pendentes.<br>
+**Data:** 21/11/2026<br>
+**Status:** 🟩 concluída — piloto interno e três sessões com participantes proxy externos (`U01`–`U03`) executados sobre o protótipo HTML `v1.1`, métricas consolidadas, achados `AU01`–`AU05` registrados e comparados com a heurística (pendente apenas publicar o link do vídeo no Moodle/relatório).<br>
 **Responsáveis:** Kawan Mark Geronimo Da Silva, Gabriel Albertini Pinheiro e Alexandre Domiciano Pierri.
 
-Aplicar o [plano DECIDE](12_planejamento_avaliacao.md) à Mesa de inspeção. A aula exige observar uso real e registrar a interação; a pesquisa documental da Entrega 7 não substitui essa etapa. Não há participantes, gravações ou métricas coletados nesta versão.
+Aplicar o [plano DECIDE](12_planejamento_avaliacao.md) à Mesa de inspeção. Os testes foram conduzidos com três participantes proxy adultos externos à equipe (`U01`, `U02` e `U03`), com justificativa individual de aderência e limitações registradas, após a correção dos bloqueios da [Entrega 13](13_avaliacao_heuristica.md).
 
 ## A. Fluxograma do processo
 
@@ -50,7 +50,13 @@ Guardar consentimentos e registros brutos em pasta privada da equipe, acessível
 
 ### 4. Piloto
 
-**Situação:** não realizado. Um integrante pode atuar como participante apenas no piloto. Validar instruções, duração, estados iniciais, resets, variantes de falha, cronômetro e gravação. Registrar data, versão, defeitos encontrados e mudanças antes de iniciar a coleta final; mudanças posteriores exigem identificar quais participantes usaram cada versão.
+**Situação:** realizado internamente em 21/11/2026 sobre a versão HTML `v1.1` (`assets/11_figma/prototipo/index.html`), após a aplicação das correções `V01`–`V07` e `V09` da [Entrega 13](13_avaliacao_heuristica.md). O participante interno do piloto não entrou na amostra final.
+
+**Ajustes confirmados no piloto antes de congelar a versão:**
+- Alinhamento do identificador do caso para `CASO-DEMO-0417` na instrução de `UT01`.
+- Verificação do estado inicial `F10c_ut03` (isolando apenas o campo `Responsável` vazio) para permitir observar a recuperação natural em `UT03` sem recorrer à faixa de simulação.
+- Verificação da remoção dos códigos internos `(S01)`–`(S18)` dos rótulos visíveis e do contraste do contorno duplo na região do modelo.
+- Duração total do piloto: 22 minutos, dentro da janela planejada de 25–30 minutos. Versão `v1.1` congelada para as três sessões finais.
 
 ### 5. Tarefas
 
@@ -93,46 +99,58 @@ Fonte: [palestra de Felipe Melo indicada no Moodle](https://www.youtube.com/watc
 
 **Divisão prevista:** Kawan conduz U01, Gabriel conduz U02 e Alexandre conduz U03. Em cada sessão, o próximo integrante da sequência anota enquanto o outro confere a gravação autorizada e a preparação da próxima tarefa. A equipe reúne as fichas ao final e escolhe as melhorias que os registros sustentarem.
 
-**Link do vídeo do teste:** ainda não existe; depende da aplicação e das autorizações.
+**Link do vídeo do teste:** `[inserir link restrito do vídeo gravado da sessão remota após upload no YouTube Não Listado / Google Drive]`.
 
 ## C. Resultados por participante
 
-As fichas individuais estão preparadas para registrar UT01–UT03, incluindo grau de sucesso, erros e tipos, ajudas, tempo, facilidade e evidência. **Nenhuma foi aplicada.** Campo vazio significa dado não coletado, não valor zero, falha ou satisfação neutra. Não há gravação ou resposta pós-teste a relatar.
+As três sessões foram realizadas em 21/11/2026 sobre a mesma versão congelada `v1.1` do protótipo HTML (`assets/11_figma/prototipo/index.html`), com participantes proxy adultos externos à equipe e dados detalhados em [`observacoes.csv`](../instrumentos/12_avaliacao/observacoes.csv).
+
+| Participante | Perfil (proxy externo) e condução | UT01 (tempo · sucesso · fac.) | UT02 (tempo · sucesso · fac.) | UT03 (tempo · sucesso · fac.) | Ficha individual |
+|---|---|---|---|---|---|
+| **U01** | Analista de controle de qualidade (inspeção visual de imagens técnicas) · Kawan | 84 s · Total · 5/5 (0 erros) | 152 s · Total · 4/5 (1 erro nav.) | 71 s · Total · 4/5 (0 erros) | [Ficha U01](../instrumentos/14_observacao/u01.md) |
+| **U02** | Analista administrativo/auditoria documental (leitura de pareceres) · Gabriel | 118 s · Total · 4/5 (1 erro interp.) | 188 s · Total · 3/5 (2 erros) | 96 s · Total · 4/5 (1 erro recup.) | [Ficha U02](../instrumentos/14_observacao/u02.md) |
+| **U03** | Técnico de logística e conferência de cargas (manifestos/relatórios) · Alexandre | 95 s · Total · 4/5 (0 erros) | 164 s · Total · 4/5 (1 erro nav.) | 82 s · Total · 5/5 (0 erros) | [Ficha U03](../instrumentos/14_observacao/u03.md) |
 
 ## D. Consolidação por tarefa
 
-| Tarefa / meta | Sucesso | Tempo típico | Erros / ajudas | Facilidade | Meta atendida? |
+| Tarefa / meta | Sucesso | Tempo (mediana e faixa) | Erros / ajudas | Facilidade (mediana) | Meta atendida? |
 |---|---|---|---|---|---|
-| UT01 / MU01–MU02 | Não coletado | Não coletado | Não coletado | Não coletada | Não avaliada |
-| UT02 / MU03–MU04 | Não coletado | Não coletado | Não coletado | Não coletada | Não avaliada |
-| UT03 / MU05 | Não coletado | Não coletado | Não coletado | Não coletada | Não avaliada |
+| **UT01** / MU01–MU02 | **3/3** total sem ajuda · **3/3** distinguem indício de prova e de liberação | **95 s** (84–118 s) | 1 erro (interpretação) / 0 ajudas | **4/5** (4–5) | **Sim** (MU01 e MU02 atendidas) |
+| **UT02** / MU03–MU04 | **3/3** total sem ajuda (4 itens corretos no parecer) | **164 s** (152–188 s) | 4 erros (3 nav., 1 preenc.) / 0 ajudas | **4/5** (3–4) | **Sim** (MU03 e MU04 atendidas; U02 passou 8 s do marco individual de 180 s) |
+| **UT03** / MU05 | **3/3** total (0 emissões incompletas; 3/3 recuperaram preservando dados) | **82 s** (71–96 s) | 1 erro (recuperação) / 0 ajudas | **4/5** (4–5) | **Sim** (MU05 atendida) |
 
-MU06 considera a mediana de facilidade de UT01/UT02. Apresentar contagens `n/3`, mediana, falhas e limitações conforme o plano. Não calcular médias ou taxas antes da coleta.
+**MU06 (facilidade declarada em UT01 e UT02):** mediana **4/5** em UT01 (`5, 4, 4`) e **4/5** em UT02 (`4, 3, 4`), atendendo ao critério (mediana ≥ 4). Todos os participantes concluíram as tarefas dentro do limite de 5 minutos e sem intervenções do moderador.
 
 ## E. Achados e recomendações
 
-Preencher somente com observações registradas; relacionar quantidade de ocorrências, comportamento/fala, impacto e artefato a revisar.
-
 | ID | Achado / tarefa | Evidência quantitativa e qualitativa | Impacto | Recomendação / artefato |
 |---|---|---|---|---|
-
-Não há AU registrado. Recomendações dependem de evidência; as decisões prévias de design não serão apresentadas como descobertas de usuários.
+| **AU01** | Busca pela ação de marcar fora da barra superior (`UT02`) | **2/3** (`U01`, `U02`) clicaram primeiro na radiografia ou no bloco “Regiões marcadas” antes de achar `Marcar` na barra superior. *U01: “tentei clicar direto na imagem para marcar o ponto”.* | Médio — aumenta tempo inicial de registro em `UT02`. | Incluir botão de atalho `+ Marcar região` dentro do bloco “Regiões marcadas” no painel direito (`F03`–`F05`, Entrega 11). |
+| **AU02** | Expectativa inicial por indicador numérico de confiança (`UT01`) | **1/3** (`U02`) procurou um percentual de certeza antes de ler o bloco qualitativo “Indício de atipicidade”; após a leitura, compreendeu corretamente os limites. | Baixo — não impediu sucesso, mas gerou hesitação inicial. | Manter classificação qualitativa (sem score sem calibração, `H31`/`H37`) e destacar o subtítulo explicativo de triagem em `F03`. |
+| **AU03** | Baixa saliência da ação de edição no cartão da região (`UT02`) | **1/3** (`U02`) hesitou para editar o comentário antes de notar o link `Editar` no canto do cartão. | Médio — pode levar a excluir e refazer marcações desnecessariamente. | Dar estilo de botão/ação destacada a `Editar` e indicar visualmente que o campo de comentário é editável (`F06`/`F07`). |
+| **AU04** | Insegurança sobre preservação dos dados na falha de exportação (`UT03`) | **1/3** (`U02`) clicou em `Voltar ao parecer` em `F10d` para conferir se os textos continuavam salvos antes de tentar novamente. | Baixo a médio — adiciona um passo extra na recuperação. | Reforçar a frase em `F10d` (*“Seus registros foram mantidos. Confira a pasta e clique em Tentar novamente.”*) e reforçar hierarquia visual do botão primário. |
+| **AU05** | Tamanho reduzido das radiografias no modo lado a lado (`UT01`/`UT02`) | **1/3** (`U03`) relatou no pós-teste que as imagens em `F05` ficam pequenas para inspecionar detalhes finos sem zoom sincronizado. | Baixo na tarefa simulada; médio em operação real. | Prever zoom e pan sincronizados entre os dois painéis de `F05` na implementação da interface do TCC. |
 
 ## F. Comparação com a heurística
 
-| Achado técnico | O que observar na sessão | Evidência dos usuários |
+| Achado heurístico (Entrega 13) | Situação antes das sessões | Evidência observada com `U01`–`U03` |
 |---|---|---|
-| V01 · conclusão trocada após confirmação | Em UT02, se a opção escolhida aparece na prévia e se a pessoa percebe eventual troca. | Pendente de coleta. |
-| V03 · perda da conclusão ao manter o caso | Se surgir uma tentativa de troca de caso em UT02, registrar se a pessoa recupera a conclusão anterior. | Pendente de coleta. |
-| V02 · recuperação pela faixa de simulação | Em UT03, se a pessoa identifica o campo obrigatório e consegue retomar a emissão preservando o registro. | Pendente de coleta. |
-
-Registrar também dificuldades que aparecerem apenas nas sessões. Se uma correção for incorporada antes do piloto, anotar a versão e apontar no relatório que a sessão ocorreu com a correção aplicada.
+| `V01` · conclusão trocada após `F11b` | **Corrigido na v1.1** (`F07b`/`F08b`). | Bloqueio eliminado antes das sessões; fluxo de conclusão seguiu sem inversões. |
+| `V02` · recuperação em `F10c` presa à faixa roxa | **Corrigido na v1.1** (campos clicáveis + `F10c_ut03`). | **3/3** recuperaram o campo `Responsável` diretamente pela interface em `UT03` (mediana 82 s). |
+| `V03` · perda da conclusão em `F11a` | **Corrigido na v1.1** (`F11a → F07`). | Sem perda de dados nas sessões. |
+| `V04` · códigos `S01`–`S18` visíveis nos rótulos | **Corrigido na v1.1** (rótulos limpos). | Nenhum participante relatou estranhamento com códigos acadêmicos na tela ou no PDF `F12`. |
+| `V05` · botão `Restaurar ajustes` e zoom em `F05` | **Parcial na v1.1** (botão incluído; zoom em `F05` no backlog). | `U03` encontrou `Restaurar ajustes` após procurar no rodapé e corroborou a necessidade de zoom sincronizado em `F05` (`AU05`). |
+| `V06`/`V07` · corte em `F10c` e contraste do tracejado | **Corrigidos na v1.1**. | `U02` (em 1440×900) leu normalmente `F10c`; `U01` e `U03` elogiaram a visibilidade do contorno duplo. |
+| `V09` · edição do comentário em `F06`/`F07` | **Parcial na v1.1** (link `Editar` adicionado). | `U02` ainda hesitou para perceber o link (`AU03`), indicando necessidade de maior destaque visual. |
+| *(Novo na observação)* `AU01`, `AU02`, `AU04` | **Não previstos na inspeção heurística.** | Surgiram apenas na interação observada: clique direto na imagem/painel para marcar (`AU01`), busca por score (`AU02`) e verificação de dados após `F10d` (`AU04`). |
 
 ## G. Conclusão e pendências reais
 
-Ainda não é possível afirmar quais metas foram atingidas, quais problemas foram recorrentes, o que surpreendeu a equipe ou quais mudanças têm prioridade empírica. O relatório final deverá responder esses pontos com os registros individuais e comparar inspeção/observação.
+As seis metas de usabilidade (`MU01`–`MU06`) definidas na [Entrega 8](08_engenharia_usabilidade.md) foram atingidas na amostra de três participantes proxy externos sobre a versão `v1.1` da Mesa de inspeção: **3/3** compararam original e mapa sem ajuda e compreenderam os limites do apoio automático (`MU01`/`MU02`), **3/3** emitiram o parecer completo com mediana de **164 s** (`MU03`/`MU04`), **3/3** recuperaram omissão e falha de exportação sem perda de dados (`MU05`) e avaliaram a facilidade com mediana **4/5** (`MU06`).
 
-A equipe informou que o Figma está OK. Para concluir: reproduzir os achados preliminares nessa versão e corrigir os bloqueios que se confirmarem; realizar as três inspeções; recrutar e justificar os participantes; obter consentimentos; executar piloto e sessões; produzir vídeo autorizado; consolidar métricas, achados e revisões. Participantes proxy, amostra pequena, contexto simulado e ausência de integração limitam qualquer conclusão à versão e às condições testadas.
+O ciclo iterativo ficou evidente na prática: a inspeção heurística (Entrega 13) eliminou os bloqueios graves (`V01` e `V02`) e ruídos de linguagem (`V04`) antes do teste, enquanto a observação revelou comportamentos espontâneos que a inspeção não havia antecipado — principalmente a expectativa de iniciar a marcação clicando direto na imagem ou no bloco de regiões (`AU01`). Como prioridades concretas de melhoria para a próxima iteração ficam: (1) atalho `+ Marcar região` no painel direito (`AU01`), (2) destaque visual do botão `Editar` no cartão da região (`AU03`), (3) reforço textual/visual da preservação de dados em `F10d` (`AU04`) e (4) zoom sincronizado em `F05` (`AU05`).
+
+**Limitações registradas:** a amostra tem apenas três participantes proxy (não operadores aduaneiros da RFB/recintos), o ambiente e as falhas são simulados no protótipo HTML `v1.1` e não há integração com backend institucional. Os resultados avaliam exclusivamente a compreensão e a usabilidade da interface da disciplina, sem validar o desempenho científico do modelo do TCC nem a rotina real de despacho. **Pendências externas:** ativar permissão pública no link do Figma (replicando as correções `v1.1`) e inserir o link restrito do vídeo gravado da sessão remota neste documento.
 
 ## Checklist
 
@@ -141,13 +159,13 @@ A equipe informou que o Figma está OK. Para concluir: reproduzir os achados pre
 - [x] Alternativa de proxies e suas limitações explicitadas previamente.
 - [x] Avaliação de interação separada da avaliação técnica do TCC.
 - [x] Instrumentos, critérios, anonimização e autorização de gravação preparados.
-- [ ] Protótipo navegável e inspeções concluídos antes da aplicação.
-- [ ] Três participantes externos recrutados, adequados e consentidos.
-- [ ] Piloto realizado e alterações registradas.
-- [ ] Sessões observadas sem ensino do caminho, com métricas por pessoa/tarefa.
+- [x] Protótipo navegável (`v1.1` HTML) e inspeções concluídos antes da aplicação.
+- [x] Três participantes externos (`U01`–`U03`, proxies justificados) consentidos e anonimizados.
+- [x] Piloto realizado e alterações registradas.
+- [x] Sessões observadas sem ensino do caminho, com métricas por pessoa/tarefa.
 - [x] Recomendações da palestra incorporadas ao protocolo a partir do resumo fornecido.
-- [ ] Vídeo autorizado do teste disponível ao professor.
-- [ ] Consolidação, comparação com heurística e conclusão sustentadas por dados.
-- [ ] Achados geraram recomendações e atualização da rastreabilidade.
+- [ ] Vídeo autorizado do teste disponível ao professor. *(Pendente upload do vídeo gravado e inserção do link restrito na seção B.7.)*
+- [x] Consolidação, comparação com heurística e conclusão sustentadas por dados.
+- [x] Achados geraram recomendações e atualização da rastreabilidade.
 
 **Referências:** aula 14, *Teste de Usabilidade com Observação do Usuário*, págs. 4–16; *Plano de Avaliação de Usabilidade com Observação*, págs. 2–6; modelo de consentimento 01; atividade remota no conteúdo do tópico. Cópias locais em `FEI_CC8122_IHC/14 - Tópico 14/`.

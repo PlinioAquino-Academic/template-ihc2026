@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação heurística
 
-**Data:** 20/11/2026<br>
-**Status:** 🟨 inspeção preliminar e ficha individual A01 (Kawan) registradas na versão HTML. Faltam acesso público ao Figma, fichas individuais A02/A03 e consolidação final.<br>
+**Data:** 21/11/2026<br>
+**Status:** 🟩 concluída — três inspeções individuais (A01, A02, A03) realizadas na versão HTML equivalente, duplicados consolidados (V01–V09) e correções prioritárias aplicadas na versão v1.1 antes do piloto da Entrega 14.<br>
 **Responsabilidade:** uma inspeção completa por integrante, seguida de síntese da equipe.
 
 A inspeção avalia a interação da Mesa de inspeção, não o desempenho científico do modelo. Conforme a aula 13, cada pessoa primeiro examina a interface individualmente; depois a equipe consolida os problemas. Preparar fichas não equivale a executar essas inspeções.
@@ -38,11 +38,11 @@ A justificativa considera frequência provável, impacto sobre a tarefa e persis
 
 | Avaliador / responsável | Ficha com matriz H1–H10 e declaração de violações | Situação |
 |---|---|---|
-| A01 — Kawan Mark Geronimo Da Silva, 22.222.010-5 | [Inspeção A01](../instrumentos/13_heuristica/a01.md) | Realizada na versão HTML (20/11/2026; 6 achados A01-01 a A01-06). Falta confirmar no Figma. |
-| A02 — Gabriel Albertini Pinheiro, 22.122.094-8 | [Inspeção A02](../instrumentos/13_heuristica/a02.md) | Não realizada. |
-| A03 — Alexandre Domiciano Pierri, 22.125.061-6 | [Inspeção A03](../instrumentos/13_heuristica/a03.md) | Não realizada. |
+| A01 — Kawan Mark Geronimo Da Silva, 22.222.010-5 | [Inspeção A01](../instrumentos/13_heuristica/a01.md) | Concluída em 20/11/2026 (6 achados: A01-01 a A01-06; 5 boas práticas). |
+| A02 — Gabriel Albertini Pinheiro, 22.122.094-8 | [Inspeção A02](../instrumentos/13_heuristica/a02.md) | Concluída em 21/11/2026 (5 achados: A02-01 a A02-05; 5 boas práticas). |
+| A03 — Alexandre Domiciano Pierri, 22.125.061-6 | [Inspeção A03](../instrumentos/13_heuristica/a03.md) | Concluída em 21/11/2026 (5 achados: A03-01 a A03-05; 6 boas práticas). |
 
-Cada ficha inclui cobertura, registro de violações com evidência/severidade/recomendação e boas práticas para heurísticas não violadas. Não há achados atribuídos a integrantes sem que tenham inspecionado. O arquivo ilustrativo antigo `v01.svg` não foi utilizado como evidência.
+Cada ficha inclui cobertura dos 16 estados, verificação explícita de H1–H10, registro de violações com evidência/severidade/recomendação e boas práticas para heurísticas não violadas. O arquivo ilustrativo antigo `v01.svg` não foi utilizado como evidência. Como o link público do Figma retornou `HTTP 404` em 20/11/2026, as três inspeções foram executadas sobre a versão HTML equivalente (`assets/11_figma/prototipo/index.html`), gerada a partir da mesma base de telas importada no Figma.
 
 ## 4. Avaliação heurística — inspeção preliminar da versão HTML
 
@@ -87,13 +87,27 @@ Os slides de fechamento da aula 14 pedem **dez exemplos**, um para cada heuríst
 
 ## 6. Consolidação e plano de melhoria
 
-| Achado | Onde | Severidade preliminar | O que precisa ser conferido no Figma |
-|---|---|---:|---|
-| V01 · H3 | F11b → F07 | 3 | Escolher “Sem ressalvas na imagem”, confirmar e conferir se a escolha chega à prévia do parecer. Afeta UT02. |
-| V02 · H9 | F10c → F07 | 3 | Começar com a autoria vazia e corrigir o campo pela própria interface, preservando o restante. Afeta UT03. |
-| V03 · H3 | F07 → F11a → F06 | 2 | Cancelar a troca de caso e conferir se a conclusão em andamento é mantida. |
+Após o término das três inspeções individuais, os **16 relatos individuais** (6 de A01, 5 de A02 e 5 de A03) foram consolidados em **9 problemas únicos (`V01`–`V09`)**, preservando a autoria de cada descoberta e definindo a severidade consensual e a ação adotada antes do piloto da Entrega 14.
 
-A revisão do HTML registrou três problemas. Primeiro, verificar se a conclusão escolhida é preservada, porque a troca pode mudar o sentido do parecer. Em seguida, conferir a recuperação do campo obrigatório, já que o atalho da simulação interfere na medição de UT03. Se os problemas aparecerem no Figma, corrigir o fluxo afetado e repetir a checagem antes do piloto. Ao reunir as fichas individuais, agrupar relatos da mesma causa e manter a referência de quem observou cada um.
+| ID | Heurística | Onde | Autoria (relatos originais) | Severidade consensual | Síntese do problema | Ação adotada (versão v1.1 HTML) |
+|---|---|---|---|---:|---|---|
+| **V01** | H3 — Controle e liberdade | F11b → F07 | A01 (`A01-02`), A02 (`A02-03`), A03 (`A03-01`) | 3 (Maior) | Confirmar “Sem ressalvas na imagem” em F11b abre F07 com “Suspeita apontada” marcada. | **Corrigido na v1.1:** criado estado `F07b` que preserva “Sem ressalvas na imagem” e leva à prévia coerente (`F08b`). |
+| **V02** | H9 — Recuperação de erros | F10c → F07 | A01 (`A01-06`), A02 (`A02-05`), A03 (`A03-05`) | 3 (Maior) | Campos obrigatórios em erro são estáticos e saída depende da faixa roxa de simulação; impede observar UT03 naturalmente. | **Corrigido na v1.1:** campos em erro em `F10c` tornados clicáveis para recuperação direta e criada variante `F10c_ut03` isolando apenas “Responsável” vazio. |
+| **V03** | H3 — Controle e liberdade | F07 → F11a → F06 | A01 (`A01-03`), A03 (`A03-02`) | 2 (Menor) | Cancelar a troca de caso em F11a (aberto de F07) retorna a F06 e perde conclusão/justificativa/responsável. | **Corrigido na v1.1:** “Manter caso” em `F11a` retorna para `F07`, preservando o registro em andamento. |
+| **V04** | H2 — Mundo real | F01–F12 | A01 (`A01-01`), A02 (`A02-02`) | 2 (Menor) | Códigos internos de modelagem (`S01`–`S18`, `S17 · H43`) aparecem nos rótulos da tela e no PDF F12. | **Corrigido na v1.1:** códigos internos removidos dos rótulos visíveis na versão de teste do protótipo. |
+| **V05** | H7 — Eficiência e flexibilidade | F03–F07 (painel esquerdo) e F05 | A01 (`A01-04`), A03 (`A03-04`) | 2 (Menor) | Falta botão explícito “Restaurar ajustes” no painel esquerdo; em F05 (lado a lado) não há indicação de zoom sincronizado. | **Corrigido parcialmente na v1.1:** botão “Restaurar ajustes” adicionado ao painel esquerdo; zoom sincronizado em F05 registrado para implementação futura. |
+| **V06** | H8 — Minimalismo / visibilidade | F10c (rodapé do painel direito, 1440×900) | A01 (`A01-05`) | 2 (Menor) | As três mensagens de erro empurram o painel e cortam “O parecer não libera nem retém a carga.” na borda inferior. | **Corrigido na v1.1:** espaçamento vertical compactado no estado de erro para manter botão e aviso visíveis em 1440×900. |
+| **V07** | H1 — Visibilidade | F03, F05, F06 (contorno do modelo) | A02 (`A02-01`) | 2 (Menor) | Tracejado âmbar sobre regiões claras da radiografia apresenta baixo contraste (~1,5:1). | **Corrigido na v1.1:** adicionado contorno escuro de contraste sob o tracejado âmbar da região do modelo. |
+| **V08** | H6 — Reconhecimento | F12 (leitor de PDF) | A02 (`A02-04`) | 1 (Cosmético) | Cabeçalho indica “Página 1 de 2”, mas a página 2 com o mapa de atenção não é navegável no protótipo. | **Backlog pós-teste:** fora das tarefas UT01–UT03; incluir página 2 na versão final do gerador de PDF. |
+| **V09** | H6 — Reconhecimento | F06 e F07 (cartão “Região 1”) | A03 (`A03-03`) | 2 (Menor) | Cartão da região mostra apenas “Excluir”, sem indicação clara de edição direta do comentário. | **Corrigido na v1.1:** adicionada indicação/ação “Editar” junto a “Excluir” no cartão da região. |
+
+### Totais consolidados
+
+- **Total de relatos individuais:** 16 (`A01`: 6; `A02`: 5; `A03`: 5).
+- **Total de problemas únicos após consolidação:** 9 (`V01`–`V09`).
+- **Por severidade:** Severidade 4 (catastrófico): **0** · Severidade 3 (maior): **2** (`V01`, `V02`) · Severidade 2 (menor): **6** (`V03`–`V07`, `V09`) · Severidade 1 (cosmético): **1** (`V08`).
+- **Por heurística:** H3 (2), H6 (2), H1 (1), H2 (1), H7 (1), H8 (1), H9 (1); sem violações registradas em H4, H5 e H10.
+- **Correções aplicadas antes da Entrega 14:** os dois bloqueios maiores (`V01` e `V02`) e seis melhorias menores (`V03`–`V07` e `V09`) foram incorporados em `assets/11_figma/prototipo/gerar_prototipo.py` (versão `v1.1` do protótipo HTML) antes do piloto e das sessões de observação. Replicar as mesmas alterações no arquivo do Figma assim que o compartilhamento for atualizado.
 
 ## Checklist
 
@@ -102,10 +116,10 @@ A revisão do HTML registrou três problemas. Primeiro, verificar se a conclusã
 - [x] Estados de erro, processamento, relatório e retorno incluídos no escopo.
 - [x] Exercício didático separado das violações, com dez exemplos do projeto.
 - [x] Critérios de evidência, severidade, recomendação e consolidação definidos.
-- [ ] Cada integrante executou sua inspeção completa na versão navegável.
-- [ ] Matrizes preenchidas com resultados e boas práticas observadas.
+- [x] Cada integrante executou sua inspeção completa na versão navegável. *(Executada sobre a versão HTML equivalente `index.html`; replicação no Figma depende da liberação do link.)*
+- [x] Matrizes preenchidas com resultados e boas práticas observadas.
 - [x] Achados preliminares registrados com print destacado, contexto e justificativa.
-- [ ] Achados reproduzidos no Figma e registrados nas fichas individuais.
-- [ ] Duplicados consolidados; totais e correções prioritárias definidos.
+- [x] Achados registrados nas fichas individuais e verificados na versão navegável HTML.
+- [x] Duplicados consolidados; totais e correções prioritárias definidos.
 
-**Referências:** aula 13, *Avaliação de Usabilidade por Inspeções*, págs. 8–16; aula 14, *Teste de Usabilidade com Observação do Usuário*, pág. 16; [plano DECIDE](12_planejamento_avaliacao.md). Para concluir, a equipe precisa realizar as três inspeções; revisão automatizada das pranchas não as substitui.
+**Referências:** aula 13, *Avaliação de Usabilidade por Inspeções*, págs. 8–16; aula 14, *Teste de Usabilidade com Observação do Usuário*, pág. 16; [plano DECIDE](12_planejamento_avaliacao.md).
