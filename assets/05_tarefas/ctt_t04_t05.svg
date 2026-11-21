@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+  <rect width="1500" height="980" fill="#ffffff"/>
+
+  <text x="750" y="42" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="28"
+        font-weight="bold" fill="#24292f">
+    CTT — T04/T05 Iniciar e acompanhar uma simulação
+  </text>
+
+  <text x="750" y="72" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="17" fill="#57606a">
+    P01 — Marina Ribeiro · C01 — Preparação e execução de experimentos
+  </text>
+
+  <rect x="535" y="105" width="430" height="75" rx="24"
+        fill="#f6f8fa" stroke="#24292f" stroke-width="2"/>
+
+  <text x="750" y="136" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="18"
+        font-weight="bold" fill="#24292f">
+    [A] A0 — Executar e acompanhar simulação
+  </text>
+
+  <text x="750" y="162" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="14" fill="#57606a">
+    A1 []&gt;&gt; A2 []&gt;&gt; A3
+  </text>
+
+  <line x1="750" y1="180" x2="750" y2="220" stroke="#57606a" stroke-width="2"/>
+  <line x1="260" y1="220" x2="1240" y2="220" stroke="#57606a" stroke-width="2"/>
+  <line x1="260" y1="220" x2="260" y2="255" stroke="#57606a" stroke-width="2"/>
+  <line x1="750" y1="220" x2="750" y2="255" stroke="#57606a" stroke-width="2"/>
+  <line x1="1240" y1="220" x2="1240" y2="255" stroke="#57606a" stroke-width="2"/>
+
+  <rect x="95" y="255" width="330" height="68" rx="22"
+        fill="#f6f8fa" stroke="#24292f" stroke-width="2"/>
+  <text x="260" y="296" text-anchor="middle"
+        font-family="Arial" font-size="17" font-weight="bold">
+    [A] A1 — Preparar início
+  </text>
+
+  <rect x="585" y="255" width="330" height="68" rx="22"
+        fill="#f6f8fa" stroke="#24292f" stroke-width="2"/>
+  <text x="750" y="296" text-anchor="middle"
+        font-family="Arial" font-size="17" font-weight="bold">
+    [A] A2 — Acompanhar execução
+  </text>
+
+  <rect x="1075" y="255" width="330" height="68" rx="22"
+        fill="#f6f8fa" stroke="#24292f" stroke-width="2"/>
+  <text x="1240" y="296" text-anchor="middle"
+        font-family="Arial" font-size="17" font-weight="bold">
+    [A] A3 — Concluir execução
+  </text>
+
+  <!-- Preparar início -->
+  <line x1="260" y1="323" x2="260" y2="365" stroke="#57606a" stroke-width="2"/>
+
+  <rect x="95" y="365" width="330" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="260" y="401" text-anchor="middle" font-family="Arial" font-size="14">
+    [U] U1 — Revisar condições configuradas
+  </text>
+
+  <text x="260" y="451" text-anchor="middle" font-family="Arial"
+        font-size="16" font-weight="bold" fill="#57606a">&gt;&gt;</text>
+
+  <rect x="95" y="470" width="330" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="260" y="506" text-anchor="middle" font-family="Arial" font-size="14">
+    [I] I1 — Solicitar início da execução
+  </text>
+
+  <text x="260" y="556" text-anchor="middle" font-family="Arial"
+        font-size="16" font-weight="bold" fill="#57606a">[]&gt;&gt;</text>
+
+  <rect x="95" y="575" width="330" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="260" y="611" text-anchor="middle" font-family="Arial" font-size="14">
+    [S] S1 — Validar configuração
+  </text>
+
+  <line x1="260" y1="633" x2="260" y2="670" stroke="#57606a" stroke-width="2"/>
+  <line x1="155" y1="670" x2="365" y2="670" stroke="#57606a" stroke-width="2"/>
+
+  <rect x="70" y="690" width="170" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="155" y="724" text-anchor="middle" font-family="Arial" font-size="13">
+    [S] S2 — Inicializar simulação
+  </text>
+
+  <text x="260" y="724" text-anchor="middle" font-family="Arial"
+        font-size="16" font-weight="bold" fill="#57606a">[]</text>
+
+  <rect x="280" y="690" width="170" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="365" y="716" text-anchor="middle" font-family="Arial" font-size="12">
+    [I] I2 — Informar
+  </text>
+  <text x="365" y="734" text-anchor="middle" font-family="Arial" font-size="12">
+    inconsistência
+  </text>
+
+  <rect x="280" y="775" width="170" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="365" y="801" text-anchor="middle" font-family="Arial" font-size="12">
+    [U] U2 — Revisar
+  </text>
+  <text x="365" y="819" text-anchor="middle" font-family="Arial" font-size="12">
+    configuração / T02
+  </text>
+
+  <!-- Acompanhar -->
+  <line x1="750" y1="323" x2="750" y2="390" stroke="#57606a" stroke-width="2"/>
+
+  <rect x="530" y="390" width="190" height="65" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="625" y="417" text-anchor="middle" font-family="Arial" font-size="13">
+    [S] S3 — Processar
+  </text>
+  <text x="625" y="436" text-anchor="middle" font-family="Arial" font-size="13">
+    simulação
+  </text>
+
+  <text x="750" y="428" text-anchor="middle" font-family="Arial"
+        font-size="16" font-weight="bold" fill="#57606a">|[]|</text>
+
+  <rect x="780" y="390" width="190" height="65" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="875" y="417" text-anchor="middle" font-family="Arial" font-size="13">
+    [I] I3 — Consultar
+  </text>
+  <text x="875" y="436" text-anchor="middle" font-family="Arial" font-size="13">
+    estado da execução
+  </text>
+
+  <text x="875" y="495" text-anchor="middle" font-family="Arial"
+        font-size="16" font-weight="bold" fill="#57606a">&gt;&gt;</text>
+
+  <rect x="780" y="515" width="190" height="65" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="875" y="542" text-anchor="middle" font-family="Arial" font-size="13">
+    [U] U3 — Interpretar
+  </text>
+  <text x="875" y="561" text-anchor="middle" font-family="Arial" font-size="13">
+    estado
+  </text>
+
+  <!-- Conclusão -->
+  <line x1="1240" y1="323" x2="1240" y2="390" stroke="#57606a" stroke-width="2"/>
+
+  <rect x="1075" y="390" width="330" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="1240" y="426" text-anchor="middle" font-family="Arial" font-size="14">
+    [S] S4 — Finalizar processamento
+  </text>
+
+  <text x="1240" y="480" text-anchor="middle" font-family="Arial"
+        font-size="16" font-weight="bold" fill="#57606a">[]&gt;&gt;</text>
+
+  <rect x="1075" y="500" width="330" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="1240" y="536" text-anchor="middle" font-family="Arial" font-size="14">
+    [I] I4 — Informar estado final
+  </text>
+
+  <text x="1240" y="590" text-anchor="middle" font-family="Arial"
+        font-size="16" font-weight="bold" fill="#57606a">&gt;&gt;</text>
+
+  <rect x="1075" y="610" width="330" height="58" rx="8"
+        fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+  <text x="1240" y="646" text-anchor="middle" font-family="Arial" font-size="14">
+    [U] U4 — Confirmar término
+  </text>
+
+  <!-- Legenda -->
+  <rect x="500" y="775" width="900" height="115" rx="12"
+        fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+
+  <text x="530" y="810" font-family="Arial" font-size="18"
+        font-weight="bold">Legenda</text>
+
+  <text x="530" y="843" font-family="Arial" font-size="14" fill="#57606a">
+    [A] abstrata · [U] usuário · [S] sistema · [I] interação
+  </text>
+
+  <text x="530" y="871" font-family="Arial" font-size="14" fill="#57606a">
+    &gt;&gt; ativação · []&gt;&gt; passagem de informação · [] escolha · |[]| concorrência com comunicação
+  </text>
+</svg>
