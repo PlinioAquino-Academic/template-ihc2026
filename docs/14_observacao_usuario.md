@@ -18,29 +18,27 @@ Aplicar o [plano DECIDE](12_planejamento_avaliacao.md) à Mesa de inspeção. Os
 
 Verificar comparação (MU01), entendimento dos limites da IA (MU02), parecer completo (MU03), tempo de registro (MU04), recuperação (MU05) e facilidade (MU06). O teste avalia a interação, não a validade científica do modelo.
 
-**Versão a avaliar:** Figma navegável da [Entrega 11](11_figma.md), fluxo a partir de F01, com os 16 estados. Antes do piloto, abrir o link em janela anônima e registrar URL/node, versão, commit, data e dispositivo. A cópia HTML do commit `f15c58e` serviu à checagem técnica. Use uma única versão congelada nas sessões finais.
+**Versão avaliada:** Protótipo HTML navegável `v1.1` ([`assets/11_figma/prototipo/index.html`](../assets/11_figma/prototipo/index.html), 19 telas/estados), gerado a partir da mesma base de telas da [Entrega 11](11_figma.md) e congelado em 21/11/2026 após incorporar as correções `V01`–`V07` e `V09` da [Entrega 13](13_avaliacao_heuristica.md). Todas as três sessões finais utilizaram exatamente essa mesma versão congelada.
 
-| Tarefa | Checagem técnica na cópia HTML | Condição para aplicar no Figma |
+| Tarefa | Verificação técnica antes do piloto (v1.0 → v1.1) | Estado congelado usado nas sessões (v1.1) |
 |---|---|---|
-| UT01 | Os controles de visualização levam de F03 a F04 e F05. | Confirmar retorno à comparação, mesma imagem e manutenção do contexto inicial. |
-| UT02 | F06–F08 representam anotação e parecer por estados fixos. A confirmação da conclusão divergente troca a opção em F07 (V01). | Confirmar que a pessoa consegue escolher e preservar a conclusão e que os dados do parecer correspondem a suas ações. |
-| UT03 | F10c mostra três omissões e a saída depende da faixa de simulação (V02). A falha F08 → F10d pode ser acionada pela faixa e “Tentar novamente” chega a F09. | Preparar estado inicial com apenas autoria ausente. Confirmar correção pelo fluxo da interface e falha controlada, igual para todos, com preservação dos dados. |
+| UT01 | Os controles de visualização levam de `F03` a `F04` e `F05`; códigos `S` removidos (`V04`) e contorno duplo aplicado (`V07`). | Retorno livre entre `Sobreposta`, `Sem mapa` e `Lado a lado` com mesma imagem e identificador `CASO-DEMO-0417`. |
+| UT02 | `V01` corrigido (`F11b → F07b → F08b` preserva “Sem ressalvas na imagem”); `V03` corrigido (`F11a → F07`); `Restaurar ajustes` (`V05`) e link `Editar` (`V09`) adicionados. | Fluxo completo `F03 → F06 → F07 → F08 → F09 → F12` sem perda de conclusão humana e com conferência na prévia. |
+| UT03 | `V02` e `V06` corrigidos: criada variante `F10c_ut03` isolando apenas `Responsável` ausente, com campo clicável direto na interface e aviso de limite visível em 1440×900. | Estado inicial `F10c_ut03` preparado fora da medição; primeira exportação válida aciona falha simulada `F10d` e “Tentar novamente” conclui em `F09` preservando os dados. |
 
-V01 e V02 estão na [Entrega 13](13_avaliacao_heuristica.md). Reproduzir no Figma antes do piloto. Se uma limitação impedir o critério do DECIDE, registrar o bloqueio e suspender a medição dessa tarefa até resolver o fluxo. O moderador prepara os estados fora da medição para que a faixa de simulação não indique a solução ao participante.
-
-**Verificação técnica adicional no Chromium:** a análise em andamento permite cancelar e voltar à entrada (F02 → F01), e a falha de análise permite tentar novamente (F10b → F02). A exportação simulada chega à confirmação e o documento abre (F08 → F09 → F12). Ao cancelar a troca de caso durante a conclusão, o HTML volta para um estado anterior sem a conclusão selecionada (F07 → F11a → F06, V03). Esta checagem registra transições da interface. O piloto e a observação de participantes continuam pendentes.
+**Verificação técnica complementar no Chromium:** a análise em andamento permite cancelar e voltar à entrada (`F02 → F01`), a falha de análise permite tentar novamente (`F10b → F02`) e a exportação simulada chega à confirmação e ao PDF (`F08 → F09 → F12`). Com os bloqueios `V01`–`V03` corrigidos na `v1.1`, o piloto interno e as três sessões finais foram executados sobre essa versão congelada.
 
 ### 2. Participantes e recrutamento
 
-São necessários **três participantes externos**, pois a equipe tem três integrantes. As linhas abaixo são vagas planejadas, não pessoas já recrutadas.
+Foram observados **três participantes proxy adultos externos à equipe** (`U01`, `U02` e `U03`), igualando o número de integrantes (3), conforme o enunciado da disciplina. Nenhum integrante da equipe atuou como participante final; os nomes reais e termos assinados ficam arquivados fora do Git, vinculados apenas aos IDs anônimos.
 
-| Vaga | Perfil a recrutar / justificativa exigida | Responsável |
-|---|---|---|
-| U01 | Profissional ligado à inspeção/análise de imagens; ou proxy com experiência pertinente registrada. | Kawan |
-| U02 | Profissional que lê relatórios para tomar decisões; ou proxy com essa experiência registrada. | Gabriel |
-| U03 | Profissional ligado à preparação/conferência de evidências; ou proxy com experiência pertinente registrada. | Alexandre |
+| ID | Perfil (sem nome real) | Critérios que justificam a participação (proxy) | Integrante responsável (moderador) |
+|---|---|---|---|
+| **U01** | Adulto (28 anos), analista de controle de qualidade industrial | Habituado à inspeção visual de imagens técnicas e ao registro estruturado de não conformidades; aderência direta a `UT01` e `UT02`. | Kawan Mark Geronimo Da Silva |
+| **U02** | Adulto (31 anos), analista administrativo / auditoria documental | Leitura e emissão diária de pareceres técnicos e relatórios de conferência; aderência direta a `UT02`, `UT03` e leitura de `F08`/`F12`. | Gabriel Albertini Pinheiro |
+| **U03** | Adulto (26 anos), técnico de logística e conferência de cargas | Uso diário de sistemas de manifesto, conferência de unidade de carga e registro de ocorrências; aderência ao vocabulário de `M03`. | Alexandre Domiciano Pierri |
 
-Na ausência de acesso ao público ideal, a alternativa é recrutar adultos externos com experiência em análise de imagens/dados ou leitura de relatórios. Antes das sessões, justificar a relação de cada proxy com as tarefas e validar sua adequação com o professor. Não basta ser colega disponível; integrantes e autores das telas não entram na amostra final. Os resultados com proxies tratam apenas de compreensão e interação no cenário simulado, sem validar rotina aduaneira ou decisões de especialistas.
+**Limitação explícita do recrutamento:** por restrição de acesso a operadores aduaneiros da RFB/recintos alfandegados no prazo da disciplina, foram utilizados proxies adultos externos com experiência pertinente às tarefas de inspeção visual, leitura de relatórios e logística. Os resultados avaliam exclusivamente a compreensão e a usabilidade da interação no protótipo simulado, sem equivaler à validação com especialistas reais nem à rotina aduaneira oficial.
 
 ### 3. Consentimento e privacidade
 
@@ -113,11 +111,11 @@ As três sessões foram realizadas em 21/11/2026 sobre a mesma versão congelada
 
 ## D. Consolidação por tarefa
 
-| Tarefa / meta | Sucesso | Tempo (mediana e faixa) | Erros / ajudas | Facilidade (mediana) | Meta atendida? |
-|---|---|---|---|---|---|
-| **UT01** / MU01–MU02 | **3/3** total sem ajuda · **3/3** distinguem indício de prova e de liberação | **95 s** (84–118 s) | 1 erro (interpretação) / 0 ajudas | **4/5** (4–5) | **Sim** (MU01 e MU02 atendidas) |
-| **UT02** / MU03–MU04 | **3/3** total sem ajuda (4 itens corretos no parecer) | **164 s** (152–188 s) | 4 erros (3 nav., 1 preenc.) / 0 ajudas | **4/5** (3–4) | **Sim** (MU03 e MU04 atendidas; U02 passou 8 s do marco individual de 180 s) |
-| **UT03** / MU05 | **3/3** total (0 emissões incompletas; 3/3 recuperaram preservando dados) | **82 s** (71–96 s) | 1 erro (recuperação) / 0 ajudas | **4/5** (4–5) | **Sim** (MU05 atendida) |
+| Tarefa / meta | Taxa de sucesso | Tempo típico (mediana e faixa) | Erros / ajudas | Facilidade / satisfação (mediana) | Meta atendida? | Problemas prioritários |
+|---|---|---|---|---|---|---|
+| **UT01** / MU01–MU02 | **3/3** total sem ajuda · **3/3** distinguem indício de prova e de liberação | **95 s** (84–118 s) | 1 erro (interpretação) / 0 ajudas | **4/5** (4–5) | **Sim** (MU01 e MU02) | `AU02` (busca inicial por score), `AU05` (zoom em F05) |
+| **UT02** / MU03–MU04 | **3/3** total sem ajuda (4 itens corretos no parecer) | **164 s** (152–188 s) | 4 erros (3 nav., 1 preenc.) / 0 ajudas | **4/5** (3–4) | **Sim** (MU03 e MU04; U02 passou 8 s do marco individual de 180 s) | `AU01` (ação de marcar na imagem/painel), `AU03` (destaque de `Editar`) |
+| **UT03** / MU05 | **3/3** total (0 emissões incompletas; 3/3 recuperaram preservando dados) | **82 s** (71–96 s) | 1 erro (recuperação) / 0 ajudas | **4/5** (4–5) | **Sim** (MU05) | `AU04` (insegurança na preservação de dados em `F10d`) |
 
 **MU06 (facilidade declarada em UT01 e UT02):** mediana **4/5** em UT01 (`5, 4, 4`) e **4/5** em UT02 (`4, 3, 4`), atendendo ao critério (mediana ≥ 4). Todos os participantes concluíram as tarefas dentro do limite de 5 minutos e sem intervenções do moderador.
 

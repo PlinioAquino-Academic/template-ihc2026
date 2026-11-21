@@ -1,6 +1,6 @@
 # Roteiro de observação — Mesa de inspeção
 
-**Situação:** preparado, não aplicado. Usar o [plano DECIDE](../../docs/12_planejamento_avaliacao.md) e os critérios UT01–UT03. Não testar somente com as pranchas estáticas.
+**Situação:** aplicado em 21/11/2026 sobre o protótipo HTML navegável `v1.1` (`U01`–`U03`), seguindo o [plano DECIDE](../../docs/12_planejamento_avaliacao.md) e os critérios UT01–UT03.
 
 ## Preparação
 

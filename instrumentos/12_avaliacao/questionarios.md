@@ -1,4 +1,4 @@
-# Perfil e pós-teste — não aplicados
+# Perfil e pós-teste — aplicados em 21/11/2026 (U01–U03)
 
 Preencher somente código U01/U02/U03 e respostas necessárias. Não coletar nome, empresa, CPF ou dados de cargas reais.
 
