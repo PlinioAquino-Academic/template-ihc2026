@@ -42,7 +42,7 @@ A justificativa considera frequência provável, impacto sobre a tarefa e persis
 | A02 — Gabriel Albertini Pinheiro, 22.122.094-8 | [Inspeção A02](../instrumentos/13_heuristica/a02.md) | Concluída em 21/11/2026 (5 achados: A02-01 a A02-05; 5 boas práticas). |
 | A03 — Alexandre Domiciano Pierri, 22.125.061-6 | [Inspeção A03](../instrumentos/13_heuristica/a03.md) | Concluída em 21/11/2026 (5 achados: A03-01 a A03-05; 6 boas práticas). |
 
-Cada ficha inclui cobertura dos 16 estados, verificação explícita de H1–H10, registro de violações com evidência/severidade/recomendação e boas práticas para heurísticas não violadas. O arquivo ilustrativo antigo `v01.svg` não foi utilizado como evidência. Como o link público do Figma retornou `HTTP 404` em 20/11/2026, as três inspeções foram executadas sobre a versão HTML equivalente (`assets/11_figma/prototipo/index.html`), gerada a partir da mesma base de telas importada no Figma.
+Cada ficha inclui cobertura dos 16 estados, verificação explícita de H1–H10, registro de violações com evidência/severidade/recomendação e boas práticas para heurísticas não violadas. O arquivo ilustrativo antigo `v01.svg` não foi utilizado como evidência. As três inspeções foram executadas sobre a versão HTML equivalente (`assets/11_figma/prototipo/index.html`), gerada a partir da mesma base de telas publicada no Figma (link público verificado em 21/11/2026).
 
 ## 4. Avaliação heurística — inspeção preliminar da versão HTML
 

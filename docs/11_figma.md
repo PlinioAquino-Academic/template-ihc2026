@@ -1,7 +1,7 @@
 # Entrega 11 — Protótipo no Figma
 
-**Data:** 17/11/2026<br>
-**Status:** 🟩 concluída (pendente: conferir o acesso público ao link do Figma)<br>
+**Data:** 21/11/2026<br>
+**Status:** 🟩 concluída<br>
 **Responsabilidade:** 1 protótipo integrado por equipe, cobrindo os fluxos MoLIC<br>
 **Autoria:** pranchas SVG e especificação das conexões por Kawan Mark Geronimo Da Silva (22.222.010-5), em 11/11/2026; protótipo navegável e montagem no Figma por Gabriel Albertini Pinheiro (22.122.094-8). A base são os modelos M01 (Kawan), M02 (Gabriel) e M03 (Alexandre Domiciano Pierri, 22.125.061-6) da [Entrega 10](10_molic.md).
 
@@ -28,9 +28,9 @@ Materializar a conversa modelada no MoLIC em um protótipo navegável da **Mesa 
 
 ## 2. Link do Figma
 
-**Protótipo navegável:** https://www.figma.com/proto/9cKfwkCvyasTplQlf90RTC?node-id=1-2&starting-point-node-id=1%3A2<br>
-**Arquivo editável:** https://www.figma.com/design/9cKfwkCvyasTplQlf90RTC<br>
-**Última verificação de permissão:** 20/11/2026 — teste sem login (`HTTP 404`). O compartilhamento “qualquer pessoa com o link pode ver” ainda precisa ser ativado no Figma e retestado em janela anônima.
+**Protótipo navegável:** https://www.figma.com/proto/9cKfwkCvyasTplQlf90RTC/Mesa-de-inspe%C3%A7%C3%A3o-%E2%80%94-Prot%C3%B3tipo-Entrega-11--Equipe-09-?node-id=1-2&starting-point-node-id=1%3A2<br>
+**Arquivo editável:** https://www.figma.com/design/9cKfwkCvyasTplQlf90RTC/Mesa-de-inspe%C3%A7%C3%A3o-%E2%80%94-Prot%C3%B3tipo-Entrega-11--Equipe-09-?node-id=0-1&t=WDuvdVhiqY29aVFj-1<br>
+**Última verificação de permissão:** 21/11/2026 — protótipo navegável verificado em sessão anônima sem login (`HTTP 200`, *Mesa de inspeção — Protótipo Entrega 11 (Equipe 09)*; compartilhamento “qualquer pessoa com o link pode ver” ativo).
 
 O arquivo tem uma página, **Protótipo F01–F12**, com as 16 telas e estados organizados em grade, e o fluxo inicial **Mesa de inspeção — P01 (F01)**. As 122 interações são de clique (*On click → Navigate to*).
 
@@ -221,7 +221,7 @@ Critérios WCAG 2.2 pertinentes a um produto Web de mesa. As razões de contrast
 
 ## Checklist
 
-- [ ] Link do Figma está acessível. *(Arquivo criado e protótipo publicado; falta ativar “qualquer pessoa com o link pode ver” e testar em janela anônima.)*
+- [x] Link do Figma está acessível. *(Compartilhamento “qualquer pessoa com o link pode ver” ativo e protótipo testado em sessão anônima sem login em 21/11/2026.)*
 - [x] Há screenshots representativos no repositório.
 - [x] Todos os MoLIC relevantes estão cobertos.
 - [x] Estados de erro, feedback e recuperação foram prototipados.

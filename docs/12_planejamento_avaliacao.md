@@ -32,7 +32,7 @@ Avaliar a **interação da Mesa de inspeção**, conforme MU01–MU06 da [Entreg
 
 | Item | Definição |
 |---|---|
-| Versão | Pranchas F01–F12 da Entrega 11 como base; antes de coletar, registrar URL/node/versão e commit do protótipo navegável nas fichas. Protótipo navegável publicado no Figma (arquivo `9cKfwkCvyasTplQlf90RTC`, fluxo a partir de F01, ver [Entrega 11](11_figma.md)); falta conferir o acesso público ao link. |
+| Versão | Pranchas F01–F12 da Entrega 11 como base; antes de coletar, registrar URL/node/versão e commit do protótipo navegável nas fichas. Protótipo navegável publicado no Figma (arquivo `9cKfwkCvyasTplQlf90RTC`, fluxo a partir de F01, ver [Entrega 11](11_figma.md)), com acesso público verificado em sessão anônima em 21/11/2026. |
 | Escopo | M01–M03: entrada, análise, comparação, registro, revisão, parecer, erros e confirmações. Sem despacho, histórico, dashboard ou vistoria física. |
 | Inspeção | A01 Kawan; A02 Gabriel; A03 Alexandre. Cada um examina todos os estados, sem discutir achados até terminar. |
 | Observação | Três adultos externos à equipe. Prioridade para profissionais ligados à inspeção/logística/análise de imagens. Nenhum foi recrutado ainda. |

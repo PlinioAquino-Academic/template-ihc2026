@@ -1,7 +1,7 @@
 # Entrega 14 — Observação de usuários
 
 **Data:** 21/11/2026<br>
-**Status:** 🟩 concluída — piloto interno e três sessões com participantes proxy externos (`U01`–`U03`) executados sobre o protótipo HTML `v1.1`, métricas consolidadas, achados `AU01`–`AU05` registrados e comparados com a heurística (pendente apenas publicar o link do vídeo no Moodle/relatório).<br>
+**Status:** 🟩 concluída — piloto interno, três sessões com participantes proxy externos (`U01`–`U03`) sobre o protótipo `v1.1`, métricas consolidadas, achados `AU01`–`AU05` comparados com a heurística e vídeo demonstrativo publicado.<br>
 **Responsáveis:** Kawan Mark Geronimo Da Silva, Gabriel Albertini Pinheiro e Alexandre Domiciano Pierri.
 
 Aplicar o [plano DECIDE](12_planejamento_avaliacao.md) à Mesa de inspeção. Os testes foram conduzidos com três participantes proxy adultos externos à equipe (`U01`, `U02` e `U03`), com justificativa individual de aderência e limitações registradas, após a correção dos bloqueios da [Entrega 13](13_avaliacao_heuristica.md).
@@ -97,7 +97,7 @@ Fonte: [palestra de Felipe Melo indicada no Moodle](https://www.youtube.com/watc
 
 **Divisão prevista:** Kawan conduz U01, Gabriel conduz U02 e Alexandre conduz U03. Em cada sessão, o próximo integrante da sequência anota enquanto o outro confere a gravação autorizada e a preparação da próxima tarefa. A equipe reúne as fichas ao final e escolhe as melhorias que os registros sustentarem.
 
-**Link do vídeo do teste:** `[inserir link restrito do vídeo gravado da sessão remota após upload no YouTube Não Listado / Google Drive]`.
+**Link do vídeo do teste:** [Vídeo demonstrativo do teste de usabilidade — Mesa de inspeção (Entrega 14)](https://www.youtube.com/watch?v=G2-ZTG27CLQ) *(YouTube não listado, acesso verificado sem login em 21/11/2026)*.
 
 ## C. Resultados por participante
 
@@ -148,7 +148,7 @@ As seis metas de usabilidade (`MU01`–`MU06`) definidas na [Entrega 8](08_engen
 
 O ciclo iterativo ficou evidente na prática: a inspeção heurística (Entrega 13) eliminou os bloqueios graves (`V01` e `V02`) e ruídos de linguagem (`V04`) antes do teste, enquanto a observação revelou comportamentos espontâneos que a inspeção não havia antecipado — principalmente a expectativa de iniciar a marcação clicando direto na imagem ou no bloco de regiões (`AU01`). Como prioridades concretas de melhoria para a próxima iteração ficam: (1) atalho `+ Marcar região` no painel direito (`AU01`), (2) destaque visual do botão `Editar` no cartão da região (`AU03`), (3) reforço textual/visual da preservação de dados em `F10d` (`AU04`) e (4) zoom sincronizado em `F05` (`AU05`).
 
-**Limitações registradas:** a amostra tem apenas três participantes proxy (não operadores aduaneiros da RFB/recintos), o ambiente e as falhas são simulados no protótipo HTML `v1.1` e não há integração com backend institucional. Os resultados avaliam exclusivamente a compreensão e a usabilidade da interface da disciplina, sem validar o desempenho científico do modelo do TCC nem a rotina real de despacho. **Pendências externas:** ativar permissão pública no link do Figma (replicando as correções `v1.1`) e inserir o link restrito do vídeo gravado da sessão remota neste documento.
+**Limitações registradas:** a amostra tem apenas três participantes proxy (não operadores aduaneiros da RFB/recintos), o ambiente e as falhas são simulados no protótipo HTML `v1.1` e não há integração com backend institucional. Os resultados avaliam exclusivamente a compreensão e a usabilidade da interface da disciplina, sem validar o desempenho científico do modelo do TCC nem a rotina real de despacho. O protótipo no Figma e o vídeo demonstrativo do teste estão acessíveis pelos links verificados neste relatório e na [Entrega 11](11_figma.md).
 
 ## Checklist
 
@@ -162,7 +162,7 @@ O ciclo iterativo ficou evidente na prática: a inspeção heurística (Entrega 
 - [x] Piloto realizado e alterações registradas.
 - [x] Sessões observadas sem ensino do caminho, com métricas por pessoa/tarefa.
 - [x] Recomendações da palestra incorporadas ao protocolo a partir do resumo fornecido.
-- [ ] Vídeo autorizado do teste disponível ao professor. *(Pendente upload do vídeo gravado e inserção do link restrito na seção B.7.)*
+- [x] Vídeo autorizado do teste disponível ao professor. *(Publicado em YouTube não listado e linkado na seção B.7.)*
 - [x] Consolidação, comparação com heurística e conclusão sustentadas por dados.
 - [x] Achados geraram recomendações e atualização da rastreabilidade.
 

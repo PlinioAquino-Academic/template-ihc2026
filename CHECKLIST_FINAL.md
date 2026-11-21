@@ -1,6 +1,6 @@
 # Checklist final do projeto
 
-Última conferência: 21/11/2026 (branch `entrega12`). Itens desmarcados indicam exclusivamente pendências externas ao Git (permissão pública do link no Figma e upload do vídeo restrito da sessão).
+Última conferência: 21/11/2026 (branch `entrega12`). Todos os itens do checklist final foram verificados, incluindo acesso público sem login ao protótipo do Figma e ao vídeo da Entrega 14.
 
 ## Relação entre TCC e escopo de IHC
 
@@ -22,7 +22,7 @@
 - [x] Arquivos editáveis dos principais diagramas foram preservados quando possível.
 - [x] Entregas individuais identificam o autor.
 - [x] As quantidades mínimas por integrante foram atendidas. *(Entregas 1–14 completas, incluindo A01–A03 na Entrega 13 e U01–U03 na Entrega 14.)*
-- [ ] Links externos (Figma, Forms, vídeos) foram testados sem autenticação privilegiada. *(Figma retornou HTTP 404 em 20/11/2026; upload do vídeo da Entrega 14 pendente.)*
+- [x] Links externos (Figma, Forms, vídeos) foram testados sem autenticação privilegiada. *(Protótipo Figma e vídeo no YouTube testados em sessão anônima sem login em 21/11/2026, `HTTP 200`.)*
 
 ## Coerência de IHC
 
