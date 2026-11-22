@@ -127,36 +127,40 @@ A aula demonstra um recurso para comparar ocorrências. O avaliador pode atribui
 |---|---|
 | Protótipo de referência | Estoque Inteligente · Entrega 11, de 11/11/2026. [Abrir apresentação no Figma](https://www.figma.com/proto/jgB0Bk5BLQ3XM2W9tgZDmd/Estoque-Inteligente?page-id=0%3A1&node-id=2-2&starting-point-node-id=2%3A2&scaling=scale-down) |
 | Escopo previsto | 28 quadros de 1280 × 780 px. O inventário da seção 2 inclui os percursos principais, as alternativas e os estados de recuperação. |
-| M01 / T01 · Mariana Alves | Analisar a reposição da garrafa térmica e registrar a decisão. Percurso principal previsto de F01 → F02 → F03 → F04 → F05 → F05S. |
-| M02 / T02 · Rafael Costa | Investigar a divergência no estoque de conjuntos de potes e conferir o desfecho. Percurso principal previsto de F01 → F10 → F11 → F12 → F13. |
-| Data da inspeção | A registrar pelo integrante no dia da sua avaliação. |
-| Dispositivo e navegador utilizados | A registrar durante a inspeção individual. |
-| Área de visualização e zoom utilizados | Registrar área e zoom efetivos ao abrir a apresentação. |
+| M01 / T01 · Mariana Alves | Analisar a reposição da garrafa térmica e registrar a decisão. Percurso principal conferido de F01 → F02 → F03 → F04 → F05 → F05S. |
+| M02 / T02 · Rafael Costa | Investigar a divergência no estoque de conjuntos de potes e conferir o desfecho. Percurso principal conferido de F01 → F10 → F11 → F12 → F13. |
+| Data da inspeção assistida | 22/11/2026. |
+| Dispositivo e navegador utilizados | Leitura direta do arquivo pelo conector do Figma, com inspeção de textos, controles, destinos e capturas. Esta sessão não utilizou navegador em modo de apresentação. |
+| Área de visualização e zoom utilizados | Quadros de 1280 × 780 px. Zoom de navegador inaplicável ao método. |
 
-**Situação da ficha.** As colunas abaixo contêm referências verificadas para conferência individual. A decisão do avaliador sobre cada linha e seus próprios IDs serão registrados após seu percurso.
+**Responsável pela ficha A01:** Paulo Andre de Oliveira Hirata. **Execução desta análise:** Codex, a pedido de Paulo. A pré-análise compartilhada já era conhecida. Cabe a Paulo revisar as conclusões e registrar sua própria inspeção para cumprir a etapa individual da disciplina.
+
+Partindo de F01, foram seguidos os destinos das ações até cobrir os 28 quadros alcançáveis de M01 e M02. A leitura pelas dez heurísticas considerou a ação de origem, o texto recebido, as alternativas e o caminho de volta. Em M01 foram examinados planejamento de 4 e 6 unidades, adiamento, pendência, pausa, quantidade inválida e falha ao salvar. Em M02 foram examinados correção, origem incerta, falta de autorização, pausa, confirmação e recuperação. A frequência e o impacto abaixo são estimativas de inspeção.
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
-| Heurística | Quadros de referência | Resultado preliminar | ID preliminar | Boa prática localizada |
+| Heurística | Quadros representativos dos dois fluxos | Violação identificada? | ID | Evidência de cobertura |
 |---|---|---|---|---|
-| H1 · Visibilidade do status do sistema | F13, F06E e F12E | Indício identificado na pré-análise | PRE-01 | F13 identifica a correção como registrada e mostra o saldo de 10 conjuntos. |
-| H2 · Compatibilidade entre o sistema e o mundo real | F02 | Sem violação registrada na pré-análise | — | F02 distingue garrafas na loja, reservadas para pedido pago e disponíveis para novas vendas. |
-| H3 · Controle e liberdade do usuário | F12 | Sem violação registrada na pré-análise | — | F12 oferece “Editar” durante a revisão da correção. |
-| H4 · Consistência e padrões | F01 | Sem violação registrada na pré-análise | — | F01 usa a mesma estrutura de cartão para reposição e conferência, com identificação, valor principal e ação. |
-| H5 · Prevenção de erros | F12 | Sem violação registrada na pré-análise | — | F12 mostra 8 conjuntos atuais, desconto indevido de 2 e saldo previsto de 10. |
-| H6 · Reconhecimento em vez de memorização | F11 | Sem violação registrada na pré-análise | — | F11 mantém pedido, anotação e recontagem visíveis ao mesmo tempo. |
-| H7 · Flexibilidade e eficiência de uso | F01, F11 e F10P | Indício identificado na pré-análise | PRE-02 | Cada cartão de F01 dá acesso direto à ação daquele item. |
-| H8 · Estética e design minimalista | F02, F02 e F12 | Indício identificado na pré-análise | PRE-03 | F02 agrupa físico, comprometido e disponível, com destaque para as quatro garrafas livres. |
-| H9 · Ajudar usuários a reconhecer, diagnosticar e recuperar-se de erros | F04E | Sem violação registrada na pré-análise | — | F04E identifica o valor zero, preserva o motivo e oferece “Corrigir quantidade”. |
-| H10 · Ajuda e documentação | F11 | Sem violação registrada na pré-análise | — | F11 orienta consultar Mariana para verificar a origem da anotação. |
+| H1 · Visibilidade do status do sistema | F02P, F05S, F06E/F06R, F10P, F12E/F12F, F13/F14 | Não | — | F06E e F12E identificam o registro e a confirmação pendente. |
+| H2 · Compatibilidade entre o sistema e o mundo real | F01, F02/F02B, F10/F11, F12/F13 | Não | — | A reposição distingue garrafas livres e comprometidas. A conferência conta conjuntos de potes. |
+| H3 · Controle e liberdade do usuário | F03/F04, F05/F05Q/F05A/F05P, F12/F12P | Sim | A01-V01 | Editar a correção em F12 permite rever as fontes em F11. |
+| H4 · Consistência e padrões | F01, F05/F05Q/F05A/F05P, F12/F12P, F13/F14 | Não | — | Revisões precedem confirmações nos dois percursos. |
+| H5 · Prevenção de erros | F04/F04E, F05, F11/F12/F12N/F12P | Não | — | A quantidade zero exige correção. F12 apresenta o efeito sobre o saldo antes de confirmar. |
+| H6 · Reconhecimento em vez de memorização | F02, F02P, F10P, F11/F12 | Não | — | Pedido, anotação e recontagem aparecem juntos no confronto. |
+| H7 · Flexibilidade e eficiência de uso | F02/F02P, F10/F10P/F11 | Sim | A01-V02 | F01 oferece entrada direta nos dois trabalhos. |
+| H8 · Estética e design minimalista | F01/F02, F05, F11/F12 | Sim | A01-V03 | Em F02, as quatro unidades disponíveis têm destaque próprio. |
+| H9 · Ajudar usuários a reconhecer, diagnosticar e recuperar-se de erros | F04E, F06E/F06R, F12E/F12F | Não | — | F04E explica o valor inválido e oferece correção. |
+| H10 · Ajuda e documentação | F02B, F03, F04E, F11/F12N/F13 | Não | — | F11 orienta Rafael a consultar Mariana sobre a origem da anotação. |
+
+**Revisão do indício PRE-01 (H1).** A consulta em F06E leva a F05S e a consulta em F12E leva a F13. O protótipo comunica tanto a espera inicial quanto o resultado da consulta. Falta simular a possibilidade de uma segunda resposta ainda pendente, prevista no MoLIC. Nesta ficha, a diferença foi classificada como lacuna de cobertura da simulação. A inspeção não encontrou uma mensagem incorreta de estado nesses dois caminhos.
 
 ### 5. Declaração de violações
 
-| ID preliminar | Heurística | Tela/estado | Problema observado | Evidência e elemento a conferir | Severidade proposta | Frequência, impacto e persistência | Recomendação |
-|---|---|---|---|---|---|---|---|
-| PRE-01 | H1 | F06E e F12E | Ao consultar um salvamento incerto, o caminho de consulta termina sempre em sucesso (F05S ou F13). O MoLIC também prevê que a consulta possa continuar aguardando resposta. O protótipo deixa essa situação sem um caminho para uma nova consulta. | **Consultar registro / Consultar resultado**<br>![Tela F06E](../assets/13_heuristica/f06e.png)<br>![Tela F12E](../assets/13_heuristica/f12e.png) | 2 | Ocorre quando a demora persiste após a primeira consulta. Impede ensaiar a espera prolongada e se repete nas duas tarefas. O efeito foi verificado na simulação. | Prever a resposta “Ainda aguardando”, manter visível o mesmo registro e permitir nova consulta sem repetir a operação. |
-| PRE-02 | H7 | F11 e F10P | Rafael já comparou as fontes em F11 quando precisa atender no balcão. A pausa está em F10. Voltar e pausar leva a um resumo que ainda manda comparar as fontes, e retomar retorna a F10. Rafael precisa reconstruir o ponto em que parou. | **Ações ao pé de F11 e próxima etapa em F10P**<br>![Tela F11](../assets/13_heuristica/f11.png)<br>![Tela F10P](../assets/13_heuristica/f10p.png) | 2 | Atinge as interrupções durante a comparação. Acrescenta navegação e exige memória do que já foi conferido. A dificuldade volta a ocorrer se houver nova interrupção nesse ponto. | Oferecer pausa em F11, guardar a última fonte conferida e retornar à comparação com a verificação pendente visível. |
-| PRE-03 | H8 | F02 e F12 | “Ver caso sem previsão” aparece ao lado das ações de Mariana. “Testar falha” aparece ao lado da confirmação de Rafael. Os dois controles trocam o cenário de demonstração e competem com ações do trabalho, podendo sugerir caminhos durante a avaliação. | **Ver caso sem previsão / Testar falha**<br>![Tela F02](../assets/13_heuristica/f02.png)<br>![Tela F12](../assets/13_heuristica/f12.png) | 2 | Os controles aparecem toda vez que essas telas são abertas. Um clique muda o cenário e pode desviar a tentativa. O caminho principal continua disponível. | Deixar a seleção de cenários com o moderador e abrir cada tarefa no estado preparado para o participante. |
+| ID | Heurística e local | Ação, resposta e consequência | Evidência | Severidade (0–4) e justificativa | Correção e verificação |
+|---|---|---|---|---|---|
+| A01-V01 | H3 · F05Q → F04 | Mariana seleciona 4 unidades para preservar o caixa. Ao escolher **Editar** na revisão, volta a um rascunho de **6 unidades**, com o motivo de cobrir a procura até quinta. Para manter a escolha anterior, precisa selecionar 4 outra vez. | **Antes de editar:** ![Quadro F05Q](../assets/13_heuristica/f05q.png)<br>**Depois de editar:** ![Quadro F04](../assets/13_heuristica/f04.png) | **3 · maior.** Afeta toda edição que parte da opção de 4 unidades. A troca silenciosa envolve quantidade e justificativa comercial e pode chegar à confirmação se passar despercebida. É recuperável, mas se repete ao editar novamente. | Reabrir o rascunho com a quantidade e o motivo selecionados. Escolher 4, editar e voltar à revisão sem alterar nada. As duas telas devem manter 4 unidades e o motivo ligado ao caixa. |
+| A01-V02 | H7 · F11, F10, F10P | Durante o confronto, F11 oferece confirmação da origem, origem incerta ou retorno a F10. Para pausar é necessário voltar. A retomada leva a F10 e pede que a comparação recomece. | **Ações de F11:** ![Quadro F11](../assets/13_heuristica/f11.png)<br>**Próxima etapa ao pausar:** ![Quadro F10P](../assets/13_heuristica/f10p.png) | **2 · menor.** O problema ocorre nas interrupções durante o confronto. Exige navegação adicional e recuperar de memória quais fontes já foram vistas. Repete-se a cada interrupção nesse ponto. | Oferecer pausa em F11. Interromper depois de comparar o pedido e verificar se a retomada mostra a mesma investigação e a próxima fonte a conferir. |
+| A01-V03 | H8 · F02, F05, F12 | Mariana recebe “Ver caso sem previsão” ao lado de “Escolher decisão”. Rafael recebe “Testar falha” junto de “Confirmar correção”. Esses comandos permitem ao participante trocar o cenário durante a tarefa. | **Comandos na faixa de ações:** ![Quadro F02](../assets/13_heuristica/f02.png)<br>![Quadro F12](../assets/13_heuristica/f12.png) | **2 · menor.** Os comandos aparecem a cada visita a esses quadros e podem desviar a tentativa para outra condição de teste. O fluxo principal continua acessível. | Preparar os casos alternativos por entradas do moderador. Reabrir os casos como participante e conferir que só aparecem ações próprias da tarefa. |
 
 ### 6. Boas práticas — heurísticas não violadas (atividade didática)
 
