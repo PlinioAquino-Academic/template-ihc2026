@@ -1,5 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="949" viewBox="0 0 1200 949">
+<defs>
+<linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#090d16"/><stop offset="50%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient>
+<linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient>
+<linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+<filter id="cardShadow" x="-3%" y="-3%" width="106%" height="108%" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.35"/></filter>
+</defs>
+<rect width="1200" height="949" fill="url(#bgGrad)"/>
+<g filter="url(#cardShadow)"><rect x="30" y="20" width="1140" height="65" rx="12" fill="url(#headerGrad)"/>
+<text x="600" y="47" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" font-style="normal" fill="#ffffff">MAPA DE EMPATIA · PERSONA P01</text>
+<text x="600" y="69" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" font-style="normal" fill="#bfdbfe">Gustavo Onofre • operador da estação de imagem de raio-X • proto-persona: conteúdo hipotético [H], salvo onde indicado [F]</text>
+</g>
+<g filter="url(#cardShadow)">
+<rect x="30" y="105" width="310" height="558" rx="10" fill="url(#cardGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="30" y="105" width="310" height="34" rx="10" fill="#e0f2fe"/>
+<path d="M 30 125 L 30 139 L 340 139 L 340 125 Z" fill="#e0f2fe"/>
+<text x="185.0" y="128" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#0369a1">2. O QUE VÊ?</text>
+<circle cx="48" cy="159" r="3.5" fill="#0369a1"/>
+<text x="60" y="163" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[F] Imagem radiográfica em monitor</text>
+<text x="60" y="181" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">dedicado de 22" a 24" (C03).</text>
+<circle cx="48" cy="203" r="3.5" fill="#0369a1"/>
+<text x="60" y="207" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[F] Tratamentos visuais do software</text>
+<text x="60" y="225" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">do scanner: pseudo-cor por material</text>
+<text x="60" y="243" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">e realce de bordas (C01, C03).</text>
+<circle cx="48" cy="265" r="3.5" fill="#0369a1"/>
+<text x="60" y="269" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Imagens complexas, com objetos</text>
+<text x="60" y="287" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">sobrepostos (H10).</text>
+<circle cx="48" cy="309" r="3.5" fill="#0369a1"/>
+<text x="60" y="313" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Uma sala de controle com outras</text>
+<text x="60" y="331" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">estações de trabalho (H14).</text>
+<circle cx="48" cy="353" r="3.5" fill="#0369a1"/>
+<text x="60" y="357" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[?] A iluminação da sala e o</text>
+<text x="60" y="375" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">restante do ambiente não foram</text>
+<text x="60" y="393" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">observados.</text>
+</g>
+<g filter="url(#cardShadow)">
+<rect x="360" y="105" width="480" height="238" rx="10" fill="url(#cardGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="360" y="105" width="480" height="34" rx="10" fill="#e0e7ff"/>
+<path d="M 360 125 L 360 139 L 840 139 L 840 125 Z" fill="#e0e7ff"/>
+<text x="600.0" y="128" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#4338ca">1. O QUE PENSA E SENTE?</text>
+<circle cx="378" cy="159" r="3.5" fill="#4338ca"/>
+<text x="390" y="163" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] "Não quero segurar carga regular à toa, nem deixar</text>
+<text x="390" y="181" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">passar algo que eu deveria ter visto." (H12)</text>
+<circle cx="378" cy="203" r="3.5" fill="#4338ca"/>
+<text x="390" y="207" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Receio de errar para qualquer lado e de não conseguir</text>
+<text x="390" y="225" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">justificar depois o que concluiu (H08, H38).</text>
+<circle cx="378" cy="247" r="3.5" fill="#4338ca"/>
+<text x="390" y="251" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Sente a atenção cair depois de muitas imagens seguidas</text>
+<text x="390" y="269" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">(H10).</text>
+<circle cx="378" cy="291" r="3.5" fill="#4338ca"/>
+<text x="390" y="295" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Quer que a IA ajude a olhar, sem decidir no lugar</text>
+<text x="390" y="313" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">dele.</text>
+</g>
+<g filter="url(#cardShadow)">
+<rect x="860" y="105" width="310" height="558" rx="10" fill="url(#cardGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="860" y="105" width="310" height="34" rx="10" fill="#dcfce7"/>
+<path d="M 860 125 L 860 139 L 1170 139 L 1170 125 Z" fill="#dcfce7"/>
+<text x="1015.0" y="128" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#15803d">3. O QUE OUVE?</text>
+<circle cx="878" cy="159" r="3.5" fill="#15803d"/>
+<text x="890" y="163" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Da chefia: pedidos para não</text>
+<text x="890" y="181" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">atrasar a liberação. Metas formais</text>
+<text x="890" y="199" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">não confirmadas (?07).</text>
+<circle cx="878" cy="221" r="3.5" fill="#15803d"/>
+<text x="890" y="225" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] De colegas: comentários sobre</text>
+<text x="890" y="243" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">casos difíceis e formas de</text>
+<text x="890" y="261" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">ocultação.</text>
+<circle cx="878" cy="283" r="3.5" fill="#15803d"/>
+<text x="890" y="287" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] No ambiente: ruído de pátio e</text>
+<text x="890" y="305" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">comunicação por rádio (H16).</text>
+<circle cx="878" cy="327" r="3.5" fill="#15803d"/>
+<text x="890" y="331" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[?] Não sabemos que informações de</text>
+<text x="890" y="349" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">inteligência chegam a quem examina</text>
+<text x="890" y="367" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">a imagem.</text>
+</g>
+<g filter="url(#cardShadow)"><circle cx="600" cy="381" r="24" fill="#0f172a" stroke="#3b82f6" stroke-width="3"/><circle cx="600" cy="375" r="8" fill="#60a5fa"/><path d="M 587 393 C 587 382, 613 382, 613 393 Z" fill="#60a5fa"/><rect x="495" y="411" width="210" height="26" rx="13" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"/>
+<text x="600" y="429" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" font-style="normal" fill="#ffffff">GUSTAVO ONOFRE</text>
+</g>
+<g filter="url(#cardShadow)">
+<rect x="360" y="443" width="480" height="220" rx="10" fill="url(#cardGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="360" y="443" width="480" height="34" rx="10" fill="#fef3c7"/>
+<path d="M 360 463 L 360 477 L 840 477 L 840 463 Z" fill="#fef3c7"/>
+<text x="600.0" y="466" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#92400e">4. O QUE DIZ E FAZ?</text>
+<circle cx="378" cy="497" r="3.5" fill="#92400e"/>
+<text x="390" y="501" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Diz: "Isso não parece o que está declarado. Quero ver</text>
+<text x="390" y="519" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">melhor antes de concluir." (H11)</text>
+<circle cx="378" cy="541" r="3.5" fill="#92400e"/>
+<text x="390" y="545" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[F] Faz: ajusta contraste, pseudo-cor e realce para</text>
+<text x="390" y="563" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">examinar uma região (funções existentes, C03).</text>
+<circle cx="378" cy="585" r="3.5" fill="#92400e"/>
+<text x="390" y="589" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Faz: compara a imagem com o que a carga declara ser</text>
+<text x="390" y="607" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">(H11).</text>
+<circle cx="378" cy="629" r="3.5" fill="#92400e"/>
+<text x="390" y="633" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Faz: em dúvida, pede a opinião de um colega.</text>
+</g>
+<g filter="url(#cardShadow)">
+<rect x="30" y="683" width="560" height="246" rx="10" fill="url(#cardGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="30" y="683" width="560" height="34" rx="10" fill="#fee2e2"/>
+<path d="M 30 703 L 30 717 L 590 717 L 590 703 Z" fill="#fee2e2"/>
+<text x="310.0" y="706" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#b91c1c">5. DORES</text>
+<circle cx="48" cy="737" r="3.5" fill="#b91c1c"/>
+<text x="60" y="741" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Cansaço visual e queda de atenção depois de muitas imagens</text>
+<text x="60" y="759" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">seguidas (H10).</text>
+<circle cx="48" cy="781" r="3.5" fill="#b91c1c"/>
+<text x="60" y="785" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Custo de errar para os dois lados: algo passar despercebido ou</text>
+<text x="60" y="803" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">reter carga regular (H12).</text>
+<circle cx="48" cy="825" r="3.5" fill="#b91c1c"/>
+<text x="60" y="829" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Marcações que cobrem a imagem ou competem com as cores de</text>
+<text x="60" y="847" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">material que já usa (C03).</text>
+<circle cx="48" cy="869" r="3.5" fill="#b91c1c"/>
+<text x="60" y="873" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Refazer trabalho ao registrar a conclusão em outro sistema (C02).</text>
+<circle cx="48" cy="895" r="3.5" fill="#b91c1c"/>
+<text x="60" y="899" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Não ficar sabendo o desfecho dos casos que apontou.</text>
+</g>
+<g filter="url(#cardShadow)">
+<rect x="610" y="683" width="560" height="246" rx="10" fill="url(#cardGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="610" y="683" width="560" height="34" rx="10" fill="#d1fae5"/>
+<path d="M 610 703 L 610 717 L 1170 717 L 1170 703 Z" fill="#d1fae5"/>
+<text x="890.0" y="706" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#047857">6. GANHOS</text>
+<circle cx="628" cy="737" r="3.5" fill="#047857"/>
+<text x="640" y="741" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Manter o foco ao longo do turno, sem sobrecarga visual.</text>
+<circle cx="628" cy="763" r="3.5" fill="#047857"/>
+<text x="640" y="767" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Sentir segurança ao concluir, entendendo por que aquela região</text>
+<text x="640" y="785" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#475569">foi apontada.</text>
+<circle cx="628" cy="807" r="3.5" fill="#047857"/>
+<text x="640" y="811" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Encontrar o que é suspeito sem perder o contexto da imagem.</text>
+<circle cx="628" cy="833" r="3.5" fill="#047857"/>
+<text x="640" y="837" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Registrar a conclusão uma vez só, sem retrabalho.</text>
+<circle cx="628" cy="859" r="3.5" fill="#047857"/>
+<text x="640" y="863" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Continuar no controle: a conclusão é dele, não da automação.</text>
+<circle cx="628" cy="885" r="3.5" fill="#047857"/>
+<text x="640" y="889" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="normal" font-style="normal" fill="#334155">[H] Saber depois se a sua leitura estava certa.</text>
+</g>
 </svg>

@@ -1,5 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="t d"><title id="t">F01 — Abrir um caso</title><desc id="d">Prancha editável da Mesa de inspeção. Dados demonstrativos; controles ainda sem conexões no Figma.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#172c40;font-size:18px}.h1{font-size:30px;font-weight:bold}.h2{font-size:22px;font-weight:bold}.muted{fill:#526476}.white{fill:white}.small{font-size:16px}.label{font-weight:bold}</style>
+<rect x="0" y="0" width="1440" height="960" rx="0" fill="#f1f4f7" stroke="none"/>
+<rect x="0" y="0" width="1440" height="76" rx="0" fill="#172c40" stroke="none"/>
+<text x="32" y="46" class="white h2">Mesa de inspeção</text>
+<text x="1030" y="46" class="white small">Protótipo • dados de demonstração</text>
+<text x="32" y="118" class="h1">F01 — Abrir um caso</text>
+<text x="32" y="151" class="muted">Caso DEMO-001  |  Carga declarada: volumes industriais (fictício)</text>
+<text x="32" y="937" class="small muted">Apoio à análise da imagem. Não confirma ilícito e não autoriza desembaraço.</text>
+<rect x="32" y="184" width="1376" height="695" rx="10" fill="#ffffff" stroke="none"/>
+<text x="72" y="235" class="h2">Conferir imagem e identificação</text>
+<text x="72" y="276" class="">Um caso por vez. A imagem original será preservada.</text>
+<text x="72" y="303" class="">Utilize apenas dados fictícios ou imagens autorizadas.</text>
+<rect x="72" y="345" width="800" height="230" rx="10" fill="#f1f4f7" stroke="#a6b4c1"/>
+<text x="102" y="399" class="label">Imagem de raio-X</text>
+<text x="102" y="437" class="muted">PNG ou JPEG • formato verificado antes da análise</text>
+<text x="102" y="464" class="muted">Nenhuma imagem selecionada.</text>
+<rect x="102" y="503" width="210" height="44" rx="10" fill="#185e95" stroke="#185e95"/>
+<text x="118" y="531" class="white">Selecionar imagem</text>
+<text x="72" y="634" class="label">Identificação do caso *</text>
+<rect x="72" y="652" width="480" height="50" rx="10" fill="#fff" stroke="#526476"/>
+<text x="88" y="684" class="">DEMO-001</text>
+<text x="620" y="634" class="label">Carga declarada</text>
+<rect x="620" y="652" width="650" height="50" rx="10" fill="#fff" stroke="#526476"/>
+<text x="636" y="684" class="">Volumes industriais (exemplo fictício)</text>
+<rect x="72" y="752" width="180" height="44" rx="10" fill="#185e95" stroke="#185e95"/>
+<text x="88" y="780" class="white">Abrir caso</text>
 </svg>

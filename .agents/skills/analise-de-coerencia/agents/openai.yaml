@@ -1,0 +1,6 @@
+interface:
+  display_name: "Análise de coerência"
+  short_description: "Audita documentos e gera tickets em HTML"
+  default_prompt: "Use $analise-de-coerencia para auditar a coerência dos documentos deste repositório."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Análise de coerência, 12/10/2026 17:22</title>
+<style>
+:root{--bg:#fafafa;--fg:#171717;--mut:#555;--sur:#fff;--bd:#d4d4d4;--alta:#b42318;--media:#9a5b00;--baixa:#1d5fa8;--ok:#1f7a3d}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#fff;--mut:#a3a3a3;--sur:#141414;--bd:#333;--alta:#ff8a80;--media:#ffc46b;--baixa:#8ab8ff;--ok:#7bd88f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.6rem;margin:0 0 4px}
+h2{font-size:1.2rem;margin:36px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--bd)}
+h3{font-size:1.02rem;margin:0 0 8px}
+p{margin:8px 0}
+.sig,.mut{color:var(--mut);font-size:.9rem}
+code{font:.88em ui-monospace,Menlo,Consolas,monospace;background:var(--sur);border:1px solid var(--bd);border-radius:4px;padding:0 4px;overflow-wrap:anywhere}
+.tw{overflow-x:auto;border:1px solid var(--bd);border-radius:8px;background:var(--sur)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--bd)}
+tr:last-child td{border-bottom:0}
+th{font-weight:600;white-space:nowrap}
+article{background:var(--sur);border:1px solid var(--bd);border-radius:8px;padding:14px 16px;margin:14px 0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.tag{font-size:.78rem;font-weight:600;border:1px solid currentColor;border-radius:999px;padding:1px 9px}
+.alta{color:var(--alta)}.media{color:var(--media)}.baixa{color:var(--baixa)}.ok{color:var(--ok)}.neutro{color:var(--mut)}
+dl{margin:0}
+dt{font-weight:600;font-size:.85rem;color:var(--mut);margin-top:10px}
+dd{margin:2px 0 0}
+ul{margin:4px 0;padding-left:20px}
+li{margin:3px 0}
+a{color:inherit}
+</style>
+</head>
+<body>
+<main>
+<header>
+<p class="sig">Claude Opus 5.5 (nível de raciocínio não informado) no Claude Code</p>
+<h1>Análise de coerência documental</h1>
+<p class="mut">Projeto de IHC da Equipe 09: estação de análise de imagens de raio-X de contêineres.</p>
+</header>
+
+<section>
+<h2>Resumo</h2>
+<div class="tw"><table>
+<tr><th>Data</th><td>12/10/2026, 17:22 (horário de Brasília, -03)</td></tr>
+<tr><th>Escopo</th><td>Todos os documentos do repositório, no estado da árvore de trabalho da branch <code>entrega4_albertini</code>, incluindo alterações ainda não commitadas em <code>README.md</code>, <code>RASTREABILIDADE.md</code>, <code>docs/02_analise_concorrencia.md</code>, <code>docs/04_cenarios_problema.md</code> e na skill <code>aplicar-feedback-professor</code>.</td></tr>
+<tr><th>Status da análise</th><td><strong>Em andamento</strong>. 18 tickets: 1 pendente (AC-010), 17 aplicados, 0 descartados. Atualizado em 12/10/2026, depois da aplicação das correções pedida pelo usuário. As correções ainda não foram commitadas.</td></tr>
+<tr><th>Por gravidade</th><td>2 altas, 10 médias, 6 baixas.</td></tr>
+<tr><th>Por confiança</th><td>16 sustentados, 2 precisam de revisão (AC-010 e AC-012).</td></tr>
+<tr><th>Histórico</th><td>Primeira auditoria. Não havia relatórios anteriores em <code>analises de coerencia</code> nem em <code>análises de coerência</code>. A numeração começa em AC-001.</td></tr>
+</table></div>
+</section>
+
+<section>
+<h2>Conclusão geral</h2>
+<p class="mut">O texto abaixo descreve o estado encontrado na auditoria, antes das correções. O que foi feito com cada ticket está no campo "Acompanhamento".</p>
+<p>A espinha do projeto está coerente: Entrega 1, seções de grupo das Entregas 2 e 3, matriz de rastreabilidade, README e o cenário CP02 contam a mesma história. O usuário prioritário é quem examina a imagem (H01), a decisão formal pode caber a outro cargo (H39), o canal aduaneiro fica separado do resultado da IA (RC05) e as soluções de interface são alternativas a testar.</p>
+<p>O desalinhamento que resta se concentra em três lugares:</p>
+<ul>
+<li><strong>Partes individuais ainda não revisadas.</strong> As fichas de P01 e P03 e as análises C01 e C03 mantêm a versão anterior ao parecer do professor e contradizem as seções de grupo do mesmo arquivo (AC-001 a AC-004). Os próprios documentos já registram essa pendência com os autores.</li>
+<li><strong>Trechos de grupo que ficaram para trás.</strong> A seção 1 da matriz, alguns enunciados de hipótese e a coluna "Como/onde investigar" não acompanharam as revisões de 06/10 e 08/10 (AC-005 a AC-008, AC-011).</li>
+<li><strong>Entrega 4.</strong> O cenário CP02 afirma um ponto além do que sua própria tabela de questões sustenta (AC-009), e o cenário CP03 está previsto para uma persona que o projeto tirou do recorte (AC-010).</li>
+</ul>
+</section>
+
+<section>
+<h2>Cobertura</h2>
+<div class="tw"><table>
+<tr><th>Categoria</th><th>Arquivos</th><th>Tratamento</th></tr>
+<tr><td>Fonte textual do projeto</td><td><code>README.md</code>, <code>RASTREABILIDADE.md</code>, <code>docs/01_conhecendo_o_problema.md</code>, <code>docs/02_analise_concorrencia.md</code>, <code>docs/03_personas_contexto_jornada.md</code>, <code>docs/04_cenarios_problema.md</code>, os três arquivos de <code>feedbacks_professor/</code></td><td>Lidos integralmente.</td></tr>
+<tr><td>Apoio e convenções</td><td><code>GUIA_DE_USO.md</code>, <code>GUIA_ESCOPO_IHC.md</code>, <code>CHECKLIST_FINAL.md</code>, <code>CONTRIBUTING.md</code>, <code>BIBLIOGRAFIA.md</code>, <code>.github/PULL_REQUEST_TEMPLATE.md</code>, <code>docs/05_analise_tarefas.md</code>, <code>.agents/skills/*/SKILL.md</code></td><td>Lidos integralmente.</td></tr>
+<tr><td>Template ainda não preenchido</td><td><code>docs/06</code> a <code>docs/14</code>, <code>instrumentos/*.md</code>, <code>assets/README.md</code>, <code>references/*.md</code> da skill de feedback</td><td>Inspecionados pela estrutura de títulos e pelo estado. Todos estão como "não iniciada" ou são modelos, sem conteúdo do projeto a comparar.</td></tr>
+<tr><td>Mídia citada</td><td><code>assets/03_personas/mapa_empatia.svg</code></td><td>Texto extraído e comparado com a tabela do mapa na Entrega 3.</td></tr>
+<tr><td>Mídia restante</td><td>9 PNG em <code>assets/02_concorrencia/</code>, 3 JPEG e 2 SVG em <code>assets/03_personas/</code>, SVG de exemplo do template em <code>assets/05</code> a <code>assets/14</code></td><td>Verificadas a existência e as referências a cada arquivo. O conteúdo visual não foi inspecionado (ver Limitações).</td></tr>
+<tr><td>Excluídos</td><td><code>scripts/gerar_diffs.py</code>, <code>agents/openai.yaml</code>, <code>exemplo-spec-entrega03.json</code>, <code>.gitkeep</code>, <code>.gitignore</code></td><td>Código, configuração e exemplo de ferramenta. Não são texto do projeto. O exemplo JSON foi consultado só para o AC-017.</td></tr>
+<tr><td>Inacessível</td><td><code>TCCI.pdf</code>, anexo externo citado na seção 1 da matriz</td><td>Não foi aberto. É limitação, não fonte verificada.</td></tr>
+</table></div>
+</section>
+
+<section>
+<h2>Pontos que já estão alinhados</h2>
+<ul>
+<li>README, Entrega 1 (seções 2, 3, 7 e 11) e seção 1 da matriz nomeiam o mesmo usuário prioritário e o mesmo objetivo (H01, H38, H39).</li>
+<li>A separação entre canal aduaneiro e resultado da IA aparece de forma consistente na Entrega 1 (6.6), em RC05, na matriz (H24, ?08) e nas seções de grupo da Entrega 3.</li>
+<li>As recomendações RC01 a RC11 têm origem e classificação (PM, AP, HD, TIHC), e as que eram solução concreta estão como hipótese.</li>
+<li>O mapa de empatia em SVG e a tabela correspondente trazem o mesmo conteúdo e as mesmas marcas.</li>
+<li>O cenário CP02 descreve a situação atual sem antecipar interface, usa o prefixo <code>CP</code> da convenção e está ligado a P02 e R03 na matriz (seções 2.1, 3 e 5).</li>
+<li>As fontes novas de CP02 foram conferidas nesta auditoria e sustentam o que o cenário atribui a elas (ver Fontes externas).</li>
+<li>O status da Entrega 4 é o mesmo no documento e no README (em andamento).</li>
+<li>Nenhum link local quebrado em README, matriz e Entregas 1 a 4.</li>
+</ul>
+</section>
+
+<section>
+<h2>Tickets</h2>
+
+<article id="AC-001">
+<h3>AC-001. A ficha de P01 contradiz a classificação do elenco, a Entrega 1 e a matriz</h3>
+<p class="tags"><span class="tag alta">Gravidade: Alta</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>docs/03</code>, ficha de P01, "Ocupação/papel": Gustavo é "Fiscal Aduaneiro da Receita Federal", responsável por "decidir se a carga segue liberada ou se deve ser retida". A "Classificação do elenco" do mesmo arquivo diz que não se sabe se quem examina a imagem é operador do recinto ou servidor da RFB, e a tabela de entradas diz que a autoridade para liberar ou reter "não é atribuída a P01".</li>
+<li>Ficha, "Necessidades" 1 e decisão "Fila de trabalho priorizada automaticamente por risco": fila ordenada pelos canais normativos, com destaque para canal cinza e vermelho. RC05 e a lacuna ?08 mandam manter canal e resultado da IA separados.</li>
+<li>Ficha, "Motivadores" 1: "cumprir a meta operacional do turno". Metas de liberação são a lacuna ?07.</li>
+<li>Ficha, "Restrições" 3 e decisão "Tema Dark Mode obrigatório": penumbra tratada como fato. O contexto de uso do mesmo arquivo registra penumbra como "[?] o que não sabemos" (H16 aberta).</li>
+<li>Decisões "70% da área útil", "slider de opacidade", "poucos cliques": a Síntese do mesmo arquivo as coloca no nível 3, alternativas a prototipar.</li>
+<li>A coluna de P01 na tabela "Síntese das personas" repete esses pontos.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Quem lê só a ficha conclui que o usuário decide a liberação e que a interface já está definida. É a persona primária do projeto, base da Entrega 5 e do cenário CP01.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Em <code>docs/03</code>, reescrever a ficha de P01 e sua lista de decisões com a mesma camada de evidência usada em P02 ([F], [H], [?], ficcional), trocando "Decisões de design" por implicações a investigar. Atualizar a coluna de P01 na "Síntese das personas". A ficha é de Kawan.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Ficha de P01 reescrita em <code>docs/03</code> com [F], [H], [?] e ficcional. P01 não decide sobre a carga, e as decisões de design viraram implicações a investigar. Coluna de P01 na síntese das personas refeita. A ficha é de Kawan e a reescrita fica sujeita à conferência dele.</dd>
+</dl>
+</article>
+
+<article id="AC-002">
+<h3>AC-002. A ficha de P03 descreve um usuário com interface móvel que o projeto tirou do recorte</h3>
+<p class="tags"><span class="tag alta">Gravidade: Alta</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>docs/03</code>, ficha de P03, "Ocupação/papel": "É o usuário secundário e destinatário da decisão de triagem". O título da ficha e a "Classificação do elenco" dizem "proto-persona a validar, possível stakeholder", fora do recorte até H42.</li>
+<li>"Decisões de design influenciadas pela Persona P03": cartão de veredito, mapeamento por quadrante e confirmação em um toque, escritos com "o sistema deve". A classificação diz que P03 "não justifica uma interface móvel".</li>
+<li>"Necessidades" 1: status "[ANOMALIA DETECTADA, CANAL CINZA/VERMELHO]", que funde canal e resultado da IA (contra RC05).</li>
+<li>"Comportamentos": depende do "laudo do fiscal aduaneiro (Persona P01)" para violar o lacre, o que atribui a P01 uma autoridade em aberto (H39).</li>
+<li>A última decisão termina com o resíduo "RC08[cite: 12]".</li>
+<li><code>docs/01</code>, seção 2.3: o mesmo perfil aparece como stakeholder que não usa a interface (H03).</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>O mesmo arquivo afirma e nega que existe uma interface para o agente de campo. Isso alimenta diretamente a dúvida sobre o cenário CP03 (AC-010).</dd>
+<dt>Mudança sugerida</dt>
+<dd>Em <code>docs/03</code>, converter a ficha de P03 em descrição de stakeholder ou reescrevê-la com [F], [H] e [?], retirando as decisões de interface e o resíduo "[cite: 12]". Atualizar a coluna de P03 na "Síntese das personas". A ficha é de Alexandre.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Ficha de P03 reescrita em <code>docs/03</code> como proto-persona tratada como stakeholder. As decisões de interface só valem se H42 for confirmada. O resíduo "[cite: 12]" saiu. A ficha é de Alexandre e a reescrita fica sujeita à conferência dele.</dd>
+</dl>
+</article>
+
+<article id="AC-003">
+<h3>AC-003. A matriz diz que H13 não serviu de base para persona, mas a ficha de P01 a cita como base</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>RASTREABILIDADE.md</code>, seção 2, H13, "Evidência obtida": "Não foi usado como base de persona. (Entrega 3)".</li>
+<li><code>docs/01</code>, seção 12: "O personagem da situação 4.5 não é ponto de partida para persona".</li>
+<li><code>docs/03</code>, ficha de P01, "Base de evidências": inclui "a situação concreta de uso H13". A dor 1 cita "(situação H13)" e a decisão de Dark Mode cita H13.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>A matriz registra como feito algo que o documento não cumpre. O parecer da Entrega 1 (correção 8) pediu exatamente que o cenário de Carlos não virasse persona.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Na revisão da ficha de P01 (AC-001), retirar H13 da base de evidências e das justificativas. Até lá, ajustar a célula de H13 na matriz para dizer que a ficha de P01 ainda a cita.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. A ficha de P01 não cita mais H13 na base de evidências nem nas justificativas. A célula de H13 na matriz passou a ser verdadeira.</dd>
+</dl>
+</article>
+
+<article id="AC-004">
+<h3>AC-004. C01 e C03 ainda prescrevem soluções que a seção 5 da Entrega 2 rebaixou a hipótese</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>docs/02</code>, C03, "Pontos positivos, limitações e lições": "deve oferecer controle de opacidade ajustável (slider) e alternância rápida (toggle)" e "painéis laterais retraíveis". RC09 e RC10 dizem que nenhuma dessas soluções foi observada como padrão e que são alternativas a testar.</li>
+<li>C03, tabela de funcionalidades: "deve ser sobreposto sem conflitar" e "exige que a camada [...] possua controle de opacidade".</li>
+<li>C01, tabela de funcionalidades: "Confirma que a comparação visual lado a lado é um padrão relevante [...] H30". A matriz registra H30 como parcialmente sustentada, com preferência não medida.</li>
+<li>C01, linha "Limitação: pouca transparência pública": "Há oportunidade para nosso projeto enfatizar rastreabilidade". RC04 diz que essa ausência serve "apenas de contraste e não de origem".</li>
+<li>Seção 4, coluna "Oportunidade": "Projetar confirmação de veredito, justificativa e registro de auditoria como diferencial" e "espelhar os marcos do processo em uma linha do tempo do contêiner", enquanto RC08 é [HD].</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>O leitor encontra a mesma ideia como requisito nas análises individuais e como hipótese na síntese. É o problema central apontado no parecer da Entrega 2 (correções 3, 6 e 7).</dd>
+<dt>Mudança sugerida</dt>
+<dd>Em <code>docs/02</code>, reescrever as células citadas de C01 (Kawan) e C03 (Alexandre) como alternativas a testar, e moderar as duas células da seção 4 (grupo).</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Células citadas de C01 e C03 e as duas células da seção 4 de <code>docs/02</code> reescritas como hipótese ou alternativa a testar, com remissão a RC02, RC04, RC08, RC09 e RC10. As células de C01 e C03 ficam sujeitas à conferência de Kawan e Alexandre.</dd>
+</dl>
+</article>
+
+<article id="AC-005">
+<h3>AC-005. C02 atribui a algumas hipóteses mais sustentação do que a matriz registra</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>docs/02</code>, C02, linha "Distribuição para auditor": "apoia H04 e H25". Na matriz, H04 está com evidência "PENDENTE" e H25 como "aberta: vazio observado na concorrência".</li>
+<li>C02, linha "Registro de exigência fiscal": "Sustenta H06 e H19". Na matriz, H06 está "PENDENTE" e "aberta".</li>
+<li>C02, "Pontos positivos": "Sustenta H17: cada análise no nosso protótipo deve ficar vinculada ao fiscal". Na matriz, H17 é parcialmente sustentada e o impacto é "possibilidade a investigar".</li>
+<li>C02, linha "Linha do tempo" e ponto "histórico é cronológico": "o histórico do contêiner deve ser uma linha do tempo". RC08, que trata disso, é [HD].</li>
+<li>C02, linha "Canal de parametrização por risco": "o código de cores por risco", expressão que a própria revisão evitou em RC05.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Não fica claro se a exigência fiscal e a distribuição para auditor são evidência parcial de H04 e H06 ou não. Isso afeta a prioridade 1 da Entrega 1 (seção 10).</dd>
+<dt>Mudança sugerida</dt>
+<dd>Escolher uma das duas direções. Ou registrar em H04 e H06, na matriz, a evidência documental parcial de C02 com suas ressalvas, ou moderar as células de C02 para "relaciona-se a". Trocar "deve ser" por formulação de hipótese nas duas linhas sobre linha do tempo. A análise C02 é de Gabriel.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Nas duas direções: a matriz registra em H04 e H06 a evidência documental parcial de C02, e as células de C02 em <code>docs/02</code> foram moderadas (H04, H06, H17, H19, linha do tempo, "código de cores dos canais").</dd>
+</dl>
+</article>
+
+<article id="AC-006">
+<h3>AC-006. A seção 1 da matriz e a síntese da Entrega 1 guardam trechos anteriores à revisão</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>RASTREABILIDADE.md</code>, seção 1, "Interface/recorte de IHC": "painel de triagem e registro de vereditos", justificado como "Derivado do fluxo operacional do Fiscal Aduaneiro", estado "definido". Na mesma tabela o usuário é o operador da estação e a triagem é hipótese (H04).</li>
+<li>Seção 1, "Possíveis beneficiários": evidência "[F] Operação aduaneira e portuária", sem fonte. A correção 3 do parecer da Entrega 1 criticou essa mesma formulação.</li>
+<li>Seção 1, "Relação com o TCC": "Protótipo demonstrativo", justificado como "Extensão conceitual". São opções diferentes na seção 7.5 da Entrega 1, que marca só a primeira.</li>
+<li><code>docs/01</code>, seção 11: "Visualizador comparativo [...] e painel de veredito" e, na delimitação, "telas de triagem [...] e fluxo de decisão". A seção 7.3 do mesmo arquivo fala em "registrar o resultado da análise", que pode ser apontamento e não decisão (H39).</li>
+<li><code>docs/01</code>, seção 11, última linha: lista como lacunas abertas só ?01, ?02 e ?07. A matriz tem ?01 a ?08 abertas.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>A tabela que deveria ser o resumo de autoridade do recorte ainda descreve fila, veredito e fiscal como definidos.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Na matriz, reescrever as três linhas da seção 1 com o vocabulário atual e marcar a de beneficiários como [H] ou citar a fonte. Em <code>docs/01</code>, alinhar a seção 11 a 7.3 e 7.4 e completar a lista de lacunas.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Três linhas da seção 1 da matriz reescritas. Seção 11 de <code>docs/01</code> alinhada às seções 7.3 e 7.4, com a lista de lacunas completa.</dd>
+</dl>
+</article>
+
+<article id="AC-007">
+<h3>AC-007. H31 e H33 têm enunciados diferentes na Entrega 1 e na matriz</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li>H33 em <code>docs/01</code>, seção 10: "Reorganizar a fila por nível de anomalia reduz o tempo de resposta em casos críticos". H33 na matriz: "Alertas e notificações em tempo real são necessários para notificar o surgimento de contêineres de altíssimo risco". Na seção 8 da Entrega 1, H33 é a evidência de "Alertas/ocorrências".</li>
+<li>H31 em <code>docs/01</code>, seção 10: "Um índice de anomalia acompanhado de marcação da região é suficiente para apoiar a conclusão", a investigar nas Entregas 6 e 12 a 14. H31 na matriz: score e ROI "aumentam a aceitabilidade da IA pelo operador", a investigar na Entrega 7.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>O mesmo ID designa duas afirmações. Uma evidência futura pode sustentar uma e não a outra. O guia de uso pede IDs estáveis.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Adotar o enunciado da matriz na seção 10 da Entrega 1, ou abrir IDs novos para as formulações da seção 10 (a reordenação da fila se aproxima de H35 e H41). Unificar onde H31 será investigada.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. A seção 10 de <code>docs/01</code> usa os enunciados de H31 e H33 da matriz, com remissão a H35 e H41 para a reordenação da fila. O local de investigação de H31 é o mesmo nos dois arquivos.</dd>
+</dl>
+</article>
+
+<article id="AC-008">
+<h3>AC-008. A coluna "Como/onde investigar" aponta para entregas já concluídas ou para modelagem</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>RASTREABILIDADE.md</code>, seção 2: H14 aponta para "Entrega 3 (Análise de Contexto)" e H15 para "Entrega 3 / Entrega 8". A Entrega 3 está concluída e as duas seguem parciais.</li>
+<li>H24 aponta para "Entrega 3 (Dicionário do Domínio)", artefato que não existe na Entrega 3.</li>
+<li>H20 aponta para "Entrega 2 (Benchmark)". A própria Entrega 2 diz que H20 não foi investigada e fica para a Entrega 7.</li>
+<li>H13 aponta para "Entrega 4 (Cenário do Problema)". O CP02 não a utiliza.</li>
+<li>H17, H25, H26, H28 e ?02 apontam para a Entrega 5 (modelagem), embora perguntem sobre o trabalho real. A nota no topo da própria seção diz que essas perguntas se investigam com usuários e documentos do domínio.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>A matriz é a entrada da tabela "Hipóteses e lacunas herdadas" da Entrega 7. Com os destinos errados, hipóteses abertas ficam fora da coleta de dados.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Na matriz, redirecionar essas linhas para a Entrega 7 quando a pergunta for sobre a situação atual, mantendo a entrega de modelagem ou prototipação só como etapa posterior, como já foi feito em H04 a H08.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Na seção 2 da matriz, H13, H14, H15, H17, H20, H24, H25, H26, H28, H32 e ?02 apontam para a Entrega 7 quando a pergunta é sobre a situação atual.</dd>
+</dl>
+</article>
+
+<article id="AC-009">
+<h3>AC-009. O cenário refinado de CP02 afirma onde a imagem fica, e a questão Q5 responde que isso não é sabido</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>docs/04</code>, CP02, seção 3: "[NOVO: ... precisa buscá-la fora do Siscomex, em outro sistema (Q5)]". Seção 4, "Recursos": "Imagem do escâner, guardada fora do Siscomex". "Problemas/rupturas": "Imagem e declaração ficam em lugares diferentes".</li>
+<li>Seção 2, Q5: a resposta traz "[?] Onde e como o auditor acessa a imagem, e se sabe interpretá-la".</li>
+<li>Seção 3, último parágrafo: "A base de cada trecho novo está na tabela da seção 2", o que leva o leitor a tomar o trecho como respondido.</li>
+<li>O cabeçalho lista como hipóteses presentes H06, H08, H11, H17, H32, H39 e ?08. O registro de 08/10 na seção 5 da matriz lista também H01 e H18 como afetadas por CP02.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>A ruptura central do cenário (evidência separada da declaração) é uma suposição plausível, mas aparece com a aparência de resposta apurada. É o tipo de salto que os três pareceres apontaram.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Em <code>docs/04</code>, marcar esse trecho como [H] dentro do próprio [NOVO] e nas linhas da seção 4, ou criar uma hipótese com ID na matriz ("a imagem do escâner não fica acessível junto da declaração") e citá-la. Acrescentar H01 e H18 ao cabeçalho de CP02.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Em <code>docs/04</code>, os trechos do cenário refinado e dos elementos extraídos que dependem de Q5 e de Q10 trazem a marca [H]. A correção foi estendida a Q10, que tinha o mesmo problema. H01 e H18 entraram no cabeçalho de CP02.</dd>
+</dl>
+</article>
+
+<article id="AC-010">
+<h3>AC-010. O cenário CP03 está previsto para P03, persona sem atividade no recorte</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag media">Precisa de revisão</span><span class="tag neutro">Pendente</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>docs/04</code>, introdução: "O número acompanha a persona de cada autor". O bloco CP03 traz "Persona(s) relacionada(s): {{P03}}" e "Necessidade relacionada: {{R01}}".</li>
+<li><code>RASTREABILIDADE.md</code>, seção 2.1: para P03, "Nenhuma atividade no recorte enquanto H42 estiver aberta". R01 é necessidade de P01.</li>
+<li><code>docs/03</code>, "Classificação do elenco": P03 fica fora do recorte principal.</li>
+<li>A entrega exige um cenário completo por integrante.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Se CP03 for escrito para P03 como usuário, reintroduz no projeto o fluxo de campo que a revisão retirou. Se não for, falta definir qual situação Alexandre vai cobrir.</dd>
+<dt>O que falta decidir</dt>
+<dd>É decisão da equipe, possivelmente com o docente. Caminhos compatíveis com os documentos: CP03 sobre outra situação de P01 (por exemplo a triagem, R02, deixando R01 para CP01), ou CP03 sobre a verificação física vista como situação atual de um stakeholder, sem supor uso da solução.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Em <code>docs/04</code>, registrar a escolha no cabeçalho de CP03 e ajustar a frase "o número acompanha a persona" se a regra deixar de valer.</dd>
+<dt>Acompanhamento</dt>
+<dd>Pendente, com aplicação parcial em 12/10/2026. Em <code>docs/04</code>, a frase da introdução passou a dizer que o número acompanha a ordem dos autores, e os campos de persona e necessidade de CP03 registram que P03 está fora do recorte e listam as opções. Falta a equipe escolher a situação de CP03 e Alexandre escrever o cenário.</dd>
+</dl>
+</article>
+
+<article id="AC-011">
+<h3>AC-011. A evidência sobre Santos entrou na matriz e em CP02, mas não chegou às Entregas 1 e 3</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>RASTREABILIDADE.md</code>, H01, H39 e registro de 08/10: em Santos, as imagens seriam analisadas por servidores da vigilância da RFB, em uma central, "e não por operador do recinto nem pelo auditor do despacho".</li>
+<li><code>docs/03</code>, tabela de entradas (H01, H39), "Classificação do elenco" e linha "Usuários" do contexto de uso: citam só o caso de Imbituba (operador do recinto) e dizem que falta saber quem examina as imagens na RFB.</li>
+<li><code>docs/03</code>, Síntese, nível 2, item 1: mesma formulação.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>A nova evidência sugere um terceiro arranjo de papéis, que pode mudar quem P01 representa. A Entrega 3, que define as personas, ainda não o menciona. A informação é compatível com o que está escrito, mas está defasada.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Acrescentar o indício de Santos à tabela de entradas e à classificação de P01 em <code>docs/03</code>, com a ressalva de que são matérias de 2013 e 2015. Levar a pergunta "operador do recinto, servidor da vigilância ou ambos" para a tabela de hipóteses herdadas da Entrega 7.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Indício sobre Santos acrescentado em <code>docs/03</code>: tabela de entradas (H01), classificação de P01, linha "Usuários" do contexto, nível 2 da síntese e nota nas referências.</dd>
+</dl>
+</article>
+
+<article id="AC-012">
+<h3>AC-012. Não está claro de quem é a necessidade de consultar histórico</h3>
+<p class="tags"><span class="tag media">Gravidade: Média</span><span class="tag media">Precisa de revisão</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>docs/01</code>, seção 8: "Histórico com busca/filtros" é classificado como "3. Necessidade de outro perfil (Analista de Inteligência, H02)".</li>
+<li><code>docs/01</code>, seção 9.2: AC04, "Recuperar análises anteriores de um contêiner ou declaração", está entre as ações que "o usuário" deve conseguir, com prioridade média.</li>
+<li><code>docs/03</code>, P02, necessidade 4: "Consultar o que já aconteceu com o mesmo processo (H29)". Jornada de P01, etapa 7: "permitir consultar casos anteriores".</li>
+<li><code>RASTREABILIDADE.md</code>, seção 4: histórico com busca ligado à atividade A04, que a Entrega 1 atribui ao Analista de Inteligência.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>O padrão "histórico" pode entrar ou sair do recorte conforme a leitura. Isso pesa na seleção de tarefas da Entrega 5.</dd>
+<dt>O que falta decidir</dt>
+<dd>Se há duas necessidades distintas (consultar o andamento de um caso próprio, de P01 ou P02, e investigar padrões em histórico agregado, do Analista) ou uma só. O parecer da Entrega 2 já pedia separar busca por identificador, histórico cronológico e busca por risco.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Na seção 4 da matriz, desdobrar a linha de histórico por perfil e tarefa. Na Entrega 1, alinhar a classificação da seção 8 com AC04.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Aplicada a leitura recomendada, de duas necessidades: consulta de um caso pelo identificador (AC04, P01 e P02) e histórico agregado (Analista, fora do recorte). Seção 4 da matriz desdobrada e seção 8 de <code>docs/01</code> alinhada. A leitura foi aceita pelo usuário ao pedir a correção de todos os tickets.</dd>
+</dl>
+</article>
+
+<article id="AC-013">
+<h3>AC-013. Entregas revisadas após feedback seguem com estado "concluída" e sem histórico de revisões</h3>
+<p class="tags"><span class="tag baixa">Gravidade: Baixa</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>GUIA_DE_USO.md</code>, seção 10: prevê o estado "🟦 revisada após feedback" e pede uma seção "Histórico de revisões" dizendo o que mudou.</li>
+<li><code>docs/01</code>, <code>docs/02</code> e <code>docs/03</code>: têm a linha "Revisão: 06/10/2026", mas o status é "🟩 concluída" e não há seção de histórico. O README repete 🟩.</li>
+<li><code>docs/02</code> e <code>README.md</code> foram alterados em 12/10/2026 (público-alvo e resumo), sem registro.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Não dá para saber, pelo documento, o que mudou depois da versão avaliada. A informação existe só nas anotações dos pareceres.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Trocar o estado das Entregas 1 a 3 para 🟦 nos documentos e no README e acrescentar uma seção curta de histórico apontando para o parecer anotado, incluindo o ajuste de 12/10.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Entregas 1 a 3 com estado "🟦 revisada após feedback" nos documentos e no README, que ganhou a legenda de estados. Cada uma tem a seção "Histórico de revisões" no fim do arquivo.</dd>
+</dl>
+</article>
+
+<article id="AC-014">
+<h3>AC-014. A jornada marca como [F] uma inferência que o mapa de empatia marca como [H]</h3>
+<p class="tags"><span class="tag baixa">Gravidade: Baixa</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>docs/03</code>, jornada, etapa 4, coluna "Dor": "[F] A marcação da IA pode competir com as cores de material já usadas (C03)".</li>
+<li><code>docs/03</code>, mapa de empatia, "Dores": "[H] Marcações que cobrem a imagem ou competem com as cores de material que já usa".</li>
+<li>C03 documenta a pseudo-cor por material. A competição com uma camada de IA que ainda não existe é inferência.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Problema localizado, mas atinge a convenção [F], [H], [?], que é o eixo dos três pareceres.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Na jornada, separar em "[F] a estação usa pseudo-cor por material (C03)" e "[H] a marcação da IA pode competir com essas cores".</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Etapa 4 da jornada em <code>docs/03</code> separa o [F] da pseudo-cor do [H] da competição com a marcação da IA.</dd>
+</dl>
+</article>
+
+<article id="AC-015">
+<h3>AC-015. O artigo base do TCC é citado com dois anos diferentes</h3>
+<p class="tags"><span class="tag baixa">Gravidade: Baixa</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li>"Gaikwad et al., 2024": <code>docs/01</code>, seção 4.6, e <code>docs/03</code>, base de evidências de P01.</li>
+<li>"2025": referências de <code>docs/02</code> e <code>docs/03</code> e linha H40 da matriz.</li>
+<li>O DOI citado em todos é o mesmo (10.1016/j.engappai.2024.109675).</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Parece que são duas fontes. A data de publicação não foi verificada nesta auditoria.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Conferir o ano na página do DOI e padronizar nos três arquivos.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Ano conferido no registro do DOI na Crossref: volume 140, janeiro de 2025. <code>docs/01</code> (seção 4.6) e a ficha de P01 usam 2025. As anotações antigas dos pareceres não foram alteradas.</dd>
+</dl>
+</article>
+
+<article id="AC-016">
+<h3>AC-016. Resíduos de template e de edição em documentos já concluídos</h3>
+<p class="tags"><span class="tag baixa">Gravidade: Baixa</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>README.md</code>: a nota inicial "Template acadêmico [...] Substitua todo texto entre {{...}}" e, na seção de resumo, as instruções "Escreva um parágrafo curto e concreto", "Evite começar pela tecnologia" e a "Estrutura sugerida" continuam ao lado do texto preenchido.</li>
+<li><code>README.md</code>, tabela da equipe: "Responsabilidade principal" cita só a análise de concorrência, sem persona nem cenário de cada integrante.</li>
+<li><code>docs/01</code>: "{{...}}" em 0.4 e no Caminho A da seção 7.1. O título 0.3 está dentro de um bloco de citação.</li>
+<li><code>docs/02</code>, seção 1, segundo parágrafo: "esta análise investiga uma solução profissional existente", no singular, embora sejam três análises.</li>
+<li><code>docs/02</code>, C03: o título fala em "CargoVision &amp; Hi-TRAX", os links e o README em "DaiSy/viZual", e o texto chama o projeto de "nosso TCC de IHC".</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Ruído de leitura. O guia de uso pede a remoção do texto entre chaves.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Remover as instruções e os campos vazios dos arquivos citados, completar a coluna de responsabilidades e uniformizar o nome do produto em C03.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Instruções e campos de template removidos de <code>README.md</code> e <code>docs/01</code>. Coluna de responsabilidades do README completada. Seção 1 e título de C03 ajustados em <code>docs/02</code>.</dd>
+</dl>
+</article>
+
+<article id="AC-017">
+<h3>AC-017. CONTRIBUTING e a skill de feedback definem convenções diferentes de commit e branch</h3>
+<p class="tags"><span class="tag baixa">Gravidade: Baixa</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>CONTRIBUTING.md</code>: mensagens como "docs: adiciona persona P02" e branches como <code>entrega/05-analise-tarefas</code>. Pede evitar mensagens como "alterações" ou "final".</li>
+<li><code>.agents/skills/aplicar-feedback-professor/SKILL.md</code>, seção 4: padrão "Entrega NN: o que mudou", na branch <code>aplicar-feedback</code>. O histórico segue esse padrão.</li>
+<li>A branch atual é <code>entrega4_albertini</code>, e o commit mais recente tem a mensagem "apagando lixo".</li>
+<li><code>references/exemplo-spec-entrega03.json</code> da mesma skill traz personas e nomes de outra equipe (Rafael, Jorginho Jr., Pedro), embora a skill o apresente como exemplo da Entrega 3.</li>
+<li>A skill pede "uma entrada no histórico da matriz". A matriz só tem o registro de mudanças da seção 5.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Dois documentos de convenção dão instruções diferentes, e nenhum descreve a prática atual.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Atualizar <code>CONTRIBUTING.md</code> com o padrão adotado ("Entrega NN: ...") e o esquema de branches em uso. Na skill, dizer que o JSON é exemplo de outro projeto e retirar a menção ao histórico da matriz.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. <code>CONTRIBUTING.md</code> descreve o padrão de commit e de branch em uso. A skill avisa que o JSON é exemplo de outro projeto e não cita mais o histórico da matriz.</dd>
+</dl>
+</article>
+
+<article id="AC-018">
+<h3>AC-018. Dois arquivos de imagem de persona não são referenciados</h3>
+<p class="tags"><span class="tag baixa">Gravidade: Baixa</span><span class="tag ok">Sustentado</span><span class="tag ok">Aplicado em 12/10/2026</span></p>
+<dl>
+<dt>Evidências</dt>
+<dd><ul>
+<li><code>assets/03_personas/persona_p02.svg</code> e <code>persona_p03.svg</code> não são citados em nenhum documento. A Entrega 3 usa <code>persona_p02.jpeg</code> e <code>persona_p03.jpeg</code>.</li>
+<li>O parecer da Entrega 3 (correção 9) tratou da coerência das imagens das personas. A de P02 foi trocada no JPEG.</li>
+</ul></dd>
+<dt>Efeito</dt>
+<dd>Pode restar no repositório uma versão anterior da imagem de P02. O conteúdo dos SVG não foi inspecionado.</dd>
+<dt>Mudança sugerida</dt>
+<dd>Conferir os dois SVG. Se forem versões antigas, removê-los. Se forem a fonte editável das imagens, dizer isso em <code>assets/README.md</code>.</dd>
+<dt>Acompanhamento</dt>
+<dd>Aplicado em 12/10/2026, verificado nos documentos. Os dois SVG eram placeholders do template ("PLACEHOLDER PERSONA P02" e "P03") e foram removidos do repositório.</dd>
+</dl>
+</article>
+</section>
+
+<section>
+<h2>Limitações</h2>
+<ul>
+<li>As imagens PNG e JPEG não foram abertas. A auditoria não avalia se os prints mostram o que o texto diz nem a coerência das imagens das personas.</li>
+<li>O PDF do TCC citado na matriz é um anexo externo e não foi lido.</li>
+<li>As normas da RFB citadas na Entrega 3 (Portaria RFB nº 143/2022, Portaria ALF/FNS nº 9/2024, ADE Coana nº 19/2014) e o Manual de Despacho de Importação não foram reverificados. Só as três fontes novas de CP02 foram conferidas.</li>
+<li>A conferência das fontes externas foi feita por leitura automática das páginas, com extração de trechos. Vale uma conferência manual antes de citar literalmente.</li>
+<li>Os documentos das Entregas 5 a 14 são template sem conteúdo do projeto. Não há o que comparar neles ainda.</li>
+<li>A análise reflete a árvore de trabalho, com alterações não commitadas. Os mesmos arquivos em outras branches podem diferir.</li>
+<li>Verificação visual do relatório: o arquivo foi aberto no Google Chrome em modo headless, em 420 px de largura e tema escuro, e o trecho inicial (resumo, conclusão e início da cobertura) foi conferido por captura de tela. O restante da página, o tema claro e os links externos não foram conferidos visualmente.</li>
+</ul>
+</section>
+
+<section>
+<h2>Fontes externas usadas</h2>
+<div class="tw"><table>
+<tr><th>Fonte</th><th>O que foi conferido</th><th>Resultado</th></tr>
+<tr><td>A Tribuna, 24/06/2015, reproduzida pelo Setcesp: <a href="https://setcesp.org.br/noticias/tecnologia-adotada-no-porto-de-santos-afasta-quadrilhas/" target="_blank" rel="noopener noreferrer">setcesp.org.br</a></td><td>CP02, Q1 e Q9: 16 escâneres, inspeção de 100% das cargas de importação desde setembro de 2013, imagens analisadas na COV, na sede da Alfândega.</td><td>Confere com o que CP02 atribui à matéria.</td></tr>
+<tr><td>A Tribuna, reproduzida em <a href="https://contadores.cnt.br/projetos/48/noticias/tecnicas/2013/12/04/novo-sistema-de-fiscalizacao-deve-agilizar-os-processos-de-liberacao-de-cargas.html" target="_blank" rel="noopener noreferrer">contadores.cnt.br</a></td><td>CP02, Q1, Q2, Q5, Q7 e Q10: servidores da Receita na COV, poder de liberar ou bloquear, guarda de 90 dias e de cinco anos, convicção do servidor do despacho, conferência presencial ou remota.</td><td>Confere. A página não traz a data da matéria: o ano de 2013 vem do endereço da reprodução (2013/12/04).</td></tr>
+<tr><td>Portaria ALF/STS nº 197, de 24/09/2025, em <a href="https://www.normasbrasil.com.br/norma/portaria-197-2025_483927.html" target="_blank" rel="noopener noreferrer">normasbrasil.com.br</a></td><td>CP02, Q1 e Q3: Edaim na Divisão de Despacho Aduaneiro, Eqvig em outra divisão, art. 34 sobre vigilância remota e inspeção não invasiva.</td><td>Confere. A Eqvig aparece na Divisão de Vigilância e Repressão ao Contrabando e Descaminho. É reprodução não oficial, como CP02 já registra.</td></tr>
+</table></div>
+</section>
+</main>
+</body>
+</html>

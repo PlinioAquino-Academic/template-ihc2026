@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="920" viewBox="0 0 1500 920">
+<rect width="1500" height="920" fill="#ffffff"/>
+
+<!-- Título e cabeçalho -->
+<text x="24" y="30" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#24292f" text-anchor="start">CTT — T09 Executar a verificação física no pátio e formalizar o resultado no despacho (situação atual)</text>
+<text x="24" y="52" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#57606a" text-anchor="start">Proto-persona P03 (Marcos Oliveira, stakeholder exploratório em H42) · Cenário CP03 · Autor: Alexandre Domiciano Pierri — 22.125.061-6</text>
+
+<!-- ================= NÍVEL 0: RAIZ ================= -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="741" cy="89" r="8"/>
+  <circle cx="759" cy="89" r="8"/>
+  <circle cx="750" cy="82" r="10"/>
+  <rect x="741" y="87" width="18" height="10" stroke="none"/>
+</g>
+<text x="750" y="118" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#24292f" text-anchor="middle">Executar a verificação física no pátio e formalizar o resultado</text>
+
+<!-- Linhas tronco de nível 0 para nível 1 -->
+<line x1="750" y1="129" x2="750" y2="163" stroke="#57606a" stroke-width="1.5"/>
+<line x1="180" y1="163" x2="1150" y2="163" stroke="#57606a" stroke-width="1.5"/>
+<line x1="180" y1="163" x2="180" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="600" y1="163" x2="600" y2="183" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1150" y1="163" x2="1150" y2="183" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador temporal nível 1a: []>> -->
+<rect x="369" y="152" width="42" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="390" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+
+<!-- Operador temporal nível 1b: []>> -->
+<rect x="854" y="152" width="42" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="875" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]&gt;&gt;</text>
+
+<!-- ================= NÍVEL 1: NÓS ================= -->
+<!-- Tarefa do usuário (gatilho externo): Receber solicitação de verificação física agendada -->
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5">
+  <circle cx="180" cy="193" r="7"/>
+  <path d="M168,212 Q168,200 180,200 Q192,200 192,212 Z"/>
+</g>
+<text x="180" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Receber solicitação de</text>
+<text x="180" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">verificação física agendada</text>
+<text x="180" y="261" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="normal" fill="#57606a" text-anchor="middle">e ler motivo da retenção [F, ?]</text>
+
+<!-- Tarefa abstrata: Conduzir conferência física no pátio -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="591" cy="202" r="8"/>
+  <circle cx="609" cy="202" r="8"/>
+  <circle cx="600" cy="195" r="10"/>
+  <rect x="591" y="200" width="18" height="10" stroke="none"/>
+</g>
+<text x="600" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Conduzir conferência</text>
+<text x="600" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">física no pátio [F, H]</text>
+
+<!-- Tarefa abstrata: Formalizar resultado no posto administrativo -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="1141" cy="202" r="8"/>
+  <circle cx="1159" cy="202" r="8"/>
+  <circle cx="1150" cy="195" r="10"/>
+  <rect x="1141" y="200" width="18" height="10" stroke="none"/>
+</g>
+<text x="1150" y="231" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Formalizar resultado no</text>
+<text x="1150" y="246" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">posto administrativo [F, H]</text>
+
+<!-- ================= NÍVEL 2 SOB CONDUZIR CONFERÊNCIA NO PÁTIO ================= -->
+<line x1="600" y1="257" x2="600" y2="295" stroke="#57606a" stroke-width="1.5"/>
+<line x1="330" y1="295" x2="800" y2="295" stroke="#57606a" stroke-width="1.5"/>
+<line x1="330" y1="295" x2="330" y2="315" stroke="#57606a" stroke-width="1.5"/>
+<line x1="565" y1="295" x2="565" y2="315" stroke="#57606a" stroke-width="1.5"/>
+<line x1="800" y1="295" x2="800" y2="315" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador >> entre 2.1 e 2.2 -->
+<rect x="434" y="284" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="447" y="300" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+
+<!-- Operador ||| entre 2.2 e 2.3 -->
+<rect x="669" y="284" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="682" y="300" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">|||</text>
+
+<!-- 2.1 Usuário: Romper lacres e orientar desova -->
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5">
+  <circle cx="330" cy="325" r="7"/>
+  <path d="M318,344 Q318,332 330,332 Q342,332 342,344 Z"/>
+</g>
+<text x="330" y="363" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Romper lacres e orientar</text>
+<text x="330" y="378" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">desova pela porta [F, H]</text>
+
+<!-- 2.2 Usuário (iterativa *): Inspecionar volumes e estrutura -->
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5">
+  <circle cx="565" cy="325" r="7"/>
+  <path d="M553,344 Q553,332 565,332 Q577,332 577,344 Z"/>
+</g>
+<text x="582" y="324" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#6639ba" text-anchor="start">*</text>
+<text x="565" y="363" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Inspecionar lotes e</text>
+<text x="565" y="378" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">estrutura interna [H]</text>
+
+<!-- 2.3 Usuário (opcional [T]): Anotar achados e fotografar -->
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5">
+  <circle cx="800" cy="325" r="7"/>
+  <path d="M788,344 Q788,332 800,332 Q812,332 812,344 Z"/>
+</g>
+<text x="800" y="363" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">[Anotar achados e registrar</text>
+<text x="800" y="378" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">fotos no pátio] (T08) [H, ?]</text>
+
+<!-- ================= NÍVEL 2 SOB FORMALIZAR RESULTADO ================= -->
+<line x1="1150" y1="257" x2="1150" y2="295" stroke="#57606a" stroke-width="1.5"/>
+<line x1="990" y1="295" x2="1320" y2="295" stroke="#57606a" stroke-width="1.5"/>
+<line x1="990" y1="295" x2="990" y2="315" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1320" y1="295" x2="1320" y2="315" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador >> entre abrir processo e registrar desfecho -->
+<rect x="1142" y="284" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="1155" y="300" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+
+<!-- 3.1 Interação: Acessar processo no computador de mesa -->
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff">
+  <circle cx="979" cy="328" r="5"/>
+  <path d="M971,343 Q971,334 979,334 Q987,334 987,343 Z"/>
+  <rect x="991" y="321" width="19" height="14" rx="1.5"/>
+  <line x1="1000" y1="335" x2="1000" y2="340"/>
+  <line x1="995" y1="341" x2="1005" y2="341"/>
+</g>
+<text x="990" y="363" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Abrir processo no sistema</text>
+<text x="990" y="378" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">do posto administrativo [H, ?]</text>
+
+<!-- 3.2 Abstrata: Registrar desfecho da verificação -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="1311" cy="334" r="8"/>
+  <circle cx="1329" cy="334" r="8"/>
+  <circle cx="1320" cy="327" r="10"/>
+  <rect x="1311" y="332" width="18" height="10" stroke="none"/>
+</g>
+<text x="1320" y="363" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">Registrar desfecho da</text>
+<text x="1320" y="378" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="middle">verificação física [F]</text>
+
+<!-- ================= NÍVEL 3 SOB REGISTRAR DESFECHO ================= -->
+<line x1="1320" y1="389" x2="1320" y2="427" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1060" y1="427" x2="1380" y2="427" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1060" y1="427" x2="1060" y2="447" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1380" y1="427" x2="1380" y2="447" stroke="#57606a" stroke-width="1.5"/>
+
+<!-- Operador [] escolha exclusiva -->
+<rect x="1207" y="416" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="1220" y="432" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">[]</text>
+
+<!-- Ramo 3.2.1 Interação: Registrar conformidade para desembaraço -->
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff">
+  <circle cx="1049" cy="460" r="5"/>
+  <path d="M1041,475 Q1041,466 1049,466 Q1057,466 1057,475 Z"/>
+  <rect x="1061" y="453" width="19" height="14" rx="1.5"/>
+  <line x1="1070" y1="467" x2="1070" y2="472"/>
+  <line x1="1065" y1="473" x2="1075" y2="473"/>
+</g>
+<text x="1060" y="495" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Registrar conformidade da</text>
+<text x="1060" y="510" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">carga (falso positivo) [F]</text>
+
+<!-- Ramo 3.2.2 Interação: Transcrever relato de divergência e anexar fotos -->
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff">
+  <circle cx="1369" cy="460" r="5"/>
+  <path d="M1361,475 Q1361,466 1369,466 Q1377,466 1377,475 Z"/>
+  <rect x="1381" y="453" width="19" height="14" rx="1.5"/>
+  <line x1="1390" y1="467" x2="1390" y2="472"/>
+  <line x1="1385" y1="473" x2="1395" y2="473"/>
+</g>
+<text x="1380" y="495" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Transcrever divergência e</text>
+<text x="1380" y="510" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">anexar fotos ao processo [H, ?]</text>
+
+<!-- Aplicação após registro: Atualizar situação no Siscomex -->
+<line x1="1060" y1="522" x2="1060" y2="565" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1380" y1="522" x2="1380" y2="565" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1060" y1="565" x2="1380" y2="565" stroke="#57606a" stroke-width="1.5"/>
+<line x1="1220" y1="565" x2="1220" y2="600" stroke="#57606a" stroke-width="1.5"/>
+<rect x="1207" y="554" width="26" height="21" rx="4" fill="#ffffff" stroke="#8250df" stroke-width="1.3"/>
+<text x="1220" y="570" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#6639ba" text-anchor="middle">&gt;&gt;</text>
+
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1">
+  <rect x="1208" y="605" width="24" height="17" rx="2"/>
+  <line x1="1220" y1="622" x2="1220" y2="627"/>
+  <line x1="1213" y1="628" x2="1227" y2="628"/>
+  <path d="M1214,614 l3,-3 l3,2 l4,-4" fill="none"/>
+</g>
+<text x="1220" y="646" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">Atualizar andamento da verificação</text>
+<text x="1220" y="661" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f" text-anchor="middle">física no despacho (Siscomex) [F]</text>
+
+<!-- ================= CAIXA DE RUPTURA ================= -->
+<rect x="930" y="700" width="540" height="80" rx="6" fill="#fff1f0" stroke="#cf222e" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="940" y="720" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#a40e26" text-anchor="start">Rupturas da situação atual representadas no CTT (CP03, ?08):</text>
+<text x="940" y="738" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">1. O gatilho inicial traz suspeita sem região do contêiner, forçando repetição (*) em 2.2.</text>
+<text x="940" y="754" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">2. Anotações feitas no pátio exigem transcrição manual posterior no posto administrativo [H, ?].</text>
+<text x="940" y="770" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#a40e26" text-anchor="start">3. O desfecho no despacho não realimenta a estação de imagem que originou o alerta.</text>
+
+<!-- ================= LEGENDA ================= -->
+<rect x="24" y="700" width="880" height="185" rx="6" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="38" y="722" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#24292f" text-anchor="start">Legenda — ConcurTaskTrees (CTT, Paternò)</text>
+
+<!-- Ícones de categoria -->
+<g fill="#eaeef2" stroke="#57606a" stroke-width="1.3">
+  <circle cx="48" cy="748" r="6"/><circle cx="62" cy="748" r="6"/><circle cx="55" cy="742" r="7.5"/><rect x="48" y="746" width="14" height="8" stroke="none"/>
+</g>
+<text x="76" y="752" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#24292f">Tarefa abstrata</text>
+
+<g fill="#fff1e5" stroke="#bc4c00" stroke-width="1.5">
+  <circle cx="235" cy="742" r="5.5"/><path d="M225,757 Q225,748 235,748 Q245,748 245,757 Z"/>
+</g>
+<text x="255" y="752" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#24292f">Tarefa do usuário</text>
+
+<g stroke="#0969da" stroke-width="1.5" fill="#ddf4ff">
+  <circle cx="410" cy="744" r="4.5"/><path d="M403,756 Q403,749 410,749 Q417,749 417,756 Z"/><rect x="420" y="739" width="16" height="12" rx="1.5"/>
+</g>
+<text x="444" y="752" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#24292f">Tarefa de interação</text>
+
+<g stroke="#1a7f37" stroke-width="1.5" fill="#dafbe1">
+  <rect x="615" y="739" width="20" height="14" rx="2"/><line x1="625" y1="753" x2="625" y2="757"/><line x1="619" y1="758" x2="631" y2="758"/>
+</g>
+<text x="644" y="752" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#24292f">Tarefa da aplicação (sistema)</text>
+
+<!-- Operadores temporais -->
+<text x="38" y="785" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#24292f"><tspan font-weight="bold" fill="#6639ba">[]&gt;&gt;</tspan> Habilitação com passagem de informação · <tspan font-weight="bold" fill="#6639ba">&gt;&gt;</tspan> Habilitação sequencial · <tspan font-weight="bold" fill="#6639ba">|||</tspan> Concorrência (entrelaçamento) · <tspan font-weight="bold" fill="#6639ba">[]</tspan> Escolha exclusiva</text>
+<text x="38" y="805" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#24292f"><tspan font-weight="bold" fill="#6639ba">*</tspan> Tarefa iterativa (repetida por lotes até achar a causa da suspeita) · <tspan font-weight="bold">[T]</tspan> Tarefa opcional (executada quando há achado a documentar)</text>
+<text x="38" y="830" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#57606a">[F] Fato sustentado por norma/documento (Decreto nº 6.759/2009; C02) · [H] Hipótese sobre o trabalho atual · [?] Lacuna para a Entrega 7.</text>
+<text x="38" y="850" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#57606a">Nota de escopo: P03 permanece como proto-persona exploratória de stakeholder enquanto H42 estiver aberta em RASTREABILIDADE.md.</text>
+</svg>

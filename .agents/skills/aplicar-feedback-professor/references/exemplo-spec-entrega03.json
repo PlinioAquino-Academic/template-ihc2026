@@ -1,0 +1,140 @@
+{
+  "titulo": "Entrega 3: diffs do feedback",
+  "base": "538c3dd",
+  "fim": "25fc482",
+  "parecer": "feedbacks_professor/Feedback_Professor_Entrega03_Equipe16.md",
+  "parecer_rev": "1f73b32",
+  "itens": [
+    {
+      "commit": "9ed8554",
+      "tipo": "pendencia",
+      "rotulo": "Pendência E1",
+      "titulo": "H05 na tabela de entradas",
+      "nota": "Não vem deste parecer: é a pendência da revisão da Entrega 1. Desde então, H05 descreve um editor que domina as ferramentas de edição e tem pouco conhecimento de programação e IA."
+    },
+    {
+      "commit": "1dde02e",
+      "tipo": "correcao",
+      "rotulo": "Correção 1",
+      "titulo": "P01 e P03 primárias; P02 persona atendida",
+      "citacoes": [
+        {
+          "onde": "Avaliação geral",
+          "inicio": "Entretanto, a composição de **uma persona primária",
+          "fim": "exige uma justificativa mais cuidadosa de sua classificação."
+        },
+        {
+          "onde": "Correção prioritária 1: rever a composição e justificar a prioridade das personas",
+          "inicio": "Na seção de personas, Rafael é primário",
+          "fim": "partir das atividades que efetivamente serão apoiadas."
+        },
+        {
+          "onde": "Recomendação de melhoria",
+          "linha": "- Justifiquem a classificação primária ou secundária"
+        }
+      ],
+      "nota": "Opção escolhida por Pedro: Jorginho Jr. primário e Arnaldo como persona atendida. Nas fichas de P02 e P03 mudou só a linha Tipo; o restante delas fica com Lucas e Giovanni."
+    },
+    {
+      "commit": "84e1398",
+      "tipo": "correcao",
+      "rotulo": "Correção 2",
+      "titulo": "Biografia e idade de Rafael",
+      "citacoes": [
+        {
+          "onde": "Correção prioritária 2: transformar os perfis em personagens suficientemente caracterizados",
+          "inicio": "As fichas são estruturadas",
+          "fim": "também não resolve o problema."
+        }
+      ],
+      "nota": "Aplicado só em Rafael, persona de Pedro. As biografias de Arnaldo e Jorginho Jr. ficam com Lucas e Giovanni."
+    },
+    {
+      "commit": "623c187",
+      "tipo": "correcao",
+      "rotulo": "Correção 3",
+      "titulo": "Condições físicas e sociais de uso",
+      "citacoes": [
+        {
+          "onde": "Correção prioritária 3: detalhar o contexto físico e social de uso",
+          "inicio": "A seção de contexto já distingue",
+          "fim": "características do computador ou do servidor."
+        },
+        {
+          "onde": "Recomendação de melhoria",
+          "linha": "- Atualizem o contexto e a rastreabilidade"
+        }
+      ],
+      "nota": "Quem divide a casa com Jorginho Jr. ficou como lacuna, porque depende do momento de vida que Giovanni vai definir."
+    },
+    {
+      "commit": "5b45239",
+      "tipo": "correcao",
+      "rotulo": "Correção 4",
+      "titulo": "Relato da jornada de Rafael",
+      "citacoes": [
+        {
+          "onde": "Correção prioritária 4: completar o caráter narrativo das jornadas",
+          "inicio": "As três jornadas apresentam sete etapas",
+          "fim": "sem atribuir a ele um uso direto que não foi definido."
+        }
+      ],
+      "nota": "As jornadas de P02 e P03 foram escritas por Lucas e ficam com ele."
+    },
+    {
+      "commit": "2895911",
+      "tipo": "correcao",
+      "rotulo": "Correção 5",
+      "titulo": "Hoje × uso proposto no mapa e na jornada de Rafael",
+      "citacoes": [
+        {
+          "onde": "Correção prioritária 5: separar necessidades, hipóteses de experiência e decisões de solução",
+          "inicio": "Nos mapas de empatia, alguns campos",
+          "fim": "usada como justificativa de si mesma."
+        },
+        {
+          "onde": "Recomendação de melhoria",
+          "linha": "- Mantenham nos mapas a ligação entre dores"
+        }
+      ],
+      "nota": "Os quatro ajustes pontuais da Correção 5 estão nas fichas, mapas e jornadas de P02 e P03 e ficam com seus autores."
+    },
+    {
+      "commit": "7bb45ad",
+      "tipo": "recomendacao",
+      "rotulo": "Recomendação",
+      "titulo": "Lacunas e cautela com H35 e H36",
+      "citacoes": [
+        {
+          "onde": "Recomendação de melhoria",
+          "linha": "- Diferenciem a necessidade de obter lances de um jogador"
+        },
+        {
+          "onde": "Pontos que devem alimentar as próximas entregas",
+          "inicio": "A investigação posterior deverá verificar",
+          "fim": "não se tornem funcionalidades presumidas."
+        }
+      ]
+    },
+    {
+      "commit": "1f73b32",
+      "tipo": "registro",
+      "rotulo": "Registro",
+      "titulo": "Data de revisão e matriz de rastreabilidade",
+      "citacoes": [
+        {
+          "onde": "Recomendação de melhoria",
+          "linha": "- Atualizem o contexto e a rastreabilidade"
+        }
+      ],
+      "nota": "Também registra a revisão no cabeçalho, no histórico do documento e na tabela de mudanças da matriz. O processo do projeto exige esse registro."
+    },
+    {
+      "commit": "25fc482",
+      "tipo": "anotacao",
+      "rotulo": "Anotações",
+      "titulo": "Parecer anotado e assinado",
+      "nota": "Não vem do parecer: é o pedido de anotar cada comentário com o commit correspondente, assinado \"- Pedro\"."
+    }
+  ]
+}
