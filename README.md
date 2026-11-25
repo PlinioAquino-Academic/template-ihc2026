@@ -107,7 +107,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟦  |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | 🟦 |
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | 🟩 |
-| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟩 |
+| 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | Questionário e entrevista preparados. Falta inserir e testar o link de resposta. | 🟨 |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe | 🟩 |
 | 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | 🟩 |
 | 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante | 🟩 |

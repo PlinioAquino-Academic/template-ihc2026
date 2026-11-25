@@ -2,11 +2,11 @@
 
 **Data:** 23/10/2026
 
-**Revisão:** 08/11/2026
+**Revisão:** 25/11/2026
 
 **Equipe:** 14 — Estoque com ML
 
-**Status:** ✅ entrega fechada — partes A e B, instrumentos integrais, protocolo e aspectos éticos concluídos. As pendências de execução (formulários online, piloto e aplicação) estão declaradas no checklist e não foram simuladas.
+**Status:** planejamento e instrumentos revisados. O formulário I01 existe no Drive da equipe. Para concluir a entrega, falta inserir o link público de resposta e verificar o acesso como participante. A equipe ainda não registrou piloto, coleta ou análise de respostas.
 
 **Responsabilidade:** 1 solução integrada por equipe, com partes individuais conforme o modelo da atividade.
 
@@ -25,7 +25,7 @@ A Parte A segue as cinco categorias dos slides 2–7 de **CC8122-Identificacao N
 | [E3 — personas e jornada](03_personas_contexto_jornada.md) | Paulo — Mariana/P01; Victor — Rafael/P02. Investigar autonomia, ajuda e interrupções sem deduzir habilidade pela idade |
 | [E4 — cenários](04_cenarios_problema.md) | E4-C01/R04-01: disponibilidade, prazo, recursos e acompanhamento. E4-C02/R04-02: fontes, causa da divergência e comunicação |
 | [E5 — tarefas](05_analise_tarefas.md) | T01 continua com Paulo e T02 com Victor. A coleta investiga a rotina que fundamenta esses modelos |
-| [E6 — protótipo](06_prototipacao_papel.md) | PF01/PF02 oferecem cobertura parcial das tarefas. Investigar linguagem e dados antes de completar os fluxos; telas existentes não validam necessidades |
+| [E6 — protótipo](06_prototipacao_papel.md) | A primeira versão de PF01/PF02 cobria parte de T01/T02. A revisão acrescentou cartões com os desfechos de reposição e conferência. A coleta investiga se os termos, dados e decisões fazem sentido na rotina dos participantes. |
 
 ## Hipóteses e lacunas prioritárias herdadas da Entrega 1
 
@@ -107,7 +107,7 @@ Os quatro princípios do material A, pp. 10–11, orientam as medidas desta cole
 Medidas práticas decorrentes, aplicáveis aos dois instrumentos:
 
 - Participação voluntária, com possibilidade de pular perguntas ou desistir sem prejuízo. Não pressionar familiares, subordinados ou colegas.
-- Usar códigos Q001/E001. Não pedir documento, endereço, renda ou diagnóstico. Separar contatos de recrutamento das respostas.
+- Usar códigos sem identificação pessoal. No questionário, a pessoa pode usar o código do convite ou criar e guardar um código próprio. O preenchimento é opcional. Na entrevista, o aplicador entrega o código da sessão. Guardar contatos de recrutamento separadamente das respostas.
 - Nesta versão, registrar apenas respostas e notas autorizadas, sem áudio, vídeo ou captura de tela. Gravações futuras exigem autorização específica e revisão do protocolo.
 - Armazenar em pasta restrita à equipe, protegida por senha. Compartilhar com docente somente síntese sem identificação. Não colocar dados brutos no GitHub.
 - Remover nomes de pessoas, estabelecimentos e detalhes que permitam identificação indireta. Código é pseudonimização, não anonimização automática.
@@ -118,9 +118,9 @@ Medidas práticas decorrentes, aplicáveis aos dois instrumentos:
 
 **Contato para dúvidas e retirada de respostas:** Victor Merker Binda — victor.merker.bindaa@gmail.com (endereço confirmado pelo integrante).
 
-> Somos Paulo Andre de Oliveira Hirata e Victor Merker Binda, estudantes de IHC da FEI. Queremos entender como pessoas controlam estoque e decidem reposições. Conforme o convite, a participação será em questionário de cerca de 10 minutos ou entrevista de cerca de 25 minutos. Não é avaliação do seu desempenho. Lembrar dificuldades pode gerar desconforto; você pode pular perguntas ou parar sem prejuízo. Não haverá gravação nem solicitação de dados de clientes ou valores financeiros. A equipe guardará os registros de forma restrita, pelo prazo informado acima, e apresentará somente síntese sem identificação. Não há benefício individual garantido. Você pode esclarecer dúvidas e solicitar retirada usando o contato victor.merker.bindaa@gmail.com e seu código, enquanto o registro puder ser localizado. Você entendeu e aceita participar?
+> Somos Paulo Andre de Oliveira Hirata e Victor Merker Binda, estudantes de IHC da FEI. Queremos entender como as pessoas controlam o estoque e decidem reposições. Estimamos de 10 a 15 minutos para o questionário e de 20 a 30 minutos para a entrevista. A participação é voluntária. Falar de dificuldades pode gerar desconforto. Você pode pular perguntas após a triagem ou parar a qualquer momento. Não pedimos dados de clientes nem valores financeiros. Não haverá gravação. Só a equipe terá acesso aos registros individuais e os apagará até 90 dias após a avaliação final da disciplina. O relatório trará uma síntese sem identificação. Não há benefício individual garantido. Para tirar dúvidas ou solicitar retirada enquanto o registro puder ser localizado, escreva para victor.merker.bindaa@gmail.com e informe seu código. Você aceita participar?
 
-Registrar aceita/não aceita e confirmar idade de 18 anos ou mais. Em caso de recusa, encerrar sem guardar respostas de pesquisa. Incluir o contato confirmado acima no convite e na descrição dos dois formulários.
+Confirmar consentimento, maioridade e experiência recente antes das perguntas de pesquisa. Diante de recusa, encerrar. No questionário, orientar a pessoa a fechar a página sem enviar. Na entrevista, encerrar sem iniciar a ficha de respostas.
 
 ## Parte B — ferramentas de coleta
 
@@ -162,55 +162,26 @@ Os dois métodos adotados são declarativos: registram o que a pessoa relata, n�
 
 #### Procedimento padronizado de aplicação
 
-1. Transpor o questionário para Google Forms ou ferramenta institucional equivalente, conforme material B, p. 21. Desativar coleta de e-mail e exigência de login, quando disponível, e conferir configurações. **Formulário online ainda não publicado; cópia textual completa abaixo.**
-2. Fazer piloto com uma pessoa elegível, verificando compreensão, duração e ramificações. Excluir o piloto da análise principal se houver alterações relevantes; registrar versão.
-3. Apresentar consentimento, critério etário e Q01; encerrar se não elegível. Demais respostas são opcionais, sempre permitindo “prefiro não responder”.
-4. Aplicar individualmente; na leitura assistida, ler literalmente sem explicar respostas corretas. Registrar código, versão e modalidade.
-5. Agradecer, fornecer código/contato, exportar para pasta restrita e retirar identificadores eventualmente escritos antes de divulgar síntese.
+**Link para responder:**
 
-#### Questionário completo
+1. Publicar o questionário na conta da equipe, conforme o [instrumento I01](../instrumentos/07_questionario_reposicao.gs). Copiar o link de resposta para o campo acima. Manter a edição e os resultados restritos à equipe.
+2. Abrir esse endereço em janela anônima, sem conta conectada. Se o Google restringir o acesso à instituição, ajustar o acesso de participante para “qualquer pessoa com o link” e repetir o teste. Conferir que o participante consegue responder sem login ou e-mail e que o encerramento mostra agradecimento e contato. Usar códigos de teste ao verificar o envio. Conferir o recebimento na área privada e separar esses registros da coleta.
+3. Percorrer a recusa, a menoridade e a falta de experiência recente. Cada percurso deve encerrar antes do perfil. Depois, testar quem não usa registros, quem usa uma planilha mas nunca encontrou divergência e quem relata uma diferença. Repetir pulando as opcionais e escolhendo “não sei” e “prefiro não responder”. Conferir os destinos na tabela abaixo.
+4. Fazer um piloto com uma pessoa elegível. Anotar versão, modalidade, duração do início ao envio ou à interrupção, perguntas que precisaram ser relidas e em que ponto a pessoa quis parar. No fim, perguntar qual questão deu mais trabalho. Se o percurso ultrapassar 15 minutos ou houver sinal de cansaço, rever primeiro as sondagens complementares (Q09a, Q12a e Q14b), ajustar o convite e repetir a medição. Guardar o piloto separado da amostra principal.
+5. Na aplicação, enviar o link de resposta e oferecer um código de retirada. Na leitura assistida, ler o enunciado e as alternativas literalmente e aguardar a resposta. Registrar versão e modalidade. Desidentificar os relatos antes de compartilhar a síntese.
 
-**Q01. Nos últimos três meses, participou da decisão de comprar produtos para repor estoque de um pequeno comércio?** Sim / não. Se não, encerrar.
+#### Estrutura e lógica do questionário
 
-**Q02. Qual sua participação?** Múltiplas respostas: decido o que comprar / reúno informações / confiro estoque / aprovo o valor da compra / outra (qual?).
+| Bloco | O que a pessoa encontra | Encaminhamento |
+|---|---|---|
+| Entrada | Objetivo, duração prevista, privacidade, contato e consentimento. Em seguida, maioridade e participação em decisão de reposição nos últimos três meses (Q01). | Só três respostas afirmativas abrem o perfil. Os demais percursos terminam com a orientação de fechar a página. |
+| Perfil e registros | Código opcional, modalidade, papel, experiência, faixa etária (Q02–Q04) e uso de registros (Q05). | Quem mantém ou consulta registros pode indicar várias fontes (Q05a). Só esse grupo recebe Q11. Apenas uma divergência relatada em Q11 abre Q11a. |
+| Tecnologia | Dispositivo usado (Q06), conexão e autonomia (Q06a/Q07). | Quem usa dispositivo digital vê conexão e autonomia. Quem não usa, pula ou prefere não responder segue para a rotina. |
+| Última reposição | Frequência (Q08) e critérios lembrados livremente (Q09). Na página seguinte aparecem prazo e recursos (Q09a), interrupções (Q10), registro e acompanhamento (Q12/Q12a). | Registrar separadamente o que apareceu na lembrança inicial e o que surgiu depois da sondagem. |
+| Disponibilidade e estimativa | Unidades físicas e reservadas (Q13) e interpretação de uma estimativa de vendas (Q14). | Somente na página seguinte aparecem os pedidos de contexto adicional e de utilidade percebida (Q14a/Q14b). |
+| Prioridades e encerramento | Importância de quatro aspectos da ferramenta (Q15), dificuldades de leitura, formas de aprender e melhoria desejada (Q16a/Q16/Q17). | Cada item pode ficar em branco. Após o envio, a pessoa recebe agradecimento e contato para dúvidas ou retirada. |
 
-**Q03. Há quanto tempo realiza essa atividade?** Menos de 6 meses / de 6 meses a menos de 2 anos / de 2 a 5 anos / mais de 5 anos.
-
-**Q04. Qual sua faixa etária?** 18–29 / 30–44 / 45–59 / 60 ou mais / prefiro não responder. Opcional; não usar para inferir habilidade.
-
-**Q05. Onde registra ou consulta dados de estoque?** Múltiplas respostas: caderno/papel / planilha / sistema de vendas ou estoque / mensagens / plataforma de vendas online / não mantém registros / outro (qual?). A opção “não mantém registros” é exclusiva das demais.
-
-**Q06. Qual dispositivo mais utiliza nessa atividade?** Celular / computador ou notebook / tablet / não utiliza dispositivo digital / outro. **Q06a. Quando precisa de internet no trabalho, ela está disponível?** Sempre / na maioria das vezes / poucas vezes / nunca / não preciso / não sei.
-
-**Q07. Como usa ferramentas digitais nessa atividade?** Sem ajuda / ajuda apenas em situações novas / ajuda frequente / outra pessoa faz essa parte / não uso.
-
-**Q08. Com que frequência decide reposições?** Diariamente / algumas vezes por semana / semanalmente / quinzenalmente / mensalmente ou menos / quando surge necessidade, sem intervalo fixo / outra frequência.
-
-**Q09. Pensando na última reposição, que informações utilizou para decidir?** Aberta; não fornecer exemplos antes da resposta.
-
-**Q09a. Como o prazo do fornecedor e os recursos disponíveis influenciaram essa decisão, se influenciaram?** Aberta; não solicitar valores financeiros. Aplicar depois de Q09 e distinguir resposta espontânea de resposta estimulada.
-
-**Q10. No último mês, quantas vezes interrompeu uma análise de reposição para atender outra demanda?** Nenhuma / 1–2 / 3–5 / 6 ou mais / não fiz essa análise / não lembro.
-
-**Q11. No último mês, encontrou diferenças entre estoque registrado e disponível?** Não / sim / não mantenho registro / não sei. Se sim, **Q11a. Como lidou com a última diferença?** Aberta, sem nomes ou dados comerciais reservados.
-
-**Q12. Como registra uma decisão de reposição para consultar depois?** Aberta; “não registro” é válido.
-
-**Q12a. Depois da chegada dos produtos, como verifica se a reposição foi adequada?** Aberta; pode responder que não acompanha. Investiga a jornada da E3/E4, sem ampliar o término de T01, que na E5 acaba no registro da decisão.
-
-**Q13. Exemplo fictício: há 6 unidades, mas 2 estão reservadas para pedidos já feitos. Quantas estão livres para novas vendas?** Número livre / não sei. Não corrigir durante a aplicação.
-
-**Q14. Exemplo fictício: “Estimativa de venda: 10 unidades nos próximos 7 dias; os valores reais podem variar”. O que isso significa para você?** Aberta. **Q14a. Que outras informações, se houver, procuraria antes de decidir uma compra?** Aberta.
-
-**Q14b. Em que situações uma estimativa assim ajudaria ou não ajudaria sua rotina?** Aberta; utilidade declarada não demonstra benefício real sobre faltas e excessos.
-
-**Q15. Qual a importância de cada aspecto em uma ferramenta de estoque?** Uma resposta por item: 1 nada importante / 2 pouco importante / 3 moderadamente importante / 4 importante / 5 muito importante / não se aplica. Itens: entender a origem dos valores; poder corrigir uma decisão; terminar rapidamente; consultar decisões anteriores.
-
-**Q16a. Ao consultar informações de estoque, que dificuldades de leitura ou compreensão encontra, se houver?** Aberta; não pedir diagnóstico nem escolaridade.
-
-**Q16. Como prefere aprender uma ferramenta nova?** Múltiplas respostas: demonstração de outra pessoa / instruções escritas / vídeo / experimentar com exemplos / outra forma / não sei.
-
-**Q17. Qual a maior dificuldade na reposição e o que gostaria de melhorar?** Aberta; pode responder que não percebe dificuldade.
+Os códigos das perguntas acompanham sua versão de origem. Q11 foi agrupada com as fontes de estoque para que quem não consulta registros possa pular as perguntas sobre divergência.
 
 #### Tipos de pergunta utilizados
 
@@ -218,20 +189,20 @@ Classificação conforme o material B, pp. 5 e 7–9.
 
 | Tipo (material B) | Perguntas de I01 | Motivo da escolha |
 |---|---|---|
-| Fechada — escolha de um valor (p. 7) | Q01, Q03, Q06, Q06a, Q07, Q08, Q11 | Respostas comparáveis entre participantes e contagem direta |
-| Fechada — escolha de vários valores (p. 7) | Q02, Q05, Q16 | A pessoa pode acumular papéis, ferramentas e formas de aprender; a soma pode exceder o número de participantes |
+| Fechada — escolha de um valor (p. 7) | Q01, Q03, Q05, Q06, Q06a, Q07, Q08 e Q11 | Permite comparar respostas e encaminhar para as perguntas pertinentes |
+| Fechada — escolha de vários valores (p. 7) | Q02, Q05a e Q16 | A pessoa pode indicar mais de um papel, fonte de registro ou forma de aprender |
 | Fechada — faixa de valores (p. 7) | Q04, faixa etária; Q10, contagem de interrupções em faixas | Evita pedir idade exata e reduz erro de memória em contagens |
-| Escala de Likert (p. 8) | Q15, um item por linha | Mede importância declarada de quatro aspectos com a mesma régua de cinco pontos |
+| Escala de importância de cinco pontos (p. 8) | Q15, uma resposta opcional por aspecto | Descreve a importância atribuída a cada aspecto, com a alternativa “não se aplica” |
 | Diferenciais semânticos (p. 8) | Não utilizado nesta entrega | Os pares de adjetivos do exemplo do slide avaliam a impressão sobre uma interface existente; esta coleta ainda investiga a rotina atual. O recurso fica reservado às avaliações das E12–E14 |
 | Aberta (pp. 5 e 9) | Q09, Q09a, Q11a, Q12, Q12a, Q13 como resposta curta numérica com opção “não sei”, Q14, Q14a, Q14b, Q16a, Q17 e os campos “outra/qual?” das fechadas | Exploram critérios, significados e dificuldades sem restringir o tipo ou o tamanho da resposta nem sugerir alternativas |
 
-As perguntas abertas vêm antes das fechadas equivalentes sempre que a alternativa poderia sugerir a resposta: por isso Q09 precede Q09a e Q14 precede Q14a/Q14b. Conforme o material B, p. 6, o questionário tende a produzir respostas mais superficiais que a entrevista; I02 compensa essa limitação aprofundando um episódio.
+Q09 abre espaço para lembrar a decisão antes de mencionar prazo e recursos em Q09a. Q14 pede a interpretação da estimativa antes de Q14a e Q14b perguntarem sobre informações adicionais e utilidade. I02 permite aprofundar um episódio que o questionário descreve brevemente.
 
 #### Como os dados serão analisados
 
-Apresentar contagens e denominadores válidos por pergunta, separando omissões, “não sei” e “não se aplica”. Em múltiplas respostas, a soma pode exceder o número de pessoas. Em Q15, apresentar distribuição e mediana por item; a escala mede importância declarada, não satisfação validada.
+Apresentar contagens e denominadores válidos por pergunta. Separar pergunta pulada pela lógica, omissão voluntária, “não sei” e “não se aplica”. Em Q15, apresentar distribuição e mediana por aspecto, excluindo “não se aplica” e omissões do cálculo. Uma nota alta identifica um tema a investigar. Antes de propor um requisito, confrontá-la com um episódio concreto e considerar também relatos contrários.
 
-Agrupar respostas abertas por critérios comerciais, qualidade de dados, confiança, ferramentas e ajuda. Em Q13, interpretação esperada: 4 unidades. Em Q14, procurar reconhecimento de estimativa sujeita a variação, sem exigir jargão. Preservar respostas contrárias às hipóteses. Comparar modalidades e experiências somente descritivamente; opiniões não demonstram eficácia do sistema. Q13/Q14 avaliam os exemplos fornecidos, não a interface. Q14 explicita que os valores variam; a resposta não prova reconhecimento espontâneo da incerteza. Registrar também casos em que a previsão não ajudaria (Q14b).
+Agrupar relatos por critérios comerciais, qualidade dos dados, confiança, ferramentas e ajuda. Na codificação, separar **espontânea** (Q09) de **estimulada** (Q09a). Em Q13, registrar a quantidade informada (4 unidades no exemplo), a dúvida expressa ou a omissão. Só codificar o raciocínio quando a própria pessoa o explicar. Em Q14, registrar a interpretação inicial da frase, que já informa que os valores podem variar. Distingui-la de Q14a/Q14b, que pedem contexto e utilidade. Q13 e Q14 medem compreensão dos exemplos. Avaliar desempenho com a interface exigiria observar o uso do protótipo. Guardar situações em que a estimativa seria pouco útil e comparar as modalidades de preenchimento apenas de forma descritiva.
 
 ### Instrumento I02 — Entrevista semiestruturada sobre conferência
 
@@ -249,9 +220,9 @@ Agrupar respostas abertas por critérios comerciais, qualidade de dados, confian
 
 #### Procedimento padronizado de aplicação
 
-1. Preparar formulário online de notas com código, data, versão, papel, aceite e campos E01–E12, conforme material B, p. 21. O pesquisador registra as respostas durante a conversa. Configuração online pendente.
+1. Preparar uma cópia da [ficha de entrevista I02](../instrumentos/07_ficha_entrevista.md) em uma pasta privada da equipe. Victor registra as notas durante a conversa e mantém o exemplo hipotético em campo próprio.
 2. Fazer piloto, combinar local reservado e horário adequado, apresentar consentimento e confirmar conferência nos últimos três meses.
-3. Seguir o roteiro; sondagens neutras permitidas: “Pode dar um exemplo?”, “O que aconteceu depois?” e “Como verificou?”. Não oferecer a solução projetada antes do relato atual.
+3. Começar pela última conferência real. Usar sondagens como “O que aconteceu depois?” e “Como você soube disso?”. Deixar a pessoa nomear fontes, causas, pessoas e decisões antes de pedir detalhes. Se uma prática nunca ocorreu, registrar essa ausência e avançar.
 4. Separar paráfrase de fala literal. Não solicitar acesso a sistemas reais. Em interrupção, oferecer retomada ou encerramento.
 5. Ler um resumo ao participante para confirmar entendimento, aceitar correções, agradecer e fornecer código/contato. Revisar e desidentificar as notas.
 
@@ -262,17 +233,17 @@ Agrupar respostas abertas por critérios comerciais, qualidade de dados, confian
 | E01. Qual sua função e como participa da conferência? | Experiência; outras pessoas; proprietário sozinho ou auxiliar; ferramentas e dispositivos utilizados |
 | E02. Como foi a última conferência, do começo ao fim? | Gatilho, sequência, ferramentas, duração aproximada e término |
 | E03. Como identifica que dois registros tratam do mesmo produto e unidade de venda? | Código, nome, tamanho, kit e ambiguidades |
-| E04. Qual foi a última diferença encontrada? Se nunca encontrou, como investigaria uma possível diferença? | Separar relato real de resposta hipotética |
-| E05. Que informações verificou para entender a causa? | Fontes, momento e responsável pelos registros; tratamento de reservas, cancelamentos e devoluções, se ocorrerem. Não pressupor duplicidade |
-| E06. Quem pode corrigir um registro e como decide o que alterar? | Responsabilidade, autorização e justificativa |
-| E07. O que faz quando não consegue confirmar a causa? | Pendência e próxima verificação |
-| E08. Já precisou parar uma conferência? Como soube onde continuar? | Interrupção, anotações, estratégias e perdas |
-| E09. Como comunica o que resolveu e o que ainda falta conferir? | Item resolvido versus conjunto de registros |
+| E04. Você se lembra de uma conferência em que encontrou uma diferença? Se sim, conte o que aconteceu. | Distinguir “nunca encontrei”, “não me lembro” e recusa. Sem episódio, pular E05–E07 e seguir para E08. |
+| E05. Naquela ocasião, o que você consultou ou fez em seguida? | Retomar as fontes citadas pela pessoa. Perguntar o que cada uma permitiu descobrir. |
+| E06. Como terminou esse caso? Quem participou dessa decisão? | Se a pessoa mencionar uma alteração, perguntar como decidiram fazê-la e quem a realizou. Registrar também se ninguém alterou o estoque. |
+| E07. Naquele momento, ficou algo por esclarecer? | Se sim, perguntar o que aconteceu depois. Se tudo foi esclarecido, registrar o encerramento e avançar. |
+| E08. Já precisou parar uma conferência no meio? | Se sim, perguntar sobre a última vez e como retomou, caso tenha retomado. Registrar também a ausência de interrupção. |
+| E09. Ao terminar a conferência, você costuma registrar ou contar a alguém o que aconteceu? | Se sim, pedir um exemplo. Trabalhar sozinho ou encerrar sem registro também são respostas válidas. |
 | E10. O que faz confiar ou desconfiar do saldo? | Origem, atualização e consequências de erro, sem valores financeiros |
 | E11. Que dificuldades encontra ao aprender ou usar ferramentas dessa tarefa? Como prefere ajuda? | Admitir ausência de dificuldade; vocabulário, leitura, autonomia e receios de alterar registros |
-| E12. Exemplo fictício: registro com 8 conjuntos e contagem de 10. O que verificaria antes de alterar? | Após resposta: se duas anotações puderem ser a mesma saída de 2 conjuntos, como confirmaria? Sem confirmação, o que faria? |
+| E12. Exemplo separado do relato: um registro mostra 8 conjuntos e uma contagem mostra 10. O que você faria, se fizesse algo? | Usar só depois de explorar e resumir a rotina real de E01–E11. Perguntar “O que levaria você a fazer isso?”. Guardar a resposta como hipotética. |
 
-**Encerramento:** “O que não perguntamos e é importante nessa atividade?”, seguido de resumo para conferência. E12 é sondagem de raciocínio com dados fictícios; não comprova desempenho real.
+**Encerramento:** antes de E12, resumir o episódio e perguntar “Foi assim mesmo? Faltou algo?”. Se não houve divergência, confirmar o que a pessoa relatou sobre a rotina normal. E12 é opcional e fica em campo próprio. Ao final, abrir espaço para correções, agradecer e entregar o código e o contato da equipe.
 
 #### Como os dados serão analisados
 
@@ -287,7 +258,7 @@ Codificar episódios por identificação/unidade, fonte, causa, confirmação, a
 | I01 Q09/Q09a/Q12/Q12a/Q15; I02 E06–E10 | Controle humano e histórico | Definir revisão, rastreabilidade e retomada |
 | Consulta ao orientador/documentação técnica | Escopo formal do TCC | Confirmar horizonte e eventual cálculo de reposição |
 
-Depois da coleta, registrar por hipótese: pergunta e código da evidência, participantes que apoiam/contradizem, limitações, estado e mudança de design. Sustentada significa apoiada nesta amostra; contradições podem refutar ou refinar; ausência de dados mantém aberta. Questionários e entrevistas podem sofrer vieses de memória e desejabilidade social; observação futura poderá confrontá-los.
+Atualizar a [rastreabilidade](../RASTREABILIDADE.md) somente depois de interpretar respostas reais. Para cada hipótese, registrar instrumento, pergunta, código da evidência, relatos favoráveis e contrários, limitações e decisão fundamentada. A ausência de dados mantém a hipótese aberta. Publicar o formulário e testar a navegação são marcos de preparação. Questionários e entrevistas também estão sujeitos a vieses de memória e de resposta socialmente desejável.
 
 **Situação atual:** nenhum participante ou resultado reportado; nenhuma hipótese confirmada. Benefício real sobre falta/excesso exige acompanhamento posterior.
 
@@ -298,15 +269,15 @@ Depois da coleta, registrar por hipótese: pergunta e código da evidência, par
 | Configuração | I01 — questionário | I02 — entrevista |
 |---|---|---|
 | Título online | Estoque com ML — Rotina de reposição | Estoque com ML — Roteiro de conferência |
-| Introdução | Texto integral de consentimento desta entrega, prazo de retenção e o contato victor.merker.bindaa@gmail.com | Mesmo texto, com duração da entrevista |
+| Introdução | Texto breve para o participante, com objetivo, tempo previsto, privacidade, retenção, voluntariedade e contato | Apresentação adaptada à conversa, com duração da entrevista |
 | Triagem obrigatória | Aceite sim/não; 18 anos ou mais sim/não; Q01. Qualquer “não” encerra antes das perguntas de pesquisa | Aceite e maioridade; confirmar conferência nos últimos três meses antes de E01 |
-| Conteúdo | Q01–Q17 e subperguntas; todas opcionais após triagem. Q11a somente se Q11 = sim | Campos E01–E12 preenchidos pelo entrevistador; anotar não respondido ou não aplicável sem inferir resposta |
-| Tipos | Q02/Q05/Q16: múltipla escolha de várias opções; Q15: escala por item; demais conforme o texto | Campos de texto longo; E12 marcado como exemplo fictício |
+| Conteúdo | Q01–Q17 e subperguntas. As perguntas após a triagem são opcionais. Q05, Q06 e Q11 determinam os blocos seguintes. | E01–E12. Distinguir recusa, ausência de prática, episódio real e resposta hipotética. |
+| Tipos | Q02/Q05a/Q16 admitem várias respostas. Q15 permite omitir cada aspecto separadamente. | Notas em texto livre, com campo separado para E12. |
 | Privacidade | Sem coleta automática de e-mail; verificar ausência de exigência de login; desativar visualização pública de respostas | Formulário de notas restrito à equipe, sem acesso público às respostas |
-| Identificação | Código aleatório sem nome, fornecido no convite individual e inserido no formulário; registrar modalidade assistida/autônoma | Código, data, duração, versão do roteiro, aceite e função; contatos guardados separadamente |
+| Identificação | Código opcional do convite ou criado e guardado pela pessoa para permitir retirada. Modalidade assistida/autônoma. | Código, data, duração, versão do roteiro, aceite e função. Contatos de recrutamento guardados separadamente. |
 | Encerramento | Agradecer; lembrar o código e o canal para dúvidas/retirada | Ler o resumo ao participante e registrar correções de interpretação |
 
-No questionário, revisar incompatibilidades como “não mantém registros” junto a ferramentas. Se a ferramenta não permitir impedir a combinação, orientar no enunciado e registrar a inconsistência sem corrigir por suposição. “Não sei”/“prefiro não responder” em questões múltiplas também devem ser exclusivos das respostas substantivas.
+Na conferência dos dados, distinguir quem declarou não consultar registros de quem preferiu pular Q05. O mesmo vale para uso de dispositivos e ausência de divergência. Se uma combinação ficar ambígua, preservá-la como tal.
 
 **Ficha mínima de análise, a preencher somente depois da aplicação:** código da pessoa; instrumento/versão; pergunta; resposta ou nota autorizada; relato real/exemplo hipotético; tema; hipótese relacionada; evidência favorável/contrária/inconclusiva; limitação; decisão de design. Para participação nos dois instrumentos, manter ligação privada entre os códigos e contar a pessoa uma única vez no total de participantes.
 
@@ -314,21 +285,22 @@ No questionário, revisar incompatibilidades como “não mantém registros” j
 
 ### O que ainda depende da equipe
 
-O conteúdo escrito, os dois instrumentos, o protocolo de execução, o convite e o termo de consentimento estão fechados nesta versão, já com o contato real, e podem ser aplicados como estão. Para atender também à orientação de ferramenta online do material B, resta transcrever o questionário para um formulário seguindo a tabela de configuração acima e registrar o link neste arquivo — transcrição, não nova redação. Depois, realizar piloto e ajustar a duração. A aplicação e a análise exigem participantes reais, caso sejam solicitadas nesta etapa pelo docente; o modelo do repositório enfatiza planejamento e instrumentos, e não autoriza inventar resultados. As faixas de amostra propostas podem ser revistas antes do recrutamento, com justificativa de acesso e objetivo exploratório.
+Paulo deve inserir o link de resposta do I01, conferir o acesso externo e registrar a duração e os ajustes do piloto. Victor deve preparar a cópia privada da ficha e pilotar o roteiro da entrevista. A equipe atualizará as hipóteses depois de analisar os dados coletados.
 
 ## Checklist
 
-- [x] Cinco categorias de dados e perfis específicos para cada integrante.
-- [x] Hipóteses, tarefas e decisões relacionadas.
-- [x] Ética, consentimento e análise contextualizados.
-- [x] Duas técnicas distintas, incluindo questionário, com conteúdo integral.
-- [x] Escolha dos métodos justificada diante das sete alternativas do material B.
-- [x] Tipos de pergunta e papel do protocolo de execução explicitados.
-- [x] Definir contato real para dúvidas e retirada: victor.merker.bindaa@gmail.com.
-- [x] Convite e termo de consentimento finalizados com o contato real, prontos para envio.
-- [ ] Transcrever os instrumentos para formulário online e registrar os links aqui.
-- [ ] Realizar piloto, recrutamento e aplicação.
-- [ ] Analisar respostas e atualizar hipóteses com evidências.
+- [ ] Cinco categorias de dados e perfis específicos para cada integrante.
+- [ ] Hipóteses, tarefas e decisões relacionadas.
+- [ ] Ética, consentimento e análise contextualizados.
+- [ ] Duas técnicas distintas, incluindo o questionário obrigatório.
+- [ ] Escolha dos métodos justificada diante das alternativas do material B.
+- [ ] Tipos de pergunta e protocolo de execução explicitados.
+- [ ] Contato para dúvidas e retirada, convite e consentimento disponíveis.
+- [ ] Questionário publicado com link de resposta neste documento e acesso externo testado.
+- [ ] Ficha privada de notas da entrevista preparada.
+- [ ] Pilotos realizados e duração, dificuldades e ajustes registrados.
+- [ ] Recrutamento e aplicação realizados.
+- [ ] Respostas analisadas e hipóteses atualizadas com evidências.
 
 ## Referências
 
